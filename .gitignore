@@ -1,5 +1,9 @@
 # Ignore everything
 /*
+/*/
 
 # But not these files...
-!.gitignore
+!*.gitignore
+!.config
+.config/*
+!.config/awesome
