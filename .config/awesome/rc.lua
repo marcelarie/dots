@@ -545,7 +545,11 @@ globalkeys = mytable.join( -- Take a screenshot
                        "rofi -show power-menu -theme flat-orange -modi power-menu:rofi-power-menu -width 25",
                        'run', 'dmenu'))
     end, {description = "show rofi", group = "launcher"}), -- ]]
-    -- Prompt
+    -- Keyword layout toggle
+    awful.key({altkey}, "space", function()
+        os.execute(string.format("i3-keyboard-layout cycle us es", 'run',
+                                 'dmenu'))
+    end, {description = "show rofi", group = "launcher"}), -- Prompt
     awful.key({modkey}, "r",
               function() awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
