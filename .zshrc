@@ -151,7 +151,8 @@ alias gopt="cd ~/personal/tasks"
 alias wbcn="curl wttr.in/Barcelona\?0Q"
 alias create-react-app="create-react-app --template mini"
 alias cry\$="curl rate.sx"
-alias gmod="$(git ls-files -m)"
+alias gmod='$(git ls-files -m)'
+alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
 
 pfetch
 # wbcn

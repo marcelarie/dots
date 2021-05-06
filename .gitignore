@@ -7,4 +7,5 @@
 !.config
 .config/*
 !.config/awesome
+!.config/kitty
 !*.zshrc
