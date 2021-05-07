@@ -153,6 +153,9 @@ alias create-react-app="create-react-app --template mini"
 alias cry\$="curl rate.sx"
 alias gmod='$(git ls-files -m)'
 alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
+alias xyy="xsel --clipboard --input"
+alias xp="xsel --clipboard --output"
+alias node15="source /usr/share/nvm/init-nvm.sh"
 
 pfetch
 # wbcn
