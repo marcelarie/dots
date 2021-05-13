@@ -23,9 +23,6 @@ local mytable = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 -- }}}
 
--- Modules
-require('modules.autostart')
-
 -- {{{ Error handling
 
 -- Check if awesome encountered an error during startup and fell back to
@@ -102,11 +99,11 @@ local themes = {
 local chosen_theme = themes[7]
 local modkey = "Mod4"
 local altkey = "Mod1"
-local terminal = "kitty"
+local terminal = "urxvtc"
 local vi_focus = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev = true -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
-local editor =  "/usr/local/bin/nvim"
-local browser = "/usr/bin/brave"
+local editor = os.getenv("EDITOR") or "nvim"
+local browser = "librewolf"
 
 awful.util.terminal = terminal
 awful.util.tagnames = {"1", "2", "3", "4", "5"}
@@ -379,8 +376,10 @@ globalkeys = mytable.join( -- Take a screenshot
         group = "launcher"
     }), awful.key({modkey, "Control"}, "r", awesome.restart,
                   {description = "reload awesome", group = "awesome"}),
-    --    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
-    --              {description = "quit awesome", group = "awesome"}),
+    -- awful.key({ modkey, "Shift"   }, "q", awesome.quit,                      <-- ORIGINAL KEYBINDING
+    --           {description = "quit awesome", group = "awesome"}),                replaced by
+                 awful.key({modkey, "Shift"}, "q", function(c) c:kill() end, -- <-- this
+                           {description = "close", group = "client"}),
 
                  awful.key({modkey, altkey}, "l",
                            function() awful.tag.incmwfact(0.05) end, {
@@ -530,29 +529,17 @@ globalkeys = mytable.join( -- Take a screenshot
     --]]
     -- alternatively use rofi, a dmenu-like application with more features
     -- check https://github.com/DaveDavenport/rofi for more details
-    -- rofi
-                 awful.key({modkey}, "d", function()
-        os.execute(string.format(
-                       " rofi -modi combi -theme gruvbox-dark -show drun -font 'Fira Code 10' -width 30",
-                       'run', 'dmenu'))
-    end, {description = "show rofi", group = "launcher"}),
-                 awful.key({modkey}, "g", function()
-        os.execute(string.format("~/scripts/dmsearch-distrotube/dmsearch",
-                                 'run', 'dmenu'))
-    end, {description = "show rofi", group = "launcher"}), -- ]]
-    awful.key({modkey}, "0", function()
-        os.execute(string.format(
-                       "rofi -show power-menu -theme flat-orange -modi power-menu:rofi-power-menu -width 25",
-                       'run', 'dmenu'))
-    end, {description = "show rofi", group = "launcher"}), -- ]]
-    -- Keyword layout toggle
-    awful.key({altkey}, "space", function()
-        os.execute(string.format("i3-keyboard-layout cycle us es", 'run',
-                                 'dmenu'))
-    end, {description = "show rofi", group = "launcher"}), -- Prompt
-    awful.key({modkey}, "r",
-              function() awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    --[[ rofi
+    awful.key({ modkey }, "x", function ()
+            os.execute(string.format("rofi -show %s -theme %s",
+            'run', 'dmenu'))
+        end,
+        {description = "show rofi", group = "launcher"}),
+    --]]
+    -- Prompt
+                 awful.key({modkey}, "r", function()
+        awful.screen.focused().mypromptbox:run()
+    end, {description = "run prompt", group = "launcher"}),
 
                  awful.key({modkey}, "x", function()
         awful.prompt.run {
@@ -572,7 +559,7 @@ clientkeys = mytable.join(awful.key({altkey, "Shift"}, "m",
     c.fullscreen = not c.fullscreen
     c:raise()
 end, {description = "toggle fullscreen", group = "client"}),
-                          awful.key({modkey, "Shift"}, "q",
+                          awful.key({modkey, "Shift"}, "c",
                                     function(c) c:kill() end,
                                     {description = "close", group = "client"}),
                           awful.key({modkey, "Control"}, "space",
