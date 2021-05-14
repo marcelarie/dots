@@ -8,7 +8,7 @@
 .config/*
 !.config/awesome
 !.config/kitty
-!.config/polybar
+!.config/polybar*
 !.config/pacman
 !.config/paru
 !*.zshrc
