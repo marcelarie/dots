@@ -8,4 +8,5 @@
 .config/*
 !.config/awesome
 !.config/kitty
+!.config/polybar
 !*.zshrc
