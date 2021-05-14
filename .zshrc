@@ -42,7 +42,7 @@ ZSH_THEME="nicoulaj"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -113,7 +113,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# 
+ 
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
+#   ZSH ALIAS    #
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
+
+#### Linux ####
 alias ls="exa"
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias mv='mv -i'                                                # Confirm before overwriting something
@@ -123,30 +128,41 @@ alias free='free -m'                                            # Show sizes in 
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ...='cd ../../..'
+alias cat='bat'
+
+#### Pacman ####
 alias pac='sudo pacman -S'
 alias pacr='sudo pacman -Rns'
 alias pyyu='sudo pacman -Syyu'
 alias pacu='sudo pacman -Su'
+
+#### Server ####
 alias ubuntu-sshs='ssh ubuntu@54.38.188.31'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ...='cd ../../..'
-alias gomain='git checkout main'
-alias cat='bat'
+
+#### Git ####
 alias gb='git checkout $(git branch | fzy)'
 alias gbde='git branch -D $(git branch | fzy)'
-alias rc='nvim ~/.config/nvim/init.*'
+
+#### Configs ####
 alias zrc='nvim ~/.zshrc'
 alias arc='nvim ~/.config/awesome'
 alias clones='~/clones'
-alias dots='~/clones/dot-files'
+alias dots='vi ~/.gitignore'
+
+#### Nvim ####
 alias vi='nvim'
 alias bi='nvim -c "colorscheme OceanicNext"'
 alias revi='bash ~/scripts/install-last-neovim.sh'
+alias rc='nvim ~/.config/nvim/init.*'
 alias gorc='cd ~/.config/nvim/'
-alias live-server='live-server --no-browser'
+
+#### Others ####
 alias fzf="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
 alias history="history | fzy"
+alias live-server='live-server --no-browser'
 alias pt="vi ~/personal/tasks"
 alias gopt="cd ~/personal/tasks"
 alias wbcn="curl wttr.in/Barcelona\?0Q"
@@ -158,11 +174,16 @@ alias xyy="xsel --clipboard --input"
 alias xp="xsel --clipboard --output"
 alias node15="source /usr/share/nvm/init-nvm.sh"
 
+#### Tmux ####
+alias t='tmux attach || tmux new-session'   # Attaches tmux to the last session; creates a new session if none exists.
+alias ta='tmux attach -t'                   # Attaches tmux to a session (example: ta portal)
+alias tn='tmux new-session'                 # Creates a new session
+alias tl='tmux list-sessions'               # Lists all ongoing sessions
+
 pfetch
 # wbcn
 # DEFAULT => (?) 250 45
 xset r rate 150 45
 
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
-
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
