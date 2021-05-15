@@ -11,5 +11,6 @@
 !.config/polybar*
 !.config/pacman
 !.config/paru
+!.config/himalaya
 !.vimrc
 !*.zshrc
