@@ -179,6 +179,7 @@ alias t='tmux attach || tmux new-session'   # Attaches tmux to the last session;
 alias ta='tmux attach -t'                   # Attaches tmux to a session (example: ta portal)
 alias tn='tmux new-session'                 # Creates a new session
 alias tl='tmux list-sessions'               # Lists all ongoing sessions
+alias ts='tmux switch -t $(tmux ls | cut -f1 -d":" | fzy)'
 
 pfetch
 # wbcn
