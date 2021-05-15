@@ -7,7 +7,6 @@ export ZSH="/home/marcel/.oh-my-zsh" ### SET MANPAGER
 
 ### "bat" as manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
 ## go
 export PATH=/home/$USER/.cargo/bin:$PATH export GOPATH=$HOME/.local/go
 
@@ -172,6 +171,8 @@ alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
 alias xyy="xsel --clipboard --input"
 alias xp="xsel --clipboard --output"
 alias node15="source /usr/share/nvm/init-nvm.sh"
+alias sc='sh ~/scripts/$(ls ~/scripts/ | fzy)' # scripts selector
+alias env='printenv | fzy' # scripts selector
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session'   # Attaches tmux to the last session; creates a new session if none exists.
