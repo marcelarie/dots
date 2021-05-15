@@ -9,8 +9,7 @@ export ZSH="/home/marcel/.oh-my-zsh" ### SET MANPAGER
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ## go
-export PATH=/home/$USER/.cargo/bin:$PATH
-export GOPATH=$HOME/.local/go
+export PATH=/home/$USER/.cargo/bin:$PATH export GOPATH=$HOME/.local/go
 
 
 ### "vim" as manpager
