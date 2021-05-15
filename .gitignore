@@ -14,3 +14,5 @@
 !.config/himalaya
 !.vimrc
 !*.zshrc
+!*.profile
+!*.tmux.conf

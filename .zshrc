@@ -181,6 +181,14 @@ alias tn='tmux new-session'                 # Creates a new session
 alias tl='tmux list-sessions'               # Lists all ongoing sessions
 alias ts='tmux switch -t $(tmux ls | cut -f1 -d":" | fzy)'
 
+
+#### Rust ####
+alias cn='cargo new'
+alias cr='cargo run'
+alias cb='cargo build'
+alias cu='cargo update'
+alias cdo='cargo doc --open'
+
 pfetch
 # wbcn
 # DEFAULT => (?) 250 45
