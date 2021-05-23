@@ -138,7 +138,7 @@ alias pyyu='sudo pacman -Syyu'
 alias pacu='sudo pacman -Su'
 
 #### Server ####
-alias ubuntu-sshs='ssh ubuntu@54.38.188.31'
+alias govh='ssh marcel@135.125.234.60'
 
 #### Git ####
 alias gb='git checkout $(git branch | fzy)'
@@ -196,3 +196,4 @@ xset r rate 150 45
 
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
+if [ -e /home/marcel/.nix-profile/etc/profile.d/nix.sh ]; then . /home/marcel/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

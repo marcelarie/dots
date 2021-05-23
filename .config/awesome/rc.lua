@@ -521,10 +521,9 @@ end, {description = "show rofi", group = "launcher"}), -- Prompt
 awful.key({modkey}, "r",
           function() awful.screen.focused().mypromptbox:run() end,
           {description = "run prompt", group = "launcher"}), --[[Print screen]] --
-                          awful.key({}, "Print", function()
-    awful.util.spawn("scrot -s")
-end), -- Run lua code
-awful.key({modkey}, "x", function()
+                          awful.key({}, "Print",
+                                    function() awful.util.spawn("scrot -s") end), -- Run lua code
+                          awful.key({modkey}, "x", function()
     awful.prompt.run {
         prompt = "Run Lua code: ",
         textbox = awful.screen.focused().mypromptbox.widget,
@@ -538,13 +537,12 @@ clientkeys = mytable.join(awful.key({altkey, "Shift"}, "m",
                                     lain.util.magnify_client, {
     description = "magnify client",
     group = "client"
-}), awful.key({modkey}, "f", function(c)
-    c.fullscreen = not c.fullscreen
-    c:raise()
-end, {description = "toggle fullscreen", group = "client"}),
-                          awful.key({modkey, "Shift"}, "q",
-                                    function(c) c:kill() end,
-                                    {description = "close", group = "client"}),
+}), --     awful.key({modkey}, "f", function(c)
+--     c.fullscreen = not c.fullscreen
+--     c:raise()
+-- end, {description = "toggle fullscreen", group = "client"}),
+awful.key({modkey, "Shift"}, "q", function(c) c:kill() end,
+          {description = "close", group = "client"}),
                           awful.key({modkey, "Control"}, "space",
                                     awful.client.floating.toggle, {
     description = "toggle floating",
@@ -563,7 +561,7 @@ end, {description = "toggle fullscreen", group = "client"}),
     -- minimized, since minimized clients can't have the focus.
     c.minimized = true
 end, {description = "minimize", group = "client"}),
-                          awful.key({modkey}, "m", function(c)
+                          awful.key({modkey}, "f", function(c)
     c.maximized = not c.maximized
     c:raise()
 end, {description = "(un)maximize", group = "client"}),
