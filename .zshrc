@@ -131,6 +131,9 @@ alias ...='cd ../..'
 alias ...='cd ../../..'
 alias cat='bat'
 
+#### Manjaro ####
+alias pacmi="sudo pacman-mirrors --fasttrack && sudo pacman -Syyu"
+
 #### Pacman ####
 alias pac='sudo pacman -S'
 alias pacr='sudo pacman -Rns'
@@ -143,6 +146,13 @@ alias govh='ssh marcel@135.125.234.60'
 #### Git ####
 alias gb='git checkout $(git branch | fzy)'
 alias gbde='git branch -D $(git branch | fzy)'
+
+#### Develop ####
+alias ys='yarn start'
+alias yu='yarn update'
+alias yi='yarn install'
+alias ya='yarn add'
+alias yig='yarn install -g'
 
 #### Configs ####
 alias zrc='nvim ~/.zshrc'
@@ -173,6 +183,7 @@ alias xp="xsel --clipboard --output"
 alias node15="source /usr/share/nvm/init-nvm.sh"
 alias sc='sh ~/scripts/$(ls ~/scripts/ | fzy)' # scripts selector
 alias env='printenv | fzy' # scripts selector
+alias nm='mw -Y && neomutt' # refresh and open neomutt 
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session'   # Attaches tmux to the last session; creates a new session if none exists.
