@@ -195,6 +195,7 @@ alias ts='tmux switch -t $(tmux ls | cut -f1 -d":" | fzy)'
 
 #### Rust ####
 alias cn='cargo new'
+alias ca='cargo add'
 alias cr='cargo run'
 alias cb='cargo build'
 alias cu='cargo update'
