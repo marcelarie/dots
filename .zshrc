@@ -203,6 +203,31 @@ alias cu='cargo update'
 alias cdo='cargo doc --open'
 alias cw="cargo watch -x run"
 
+
+### FUNCTIONS ###
+rga-fzf() { # ripgrep + fzf
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && bat --style=numbers --color=always && rga --pretty --context 5 {q} {}" \
+            # fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
+rgf()
+{
+    RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
+    FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
+    fzf --ansi --phony \
+        --bind "change:reload:$RG_PREFIX {q} || true" \
+        --preview-window=top:40% --preview "~/scripts/preview.sh -v {} | rg --pretty --colors 'match:bg:red' --colors 'match:fg:white' --no-line-number --ignore-case --context 3 {q}"
+}
+
 pfetch
 # wbcn
 # DEFAULT => (?) 250 45
