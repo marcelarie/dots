@@ -12,6 +12,7 @@
 !.config/pacman
 !.config/paru
 !.config/himalaya
+!.config/cheat
 !scripts/
 !.vimrc
 !*.zshrc

@@ -169,7 +169,7 @@ alias gorc='cd ~/.config/nvim/'
 
 #### Others ####
 alias fzf="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
-alias history="history | fzy"
+alias hist="history | fzy"
 alias live-server='live-server --no-browser'
 alias pt="vi ~/personal/tasks"
 alias gopt="cd ~/personal/tasks"
@@ -185,6 +185,7 @@ alias sc='sh ~/scripts/$(ls ~/scripts/"1$" | fzy)' # scripts selector
 alias scd='f(){sh ~/scripts/"$@"$(ls ~/scripts/"$@"/ | fzy)}; f'
 alias env='printenv | fzy' # scripts selector
 alias nm='mw -Y && neomutt' # refresh and open neomutt 
+alias mc="mcfly search"
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session'   # Attaches tmux to the last session; creates a new session if none exists.
@@ -227,6 +228,16 @@ rgf()
         --bind "change:reload:$RG_PREFIX {q} || true" \
         --preview-window=top:40% --preview "~/scripts/preview.sh -v {} | rg --pretty --colors 'match:bg:red' --colors 'match:fg:white' --no-line-number --ignore-case --context 3 {q}"
 }
+
+### init ###
+# eval "$(mcfly init zsh)"
+export MCFLY_KEY_SCHEME=vim
+export MCFLY_FUZZY=true
+eval "$(zoxide init zsh)"
+
+
+
+### AUTOS STARTS ###
 
 pfetch
 # wbcn
