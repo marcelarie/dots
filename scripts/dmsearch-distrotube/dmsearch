@@ -31,6 +31,8 @@ declare -a options=(
 "googlenews - https://news.google.com/search?q="
 "imdb - https://www.imdb.com/find?q="
 "reddit - https://www.reddit.com/search/?q="
+"rust - https://doc.rust-lang.org/book/?search="
+"crates.io - https://crates.io/search?q="
 "stack - https://stackoverflow.com/search?q="
 "translate - https://translate.google.com/?sl=auto&tl=en&text="
 "urban - https://www.urbandictionary.com/define.php?term="

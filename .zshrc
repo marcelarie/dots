@@ -169,7 +169,7 @@ alias gorc='cd ~/.config/nvim/'
 
 #### Others ####
 alias fzf="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
-alias hist="history | fzy"
+alias hist='history | fzy'
 alias live-server='live-server --no-browser'
 alias pt="vi ~/personal/tasks"
 alias gopt="cd ~/personal/tasks"
@@ -181,7 +181,7 @@ alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
 alias xyy="xsel --clipboard --input"
 alias xp="xsel --clipboard --output"
 alias node15="source /usr/share/nvm/init-nvm.sh"
-alias sc='sh ~/scripts/$(ls ~/scripts/"1$" | fzy)' # scripts selector
+alias sc='sh ~/scripts/$(ls ~/scripts/ | fzy)' # scripts selector
 alias scd='f(){sh ~/scripts/"$@"$(ls ~/scripts/"$@"/ | fzy)}; f'
 alias env='printenv | fzy' # scripts selector
 alias nm='mw -Y && neomutt' # refresh and open neomutt 
@@ -201,8 +201,14 @@ alias ca='cargo add'
 alias cr='cargo run'
 alias cb='cargo build'
 alias cu='cargo update'
+alias ci='cargo install'
 alias cdo='cargo doc --open'
 alias cw="cargo watch -x run"
+
+### Cheat ###
+alias ch='cheat'
+alias che='cheat -e'
+alias chl=' cheat $(cheat -l | cut -f1 -d " " | fzy)'
 
 
 ### FUNCTIONS ###
@@ -220,8 +226,7 @@ rga-fzf() { # ripgrep + fzf
 	echo "opening $file" &&
 	xdg-open "$file"
 }
-rgf()
-{
+rgf() {
     RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
     FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
     fzf --ansi --phony \
@@ -231,8 +236,8 @@ rgf()
 
 ### init ###
 # eval "$(mcfly init zsh)"
-export MCFLY_KEY_SCHEME=vim
-export MCFLY_FUZZY=true
+# export MCFLY_KEY_SCHEME=nvim
+# export MCFLY_FUZZY=true
 eval "$(zoxide init zsh)"
 
 
