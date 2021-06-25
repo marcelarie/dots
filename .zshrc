@@ -169,7 +169,7 @@ alias gorc='cd ~/.config/nvim/'
 
 #### Others ####
 alias fzf="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
-alias hist='history | fzy'
+alias hist='xdotool type --delay 0 "$(history | cut -c 8- | fzy)"'
 alias live-server='live-server --no-browser'
 alias pt="vi ~/personal/tasks"
 alias gopt="cd ~/personal/tasks"
@@ -186,6 +186,9 @@ alias scd='f(){sh ~/scripts/"$@"$(ls ~/scripts/"$@"/ | fzy)}; f'
 alias env='printenv | fzy' # scripts selector
 alias nm='mw -Y && neomutt' # refresh and open neomutt 
 alias mc="mcfly search"
+alias own='cd ~/clones/own/$(ls ~/clones/own | fzy)'
+alias learn='cd ~/clones/learning/$(ls ~/clones/learning | fzy)'
+alias fork='cd ~/clones/forks/$(ls ~/clones/forks | fzy)'
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session'   # Attaches tmux to the last session; creates a new session if none exists.
