@@ -169,7 +169,7 @@ alias gorc='cd ~/.config/nvim/'
 
 #### Others ####
 alias fzf="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
-alias hist='xdotool type --delay 0 "$(history | cut -c 8- | fzy)"'
+alias hist='xdotool type --delay 0 "$(history | cut -c 8- | fzy -l 20)"'
 alias live-server='live-server --no-browser'
 alias pt="vi ~/personal/tasks"
 alias gopt="cd ~/personal/tasks"
@@ -213,6 +213,11 @@ alias ch='cheat'
 alias che='cheat -e'
 alias chl=' cheat $(cheat -l | cut -f1 -d " " | fzy)'
 
+### Ctags ###
+alias ctag='ctags --recurse=yes'
+alias t='vi -t "$(cut -f1 tags | tail +7 | uniq | fzf)"'
+
+
 
 ### FUNCTIONS ###
 rga-fzf() { # ripgrep + fzf
@@ -255,3 +260,9 @@ xset r rate 150 45
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
 if [ -e /home/marcel/.nix-profile/etc/profile.d/nix.sh ]; then . /home/marcel/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+PATH="/home/marcel/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/marcel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/marcel/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/marcel/perl5"; export PERL_MM_OPT;

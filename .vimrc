@@ -1,5 +1,4 @@
 
-
     call plug#begin('~/.vim/plugged')
             Plug 'Mcmartelle/vim-monokai-bold'
             Plug 'sickill/vim-monokai'
@@ -11,10 +10,11 @@
         let mapleader = " "
         let g:oceanic_next_terminal_bold = 1
         colorscheme OceanicNext
+        set termguicolors
         syntax on
         set nu
         set cursorline
-        au TextYankPost * silent! lua require("vim.highlight").on_yank({ higroup = 'IncSearch', timeout = 300 })
+        " au TextYankPost * silent! lua require("vim.highlight").on_yank({ higroup = 'IncSearch', timeout = 300 })
 
 
     " Open tab
@@ -40,6 +40,10 @@
     " Resize vertical windows
         nnoremap <Leader>+ :vertical resize +5<CR>
         nnoremap <Leader>- :vertical resize -5<CR>
+    " ; for :                                                                                                                                                                               
+        nnoremap ; :                                                                                                                                                                        
+        nnoremap ; :
+
     " Go to tab by number
         noremap <leader>1 1gt
         noremap <leader>2 2gt

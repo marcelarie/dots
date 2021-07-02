@@ -19,3 +19,4 @@
 !*.prettierrc
 !*.profile
 !*.tmux.conf
+!*.vimrc
