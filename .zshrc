@@ -189,6 +189,7 @@ alias mc="mcfly search"
 alias own='cd ~/clones/own/$(ls ~/clones/own | fzy)'
 alias learn='cd ~/clones/learning/$(ls ~/clones/learning | fzy)'
 alias fork='cd ~/clones/forks/$(ls ~/clones/forks | fzy)'
+alias work='cd ~/clones/work/$(ls ~/clones/work | fzy)'
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session'   # Attaches tmux to the last session; creates a new session if none exists.
