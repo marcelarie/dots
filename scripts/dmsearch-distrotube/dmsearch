@@ -46,14 +46,14 @@ declare -a options=(
 
 # Picking a search engine.
 while [ -z "$engine" ]; do
-enginelist=$(printf '%s\n' "${options[@]}" | rofi -dmenu -theme gruvbox-dark -font "Fira Code 10" -i -l 20 -p 'Search engines') || exit
+enginelist=$(printf '%s\n' "${options[@]}" | rofi -dmenu -theme minimal -font "Fira Code 10" -i -l 20 -p 'Search engines') || exit
 engineurl=$(echo "$enginelist" | awk '{print $NF}')
 engine=$(echo "$enginelist" | awk '{print $1}')
 done
 
 # Searching the chosen engine.
 while [ -z "$query" ]; do
-query=$(echo "$engine" | rofi -dmenu -theme gruvbox-dark -font "Fira Code 11" -p 'Enter search query') || exit
+query=$(echo "$engine" | rofi -dmenu -theme gruvbox -font "Fira Code 11" -p 'Enter search query') || exit
 done
 
 # Display search results in web browser

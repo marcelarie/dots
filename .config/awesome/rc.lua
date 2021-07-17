@@ -502,7 +502,12 @@ end, {description = "copy gtk to terminal", group = "hotkeys"}),
 -- rofi
 awful.key({modkey}, "d", function()
     os.execute(string.format(
-                   " rofi -modi combi -theme gruvbox-dark -show drun -font 'Fira Code 10' -width 30",
+                   "rofi -modi combi -theme minimal -show drun -font 'Fira Code 10' -width 20",
+                   'run', 'dmenu'))
+end, {description = "show rofi", group = "launcher"}),
+                          awful.key({modkey}, "v", function()
+    os.execute(string.format(
+                   "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}' -theme minimal -font 'Fira Code 10' -width 40",
                    'run', 'dmenu'))
 end, {description = "show rofi", group = "launcher"}),
                           awful.key({modkey}, "g", function()
