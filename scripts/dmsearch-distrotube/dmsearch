@@ -14,22 +14,17 @@ DMBROWSER="brave"
 # The url format must allow for the search keywords at the end of the url.
 # For example: https://www.amazon.com/s?k=XXXX searches Amazon for 'XXXX'.
 declare -a options=(
-"amazon - https://www.amazon.com/s?k="
+"amazon - https://www.amazon.es/s?k="
 "archaur - https://aur.archlinux.org/packages/?O=0&K="
 "archpkg - https://archlinux.org/packages/?sort=&q="
 "archwiki - https://wiki.archlinux.org/index.php?search="
-"bbcnews - https://www.bbc.co.uk/search?q="
 "cliki - https://www.cliki.net/site/search?query="
-"cnn - https://www.cnn.com/search?q="
 "coinbase - https://www.coinbase.com/price?query="
 "duckduckgo - https://duckduckgo.com/?q="
-"ebay - https://www.ebay.com/sch/i.html?&_nkw="
 "github - https://github.com/search?q="
 "gitlab - https://gitlab.com/search?search="
 "google - https://www.google.com/search?q="
 "googleimages - https://www.google.com/search?hl=en&tbm=isch&q="
-"googlenews - https://news.google.com/search?q="
-"imdb - https://www.imdb.com/find?q="
 "reddit - https://www.reddit.com/search/?q="
 "rust book - https://doc.rust-lang.org/book/?search="
 "rust docs - https://doc.rust-lang.org/beta/std/index.html?search="
@@ -37,7 +32,6 @@ declare -a options=(
 "stackoverflow - https://stackoverflow.com/search?q="
 "google translate - https://translate.google.com/?sl=auto&tl=en&text="
 "urban dic - https://www.urbandictionary.com/define.php?term="
-"wayback - https://web.archive.org/web/*/"
 "webster - https://www.merriam-webster.com/dictionary/"
 "wikipedia - https://en.wikipedia.org/wiki/"
 "wiktionary - https://en.wiktionary.org/wiki/"
@@ -46,14 +40,14 @@ declare -a options=(
 
 # Picking a search engine.
 while [ -z "$engine" ]; do
-enginelist=$(printf '%s\n' "${options[@]}" | rofi -dmenu -theme minimal -font "Fira Code 10" -i -l 20 -p 'Search engines') || exit
+enginelist=$(printf '%s\n' "${options[@]}" | rofi -dmenu -theme minimal -font "Fira Code 10" -i -l 20 -p 'search engines  ') || exit
 engineurl=$(echo "$enginelist" | awk '{print $NF}')
 engine=$(echo "$enginelist" | awk '{print $1}')
 done
 
 # Searching the chosen engine.
 while [ -z "$query" ]; do
-query=$(echo "$engine" | rofi -dmenu -theme gruvbox -font "Fira Code 11" -p 'Enter search query') || exit
+query=$(echo "$engine" | rofi -dmenu -theme minimal -font "Fira Code 10" -p 'search query  ') || exit
 done
 
 # Display search results in web browser
