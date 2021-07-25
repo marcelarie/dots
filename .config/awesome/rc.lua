@@ -106,7 +106,7 @@ local terminal = "kitty"
 local vi_focus = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev = true -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor = "/usr/local/bin/nvim"
-local browser = "/usr/bin/brave"
+local browser = "/usr/bin/firefox"
 
 awful.util.terminal = terminal
 awful.util.tagnames = {"Ⅰ", "ⅠⅠ", "ⅠⅠⅠ", "ⅠⅤ", "Ⅴ"}
@@ -507,7 +507,7 @@ awful.key({modkey}, "d", function()
 end, {description = "show rofi", group = "launcher"}),
                           awful.key({modkey}, "v", function()
     os.execute(string.format(
-                   "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}' -theme minimal -font 'Fira Code 10' -width 40",
+                   [[ rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}' -theme minimal -font 'Fira Code 10' -width 40 ; xdotool type "$(xsel -b)"]],
                    'run', 'dmenu'))
 end, {description = "show rofi", group = "launcher"}),
                           awful.key({modkey}, "g", function()
