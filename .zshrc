@@ -261,7 +261,7 @@ eval "$(zoxide init zsh)"
 
 ### AUTOS STARTS ###
 
-pfetch
+#  pfetch
 # wbcn
 # DEFAULT => (?) 250 45
 xset r rate 150 45
@@ -269,6 +269,11 @@ xset r rate 150 45
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
 if [ -e /home/marcel/.nix-profile/etc/profile.d/nix.sh ]; then . /home/marcel/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+source ~/perl5/perlbrew/etc/bashrc
 
 PATH="/home/marcel/perl5/bin${PATH:+:${PATH}}"
 export PATH

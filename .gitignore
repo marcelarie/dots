@@ -13,6 +13,7 @@
 !.config/paru
 !.config/himalaya
 !.config/cheat
+!.config/fish
 !scripts/
 !.vimrc
 !*.zshrc
