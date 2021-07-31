@@ -3,6 +3,12 @@ if status is-interactive
 end
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
+#   colorscheme   #
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
+
+base16-gruvbox-dark-medium # :)
+
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  CONFIG   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
