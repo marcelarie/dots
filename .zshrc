@@ -257,7 +257,7 @@ zyc() {
 # eval "$(mcfly init zsh)"
 # export MCFLY_KEY_SCHEME=nvim
 # export MCFLY_FUZZY=true
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 
 ### AUTOS STARTS ###
 

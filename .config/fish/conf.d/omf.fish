@@ -33,4 +33,4 @@ function fish_mode_prompt
 end
 
 # pfetch on startup
-pfetch
+# pfetch
