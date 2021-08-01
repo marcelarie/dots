@@ -80,7 +80,7 @@ DISABLE_UPDATE_PROMPT="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions mongodb k)
+plugins=(git zsh-z zsh-syntax-highlighting zsh-autosuggestions mongodb k)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -274,6 +274,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 source ~/perl5/perlbrew/etc/bashrc
+source /home/marcel/programs/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 PATH="/home/marcel/perl5/bin${PATH:+:${PATH}}"
 export PATH
@@ -286,4 +287,4 @@ export PERL_MB_OPT
 PERL_MM_OPT="INSTALL_BASE=/home/marcel/perl5"
 export PERL_MM_OPT
 
-source /home/marcel/.config/broot/launcher/bash/br
+#  source /home/marcel/.config/broot/launcher/bash/br

@@ -516,7 +516,7 @@ end, {description = "show rofi", group = "launcher"}),
 end, {description = "show rofi", group = "launcher"}), -- ]]
 awful.key({modkey}, "0", function()
     os.execute(string.format(
-                   "rofi -show power-menu -theme flat-orange -modi power-menu:rofi-power-menu -width 25",
+                   "rofi -show power-menu -theme flat-orange -modi power-menu:/home/marcel/scripts/rofi-power-menu -font 'Fira Code 10' -width 25",
                    'run', 'dmenu'))
 end, {description = "show rofi", group = "launcher"}), -- ]]
 -- Keyword layout toggle
