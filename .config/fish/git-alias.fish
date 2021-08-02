@@ -57,8 +57,13 @@ alias gg 'git gui citool'
 alias gga 'git gui citool --amend'
 alias ggpull 'git pull origin (git_current_branch)'
 
-alias ggpush 'git push origin (git_current_branch)'
-alias ggsup 'git branch --set-upstream-to origin/(git_current_branch)'
+function current_branch
+  git symbolic-ref --short HEAD
+end
+
+alias ggpush 'git push origin (current_branch)'
+alias gpsup 'git push --set-upstream origin (current_branch)'
+alias ggsup 'git branch --set-upstream-to origin (current_branch)'
 alias ggpur 'ggu'
 
 alias gignore 'git update-index --assume-unchanged'

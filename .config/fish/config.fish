@@ -136,6 +136,9 @@ alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 ### Ctags ###
 alias frc='nvim ~/.config/fish/config.fish'
 
+### SoySuper ###
+alias re.pl='zsh -c re.pl'
+
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  TODO:   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
