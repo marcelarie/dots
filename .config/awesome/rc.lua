@@ -102,7 +102,7 @@ local themes = {
 local chosen_theme = themes[7]
 local modkey = "Mod4"
 local altkey = "Mod1"
-local terminal = "kitty"
+local terminal = "kitty fish"
 local vi_focus = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev = true -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor = "/usr/local/bin/nvim"
@@ -473,14 +473,14 @@ end, {description = "mpc next", group = "widgets"}),
     naughty.notify(common)
 end, {description = "mpc on/off", group = "widgets"}),
 
--- Copy primary to clipboard (terminals to gtk)
-                          awful.key({modkey}, "c", function()
-    awful.spawn.with_shell("xsel | xsel -i -b")
-end, {description = "copy terminal to gtk", group = "hotkeys"}),
--- Copy clipboard to primary (gtk to terminals)
-                          awful.key({modkey}, "v", function()
-    awful.spawn.with_shell("xsel -b | xsel")
-end, {description = "copy gtk to terminal", group = "hotkeys"}),
+-- -- Copy primary to clipboard (terminals to gtk)
+                          -- awful.key({modkey}, "c", function()
+    -- awful.spawn.with_shell("xsel | xsel -i -b")
+-- end, {description = "copy terminal to gtk", group = "hotkeys"}),
+-- -- Copy clipboard to primary (gtk to terminals)
+                          -- awful.key({modkey}, "v", function()
+    -- awful.spawn.with_shell("xsel -b | xsel")
+-- end, {description = "copy gtk to terminal", group = "hotkeys"}),
 
 -- User programs
                           awful.key({modkey}, "q",
@@ -505,11 +505,11 @@ awful.key({modkey}, "d", function()
                    "rofi -modi combi -theme minimal -show drun -font 'Fira Code 10' -width 20",
                    'run', 'dmenu'))
 end, {description = "show rofi", group = "launcher"}),
-                          awful.key({modkey}, "v", function()
-    os.execute(string.format(
-                   [[ rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}' -theme minimal -font 'Fira Code 10' -width 40 ; xdotool type "$(xsel -b)"]],
-                   'run', 'dmenu'))
-end, {description = "show rofi", group = "launcher"}),
+                          -- awful.key({modkey}, "v", function()
+    -- os.execute(string.format(
+                   -- [[ rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}' -theme minimal -font 'Fira Code 10' -width 40 ; xdotool type "$(xsel -b)"]],
+                   -- 'run', 'dmenu'))
+-- end, {description = "show rofi", group = "launcher"}),
                           awful.key({modkey}, "g", function()
     os.execute(string.format("~/scripts/dmsearch-distrotube/dmsearch", 'run',
                              'dmenu'))

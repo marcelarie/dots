@@ -192,6 +192,7 @@ alias own='zyc /home/marcel/clones/own'
 alias learn='zyc /home/marcel/clones/learning'
 alias fork='zyc /home/marcel/clones/forks'
 alias work='zyc /home/marcel/clones/work'
+alias locate='plocate'
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.
@@ -218,6 +219,10 @@ alias chl=' cheat $(cheat -l | cut -f1 -d " " | fzy)'
 ### Ctags ###
 alias ctag='ctags --recurse=yes'
 alias t='vi -t "$(cut -f1 tags | tail +7 | uniq | fzf)"'
+
+### ARCO ###
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+#  https://github.com/arcolinux/arcolinuxl-iso/blob/master/archiso/airootfs/etc/skel/.bashrc <- more here
 
 ### FUNCTIONS ###
 rga-fzf() { # ripgrep + fzf

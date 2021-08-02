@@ -3,10 +3,11 @@
             Plug 'Mcmartelle/vim-monokai-bold'
             Plug 'sickill/vim-monokai'
             Plug 'mhartington/oceanic-next'
+            Plug 'mbbill/undotree'
     call plug#end()
 
     "Leader Keybindings:"
-    
+
         let mapleader = " "
         let g:oceanic_next_terminal_bold = 1
         colorscheme OceanicNext
@@ -40,8 +41,8 @@
     " Resize vertical windows
         nnoremap <Leader>+ :vertical resize +5<CR>
         nnoremap <Leader>- :vertical resize -5<CR>
-    " ; for :                                                                                                                                                                               
-        nnoremap ; :                                                                                                                                                                        
+    " ; for :
+        nnoremap ; :
         nnoremap ; :
 
     " Go to tab by number
@@ -69,7 +70,7 @@
         set shiftwidth=4
         set softtabstop=4
         set expandtab
-     " files 
+     " files
         filetype on
         filetype indent on
         filetype plugin on
@@ -84,4 +85,3 @@
         set undolevels=1000
         set undoreload=10000
         set noswapfile
-

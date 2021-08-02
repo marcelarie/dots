@@ -62,8 +62,8 @@ alias pacu='sudo pacman -Su'
 alias govh='ssh marcel@135.125.234.60'
 
 #### Git ####
-alias gb='git checkout (git branch | fzy)'
-alias gbde='git branch -D (git branch | fzy)'
+alias gb='git checkout (git branch | fzy | xargs)'
+alias gbde='git branch -D (git branch | fzy | xargs)'
 
 #### Develop ####
 alias ys='yarn start'
@@ -105,6 +105,7 @@ alias own='zyc /home/marcel/clones/own'
 alias learn='zyc /home/marcel/clones/learning'
 alias fork='zyc /home/marcel/clones/forks'
 alias work='zyc /home/marcel/clones/work'
+alias locate='plocate'
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.
