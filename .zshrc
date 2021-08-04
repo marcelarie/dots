@@ -193,6 +193,7 @@ alias learn='zyc /home/marcel/clones/learning'
 alias fork='zyc /home/marcel/clones/forks'
 alias work='zyc /home/marcel/clones/work'
 alias locate='plocate'
+alias klay='setxkbmap $(printf "es\nus\nus(dvorak)\nes(dvorak)\n" | fzy)'
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.

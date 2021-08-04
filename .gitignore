@@ -15,6 +15,7 @@
 !.config/cheat
 !.config/fish
 !.config/starship.toml
+!.config/mimeapps.list
 !scripts/
 !.vimrc
 !*.zshrc
