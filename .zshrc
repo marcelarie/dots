@@ -115,7 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 #### Linux ####
-alias ls="exa"
+alias ls="exa --git"
 alias cp="cp -i"     # Confirm before overwriting something
 alias mv='mv -i'     # Confirm before overwriting something
 alias rm='rm -i'     # Confirm before overwriting something
@@ -194,6 +194,7 @@ alias fork='zyc /home/marcel/clones/forks'
 alias work='zyc /home/marcel/clones/work'
 alias locate='plocate'
 alias klay='setxkbmap $(printf "es\nus\nus(dvorak)\nes(dvorak)\n" | fzy)'
+alias frc='nvim ~/.config/fish/config.fish'
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.
@@ -220,6 +221,9 @@ alias chl=' cheat $(cheat -l | cut -f1 -d " " | fzy)'
 ### Ctags ###
 alias ctag='ctags --recurse=yes'
 alias t='vi -t "$(cut -f1 tags | tail +7 | uniq | fzf)"'
+
+### Supers ###
+alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
 
 ### ARCO ###
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -281,6 +285,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 source ~/perl5/perlbrew/etc/bashrc
 source /home/marcel/programs/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#  source /home/marcel/.config/broot/launcher/bash/br
 
 PATH="/home/marcel/perl5/bin${PATH:+:${PATH}}"
 export PATH
@@ -292,5 +297,3 @@ PERL_MB_OPT="--install_base \"/home/marcel/perl5\""
 export PERL_MB_OPT
 PERL_MM_OPT="INSTALL_BASE=/home/marcel/perl5"
 export PERL_MM_OPT
-
-#  source /home/marcel/.config/broot/launcher/bash/br

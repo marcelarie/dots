@@ -33,7 +33,7 @@ source $HOME/.config/fish/git-alias.fish
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 #### Linux ####
-alias ls="exa"
+alias ls="exa --git"
 alias l="ls"
 alias cp="cp -i"     # Confirm before overwriting something
 alias mv="mv -i"     # Confirm before overwriting something
@@ -86,7 +86,7 @@ alias rc='nvim ~/.config/nvim/init.*'
 alias gorc='cd ~/.config/nvim/'
 
 #### Others ####
-alias hist='xdotool type --delay 0 "(history | cut -c 8- | fzy -l 20)"'
+alias hist='xdotool type --delay 0 (history | fzy -l 20)'
 alias live-server='live-server --no-browser'
 alias pt="vi ~/personal/tasks"
 alias gopt="cd ~/personal/tasks"
@@ -139,6 +139,7 @@ alias frc='nvim ~/.config/fish/config.fish'
 
 ### SoySuper ###
 alias re.pl='zsh -c re.pl'
+alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  TODO:   #
