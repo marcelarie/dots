@@ -7,7 +7,7 @@
 # Contributors: Derek Taylor, Ali Furkan Yıldız
 
 # Defining our web browser.
-DMBROWSER="brave"
+DMBROWSER="firefox"
 
 # An array of search engines.  You can edit this list to add/remove
 # search engines. The format must be: "engine_name - url".
@@ -40,16 +40,15 @@ declare -a options=(
 
 # Picking a search engine.
 while [ -z "$engine" ]; do
-enginelist=$(printf '%s\n' "${options[@]}" | rofi -dmenu -theme minimal -font "Fira Code 10" -i -l 20 -p 'search engines  ') || exit
-engineurl=$(echo "$enginelist" | awk '{print $NF}')
-engine=$(echo "$enginelist" | awk '{print $1}')
+    enginelist=$(printf '%s\n' "${options[@]}" | rofi -dmenu -theme minimal -font "Fira Code 10" -i -l 20 -p 'search engines  ') || exit
+    engineurl=$(echo "$enginelist" | awk '{print $NF}')
+    engine=$(echo "$enginelist" | awk '{print $1}')
 done
 
 # Searching the chosen engine.
 while [ -z "$query" ]; do
-query=$(echo "$engine" | rofi -dmenu -theme minimal -font "Fira Code 10" -p 'search query  ') || exit
+    query=$(echo "$engine" | rofi -dmenu -theme minimal -font "Fira Code 10" -p 'search query  ') || exit
 done
 
 # Display search results in web browser
 $DMBROWSER "$engineurl""$query"
-

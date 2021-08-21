@@ -167,7 +167,7 @@ alias gorc='cd ~/.config/nvim/'
 
 #### Others ####
 alias fzf="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
-alias hist='xdotool type --delay 0 "$(history | cut -c 8- | fzy -l 20)"'
+alias hist='xdotool type --delay 0 "$(history | tac | cut -c 8- | fzy -l 20)"'
 alias live-server='live-server --no-browser'
 alias pt="vi ~/personal/tasks"
 alias gopt="cd ~/personal/tasks"

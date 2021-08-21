@@ -1,0 +1,6 @@
+empty_item_single_line = false
+format_strings = true
+reorder_impl_items = true
+spaces_around_ranges = true
+struct_field_align_threshold = 20
+use_field_init_shorthand = true
