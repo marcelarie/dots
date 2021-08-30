@@ -1,3 +1,4 @@
+ edition = "2018"
 empty_item_single_line = false
 format_strings = true
 reorder_impl_items = true
