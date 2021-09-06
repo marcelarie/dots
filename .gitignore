@@ -26,3 +26,6 @@
 !*.vimrc
 !*local_supers.md
 !*old-sys-pacman-qe.md
+!*.rasi
+!stylelua.toml
+!.gitconfig

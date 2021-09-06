@@ -1,0 +1,23 @@
+[user]
+	email = googlillo@gmail.com
+	name = marcelarie
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    ;  syntax-theme = Monokai Extended
+    syntax-theme = gruvbox-dark
+
+    navigate = true
+    line-numbers = true
+
+[interactive]
+    diffFilter = delta --color-only
+[core]
+	editor = nvim
