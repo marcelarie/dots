@@ -129,6 +129,9 @@ alias ...='cd ../..'
 alias ...='cd ../../..'
 alias cat='bat'
 
+#### Git ####
+alias gs='git status'
+
 #### Manjaro ####
 alias pacmi="sudo pacman-mirrors --fasttrack && sudo pacman -Syyu"
 
@@ -195,6 +198,7 @@ alias work='zyc /home/marcel/clones/work'
 alias locate='plocate'
 alias klay='setxkbmap $(printf "es\nus\nus(dvorak)\nes(dvorak)\n" | fzy)'
 alias frc='nvim ~/.config/fish/config.fish'
+#  alias af='xdotool type --delay 0 $( alias | fzy | awk -F' ' '{print $2}')'
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.

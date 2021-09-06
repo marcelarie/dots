@@ -531,7 +531,10 @@ globalkeys = mytable.join(
 		function()
 			awful.tag.incnmaster(1, nil, true)
 		end,
-		{ description = "increase the number of master clients", group = "layout" }
+		{
+			description = "increase the number of master clients",
+			group = "layout",
+		}
 	),
 	awful.key(
 		{ modkey, "Shift" },
@@ -539,7 +542,10 @@ globalkeys = mytable.join(
 		function()
 			awful.tag.incnmaster(-1, nil, true)
 		end,
-		{ description = "decrease the number of master clients", group = "layout" }
+		{
+			description = "decrease the number of master clients",
+			group = "layout",
+		}
 	),
 	awful.key({ modkey, "Control" }, "h", function()
 		awful.tag.incncol(1, nil, true)
@@ -767,18 +773,18 @@ globalkeys = mytable.join(
 	-- [[ rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}' -theme minimal -font 'Fira Code 10' -width 40 ; xdotool type "$(xsel -b)"]],
 	-- 'run', 'dmenu'))
 	-- end, {description = "show rofi", group = "launcher"}),
-	awful.key({ modkey }, "g", function()
-		os.execute(
-			string.format(
-				"~/scripts/dmsearch-distrotube/dmsearch",
-				"run",
-				"dmenu"
-			)
-		)
-	end, {
-		description = "show rofi",
-		group = "launcher",
-	}), -- ]]
+	--  awful.key({ modkey }, "g", function()
+	--  os.execute(
+	--  string.format(
+	--  "~/scripts/dmsearch-distrotube/dmsearch",
+	--  "run",
+	--  "dmenu"
+	--  )
+	--  )
+	--  end, {
+	--  description = "show rofi",
+	--  group = "launcher",
+	--  }), -- ]]
 	awful.key({ modkey }, "0", function()
 		os.execute(
 			string.format(

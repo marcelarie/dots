@@ -107,6 +107,7 @@ alias fork='zyc /home/marcel/clones/forks'
 alias work='zyc /home/marcel/clones/work'
 alias locate='plocate'
 alias klay='setxkbmap (printf "es\nus\nus(dvorak)\nes(dvorak)\n" | fzy)'
+alias af='xdotool type --delay 0 ( alias | fzy | awk -F\' \' \'{print $2}\')'
 
 #### Tmux ####
 alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.
@@ -141,6 +142,8 @@ alias frc='nvim ~/.config/fish/config.fish'
 alias re.pl='zsh -c re.pl'
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
 
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  TODO:   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
@@ -171,6 +174,9 @@ export PERL5LIB
 # set PERL_LOCAL_LIB_ROOT "/home/marcel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
 set -x PERL_LOCAL_LIB_ROOT /home/marcel/perl5:/home/marcel/perl5
 export PERL_LOCAL_LIB_ROOT
+
+set -x NODE_PATH (npm root -g)
+export NODE_PATH
 
 #set PERL_MB_OPT "--install_base \"/home/marcel/perl5\""
 # export PERL_MB_OPT
