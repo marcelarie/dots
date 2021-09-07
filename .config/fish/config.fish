@@ -164,7 +164,7 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 
 # source ~/perl5/perlbrew/etc/perlbrew.fish
 
-# set PATH "/home/marcel/perl5/bin${PATH:+:${PATH}}"
+# set -x PATH /home/marcel/perl5/bin${PATH:+:${PATH}}
 # export PATH
 
 # set PERL5LIB "/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
@@ -178,10 +178,10 @@ export PERL_LOCAL_LIB_ROOT
 set -x NODE_PATH (npm root -g)
 export NODE_PATH
 
-#set PERL_MB_OPT "--install_base \"/home/marcel/perl5\""
-# export PERL_MB_OPT
-
-# set PERL_MM_OPT "INSTALL_BASE=/home/marcel/perl5"
-# export PERL_MM_OPT
+ #set PERL_MB_OPT --install_base \"/home/marcel/perl5\"
+ #export PERL_MB_OPT
+ #
+ #set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
+ #export PERL_MM_OPT
 
 starship init fish | source

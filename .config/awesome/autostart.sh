@@ -22,6 +22,7 @@ run volumeicon
 #you can set wallpapers in themes as well
 feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 # run nitrogen
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 
 #run applications from startup
 #run firefox

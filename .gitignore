@@ -7,6 +7,7 @@
 !.config
 .config/*
 !.config/awesome
+!.config/arco-dwm
 !.config/kitty
 !.config/polybar*
 !.config/pacman
