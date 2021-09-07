@@ -26,7 +26,6 @@ Variable | Meaning | Type | Default
 `full_notify` | Show a notification popup when the battery's fully charged | string | inherited value from `notify`
 `n_perc` | Percentages assumed for critical and low battery levels | table of integers | `{5, 15}`
 `settings` | User settings | function | empty function
-`widget` | Widget to render | function | `wibox.widget.textbox`
 
 The widget will try to autodetect `battery`, `batteries` and `ac`. If something
 goes wrong, you will have to define them manually. In that case, you only have

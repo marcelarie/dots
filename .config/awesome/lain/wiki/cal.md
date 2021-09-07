@@ -24,7 +24,7 @@ Variable | Meaning | Type | Default
 `week_number` | Display the week number | string ("none", "left" or "right") | "none"
 `week_number_format` | Week number format | string | `"%3d \| "` for "left", `"\| %-3d"` for "right"
 `icons` | Path to calendar icons | string | [icons/cal/white/](https://github.com/lcpz/lain/tree/master/icons/cal/white)
-`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/lcpz/lain/wiki/cal#default-notification_preset)
+`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/lcpz/lain/wiki/calendar#default-notification_preset)
 
 Set `attach_to` as the list of widgets to which you want to attach the calendar, like this:
 

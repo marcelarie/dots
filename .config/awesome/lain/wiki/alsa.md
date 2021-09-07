@@ -19,7 +19,6 @@ Variable | Meaning | Type | Default
 `channel` | Mixer channel | string | "Master"
 `togglechannel` | Toggle channel | string | `nil`
 `settings` | User settings | function | empty function
-`widget` | Widget to render | function | `wibox.widget.textbox`
 
 `cmd` is useful if you need to pass additional arguments to amixer. For instance, you may want to define `cmd = "amixer -c X"` in order to set amixer with card `X`.
 

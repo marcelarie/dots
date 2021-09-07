@@ -15,9 +15,8 @@ local string  = string
 -- lain.widget.net
 
 local function factory(args)
-    args             = args or {}
-
-    local net        = { widget = args.widget or wibox.widget.textbox(), devices = {} }
+    local net        = { widget = wibox.widget.textbox(), devices = {} }
+    local args       = args or {}
     local timeout    = args.timeout or 2
     local units      = args.units or 1024 -- KB
     local notify     = args.notify or "on"
@@ -30,14 +29,13 @@ local function factory(args)
     net.iface = (args.iface and (type(args.iface) == "string" and {args.iface}) or
                 (type(args.iface) == "table" and args.iface)) or {}
 
-    function net.get_devices()
-        net.iface = {} -- reset at every call
+    function net.get_device()
         helpers.line_callback("ip link", function(line)
             net.iface[#net.iface + 1] = not string.match(line, "LOOPBACK") and string.match(line, "(%w+): <") or nil
         end)
     end
 
-    if #net.iface == 0 then net.get_devices() end
+    if #net.iface == 0 then net.get_device() end
 
     function net.update()
         -- These are the totals over all specified interfaces
@@ -69,19 +67,13 @@ local function factory(args)
             dev_now.last_t   = now_t
             dev_now.last_r   = now_r
 
-            if wifi_state == "on" and helpers.first_line(string.format("/sys/class/net/%s/uevent", dev)) == "DEVTYPE=wlan" then
+            if wifi_state == "on" and helpers.first_line(string.format("/sys/class/net/%s/uevent", dev)) == "DEVTYPE=wlan" and string.match(dev_now.carrier, "1") then
                 dev_now.wifi   = true
-                if string.match(dev_now.carrier, "1") then
-                        dev_now.signal = tonumber(string.match(helpers.lines_from("/proc/net/wireless")[3], "(%-%d+%.)")) or nil
-                end
-            else
-                dev_now.wifi   = false
+                dev_now.signal = tonumber(string.match(helpers.lines_from("/proc/net/wireless")[3], "(%-%d+%.)")) or nil
             end
 
-            if eth_state == "on" and helpers.first_line(string.format("/sys/class/net/%s/uevent", dev)) ~= "DEVTYPE=wlan" then
+            if eth_state == "on" and helpers.first_line(string.format("/sys/class/net/%s/uevent", dev)) ~= "DEVTYPE=wlan" and string.match(dev_now.carrier, "1") then
                 dev_now.ethernet = true
-            else
-                dev_now.ethernet = false
             end
 
             net.devices[dev] = dev_now

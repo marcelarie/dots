@@ -10,6 +10,7 @@ local markup  = require("lain.util").markup
 local awful   = require("awful")
 local naughty = require("naughty")
 local mouse   = mouse
+local string  = string
 
 -- Taskwarrior notification
 -- lain.widget.contrib.task
@@ -68,8 +69,7 @@ function task.prompt()
 end
 
 function task.attach(widget, args)
-    args                     = args or {}
-
+    local args               = args or {}
     task.show_cmd            = args.show_cmd or "task next"
     task.prompt_text         = args.prompt_text or "Enter task command: "
     task.followtag           = args.followtag or false
