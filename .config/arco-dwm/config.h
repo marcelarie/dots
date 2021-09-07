@@ -47,7 +47,7 @@ static const Rule rules[] = {
 	 */
 	/* class                       instance    title      tags mask      isfloating   monitor */
 	{ "Gimp",                         NULL,       NULL,       0,            0,           -1 },
-    { "kitty",                        NULL,       NULL,       0,            1,           -1 },
+    { "kitty",                        NULL,       NULL,       0,            0,           -1 },
 	{ "firefox",                      NULL,       NULL,       0,            0,           -1 },
 	{ "Arcolinux-welcome-app.py",     NULL,       NULL,       0,            1,           -1 },
 	{ "Arcolinux-calamares-tool.py",  NULL,       NULL,       0,            1,           -1 },
@@ -82,11 +82,12 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "kitty", "fish", NULL };
-static const char *filecmd[]  = { "thunar", NULL };
-static const char *calendar[]  = { "gsimplecal", NULL };
-static const char *taskmanager[]  = { "xfce4-taskmanager", NULL };
+static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *roficmd[]     = { "rofi", "-modi", "combi", "-show", "drun", "-theme", "/usr/share/rofi/themes/minimal.rasi", "-font", "Fira Code 10", "-width", "20", NULL };
+static const char *termcmd[]     = { "kitty", "fish", NULL };
+static const char *filecmd[]     = { "thunar", NULL };
+static const char *calendar[]    = { "gsimplecal", NULL };
+static const char *taskmanager[] = { "xfce4-taskmanager", NULL };
 
 #include "selfrestart.c"
 #include "shiftview.c"
@@ -96,13 +97,14 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = filecmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_d,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	// { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
@@ -131,10 +133,10 @@ static Key keys[] = {
 	{ Mod1Mask|ControlMask,         XK_Left,   shiftview,      {.i = -1 } },
 	{ Mod1Mask|ControlMask,         XK_Up,     shiftview,      {.i =  1 } },
 	{ Mod1Mask|ControlMask,         XK_Down,   shiftview,      {.i = -1 } },
-	{ Mod1Mask,						XK_Tab,    shiftview,      {.i =  1 } },
-	{ Mod1Mask|ShiftMask,	        XK_Tab,	   shiftview,	   {.i = -1 } },
-	{ MODKEY,		        		XK_Tab,    shiftview,	   {.i =  1 } },
-	{ MODKEY|ShiftMask,		        XK_Tab,	   shiftview,	   {.i = -1 } },
+	{ MODKEY,                       XK_Tab,    focusstack,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Tab,    focusstack,     {.i = -1 } },
+	// { MODKEY,		        		XK_Tab,    shiftview,	   {.i =  1 } },
+	// { MODKEY|ShiftMask,		        XK_Tab,	   shiftview,	   {.i = -1 } },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
