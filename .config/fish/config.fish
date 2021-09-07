@@ -75,6 +75,8 @@ alias yig='yarn install -g'
 #### Configs ####
 alias zrc='nvim ~/.zshrc'
 alias arc='nvim ~/.config/awesome'
+alias drc='nvim ~/.config/arco-dwm'
+alias frc='nvim ~/.config/fish/config.fish'
 alias clones='~/clones'
 alias dots='vi ~/.gitignore'
 
@@ -135,9 +137,6 @@ alias chl=' cheat (cheat -l | cut -f1 -d " " | fzy)'
 alias ctag='ctags --recurse=yes'
 alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 
-### Ctags ###
-alias frc='nvim ~/.config/fish/config.fish'
-
 ### SoySuper ###
 alias re.pl='zsh -c re.pl'
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
@@ -178,10 +177,10 @@ export PERL_LOCAL_LIB_ROOT
 set -x NODE_PATH (npm root -g)
 export NODE_PATH
 
- #set PERL_MB_OPT --install_base \"/home/marcel/perl5\"
- #export PERL_MB_OPT
- #
- #set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
- #export PERL_MM_OPT
+set PERL_MB_OPT --install_base \"/home/marcel/perl5\"
+export PERL_MB_OPT
+
+set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
+export PERL_MM_OPT
 
 starship init fish | source
