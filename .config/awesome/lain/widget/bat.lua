@@ -26,9 +26,8 @@ local function factory(args)
         return
     end
 
-    args              = args or {}
-
-    local bat         = { widget = args.widget or wibox.widget.textbox() }
+    local bat         = { widget = wibox.widget.textbox() }
+    local args        = args or {}
     local timeout     = args.timeout or 30
     local notify      = args.notify or "on"
     local full_notify = args.full_notify or notify
@@ -43,7 +42,7 @@ local function factory(args)
             if bstr then
                 batteries[#batteries + 1] = bstr
             else
-                ac = string.match(line, "A%w+") or ac
+                ac = string.match(line, "A%w+") or "AC0"
             end
         end)
     end
@@ -137,7 +136,7 @@ local function factory(args)
         -- "Full", "Unknown" or "Charging". When the laptop is not plugged in,
         -- one or more of the batteries may be full, but only one battery
         -- discharging suffices to set global status to "Discharging".
-        bat_now.status = bat_now.n_status[1] or "N/A"
+        bat_now.status = bat_now.n_status[1]
         for _,status in ipairs(bat_now.n_status) do
             if status == "Discharging" or status == "Charging" then
                 bat_now.status = status

@@ -1,4 +1,3 @@
-
 --[[
 
      Awesome-Freedesktop
@@ -12,12 +11,15 @@
 
 --]]
 
-local Gio        = require("lgi").Gio
 local awful_menu = require("awful.menu")
 local menu_gen   = require("menubar.menu_gen")
 local menu_utils = require("menubar.utils")
+--local icon_theme = require("menubar.icon_theme")
 
 local io, pairs, string, table, os = io, pairs, string, table, os
+
+-- Add support for NixOS systems too
+table.insert(menu_gen.all_menu_dirs, string.format("%s/.nix-profile/share/applications", os.getenv("HOME")))
 
 -- Expecting a wm_name of awesome omits too many applications and tools
 menu_utils.wm_name = ""
@@ -26,11 +28,13 @@ menu_utils.wm_name = ""
 -- freedesktop.menu
 local menu = {}
 
--- Check if a path is a directory.
--- @tparam string path The directory path
--- @treturn boolean True if path exists and is a directory
+-- Determines if a path points to a directory, by checking if it can be read
+-- (which is `nil` also for empty files) and if its size is not 0.
+-- @author blueyed
+-- @param path the path to check
 function menu.is_dir(path)
-    return Gio.File.new_for_path(path):query_file_type({}) == "DIRECTORY"
+    local f = io.open(path)
+    return f and not f:read(0) and f:seek("end") ~= 0 and f:close()
 end
 
 -- Remove non existent paths in order to avoid issues
@@ -59,6 +63,7 @@ end
 -- @return awful.menu
 function menu.build(args)
     local args       = args or {}
+--    local icon_size  = args.icon_size
     local before     = args.before or {}
     local after      = args.after or {}
     local skip_items = args.skip_items or {}
@@ -69,8 +74,8 @@ function menu.build(args)
 
     menu_gen.generate(function(entries)
         -- Add category icons
-        for k, v in pairs(menu_gen.all_categories) do
-            table.insert(result, { k, {}, v.icon })
+        for k in pairs(menu_gen.all_categories) do
+            table.insert(result, { k, {}, })
         end
 
         -- Get items table
@@ -78,7 +83,7 @@ function menu.build(args)
             for _, cat in pairs(result) do
                 if cat[1] == v.category then
                     if not menu.has_value(skip_items, v.name) then
-                        table.insert(cat[2], { v.name, v.cmdline, v.icon })
+                        table.insert(cat[2], { v.name, v.cmdline })
                     end
                     break
                 end
@@ -112,6 +117,13 @@ function menu.build(args)
         for _, v in pairs(after)  do _menu:add(v) end
     end)
 
+    -- Set icon size
+--[[    if icon_size then
+        for _,v in pairs(menu_gen.all_categories) do
+            v.icon = icon_theme():find_icon_path(v.icon_name, icon_size)
+        end
+    end
+--]]
     -- Hold the menu in the module
     menu.menu = _menu
 

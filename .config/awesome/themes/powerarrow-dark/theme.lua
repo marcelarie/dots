@@ -16,8 +16,8 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme = {}
 theme.dir = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
-theme.wallpaper = theme.dir .. "/dark.png"
-theme.font = "FiraCode 9"
+theme.wallpaper = theme.dir .. "dark.png"
+theme.font = "FiraCode 12"
 theme.fg_normal = "#DDDDFF"
 theme.fg_focus = "#DDDDFF"
 theme.fg_urgent = "#CC9393"
@@ -69,42 +69,24 @@ theme.widget_mail_on = theme.dir .. "/icons/mail_on.png"
 theme.tasklist_plain_task_name = true
 theme.tasklist_disable_icon = true
 theme.useless_gap = dpi(0)
-theme.titlebar_close_button_focus = theme.dir
-	.. "/icons/titlebar/close_focus.png"
-theme.titlebar_close_button_normal = theme.dir
-	.. "/icons/titlebar/close_normal.png"
-theme.titlebar_ontop_button_focus_active = theme.dir
-	.. "/icons/titlebar/ontop_focus_active.png"
-theme.titlebar_ontop_button_normal_active = theme.dir
-	.. "/icons/titlebar/ontop_normal_active.png"
-theme.titlebar_ontop_button_focus_inactive = theme.dir
-	.. "/icons/titlebar/ontop_focus_inactive.png"
-theme.titlebar_ontop_button_normal_inactive = theme.dir
-	.. "/icons/titlebar/ontop_normal_inactive.png"
-theme.titlebar_sticky_button_focus_active = theme.dir
-	.. "/icons/titlebar/sticky_focus_active.png"
-theme.titlebar_sticky_button_normal_active = theme.dir
-	.. "/icons/titlebar/sticky_normal_active.png"
-theme.titlebar_sticky_button_focus_inactive = theme.dir
-	.. "/icons/titlebar/sticky_focus_inactive.png"
-theme.titlebar_sticky_button_normal_inactive = theme.dir
-	.. "/icons/titlebar/sticky_normal_inactive.png"
-theme.titlebar_floating_button_focus_active = theme.dir
-	.. "/icons/titlebar/floating_focus_active.png"
-theme.titlebar_floating_button_normal_active = theme.dir
-	.. "/icons/titlebar/floating_normal_active.png"
-theme.titlebar_floating_button_focus_inactive = theme.dir
-	.. "/icons/titlebar/floating_focus_inactive.png"
-theme.titlebar_floating_button_normal_inactive = theme.dir
-	.. "/icons/titlebar/floating_normal_inactive.png"
-theme.titlebar_maximized_button_focus_active = theme.dir
-	.. "/icons/titlebar/maximized_focus_active.png"
-theme.titlebar_maximized_button_normal_active = theme.dir
-	.. "/icons/titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_inactive = theme.dir
-	.. "/icons/titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_inactive = theme.dir
-	.. "/icons/titlebar/maximized_normal_inactive.png"
+theme.titlebar_close_button_focus = theme.dir .. "/icons/titlebar/close_focus.png"
+theme.titlebar_close_button_normal = theme.dir .. "/icons/titlebar/close_normal.png"
+theme.titlebar_ontop_button_focus_active = theme.dir .. "/icons/titlebar/ontop_focus_active.png"
+theme.titlebar_ontop_button_normal_active = theme.dir .. "/icons/titlebar/ontop_normal_active.png"
+theme.titlebar_ontop_button_focus_inactive = theme.dir .. "/icons/titlebar/ontop_focus_inactive.png"
+theme.titlebar_ontop_button_normal_inactive = theme.dir .. "/icons/titlebar/ontop_normal_inactive.png"
+theme.titlebar_sticky_button_focus_active = theme.dir .. "/icons/titlebar/sticky_focus_active.png"
+theme.titlebar_sticky_button_normal_active = theme.dir .. "/icons/titlebar/sticky_normal_active.png"
+theme.titlebar_sticky_button_focus_inactive = theme.dir .. "/icons/titlebar/sticky_focus_inactive.png"
+theme.titlebar_sticky_button_normal_inactive = theme.dir .. "/icons/titlebar/sticky_normal_inactive.png"
+theme.titlebar_floating_button_focus_active = theme.dir .. "/icons/titlebar/floating_focus_active.png"
+theme.titlebar_floating_button_normal_active = theme.dir .. "/icons/titlebar/floating_normal_active.png"
+theme.titlebar_floating_button_focus_inactive = theme.dir .. "/icons/titlebar/floating_focus_inactive.png"
+theme.titlebar_floating_button_normal_inactive = theme.dir .. "/icons/titlebar/floating_normal_inactive.png"
+theme.titlebar_maximized_button_focus_active = theme.dir .. "/icons/titlebar/maximized_focus_active.png"
+theme.titlebar_maximized_button_normal_active = theme.dir .. "/icons/titlebar/maximized_normal_active.png"
+theme.titlebar_maximized_button_focus_inactive = theme.dir .. "/icons/titlebar/maximized_focus_inactive.png"
+theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/maximized_normal_inactive.png"
 
 local markup = lain.util.markup
 local separators = lain.util.separators
@@ -115,19 +97,15 @@ end)
 
 -- Textclock
 local clockicon = wibox.widget.imagebox(theme.widget_clock)
-local clock = awful.widget.watch(
-	"date +'%a %d %b %R'",
-	60,
-	function(widget, stdout)
-		widget:set_markup(" " .. markup.font(theme.font, stdout))
-	end
-)
+local clock = awful.widget.watch("date +'%a %d %b %R'", 60, function(widget, stdout)
+	widget:set_markup(" " .. markup.font(theme.font, stdout))
+end)
 
 -- Calendar
 theme.cal = lain.widget.cal({
 	attach_to = { clock },
 	notification_preset = {
-		font = "FiraCode 10",
+		font = "FiraCode 12",
 		fg = theme.fg_normal,
 		bg = theme.bg_normal,
 	},
@@ -155,8 +133,7 @@ theme.mail = lain.widget.imap({
 --]]
 
 -- MPD
-local musicplr = awful.util.terminal
-	.. " -title Music -g 130x34-320+16 -e ncmpcpp"
+local musicplr = awful.util.terminal .. " -title Music -g 130x34-320+16 -e ncmpcpp"
 local mpdicon = wibox.widget.imagebox(theme.widget_music)
 mpdicon:buttons(my_table.join(
 	awful.button({ modkey }, 1, function()
@@ -190,9 +167,7 @@ theme.mpd = lain.widget.mpd({
 			mpdicon:set_image(theme.widget_music)
 		end
 
-		widget:set_markup(
-			markup.font(theme.font, markup("#EA6F81", artist) .. title)
-		)
+		widget:set_markup(markup.font(theme.font, markup("#EA6F81", artist) .. title))
 	end,
 })
 
@@ -216,9 +191,7 @@ local cpu = lain.widget.cpu({
 local tempicon = wibox.widget.imagebox(theme.widget_temp)
 local temp = lain.widget.temp({
 	settings = function()
-		widget:set_markup(
-			markup.font(theme.font, " " .. coretemp_now .. "°C ")
-		)
+		widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
 	end,
 })
 
@@ -247,9 +220,7 @@ local bat = lain.widget.bat({
 			else
 				baticon:set_image(theme.widget_battery)
 			end
-			widget:set_markup(
-				markup.font(theme.font, " " .. bat_now.perc .. "% ")
-			)
+			widget:set_markup(markup.font(theme.font, " " .. bat_now.perc .. "% "))
 		else
 			widget:set_markup(markup.font(theme.font, " AC "))
 			baticon:set_image(theme.widget_ac)
@@ -271,9 +242,7 @@ theme.volume = lain.widget.alsa({
 			volicon:set_image(theme.widget_vol)
 		end
 
-		widget:set_markup(
-			markup.font(theme.font, " " .. volume_now.level .. "% ")
-		)
+		widget:set_markup(markup.font(theme.font, " " .. volume_now.level .. "% "))
 	end,
 })
 theme.volume.widget:buttons(awful.util.table.join(
@@ -294,15 +263,9 @@ local net = lain.widget.net({
 		widget:set_markup(
 			markup.font(
 				theme.font,
-				markup(
-					"#7AC82E",
-					" " .. string.format("%06.1f", net_now.received)
-				)
+				markup("#7AC82E", " " .. string.format("%06.1f", net_now.received))
 					.. " "
-					.. markup(
-						"#46A8C3",
-						" " .. string.format("%06.1f", net_now.sent) .. " "
-					)
+					.. markup("#46A8C3", " " .. string.format("%06.1f", net_now.sent) .. " ")
 			)
 		)
 	end,
@@ -350,18 +313,10 @@ function theme.at_screen_connect(s)
 		end)
 	))
 	-- Create a taglist widget
-	s.mytaglist = awful.widget.taglist(
-		s,
-		awful.widget.taglist.filter.all,
-		awful.util.taglist_buttons
-	)
+	s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons)
 
 	-- Create a tasklist widget
-	s.mytasklist = awful.widget.tasklist(
-		s,
-		awful.widget.tasklist.filter.currenttags,
-		awful.util.tasklist_buttons
-	)
+	s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
 	-- Create the wibox
 	s.mywibox = awful.wibar({

@@ -296,7 +296,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 NODE_PATH=$(npm root -g)
 
 source ~/perl5/perlbrew/etc/bashrc
-source /home/marcel/programs/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #  source /home/marcel/.config/broot/launcher/bash/br
 
 PATH="/home/marcel/perl5/bin${PATH:+:${PATH}}"
@@ -309,3 +308,4 @@ PERL_MB_OPT="--install_base \"/home/marcel/perl5\""
 export PERL_MB_OPT
 PERL_MM_OPT="INSTALL_BASE=/home/marcel/perl5"
 export PERL_MM_OPT
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

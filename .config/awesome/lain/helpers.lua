@@ -25,8 +25,9 @@ helpers.scripts_dir = helpers.lain_dir .. 'scripts/'
 
 -- {{{ Modules loader
 
-function helpers.wrequire(t, k)
-    return rawget(t, k) or require(t._NAME .. '.' .. k)
+function helpers.wrequire(table, key)
+    local module = rawget(table, key)
+    return module or require(table._NAME .. '.' .. key)
 end
 
 -- }}}
@@ -108,7 +109,7 @@ end
 -- @return cmd PID
 function helpers.async(cmd, callback)
     return spawn.easy_async(cmd,
-    function (stdout, _, _, exit_code)
+    function (stdout, stderr, reason, exit_code)
         callback(stdout, exit_code)
     end)
 end
@@ -116,7 +117,7 @@ end
 -- like above, but call spawn.easy_async with a shell
 function helpers.async_with_shell(cmd, callback)
     return spawn.easy_async_with_shell(cmd,
-    function (stdout, _, _, exit_code)
+    function (stdout, stderr, reason, exit_code)
         callback(stdout, exit_code)
     end)
 end

@@ -37,7 +37,6 @@ Variable | Meaning | Type | Default
 `notify` | Show notification popups | string | "on"
 `followtag` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
-`widget` | Widget to render | function | `wibox.widget.textbox`
 
 \* In Lua, "\\\\" means "\" escaped.
 
