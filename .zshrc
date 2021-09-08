@@ -158,6 +158,8 @@ alias yig='yarn install -g'
 #### Configs ####
 alias zrc='nvim ~/.zshrc'
 alias arc='nvim ~/.config/awesome'
+alias frc='nvim ~/.config/fish/config.fish'
+alias drc='cd ~/.config/arco-dwm/ & nvim .'
 alias clones='~/clones'
 alias dots='vi ~/.gitignore'
 
@@ -197,7 +199,6 @@ alias fork='zyc /home/marcel/clones/forks'
 alias work='zyc /home/marcel/clones/work'
 alias locate='plocate'
 alias klay='setxkbmap $(printf "es\nus\nus(dvorak)\nes(dvorak)\n" | fzy)'
-alias frc='nvim ~/.config/fish/config.fish'
 #  alias af='xdotool type --delay 0 $( alias | fzy | awk -F' ' '{print $2}')'
 
 #### Tmux ####
@@ -272,6 +273,16 @@ curl_brain() {
     echo "Updating config of $1";
     curl http://config.ss/worker/rebalance;
     echo "Rebalance done";
+}
+
+mount_dd() {
+    lsblk
+    echo 'usb location example: sdb1'
+    read USB_PATH
+    echo 'iso path example: /home/m/arch-linux.iso'
+    read ISO_PATH
+    sudo umount /dev/$USB_PATH
+    sudo dd bs=4M if=$ISO_PATH of=/dev/$USB_PATH conv=fdatasync status=progress
 }
 
 ### init ###

@@ -32,7 +32,7 @@ sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
 #run "nitrogen --restore"
 # run "conky -c $HOME/.config/arco-dwm/system-overview"
 #you can set wallpapers in themes as well
-feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+# feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 
 #run applications from startup

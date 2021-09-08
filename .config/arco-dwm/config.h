@@ -49,6 +49,7 @@ static const Rule rules[] = {
 	{ "Gimp",                         NULL,       NULL,       0,            0,           -1 },
     { "kitty",                        NULL,       NULL,       0,            0,           -1 },
 	{ "firefox",                      NULL,       NULL,       0,            0,           -1 },
+	{ "pavucontrol",                  NULL,       NULL,       0,            1,           -1 },
 	{ "Arcolinux-welcome-app.py",     NULL,       NULL,       0,            1,           -1 },
 	{ "Arcolinux-calamares-tool.py",  NULL,       NULL,       0,            1,           -1 },
 };

@@ -75,7 +75,7 @@ alias yig='yarn install -g'
 #### Configs ####
 alias zrc='nvim ~/.zshrc'
 alias arc='nvim ~/.config/awesome'
-alias drc='nvim ~/.config/arco-dwm'
+alias drc='cd ~/.config/arco-dwm & nvim .'
 alias frc='nvim ~/.config/fish/config.fish'
 alias clones='~/clones'
 alias dots='vi ~/.gitignore'
