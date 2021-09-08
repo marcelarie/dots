@@ -27,6 +27,6 @@
 !*.vimrc
 !*local_supers.md
 !*old-sys-pacman-qe.md
-!*.rasi
+!flat-orange.rasi
 !stylelua.toml
 !.gitconfig
