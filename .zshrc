@@ -229,6 +229,7 @@ alias t='vi -t "$(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### Supers ###
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
+#  alias re.pl="cd ~/clones/work/supers && \re.pl"
 
 ### ARCO ###
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"

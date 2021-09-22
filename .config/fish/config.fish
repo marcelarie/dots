@@ -75,7 +75,7 @@ alias yig='yarn install -g'
 #### Configs ####
 alias zrc='nvim ~/.zshrc'
 alias arc='nvim ~/.config/awesome'
-alias drc='cd ~/.config/arco-dwm & nvim .'
+alias drc='cd ~/.config/arco-dwm & nvim config.h'
 alias frc='nvim ~/.config/fish/config.fish'
 alias clones='~/clones'
 alias dots='vi ~/.gitignore'
@@ -138,7 +138,7 @@ alias ctag='ctags --recurse=yes'
 alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### SoySuper ###
-alias re.pl='zsh -c re.pl'
+# alias re.pl="zsh -c 'cd ~/clones/work/supers && \re.pl'"
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
 
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -183,4 +183,5 @@ export PERL_MB_OPT
 set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
 export PERL_MM_OPT
 
+fm6000
 starship init fish | source

@@ -28,6 +28,7 @@ picom -b  --config ~/.config/arco-dwm/picom.conf &
 run "numlockx on"
 run "volumeicon"
 run slstatus &
+xset r rate 150 45
 sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
 #run "nitrogen --restore"
 # run "conky -c $HOME/.config/arco-dwm/system-overview"
