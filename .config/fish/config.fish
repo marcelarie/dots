@@ -152,6 +152,11 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 # alias fzf="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
+#  KEY-BINDINGS  #
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
+bind -M insert \ce end-of-line # on vi-mode
+
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #    STARTUP     #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
