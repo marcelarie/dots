@@ -286,6 +286,10 @@ mount_dd() {
     sudo dd bs=4M if=$ISO_PATH of=/dev/$USB_PATH conv=fdatasync status=progress
 }
 
+perlmv() {
+    perl -le 'eval "require $ARGV[0]" and print ${"$ARGV[0]::VERSION"}' $1
+}
+
 ### init ###
 # eval "$(mcfly init zsh)"
 # export MCFLY_KEY_SCHEME=nvim

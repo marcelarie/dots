@@ -87,6 +87,12 @@ alias revi='bash ~/scripts/install-last-neovim.sh'
 alias rc='nvim ~/.config/nvim/init.*'
 alias gorc='cd ~/.config/nvim/'
 
+#### Docker ####
+alias do='docker'
+alias dor='docker run'
+alias dob='docker build'
+alias dos='docker stop'
+
 #### Others ####
 alias hist='xdotool type --delay 0 (history | fzy -l 20)'
 alias live-server='live-server --no-browser'
@@ -138,7 +144,7 @@ alias ctag='ctags --recurse=yes'
 alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### SoySuper ###
-# alias re.pl="zsh -c 'cd ~/clones/work/supers && \re.pl'"
+alias re.pl="cd ~/clones/work/supers/dist/Supers-Crawler/ && echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
 
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -189,4 +195,5 @@ set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
 export PERL_MM_OPT
 
 fm6000
+# ~/clones/own/git-tellme/target/debug/git-tellme -n
 starship init fish | source
