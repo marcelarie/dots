@@ -105,7 +105,7 @@ alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
 alias xyy="xsel --clipboard --input"
 alias xp="xsel --clipboard --output"
 alias node15="source /usr/share/nvm/init-nvm.sh"
-alias sc='sh ~/scripts/(ls ~/scripts/ | fzy)' # scripts selector
+alias scp='sh ~/scripts/(ls ~/scripts/ | fzy)' # scripts selector
 alias env='printenv | fzy'  # scripts selector
 alias nm='mw -Y && neomutt' # refresh and open neomutt
 alias mc="mcfly search"
@@ -144,8 +144,9 @@ alias ctag='ctags --recurse=yes'
 alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### SoySuper ###
-alias re.pl="cd ~/clones/work/supers/dist/Supers-Crawler/ && echo 'source ~/.zshrc && re.pl' | zsh"
+alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
+alias sdw="echo 'source ~/.zshrc && sc deploy workers' | zsh"
 
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 

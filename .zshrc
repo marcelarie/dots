@@ -184,7 +184,7 @@ alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
 alias xyy="xsel --clipboard --input"
 alias xp="xsel --clipboard --output"
 alias node15="source /usr/share/nvm/init-nvm.sh"
-alias sc='sh ~/scripts/$(ls ~/scripts/ | fzy)' # scripts selector
+alias scp='sh ~/scripts/$(ls ~/scripts/ | fzy)' # scripts selector
 alias scd='f(){sh ~/scripts/"$@"$(ls ~/scripts/"$@"/ | fzy)}; f'
 alias env='printenv | fzy'  # scripts selector
 alias nm='mw -Y && neomutt' # refresh and open neomutt
@@ -229,7 +229,8 @@ alias t='vi -t "$(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### Supers ###
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
-#  alias re.pl="cd ~/clones/work/supers && \re.pl"
+alias re.pl="cd ~/clones/work/supers/dist/Supers-Crawler && \re.pl"
+alias sdw='sc deploy workers'
 
 ### ARCO ###
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
