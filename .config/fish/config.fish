@@ -175,8 +175,20 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 
 # source ~/perl5/perlbrew/etc/perlbrew.fish
 
+# set -x PERLBREW_ROOT /usr/locaw/soft/perlbrew/
+
+# . ~/perl5/perlbrew/etc/perlbrew.fish
+
 # set -x PATH /home/marcel/perl5/bin${PATH:+:${PATH}}
 # export PATH
+
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
+#  ENV.VARIABLES #
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
+
+# Ruby
+
+# Perl
 
 # set PERL5LIB "/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
 set -x PERL5LIB /home/marcel/perl5/lib/perl5:/home/marcel/perl5/lib/perl5

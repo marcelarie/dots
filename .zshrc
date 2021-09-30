@@ -315,6 +315,15 @@ NODE_PATH=$(npm root -g)
 source ~/perl5/perlbrew/etc/bashrc
 #  source /home/marcel/.config/broot/launcher/bash/br
 
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
+#  ENV.VARIABLES #
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
+
+#  Ruby
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
+
+#  Perl
 PATH="/home/marcel/perl5/bin${PATH:+:${PATH}}"
 export PATH
 PERL5LIB="/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
