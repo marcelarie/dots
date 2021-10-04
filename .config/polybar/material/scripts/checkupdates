@@ -76,7 +76,6 @@ if [[ -t 2 && ! $USE_COLOR = "n" ]]; then
 fi
 readonly ALL_OFF BOLD BLUE GREEN RED YELLOW
 
-
 if (( $# > 0 )); then
 	echo "${myname} v${myver}"
 	echo

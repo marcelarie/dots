@@ -83,6 +83,7 @@ alias dots='vi ~/.gitignore'
 #### Nvim ####
 alias vi='nvim'
 alias bi='nvim -c "colorscheme OceanicNext"'
+alias mi='nvim -c "colorscheme monarized"'
 alias revi='bash ~/scripts/install-last-neovim.sh'
 alias rc='nvim ~/.config/nvim/init.*'
 alias gorc='cd ~/.config/nvim/'

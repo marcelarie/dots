@@ -38,19 +38,20 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 /* static const char *tags[] = { "Web", "Chat", "Edit", "Meld", "Vb", "Mail", "Video", "Image", "Files" }; */
 
-
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 *  use tags mask to point an application to a specific workspace
 	 */
-	/* class                       instance    title      tags mask      isfloating   monitor */
-	{ "Gimp",                      NULL,       NULL,       0,            0,           -1 },
-	{ "Xfce4-terminal",            NULL,       NULL,       0,            1,           -1 },
-	{ "firefox",                   NULL,       NULL,       0,            0,           -1 },
-	{ "Arcolinux-welcome-app.py",  NULL,       NULL,       0,            1,           -1 },
-	{ "Arcolinux-calamares-tool.py",  NULL,       NULL,       0,            1,           -1 },	
+	/* { "Gimp",                         NULL,       NULL,       0,            0,           -1 }, */
+	/* { "Firefox",                      NULL,       NULL,       0,            0,           -1 }, */
+	/* { "Xfce4-terminal",               NULL,       NULL,       0,            1,           -1 }, */
+	/* { "Arcolinux-welcome-app.py",     NULL,       NULL,       0,            1,           -1 }, */
+	/* { "Arcolinux-calamares-tool.py",  NULL,       NULL,       0,            1,           -1 }, */
+   /* class      instance    title       tags mask     isfloating   monitor    float x,y,w,h         floatborderpx*/
+   { "Gimp",     NULL,       NULL,       0,            1,           -1,        50,50,500,500,        5 },
+   { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        5 },
 };
 
 /* layout(s) */
@@ -89,7 +90,6 @@ static const char *taskmanager[]  = { "xfce4-taskmanager", NULL };
 
 #include "selfrestart.c"
 #include "shiftview.c"
-
 
 #include "movestack.c"
 static Key keys[] = {
@@ -130,12 +130,11 @@ static Key keys[] = {
 	{ Mod1Mask|ControlMask,         XK_Right,  shiftview,      {.i =  1 } },
 	{ Mod1Mask|ControlMask,         XK_Left,   shiftview,      {.i = -1 } },
 	{ Mod1Mask|ControlMask,         XK_Up,     shiftview,      {.i =  1 } },
-	{ Mod1Mask|ControlMask,         XK_Down,   shiftview,      {.i = -1 } },	
+	{ Mod1Mask|ControlMask,         XK_Down,   shiftview,      {.i = -1 } },
 	{ Mod1Mask,						XK_Tab,    shiftview,      {.i =  1 } },
 	{ Mod1Mask|ShiftMask,	        XK_Tab,	   shiftview,	   {.i = -1 } },
 	{ MODKEY,		        		XK_Tab,    shiftview,	   {.i =  1 } },
 	{ MODKEY|ShiftMask,		        XK_Tab,	   shiftview,	   {.i = -1 } },
-
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
