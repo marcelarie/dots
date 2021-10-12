@@ -27,3 +27,4 @@
 !*.vimrc
 !*local_supers.md
 !*old-sys-pacman-qe.md
+!.rustfmt.toml

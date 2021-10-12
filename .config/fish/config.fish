@@ -148,8 +148,13 @@ alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
 alias sdw="echo 'source ~/.zshrc && sc deploy workers' | zsh"
+alias sdm="echo 'source ~/.zshrc && sc deploy manager' | zsh"
 
+### Arco ###
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+### Own ###
+alias gtm="git-tellme"
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  TODO:   #
@@ -208,6 +213,7 @@ export PERL_MB_OPT
 set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
 export PERL_MM_OPT
 
-fm6000
-# ~/clones/own/git-tellme/target/debug/git-tellme -n
+# git-tellme
+# /home/marcel/clones/own/git-tellme/target/release/git-tellme
+fm6000 --vnstat
 starship init fish | source
