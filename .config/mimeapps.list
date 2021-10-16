@@ -99,6 +99,7 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 font/otf=fontmatrix.desktop;
+text/csv=nvim.desktop;
 
 [Default Applications]
 text/html=firefox.desktop

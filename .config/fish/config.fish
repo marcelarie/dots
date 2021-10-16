@@ -27,6 +27,7 @@ set --universal -x GOPATH $HOME/.local/go                                      #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 source $HOME/.config/fish/git-alias.fish
+source $HOME/.config/fish/zoxide.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  ALIAS   #
@@ -179,6 +180,10 @@ set fish_greeting
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
 
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
+#    SOURCES     #
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
+
 # source ~/perl5/perlbrew/etc/perlbrew.fish
 
 # set -x PERLBREW_ROOT /usr/locaw/soft/perlbrew/
@@ -217,3 +222,6 @@ export PERL_MM_OPT
 # /home/marcel/clones/own/git-tellme/target/release/git-tellme
 fm6000 --vnstat
 starship init fish | source
+
+# Generated for envman. Do not edit.
+test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
