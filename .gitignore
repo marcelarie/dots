@@ -18,6 +18,7 @@
 !.config/starship.toml
 !.config/mimeapps.list
 !.config/rustfmt
+!.config/greenclip.toml
 !scripts/
 !.vimrc
 !*.zshrc

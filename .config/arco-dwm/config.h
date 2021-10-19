@@ -89,11 +89,12 @@ static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufo
 static const char *roficmd[]     = { "rofi", "-modi", "combi", "-show", "drun", "-theme", "/usr/share/rofi/themes/minimal.rasi", "-font", "Fira Code 10", "-width", "20", NULL };
 static const char *rofimoji[]    = { "rofimoji", NULL };
 static const char *termcmd[]     = { "kitty", "fish", NULL };
-static const char *termcmd2[]    = { "alacritty", "fish",  NULL };
+static const char *termcmd2[]    = { "alacritty", "-e", "fish",  NULL };
 static const char *filecmd[]     = { "thunar", NULL };
 static const char *calendar[]    = { "gsimplecal", NULL };
 static const char *taskmanager[] = { "xfce4-taskmanager", NULL };
 static const char *browser[]     = { "firefox",  NULL };
+static const char *greenclip[]     = { "rofi", "-modi", "clipboard:greenclip print", "-show", "clipboard", "-run-command", "'{cmd}'", NULL };
 
 #include "selfrestart.c"
 #include "shiftview.c"
@@ -126,6 +127,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_v,      spawn,          {.v = greenclip } },
 	{ MODKEY|ControlMask,			XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  cyclelayout,    {.i = +1 } },
