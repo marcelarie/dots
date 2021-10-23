@@ -132,7 +132,7 @@ alias ca='cargo add'
 alias cr='cargo run'
 alias cb='cargo build'
 alias cu='cargo update'
-alias ciu='cargo install-update'
+alias ciu='cargo install-update -a'
 alias ci='cargo install'
 alias cdo='cargo doc --open'
 alias cw="cargo watch -x run"
@@ -151,6 +151,7 @@ alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
 alias sdw="echo 'source ~/.zshrc && sc deploy workers' | zsh"
 alias sdm="echo 'source ~/.zshrc && sc deploy manager' | zsh"
+alias logcli="logcli --addr='http://monitor-0.ss:3100'"
 
 ### Arco ###
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -219,9 +220,11 @@ export PERL_MB_OPT
 set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
 export PERL_MM_OPT
 
+# SoySuper
+
 # git-tellme
-/home/marcel/clones/own/git-tellme/target/release/git-tellme
-fm6000 --vnstat
+# /home/marcel/clones/own/git-tellme/target/release/git-tellme
+fm6000
 starship init fish | source
 
 # Generated for envman. Do not edit.
