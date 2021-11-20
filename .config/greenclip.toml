@@ -7,4 +7,9 @@
   blacklisted_applications = []
   enable_image_support = true
   image_cache_directory = "/tmp/greenclip"
-  static_history = [ ]
+  static_history = [
+      "my $d = driver('",
+      "$d->category_products('",
+      "$d->get_product('",
+      "$d->fetch_product('",
+]

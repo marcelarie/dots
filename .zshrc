@@ -292,6 +292,11 @@ perlmv() {
     perl -le 'eval "require $ARGV[0]" and print ${"$ARGV[0]::VERSION"}' $1
 }
 
+# clear greenclip history
+gnclr() {
+    pkill greenclip && greenclip clear && greenclip daemon &
+} >/dev/null 2>&1
+
 ### init ###
 # eval "$(mcfly init zsh)"
 # export MCFLY_KEY_SCHEME=nvim
@@ -311,7 +316,8 @@ if [ -e /home/marcel/.nix-profile/etc/profile.d/nix.sh ]; then . /home/marcel/.n
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-NODE_PATH=$(npm root -g)
+
+export NODE_PATH=$(npm root -g)
 
 # ≃≃≃≃≃≃≃≃≃ #
 #  SOURCES  #

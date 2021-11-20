@@ -94,6 +94,8 @@ alias do='docker'
 alias dor='docker run'
 alias dob='docker build'
 alias dos='docker stop'
+alias dc='docker-compose'
+alias dcu='docker-compose up'
 
 #### Others ####
 alias hist='xdotool type --delay 0 (history | fzy -l 20)'
@@ -120,7 +122,7 @@ alias klay='setxkbmap (printf "es\nus\nus(dvorak)\nes(dvorak)\n" | fzy)'
 alias af='xdotool type --delay 0 ( alias | fzy | awk -F\' \' \'{print $2}\')'
 
 #### Tmux ####
-alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.
+# alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.
 alias ta='tmux attach -t'                 # Attaches tmux to a session (example: ta portal)
 alias tn='tmux new-session'               # Creates a new session
 alias tl='tmux list-sessions'             # Lists all ongoing sessions
@@ -144,11 +146,11 @@ alias chl=' cheat (cheat -l | cut -f1 -d " " | fzy)'
 
 ### Ctags ###
 alias ctag='ctags --recurse=yes'
-alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
+# alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### SoySuper ###
 alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
-alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
+alias dz="zsh -c 'source ~/.zshrc; dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'"
 alias sdw="echo 'source ~/.zshrc && sc deploy workers' | zsh"
 alias sdm="echo 'source ~/.zshrc && sc deploy manager' | zsh"
 alias logcli="logcli --addr='http://monitor-0.ss:3100'"
