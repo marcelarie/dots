@@ -8,7 +8,9 @@ call plug#begin('~/.vim/plugged')
         Plug 'Mcmartelle/vim-monokai-bold'
         Plug 'sickill/vim-monokai'
         Plug 'mhartington/oceanic-next'
+        Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
         Plug 'mbbill/undotree'
+        Plug 'miyase256/vim-ripgrep', {'branch': 'fix/remove-complete-from-RgRoot'}
 call plug#end()
 
 "Leader Keybindings:"
@@ -20,18 +22,26 @@ call plug#end()
     syntax on
     set nu
     set cursorline
-    " au TextYankPost * silent! lua require("vim.highlight").on_yank({ higroup = 'IncSearch', timeout = 300 })
 
 " Open tab
     map <leader>pi :PlugInstall<cr>
     map <leader>pc :PlugClean<cr>
     map <leader>o :so ~/.vimrc<cr>
 
+" Open FZF
+    nnoremap <leader>f :FZF<cr>
+" Open RG
+    nnoremap <leader>r  :Rg<cr>
+    nnoremap <leader>rg :Rg
+
+" Open Undo Tree
+    map <leader>ut :UndotreeToggle<cr>
+
 " Open tab
     map <leader>t :tabnew<cr>
 " Split screen
-    map <leader>s :split<cr>
-    map <leader>vs :vsplit<cr>
+    nnoremap <leader>s :split<cr>
+    nnoremap <leader>vs :vsplit<cr>
 " Split screen and resize 55
     nnoremap <leader>ss :wincmd v<bar> :Ex <bar> :vertical resize 55<CR>
 " Saves the file.
@@ -39,7 +49,10 @@ call plug#end()
 " Saves the file with force.
     map <leader>W :w!<cr>
 " Quits vim.
-    map <leader>q :q<cr> " Quits vim with force.  map <leader>Q :q!<cr>
+    map <leader>q :q<cr>
+" Quits vim with force.
+    map <leader>Q :q!<cr>
+
 " Autoread.(editor)
     map <leader>a :e<cr>
 " Resize vertical windows
@@ -88,3 +101,6 @@ call plug#end()
     set undolevels=1000
     set undoreload=10000
     set noswapfile
+
+    " RG
+    "

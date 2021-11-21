@@ -138,6 +138,7 @@ alias ciu='cargo install-update -a'
 alias ci='cargo install'
 alias cdo='cargo doc --open'
 alias cw="cargo watch -x run"
+alias cpub="cargo publish"
 
 ### Cheat ###
 alias ch='cheat'
@@ -159,7 +160,7 @@ alias logcli="logcli --addr='http://monitor-0.ss:3100'"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 ### Own ###
-alias gtm="$HOME/clones/own/git-tellme/target/release/git-tellme"
+alias gtm="$HOME/clones/own/git-tellme/target/release/gtm"
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  TODO:   #
@@ -200,6 +201,10 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
+
+# vim
+set VICONFIG /home/marcel/.config/nvim/init.lua
+export VICONFIG
 
 # Ruby
 

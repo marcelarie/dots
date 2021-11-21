@@ -331,6 +331,9 @@ eval "$(zoxide init zsh)"
 #  ENV.VARIABLES #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
+# vim
+export VICONFIG=/home/marcel/.config/nvim/init.lua
+
 #  Ruby
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"

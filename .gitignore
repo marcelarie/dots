@@ -15,6 +15,7 @@
 !.config/himalaya
 !.config/cheat
 !.config/fish
+!.config/vifm
 !.config/starship.toml
 !.config/mimeapps.list
 !.config/rustfmt
