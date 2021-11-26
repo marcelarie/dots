@@ -65,6 +65,11 @@ alias govh='ssh marcel@135.125.234.60'
 #### Git ####
 alias gb='git checkout (git branch | fzy | xargs)'
 alias gbde='git branch -D (git branch | fzy | xargs)'
+alias gstp='git status --porcelain | awk \'match($1, "M"){print $2}\' | paste -sd " "'
+alias grs='git restore'
+alias grsa='git restore *'
+alias grss='git restore --staged'
+alias grssa='git restore --staged *'
 
 #### Develop ####
 alias ys='yarn start'
@@ -94,8 +99,15 @@ alias do='docker'
 alias dor='docker run'
 alias dob='docker build'
 alias dos='docker stop'
+alias dosp='docker system prune'
+alias dorai='docker rmi (docker images -a -q)'
+alias doraif='docker rmi -f (docker images -a -q)'
+alias doex='docker exec -it'
+
 alias dc='docker-compose'
-alias dcu='docker-compose up'
+alias dcp='docker-compose ps'
+alias dcr='docker-compose rm'
+alias dcu='docker-compose up -d'
 
 #### Others ####
 alias hist='xdotool type --delay 0 (history | fzy -l 20)'
@@ -139,6 +151,7 @@ alias ci='cargo install'
 alias cdo='cargo doc --open'
 alias cw="cargo watch -x run"
 alias cpub="cargo publish"
+alias ctd="cargo tree -d"
 
 ### Cheat ###
 alias ch='cheat'
@@ -152,9 +165,11 @@ alias ctag='ctags --recurse=yes'
 ### SoySuper ###
 alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz="zsh -c 'source ~/.zshrc; dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'"
-alias sdw="echo 'source ~/.zshrc && sc deploy workers' | zsh"
-alias sdm="echo 'source ~/.zshrc && sc deploy manager' | zsh"
+alias sdw="echo 'source ~/.zshrc && time sc deploy workers' | zsh"
+alias sdm="echo 'source ~/.zshrc && time sc deploy manager' | zsh"
 alias logcli="logcli --addr='http://monitor-0.ss:3100'"
+alias su="cd ~/clones/work/supers/"
+alias prove="provewatcher"
 
 ### Arco ###
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -189,14 +204,9 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 #    SOURCES     #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
-# source ~/perl5/perlbrew/etc/perlbrew.fish
+source ~/perl5/perlbrew/etc/perlbrew.fish
 
 # set -x PERLBREW_ROOT /usr/locaw/soft/perlbrew/
-
-# . ~/perl5/perlbrew/etc/perlbrew.fish
-
-# set -x PATH /home/marcel/perl5/bin${PATH:+:${PATH}}
-# export PATH
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #
@@ -209,13 +219,12 @@ export VICONFIG
 # Ruby
 
 # Perl
-
 # set PERL5LIB "/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
-set -x PERL5LIB /home/marcel/perl5/lib/perl5:/home/marcel/perl5/lib/perl5
+set -x PERL5LIB /home/marcel/perl5/lib/perl5
 export PERL5LIB
 
 # set PERL_LOCAL_LIB_ROOT "/home/marcel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
-set -x PERL_LOCAL_LIB_ROOT /home/marcel/perl5:/home/marcel/perl5
+set -x PERL_LOCAL_LIB_ROOT /home/marcel/perl5
 export PERL_LOCAL_LIB_ROOT
 
 set -x NODE_PATH (npm root -g)
@@ -229,7 +238,6 @@ export PERL_MM_OPT
 
 # SoySuper
 
-# git-tellme
 # /home/marcel/clones/own/git-tellme/target/release/git-tellme
 fm6000
 starship init fish | source
