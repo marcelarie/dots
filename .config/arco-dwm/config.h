@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */ static const unsigned int gappx     = 5;        /* gaps between windows */ static const unsigned int snap      = 32;       /* snap pixel */
@@ -31,6 +32,10 @@ static const unsigned int alphas[][3]      = {
 
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
+
+static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
+static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
+static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 
 /* tagging */
 // static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -147,8 +152,11 @@ static Key keys[] = {
 	{ Mod1Mask|ControlMask,         XK_Down,   shiftview,      {.i = -1 } },
 	{ MODKEY,                       XK_Tab,    focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Tab,    focusstack,     {.i = -1 } },
-	{ MODKEY|ShiftMask,      		XK_Right,   shiftview,	   {.i =  1 } },
-	{ MODKEY|ShiftMask,		        XK_Left,    shiftview,	   {.i = -1 } },
+	{ MODKEY|ShiftMask,      		XK_Right,  shiftview,	   {.i =  1 } },
+	{ MODKEY|ShiftMask,		        XK_Left,   shiftview,	   {.i = -1 } },
+	{ MODKEY,                       XK_F9,     spawn,          {.v = mutevol } },
+    { MODKEY|ShiftMask,             XK_Down,   spawn,          {.v = downvol } },
+	{ MODKEY|ShiftMask,             XK_Up,     spawn,          {.v = upvol   } },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
