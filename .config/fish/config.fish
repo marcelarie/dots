@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    # atuin init fish | source
 end
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   colorscheme   #
@@ -12,7 +13,8 @@ base16-gruvbox-dark-medium # :)
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 ### "bat" as manpager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER='nvim +Man!'
 ## go
 set --universal -x PATH /home/$USER/.cargo/bin:$PATH                           # export GOPATH=$HOME/.local/go
 set --universal -x GOPATH $HOME/.local/go                                      # export PATH=/home/$USER/.cargo/bin:$PATH
@@ -83,6 +85,7 @@ alias zrc='nvim ~/.zshrc'
 alias arc='nvim ~/.config/awesome'
 alias drc='cd ~/.config/arco-dwm & nvim config.h'
 alias frc='nvim ~/.config/fish/config.fish'
+alias krc='nvim ~/.config/kitty/kitty.conf'
 alias clones='~/clones'
 alias dots='vi ~/.gitignore'
 
@@ -100,7 +103,7 @@ alias do='docker'
 alias dor='docker run'
 alias dob='docker build'
 alias dos='docker stop'
-alias dosp='docker system prune'
+alias dosp='docker system prune -a'
 alias dorai='docker rmi (docker images -a -q)'
 alias doraif='docker rmi -f (docker images -a -q)'
 alias doex='docker exec -it'
@@ -108,7 +111,8 @@ alias doex='docker exec -it'
 alias dc='docker-compose'
 alias dcp='docker-compose ps'
 alias dcr='docker-compose rm'
-alias dcu='docker-compose up -d'
+alias dcu='docker-compose up'
+alias dcl='docker compose logs -f'
 
 #### Others ####
 alias hist='xdotool type --delay 0 (history | fzy -l 20)'

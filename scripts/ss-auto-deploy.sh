@@ -9,4 +9,5 @@ do
     sdw && sleep 20 && printf '\n';
 done
 
+sdw
 echo "Deploying workers 🎉"
