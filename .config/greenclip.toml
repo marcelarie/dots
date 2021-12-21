@@ -14,4 +14,5 @@
       "$d->category_products('",
       "$d->get_product('",
       "$d->fetch_product('",
+      "ñ",
 ]
