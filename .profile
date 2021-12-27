@@ -7,3 +7,4 @@ export TERM=kitty
 export GPGKEY=649655AE22209148
 
 . /home/marcel/torch/install/bin/torch-activate
+. "$HOME/.cargo/env"
