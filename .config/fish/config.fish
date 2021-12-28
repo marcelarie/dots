@@ -64,7 +64,7 @@ alias pacu='sudo pacman -Su'
 #### Server ####
 alias govh='ssh marcel@135.125.234.60'
 
-#### Git ####
+#### Personal Git ####
 alias gb='git checkout (git branch | fzy | xargs)'
 alias gbde='git branch -D (git branch | fzy | xargs)'
 alias gstp='git status --porcelain | awk \'match($1, "M"){print $2}\' | paste -sd " "'
@@ -87,6 +87,7 @@ alias arc='nvim ~/.config/awesome'
 alias drc='cd ~/.config/arco-dwm & nvim config.h'
 alias frc='nvim ~/.config/fish/config.fish'
 alias krc='nvim ~/.config/kitty/kitty.conf'
+alias lrc='nvim ~/.config/leftwm/config.toml'
 alias clones='~/clones'
 alias dots='vi ~/.gitignore'
 
@@ -210,9 +211,8 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 #    SOURCES     #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
-source ~/perl5/perlbrew/etc/perlbrew.fish
-
-# set -x PERLBREW_ROOT /usr/locaw/soft/perlbrew/
+# set -x PERLBREW_ROOT /usr/local/soft/perlbrew/
+# source ~/perl5/perlbrew/etc/perlbrew.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #
