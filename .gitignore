@@ -31,3 +31,4 @@
 !*old-sys-pacman-qe.md
 !.rustfmt.toml
 !.Xresources
+!.config/leftwm/config.toml
