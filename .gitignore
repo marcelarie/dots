@@ -31,3 +31,4 @@
 !*old-sys-pacman-qe.md
 !.rustfmt.toml
 !.config/leftwm/config.toml
+!.config/leftwm/themes.toml
