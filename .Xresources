@@ -6,6 +6,7 @@
 ! Xorg issue nov 2021 - use and change if needed
 Xft.dpi:   192
 *.dpi: 192
+marcel.fractionalDpi: 1.92
 
 ! general settings
 URxvt.saveLines:        50000
@@ -55,6 +56,7 @@ URxvt.background:   [80]#222222
 !URxvt.background:  [70]#3F424A
 
 *.cursorColor:  #c8c8c8
+Xcursor.size: 62
 
 ! black
 *.color0:       #3f3f3f

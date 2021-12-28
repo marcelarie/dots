@@ -353,3 +353,9 @@ export PERL_MM_OPT
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
+#   4k scaling   #
+# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export GDK_SCALE=2

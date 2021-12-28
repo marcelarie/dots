@@ -33,3 +33,4 @@
 !.Xresources
 !.config/leftwm/config.toml
 !.config/leftwm/themes.toml
+!.config/neofetch/
