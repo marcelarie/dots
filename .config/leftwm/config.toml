@@ -292,17 +292,19 @@ modifier = ["modkey", "Shift"]
 key = "9"
 
 [[keybind]]
-command = "NextLayout"
-modifier = ["modkey", "Control"]
-key = "Up"
-
-[[keybind]]
-command = "PreviousLayout"
-modifier = ["modkey", "Control"]
-key = "Down"
-
-[[keybind]]
 command = "ToggleScratchPad"
 value = "kitty" # Name set for the scratchpad
 modifier = ["modkey"]
 key = "i"
+
+[[keybind]]
+command = "IncreaseMainWidth"
+value = "5"
+modifier = ["modkey", "Shift"]
+key = "h"
+
+[[keybind]]
+command = "DecreaseMainWidth"
+value = "5"
+modifier = ["modkey", "Shift"]
+key = "l"
