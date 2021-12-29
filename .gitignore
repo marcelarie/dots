@@ -33,3 +33,5 @@
 !.rustfmt.toml
 !.config/leftwm/config.toml
 !.config/leftwm/themes.toml
+!.mozilla/firefox/
+.mozilla/firefox/33rkswy7

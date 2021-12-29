@@ -73,6 +73,7 @@ alias grsa='git restore *'
 alias grss='git restore --staged'
 alias grssa='git restore --staged *'
 alias glom='git pull origin (git branch -rl "*/HEAD" | rev | cut -d/ -f1 | rev)'
+alias glof='git log --oneline -M --stat --follow --'
 
 #### Develop ####
 alias ys='yarn start'
@@ -212,7 +213,7 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # set -x PERLBREW_ROOT /usr/local/soft/perlbrew/
-# source ~/perl5/perlbrew/etc/perlbrew.fish
+bass source ~/perl5/perlbrew/etc/bashrc
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #
