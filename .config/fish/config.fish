@@ -212,7 +212,7 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # set -x PERLBREW_ROOT /usr/local/soft/perlbrew/
-# source ~/perl5/perlbrew/etc/perlbrew.fish
+source ~/perl5/perlbrew/etc/perlbrew.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #
