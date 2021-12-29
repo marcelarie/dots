@@ -14,10 +14,10 @@ name = "kitty" # This is the name which is referenced when calling (case-sensiti
 value = "kitty" # The command to load the application if it isn't started
 # x, y, width, height are in pixels when an integer is inputted or a percentage when a float is inputted.
 # These values are relative to the size of the workspace, and will be restricted depending on the workspace size.
-x = 560
-y = 390
-height = 300
-width = 700
+x = 1000
+y = 490
+height = 1200
+width = 2000
 
 [[keybind]]
 command = "Execute"
