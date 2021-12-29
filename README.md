@@ -12,6 +12,7 @@ nice post: https://blog.yossarian.net/2020/12/24/A-few-HiDPI-tricks-for-Linux
 - [x] Polybar config
 - [x] Electron ( no need for now )
 - [x] Sddm scaling 
+- [x] dmenu
 
 **#TODO:**
 
