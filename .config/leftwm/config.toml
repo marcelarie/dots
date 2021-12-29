@@ -3,11 +3,13 @@ mousekey = "Mod4"
 workspaces = []
 # tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 tags = [ "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" ]
+# Layouts:
+# "MainAndDeck", "MainAndVertStack", "MainAndHorizontalStack", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack",
 layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
 layout_mode = "Workspace"
 # scratchpad = []
 disable_current_tag_swap = false
-focus_behaviour = "Sloppy"
+focus_behaviour = "ClickTo" # Can be Sloppy, ClickTo, or Driven
 focus_new_windows = true
 
 [[scratchpad]]
@@ -32,10 +34,26 @@ modifier = ["modkey"]
 key = "f"
 
 [[keybind]]
+command = "ToggleFloating"
+modifier = ["modkey", "Shift"]
+key = "f"
+
+[[keybind]]
+command = "ToggleFloating"
+modifier = ["modkey", "Shift"]
+key = "space"
+
+[[keybind]]
 command = "SetLayout"
 value = "Monocle"
 modifier = ["modkey"]
 key = "m"
+
+[[keybind]]
+command = "SetLayout"
+value = "MainAndVertStack"
+modifier = ["modkey"]
+key = "t"
 
 [[keybind]]
 command = "Execute"
@@ -134,15 +152,15 @@ command = "PreviousLayout"
 modifier = ["modkey", "Control"]
 key = "j"
 
-[[keybind]]
-command = "FocusWorkspaceNext"
-modifier = ["modkey"]
-key = "l"
-
-[[keybind]]
-command = "FocusWorkspacePrevious"
-modifier = ["modkey"]
-key = "h"
+# [[keybind]]
+# command = "FocusWorkspaceNext"
+# modifier = ["modkey"]
+# key = "l"
+#
+# [[keybind]]
+# command = "FocusWorkspacePrevious"
+# modifier = ["modkey"]
+# key = "h"
 
 [[keybind]]
 command = "MoveWindowUp"
@@ -301,11 +319,11 @@ key = "i"
 [[keybind]]
 command = "IncreaseMainWidth"
 value = "5"
-modifier = ["modkey", "Shift"]
-key = "h"
+modifier = ["modkey"]
+key = "l"
 
 [[keybind]]
 command = "DecreaseMainWidth"
 value = "5"
-modifier = ["modkey", "Shift"]
-key = "l"
+modifier = ["modkey"]
+key = "h"
