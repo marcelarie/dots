@@ -4,6 +4,7 @@ name = "community"
 
 [[repos.themes]]
 name = "Orange Forest"
+directory = "/home/marcel/.config/leftwm/themes/Orange Forest"
 repository = "https://github.com/PVautour/leftwm-theme-orange-forest/"
 commit = "*"
 version = "0.0.1"
@@ -12,6 +13,7 @@ current = false
 
 [[repos.themes]]
 name = "Coffee"
+directory = "/home/marcel/.config/leftwm/themes/Coffee"
 repository = "https://github.com/lex148/leftwm-coffee/"
 commit = "*"
 version = "0.0.1"
@@ -29,6 +31,7 @@ relative_directory = "theme/"
 
 [[repos.themes]]
 name = "TNG"
+directory = "/home/marcel/.config/leftwm/themes/TNG"
 repository = "https://github.com/lex148/leftwm-tng/"
 commit = "*"
 version = "0.0.1"
@@ -127,6 +130,7 @@ current = false
 
 [[repos.themes]]
 name = "Ocean-night"
+directory = "/home/marcel/.config/leftwm/themes/Ocean-night"
 repository = "https://github.com/TheRoniOne/ocean-night"
 commit = "*"
 version = "0.0.1"
@@ -151,6 +155,7 @@ current = false
 
 [[repos.themes]]
 name = "Amber"
+directory = "/home/marcel/.config/leftwm/themes/Amber"
 repository = "https://github.com/di-effe/amber"
 commit = "*"
 version = "0.2.2"
@@ -164,6 +169,13 @@ name = "LOCAL"
 [[repos.themes]]
 name = "candy"
 directory = "/home/marcel/.config/leftwm/themes/candy"
+version = "0.0.0"
+leftwm_versions = "*"
+current = false
+
+[[repos.themes]]
+name = "basic_polybar"
+directory = "/home/marcel/.config/leftwm/themes/basic_polybar"
 version = "0.0.0"
 leftwm_versions = "*"
 current = false
@@ -295,7 +307,6 @@ current = false
 
 [[repos.themes]]
 name = "db"
-directory = "/home/marcel/.config/leftwm/themes/db"
 repository = "https://github.com/arcolinux/arcolinux-leftwm-theme-db/"
 commit = "*"
 version = "2.3.2"
@@ -332,7 +343,6 @@ current = false
 
 [[repos.themes]]
 name = "db-scifi"
-directory = "/home/marcel/.config/leftwm/themes/db-scifi"
 repository = "https://github.com/PeterDauwe/db-scifi"
 commit = "*"
 version = "2.3.2"
