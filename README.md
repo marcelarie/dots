@@ -11,3 +11,9 @@ nice post: https://blog.yossarian.net/2020/12/24/A-few-HiDPI-tricks-for-Linux
 - [ ] Icon size
 - [x] Polybar config
 - [x] Electron ( no need for now )
+
+**#TODO:**
+
+fork smooth leftwm theme and use that fork
+add it as a submodule of this repo
+
