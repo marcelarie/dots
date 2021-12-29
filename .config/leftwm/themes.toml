@@ -4,6 +4,10 @@ name = "community"
 
 [[repos.themes]]
 name = "Orange Forest"
+<<<<<<< HEAD
+=======
+directory = "/home/marcel/.config/leftwm/themes/Orange Forest"
+>>>>>>> 808cdabbf11ed0b792d37bf8582756b2aa45347a
 repository = "https://github.com/PVautour/leftwm-theme-orange-forest/"
 commit = "*"
 version = "0.0.1"
@@ -12,6 +16,10 @@ current = false
 
 [[repos.themes]]
 name = "Coffee"
+<<<<<<< HEAD
+=======
+directory = "/home/marcel/.config/leftwm/themes/Coffee"
+>>>>>>> 808cdabbf11ed0b792d37bf8582756b2aa45347a
 repository = "https://github.com/lex148/leftwm-coffee/"
 commit = "*"
 version = "0.0.1"
@@ -29,6 +37,10 @@ relative_directory = "theme/"
 
 [[repos.themes]]
 name = "TNG"
+<<<<<<< HEAD
+=======
+directory = "/home/marcel/.config/leftwm/themes/TNG"
+>>>>>>> 808cdabbf11ed0b792d37bf8582756b2aa45347a
 repository = "https://github.com/lex148/leftwm-tng/"
 commit = "*"
 version = "0.0.1"
@@ -127,6 +139,10 @@ current = false
 
 [[repos.themes]]
 name = "Ocean-night"
+<<<<<<< HEAD
+=======
+directory = "/home/marcel/.config/leftwm/themes/Ocean-night"
+>>>>>>> 808cdabbf11ed0b792d37bf8582756b2aa45347a
 repository = "https://github.com/TheRoniOne/ocean-night"
 commit = "*"
 version = "0.0.1"
@@ -151,6 +167,10 @@ current = false
 
 [[repos.themes]]
 name = "Amber"
+<<<<<<< HEAD
+=======
+directory = "/home/marcel/.config/leftwm/themes/Amber"
+>>>>>>> 808cdabbf11ed0b792d37bf8582756b2aa45347a
 repository = "https://github.com/di-effe/amber"
 commit = "*"
 version = "0.2.2"
@@ -168,6 +188,16 @@ version = "0.0.0"
 leftwm_versions = "*"
 current = false
 
+<<<<<<< HEAD
+=======
+[[repos.themes]]
+name = "basic_polybar"
+directory = "/home/marcel/.config/leftwm/themes/basic_polybar"
+version = "0.0.0"
+leftwm_versions = "*"
+current = false
+
+>>>>>>> 808cdabbf11ed0b792d37bf8582756b2aa45347a
 [[repos]]
 url = "https://raw.githubusercontent.com/arcolinux/arcolinux-leftwm-themes/master/known.toml"
 name = "arcolinux"
@@ -295,7 +325,10 @@ current = false
 
 [[repos.themes]]
 name = "db"
+<<<<<<< HEAD
 directory = "/home/marcel/.config/leftwm/themes/db"
+=======
+>>>>>>> 808cdabbf11ed0b792d37bf8582756b2aa45347a
 repository = "https://github.com/arcolinux/arcolinux-leftwm-theme-db/"
 commit = "*"
 version = "2.3.2"
@@ -332,7 +365,10 @@ current = false
 
 [[repos.themes]]
 name = "db-scifi"
+<<<<<<< HEAD
 directory = "/home/marcel/.config/leftwm/themes/db-scifi"
+=======
+>>>>>>> 808cdabbf11ed0b792d37bf8582756b2aa45347a
 repository = "https://github.com/PeterDauwe/db-scifi"
 commit = "*"
 version = "2.3.2"
