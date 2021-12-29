@@ -21,7 +21,7 @@ width = 2000
 
 [[keybind]]
 command = "Execute"
-value = "dmenu_run"
+value = "dmenu_run -fn 'FiraCode:pixelsize=12'"
 modifier = ["modkey"]
 key = "p"
 
