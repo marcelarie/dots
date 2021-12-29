@@ -84,6 +84,12 @@ key = "x"
 
 [[keybind]]
 command = "Execute"
+value = "arcolinux-logout"
+modifier = ["modkey"]
+key = "x"
+
+[[keybind]]
+command = "Execute"
 value = "slock"
 modifier = ["modkey", "Control"]
 key = "l"
