@@ -6,7 +6,7 @@ tags = [ "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" ]
 # Layouts:
 # "MainAndDeck", "MainAndVertStack", "MainAndHorizontalStack", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack",
 layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
-layout_mode = "Workspace"
+layout_mode = "Tag"
 # scratchpad = []
 disable_current_tag_swap = false
 focus_behaviour = "ClickTo" # Can be Sloppy, ClickTo, or Driven
