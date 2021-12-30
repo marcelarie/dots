@@ -305,6 +305,9 @@ neofetch
 #sysinfo-retro
 #cpufetch
 #colorscript random
+ 
+source ~/perl5/perlbrew/etc/bashrc
+
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

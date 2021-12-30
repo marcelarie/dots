@@ -73,6 +73,7 @@ alias grsa='git restore *'
 alias grss='git restore --staged'
 alias grssa='git restore --staged *'
 alias glom='git pull origin (git branch -rl "*/HEAD" | rev | cut -d/ -f1 | rev)'
+alias glof='git log --oneline -M --stat --follow --'
 
 #### Develop ####
 alias ys='yarn start'
