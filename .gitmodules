@@ -1,4 +1,4 @@
-
 [submodule ".mozilla"]
 	path = .mozilla
 	url = git@github.com:marcelarie/.mozilla.git
+    ignore = dirty
