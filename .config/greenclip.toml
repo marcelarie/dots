@@ -14,5 +14,7 @@
       "$d->category_products('",
       "$d->get_product('",
       "$d->fetch_product('",
+      "my $cp = $d->category_products('",
+      'my $res = Mojo::Collection->new( @$cp )->map(sub { $d->fetch_product($_) })',
       "ñ",
 ]
