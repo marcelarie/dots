@@ -19,8 +19,12 @@ nice post: https://blog.yossarian.net/2020/12/24/A-few-HiDPI-tricks-for-Linux
 fork smooth leftwm theme and use that fork
 add it as a submodule of this repo
 
+update all language servers
+
 
 Notes:
 For AMD computers xbacklight needs acpilight
 On xfce-powermanager the option **Handle display brightness keys** can be disabled,
 enable it to control the brightness with the keyboard.
+
+
