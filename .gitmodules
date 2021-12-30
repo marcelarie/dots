@@ -1,7 +1,9 @@
 [submodule ".config/leftwm/themes/smooth"]
 	path = .config/leftwm/themes/smooth
 	url = git@github.com:marcelarie/arcolinux-leftwm-theme-smooth.git
+    ignore = dirty
 
 [submodule ".mozilla"]
 	path = .mozilla
 	url = git@github.com:marcelarie/.mozilla.git
+    ignore = dirty
