@@ -57,7 +57,7 @@ key = "t"
 
 [[keybind]]
 command = "Execute"
-value = "kitty fish"
+value = "kitty /bin/fish"
 modifier = ["modkey"]
 key = "Return"
 

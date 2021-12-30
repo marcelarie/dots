@@ -16,8 +16,8 @@ base16-gruvbox-dark-medium # :)
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANPAGER='nvim +Man!'
 ## go
-set --universal -x PATH /home/$USER/.cargo/bin:$PATH                           # export GOPATH=$HOME/.local/go
-set --universal -x GOPATH $HOME/.local/go                                      # export PATH=/home/$USER/.cargo/bin:$PATH
+set --universal -x PATH /home/$USER/.cargo/bin:$PATH # export GOPATH=$HOME/.local/go
+set --universal -x GOPATH $HOME/.local/go # export PATH=/home/$USER/.cargo/bin:$PATH
 
 ### "vim" as manpager
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
@@ -38,10 +38,10 @@ source $HOME/.config/fish/zoxide.fish
 #### Linux ####
 alias ls="exa --git"
 alias l="ls"
-alias cp="cp -i"     # Confirm before overwriting something
-alias mv="mv -i"     # Confirm before overwriting something
-alias rm="rm -i"     # Confirm before overwriting something
-alias df="df -h"     # Human-readable sizes
+alias cp="cp -i" # Confirm before overwriting something
+alias mv="mv -i" # Confirm before overwriting something
+alias rm="rm -i" # Confirm before overwriting something
+alias df="df -h" # Human-readable sizes
 alias free="free -m" # Show sizes in MB
 
 alias grep="grep --colour=auto"
@@ -129,7 +129,7 @@ alias xyy="xsel --clipboard --input"
 alias xp="xsel --clipboard --output"
 alias node15="source /usr/share/nvm/init-nvm.sh"
 alias scp='sh ~/scripts/(ls ~/scripts/ | fzy)' # scripts selector
-alias env='printenv | fzy'  # scripts selector
+alias env='printenv | fzy' # scripts selector
 alias nm='mw -Y && neomutt' # refresh and open neomutt
 alias mc="mcfly search"
 alias own='zyc /home/marcel/clones/own'
@@ -142,9 +142,9 @@ alias af='xdotool type --delay 0 ( alias | fzy | awk -F\' \' \'{print $2}\')'
 
 #### Tmux ####
 # alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.
-alias ta='tmux attach -t'                 # Attaches tmux to a session (example: ta portal)
-alias tn='tmux new-session'               # Creates a new session
-alias tl='tmux list-sessions'             # Lists all ongoing sessions
+alias ta='tmux attach -t' # Attaches tmux to a session (example: ta portal)
+alias tn='tmux new-session' # Creates a new session
+alias tl='tmux list-sessions' # Lists all ongoing sessions
 alias ts='tmux switch -t (tmux ls | cut -f1 -d":" | fzy)'
 
 #### Rust ####
@@ -212,35 +212,35 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # set -x PERLBREW_ROOT /usr/local/soft/perlbrew/
-source ~/perl5/perlbrew/etc/perlbrew.fish
+bass source ~/perl5/perlbrew/etc/bashrc
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # vim
-set VICONFIG /home/marcel/.config/nvim/init.lua
-export VICONFIG
-
-# Ruby
-
-# Perl
-# set PERL5LIB "/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
-set -x PERL5LIB /home/marcel/perl5/lib/perl5
-export PERL5LIB
-
-# set PERL_LOCAL_LIB_ROOT "/home/marcel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
-set -x PERL_LOCAL_LIB_ROOT /home/marcel/perl5
-export PERL_LOCAL_LIB_ROOT
-
-set -x NODE_PATH (npm root -g)
-export NODE_PATH
-
-set PERL_MB_OPT --install_base \"/home/marcel/perl5\"
-export PERL_MB_OPT
-
-set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
-export PERL_MM_OPT
+# set VICONFIG /home/marcel/.config/nvim/init.lua
+# export VICONFIG
+#
+# # Ruby
+#
+# # Perl
+# # set PERL5LIB "/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
+# set -x PERL5LIB /home/marcel/perl5/lib/perl5
+# export PERL5LIB
+#
+# # set PERL_LOCAL_LIB_ROOT "/home/marcel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
+# set -x PERL_LOCAL_LIB_ROOT /home/marcel/perl5
+# export PERL_LOCAL_LIB_ROOT
+#
+# set -x NODE_PATH (npm root -g)
+# export NODE_PATH
+#
+# set PERL_MB_OPT --install_base \"/home/marcel/perl5\"
+# export PERL_MB_OPT
+#
+# set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
+# export PERL_MM_OPT
 
 # SoySuper
 
