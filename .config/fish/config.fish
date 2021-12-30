@@ -184,6 +184,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 ### Own ###
 alias gtm="$HOME/clones/own/git-tellme/target/release/gtm"
+alias npmls="npm list -g | grep -o '\s.*' | tr -d '\n' | sed 's/\n+|\r|⏎//g'"
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  TODO:   #

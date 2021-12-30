@@ -63,6 +63,12 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
+value = "kitty /usr/local/bin/nvim"
+modifier = ["modkey"]
+key = "n"
+
+[[keybind]]
+command = "Execute"
 value = "rofi -modi combi -show drun -theme /usr/share/rofi/themes/minimal.rasi -font 'Fira Code 10' -width 20"
 modifier = ["modkey"]
 key = "d"
