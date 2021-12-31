@@ -283,6 +283,9 @@ alias rmgitcache="rm -r ~/.cache/git"
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /personal/* ~'
 
+# personal
+alias vi="nvim"
+
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
@@ -305,11 +308,11 @@ neofetch
 #sysinfo-retro
 #cpufetch
 #colorscript random
- 
-source ~/perl5/perlbrew/etc/bashrc
 
+source ~/perl5/perlbrew/etc/bashrc
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export NODE_PATH=$(npm root -g)
 
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake

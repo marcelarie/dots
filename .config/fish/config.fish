@@ -88,7 +88,7 @@ alias arc='nvim ~/.config/awesome'
 alias drc='cd ~/.config/arco-dwm & nvim config.h'
 alias frc='nvim ~/.config/fish/config.fish'
 alias krc='nvim ~/.config/kitty/kitty.conf'
-alias lrc='nvim ~/.config/leftwm/config.toml'
+alias lrc='cd ~/.config/leftwm/ && nvim config.toml'
 alias clones='~/clones'
 alias dots='vi ~/.gitignore'
 
