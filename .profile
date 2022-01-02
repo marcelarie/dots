@@ -6,7 +6,6 @@ export BROWSER=/usr/bin/firefox
 export TERM=kitty
 export GPGKEY=649655AE22209148
 
-# . /home/marcel/torch/install/bin/torch-activate
 . "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"

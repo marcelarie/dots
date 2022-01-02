@@ -286,14 +286,20 @@ alias personal='cp -Rf /personal/* ~'
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
+# FUNCTIONS
+function goo () {
+    search="$@"
+    xdg-open "https://www.google.com/search?q=$search"
+}
+
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 eval "$(zoxide init bash)"
 
 # reporting tools - install when not installed
-neofetch
+# neofetch
 #screenfetch
-#alsi
+alsi
 #paleofetch
 #fetch
 #hfetch
@@ -305,9 +311,8 @@ neofetch
 #sysinfo-retro
 #cpufetch
 #colorscript random
- 
-source ~/perl5/perlbrew/etc/bashrc
 
+source ~/perl5/perlbrew/etc/bashrc
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
@@ -316,6 +321,6 @@ source ~/perl5/perlbrew/etc/bashrc
 
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
 export NODE_PATH=$(npm root -g)
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" 
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

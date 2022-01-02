@@ -30,6 +30,7 @@ set --universal -x GOPATH $HOME/.local/go # export PATH=/home/$USER/.cargo/bin:$
 
 source $HOME/.config/fish/git-alias.fish
 source $HOME/.config/fish/zoxide.fish
+source $HOME/.config/fish/functions/google.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  ALIAS   #
@@ -88,7 +89,8 @@ alias arc='nvim ~/.config/awesome'
 alias drc='cd ~/.config/arco-dwm & nvim config.h'
 alias frc='nvim ~/.config/fish/config.fish'
 alias krc='nvim ~/.config/kitty/kitty.conf'
-alias lrc='nvim ~/.config/leftwm/config.toml'
+alias brc='nvim ~/.bashrc'
+alias lrc='cd ~/.config/leftwm & nvim config.toml'
 alias clones='~/clones'
 alias dots='vi ~/.gitignore'
 
@@ -181,9 +183,11 @@ alias prove="provewatcher"
 
 ### Arco ###
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias hibernate="sudo systemctl hibernate"
+alias hybridsleep="sudo systemctl hybrid-sleep"
 
 ### Own ###
-alias gtm="$HOME/clones/own/git-tellme/target/release/gtm"
+# alias gtm="$HOME/clones/own/git-tellme/target/release/gtm"
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  TODO:   #

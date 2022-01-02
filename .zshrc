@@ -297,6 +297,11 @@ gnclr() {
     pkill greenclip && greenclip clear && greenclip daemon &
 } >/dev/null 2>&1
 
+function goo () {
+    search="$@"
+    xdg-open "https://www.google.com/search?q=$search"
+}
+
 ### init ###
 # eval "$(mcfly init zsh)"
 # export MCFLY_KEY_SCHEME=nvim
