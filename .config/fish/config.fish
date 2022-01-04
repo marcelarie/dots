@@ -31,6 +31,7 @@ set --universal -x GOPATH $HOME/.local/go # export PATH=/home/$USER/.cargo/bin:$
 source $HOME/.config/fish/git-alias.fish
 source $HOME/.config/fish/zoxide.fish
 source $HOME/.config/fish/functions/google.fish
+source $HOME/.config/fish/functions/nvim.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  ALIAS   #
@@ -88,6 +89,7 @@ alias zrc='nvim ~/.zshrc'
 alias arc='nvim ~/.config/awesome'
 alias drc='cd ~/.config/arco-dwm & nvim config.h'
 alias frc='nvim ~/.config/fish/config.fish'
+alias sfrc='source ~/.config/fish/config.fish'
 alias krc='nvim ~/.config/kitty/kitty.conf'
 alias brc='nvim ~/.bashrc'
 alias lrc='cd ~/.config/leftwm & nvim config.toml'
