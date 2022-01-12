@@ -63,6 +63,12 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
+value = "thunar"
+modifier = ["modkey", "Shift"]
+key = "Return"
+
+[[keybind]]
+command = "Execute"
 value = "kitty /usr/local/bin/nvim"
 modifier = ["modkey"]
 key = "n"

@@ -33,6 +33,7 @@
 !.rustfmt.toml
 !.config/leftwm/config.toml
 !.config/leftwm/themes.toml
+!.config/dunst
 !.mozilla/
 !README.md
 !Notes.md

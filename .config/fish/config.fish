@@ -16,8 +16,8 @@ base16-gruvbox-dark-medium # :)
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANPAGER='nvim +Man!'
 ## go
-set --universal -x PATH /home/$USER/.cargo/bin:$PATH                           # export GOPATH=$HOME/.local/go
-set --universal -x GOPATH $HOME/.local/go                                      # export PATH=/home/$USER/.cargo/bin:$PATH
+set --universal -x PATH /home/$USER/.cargo/bin:$PATH # export GOPATH=$HOME/.local/go
+set --universal -x GOPATH $HOME/.local/go # export PATH=/home/$USER/.cargo/bin:$PATH
 
 ### "vim" as manpager
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
@@ -38,10 +38,10 @@ source $HOME/.config/fish/zoxide.fish
 #### Linux ####
 alias ls="exa --git"
 alias l="ls"
-alias cp="cp -i"     # Confirm before overwriting something
-alias mv="mv -i"     # Confirm before overwriting something
-alias rm="rm -i"     # Confirm before overwriting something
-alias df="df -h"     # Human-readable sizes
+alias cp="cp -i" # Confirm before overwriting something
+alias mv="mv -i" # Confirm before overwriting something
+alias rm="rm -i" # Confirm before overwriting something
+alias df="df -h" # Human-readable sizes
 alias free="free -m" # Show sizes in MB
 
 alias grep="grep --colour=auto"
@@ -74,6 +74,9 @@ alias grss='git restore --staged'
 alias grssa='git restore --staged *'
 alias glom='git pull origin (git branch -rl "*/HEAD" | rev | cut -d/ -f1 | rev)'
 alias glof='git log --oneline -M --stat --follow --'
+alias gstal='git stash list'
+alias grec='git log --graph --oneline --decorate ( git fsck --no-reflog | awk \'/dangling commit/ {print $3}\' )'
+alias gstapp='git stash apply'
 
 #### Develop ####
 alias ys='yarn start'
@@ -130,7 +133,7 @@ alias xyy="xsel --clipboard --input"
 alias xp="xsel --clipboard --output"
 alias node15="source /usr/share/nvm/init-nvm.sh"
 alias scp='sh ~/scripts/(ls ~/scripts/ | fzy)' # scripts selector
-alias env='printenv | fzy'  # scripts selector
+alias env='printenv | fzy' # scripts selector
 alias nm='mw -Y && neomutt' # refresh and open neomutt
 alias mc="mcfly search"
 alias own='zyc /home/marcel/clones/own'
@@ -143,9 +146,9 @@ alias af='xdotool type --delay 0 ( alias | fzy | awk -F\' \' \'{print $2}\')'
 
 #### Tmux ####
 # alias t='tmux attach || tmux new-session' # Attaches tmux to the last session; creates a new session if none exists.
-alias ta='tmux attach -t'                 # Attaches tmux to a session (example: ta portal)
-alias tn='tmux new-session'               # Creates a new session
-alias tl='tmux list-sessions'             # Lists all ongoing sessions
+alias ta='tmux attach -t' # Attaches tmux to a session (example: ta portal)
+alias tn='tmux new-session' # Creates a new session
+alias tl='tmux list-sessions' # Lists all ongoing sessions
 alias ts='tmux switch -t (tmux ls | cut -f1 -d":" | fzy)'
 
 #### Rust ####
@@ -173,8 +176,8 @@ alias ctag='ctags --recurse=yes'
 ### SoySuper ###
 alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz="zsh -c 'source ~/.zshrc; dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'"
-alias sdw="echo 'source ~/.zshrc && time sc deploy workers' | zsh"
-alias sdm="echo 'source ~/.zshrc && time sc deploy manager' | zsh"
+alias sdw="time sc deploy workers"
+alias sdm="time sc deploy manager"
 alias logcli="logcli --addr='http://monitor-0.ss:3100'"
 alias su="cd ~/clones/work/supers/"
 alias prove="provewatcher"
@@ -214,7 +217,7 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # set -x PERLBREW_ROOT /usr/local/soft/perlbrew/
-bass source ~/perl5/perlbrew/etc/bashrc
+# bass source ~/perl5/perlbrew/etc/bashrc
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #

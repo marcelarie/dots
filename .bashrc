@@ -309,6 +309,12 @@ neofetch
 #cpufetch
 #colorscript random
 
+goo ()
+{
+    query="$@"
+    xdg-open  https://www.google.com/search?q=$query
+}
+
 source ~/perl5/perlbrew/etc/bashrc
 
 # Generated for envman. Do not edit.
@@ -316,3 +322,8 @@ source ~/perl5/perlbrew/etc/bashrc
 export NODE_PATH=$(npm root -g)
 
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
+
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION

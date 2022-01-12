@@ -16,7 +16,7 @@
       "$d->fetch_product('",
       "my $cp = $d->category_products('",
       'my $res = Mojo::Collection->new( @$cp )->map(sub { $d->fetch_product($_) })',
-      'my $cp = Mojo::Collection->new($d->categories_with_products)->map(sub{ $d->category_products($_->{id}) })->flatten;',
+      'my $cp = Mojo::Collection->new($d->categories_with_products)->map(sub{ say "#############".$_->{id}."#############"; $d->category_products($_->{id}) })->flatten;',
       'my $fp = $cp->map(sub { $d->fetch_product($_) })->compact->flatten;',
       "ñ",
 ]
