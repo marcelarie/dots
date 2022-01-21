@@ -131,6 +131,12 @@ alias cat='bat'
 
 #### Git ####
 alias gs='git status'
+gld() {
+    branch=$(git rev-parse --abbrev-ref HEAD);
+    git fetch \
+    && git log --color -p --full-diff ${branch}..origin/${branch} \
+    && git merge origin/$branch
+}
 
 #### Manjaro ####
 alias pacmi="sudo pacman-mirrors --fasttrack && sudo pacman -Syyu"
@@ -290,6 +296,12 @@ mount_dd() {
 
 perlmv() {
     perl -le 'eval "require $ARGV[0]" and print ${"$ARGV[0]::VERSION"}' $1
+}
+
+### DOCKER ###
+drm() {
+    [[ $1 ]] && con=$1 || con=$(docker ps | tail -n +2 | fzy | awk '{ print $1 }');
+    docker stop $con && docker rm $con;
 }
 
 # clear greenclip history

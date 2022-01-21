@@ -77,6 +77,7 @@ alias glof='git log --oneline -M --stat --follow --'
 alias gstal='git stash list'
 alias grec='git log --graph --oneline --decorate ( git fsck --no-reflog | awk \'/dangling commit/ {print $3}\' )'
 alias gstapp='git stash apply'
+alias gld='git fetch && git log --color -p --full-diff (git rev-parse --abbrev-ref HEAD)..origin/(git rev-parse --abbrev-ref HEAD) && git pull'
 
 #### Develop ####
 alias ys='yarn start'

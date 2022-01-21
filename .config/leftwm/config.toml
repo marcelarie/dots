@@ -29,6 +29,12 @@ modifier = ["modkey"]
 key = "p"
 
 [[keybind]]
+command = "Execute"
+value = "~/scripts/rofi-pulse-sink.sh"
+modifier = ["modkey", "Shift"]
+key = "p"
+
+ [[keybind]]
 command = "ToggleFullScreen"
 modifier = ["modkey"]
 key = "f"
