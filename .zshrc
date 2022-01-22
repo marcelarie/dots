@@ -131,6 +131,12 @@ alias cat='bat'
 
 #### Git ####
 alias gs='git status'
+gld() {
+    branch=$(git rev-parse --abbrev-ref HEAD);
+    git fetch \
+    && git log --color -p --full-diff ${branch}..origin/${branch} \
+    && git merge origin/$branch
+}
 
 #### Manjaro ####
 alias pacmi="sudo pacman-mirrors --fasttrack && sudo pacman -Syyu"
@@ -292,6 +298,12 @@ perlmv() {
     perl -le 'eval "require $ARGV[0]" and print ${"$ARGV[0]::VERSION"}' $1
 }
 
+### DOCKER ###
+drm() {
+    [[ $1 ]] && con=$1 || con=$(docker ps | tail -n +2 | fzy | awk '{ print $1 }');
+    docker stop $con && docker rm $con;
+}
+
 # clear greenclip history
 gnclr() {
     pkill greenclip && greenclip clear && greenclip daemon &
@@ -331,30 +343,6 @@ export NODE_PATH=$(npm root -g)
 source ~/perl5/perlbrew/etc/bashrc
 eval "$(zoxide init zsh)"
 #  source /home/marcel/.config/broot/launcher/bash/br
-
-# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
-#  ENV.VARIABLES #
-# ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
-
-# vim
-export VICONFIG=/home/marcel/.config/nvim/init.lua
-
-#  Ruby
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
-
-#  Perl
-PATH="/home/marcel/perl5/bin${PATH:+:${PATH}}"
-export PATH
-PERL5LIB="/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
-export PERL5LIB
-PERL_LOCAL_LIB_ROOT="/home/marcel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
-export PERL_LOCAL_LIB_ROOT
-PERL_MB_OPT="--install_base \"/home/marcel/perl5\""
-export PERL_MB_OPT
-PERL_MM_OPT="INSTALL_BASE=/home/marcel/perl5"
-export PERL_MM_OPT
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

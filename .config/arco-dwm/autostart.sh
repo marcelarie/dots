@@ -18,10 +18,10 @@ run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 #autorandr horizontal
 
 run "nm-applet"
-run "pamac-tray"
+# run "pamac-tray"
 run "variety"
 run "xfce4-power-manager"
-run "blueberry-tray"
+# run "blueberry-tray"
 run "/usr/lib/xfce4/notifyd/xfce4-notifyd"
 run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 picom -b  --config ~/.config/arco-dwm/picom.conf &

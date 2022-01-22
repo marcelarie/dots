@@ -37,6 +37,7 @@
 !.config/leftwm/themes.toml
 !.config/neofetch/
 !README.md
+!.config/dunst
 !.mozilla/
 !README.md
 !Notes.md

@@ -76,6 +76,10 @@ alias grss='git restore --staged'
 alias grssa='git restore --staged *'
 alias glom='git pull origin (git branch -rl "*/HEAD" | rev | cut -d/ -f1 | rev)'
 alias glof='git log --oneline -M --stat --follow --'
+alias gstal='git stash list'
+alias grec='git log --graph --oneline --decorate ( git fsck --no-reflog | awk \'/dangling commit/ {print $3}\' )'
+alias gstapp='git stash apply'
+alias gld='git fetch && git log --color -p --full-diff (git rev-parse --abbrev-ref HEAD)..origin/(git rev-parse --abbrev-ref HEAD) && git pull'
 
 #### Develop ####
 alias ys='yarn start'
@@ -177,8 +181,8 @@ alias ctag='ctags --recurse=yes'
 ### SoySuper ###
 # alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz="zsh -c 'source ~/.zshrc; dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'"
-alias sdw="echo 'source ~/.zshrc && time sc deploy workers' | zsh"
-alias sdm="echo 'source ~/.zshrc && time sc deploy manager' | zsh"
+alias sdw="time sc deploy workers"
+alias sdm="time sc deploy manager"
 alias logcli="logcli --addr='http://monitor-0.ss:3100'"
 alias su="cd ~/clones/work/supers/"
 alias prove="provewatcher"
@@ -190,6 +194,8 @@ alias hybridsleep="sudo systemctl hybrid-sleep"
 
 ### Own ###
 # alias gtm="$HOME/clones/own/git-tellme/target/release/gtm"
+# alias gtm="$HOME/clones/own/git-tellme/target/release/gtm"
+alias npmls="npm list -g | grep -o '\s.*' | tr -d '\n' | sed 's/\n+|\r|⏎//g'"
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  TODO:   #
@@ -219,7 +225,7 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # set -x PERLBREW_ROOT /usr/local/soft/perlbrew/
-bass source ~/perl5/perlbrew/etc/bashrc
+# bass source ~/perl5/perlbrew/etc/bashrc
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #

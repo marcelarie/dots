@@ -29,6 +29,12 @@ modifier = ["modkey"]
 key = "p"
 
 [[keybind]]
+command = "Execute"
+value = "~/scripts/rofi-pulse-sink.sh"
+modifier = ["modkey", "Shift"]
+key = "p"
+
+ [[keybind]]
 command = "ToggleFullScreen"
 modifier = ["modkey"]
 key = "f"
@@ -63,13 +69,26 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
+<<<<<<< HEAD
+=======
+value = "thunar"
+modifier = ["modkey", "Shift"]
+key = "Return"
+
+[[keybind]]
+command = "Execute"
+>>>>>>> 358995aef8048619a78d976a08ff14220248528e
 value = "kitty /usr/local/bin/nvim"
 modifier = ["modkey"]
 key = "n"
 
 [[keybind]]
 command = "Execute"
+<<<<<<< HEAD
 value = "rofi -modi combi -show drun -theme /usr/share/rofi/themes/minimal.rasi -font 'Fira Code 12' -width 20 -dpi 192"
+=======
+value = "rofi -modi combi -show drun -theme /usr/share/rofi/themes/minimal.rasi -font 'Fira Code 10' -width 20"
+>>>>>>> 358995aef8048619a78d976a08ff14220248528e
 modifier = ["modkey"]
 key = "d"
 
