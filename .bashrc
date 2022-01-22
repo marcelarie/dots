@@ -238,6 +238,8 @@ alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
 
+alias vi="nvim"
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
