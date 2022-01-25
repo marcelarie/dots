@@ -24,6 +24,12 @@ width = 700
 
 [[keybind]]
 command = "Execute"
+value = "scrot --select"
+modifier = ["modkey"]
+key = "Print"
+
+[[keybind]]
+command = "Execute"
 value = "dmenu_run -fn 'FiraCode:pixelsize=12'"
 modifier = ["modkey"]
 key = "p"

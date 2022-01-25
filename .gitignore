@@ -4,6 +4,7 @@
 
 # But not these files...
 !*.gitignore
+!.gitconfig
 !.config
 .config/*
 !.config/awesome
