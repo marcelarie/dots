@@ -28,8 +28,12 @@ set --universal -x GOPATH $HOME/.local/go # export PATH=/home/$USER/.cargo/bin:$
 #   FISH ALIAS   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
+# source $HOME/.config/fish/functions/br.fish
 source $HOME/.config/fish/git-alias.fish
 source $HOME/.config/fish/zoxide.fish
+source $HOME/.config/fish/functions/git.fish
+source $HOME/.config/fish/functions/nvim.fish
+source $HOME/.config/fish/functions/google.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  ALIAS   #
@@ -77,7 +81,6 @@ alias glof='git log --oneline -M --stat --follow --'
 alias gstal='git stash list'
 alias grec='git log --graph --oneline --decorate ( git fsck --no-reflog | awk \'/dangling commit/ {print $3}\' )'
 alias gstapp='git stash apply'
-alias gld='git fetch && git log --color -p --full-diff (git rev-parse --abbrev-ref HEAD)..origin/(git rev-parse --abbrev-ref HEAD) && git pull'
 
 #### Develop ####
 alias ys='yarn start'
