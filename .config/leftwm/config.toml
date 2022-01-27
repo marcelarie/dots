@@ -24,7 +24,13 @@ width = 2000
 
 [[keybind]]
 command = "Execute"
-value = "dmenu_run -fn 'FiraCode:pixelsize=36'"
+value = "flameshot gui"
+modifier = ["modkey"]
+key = "Print"
+
+[[keybind]]
+command = "Execute"
+value = "dmenu_run -fn 'FiraCode:pixelsize=12'"
 modifier = ["modkey"]
 key = "p"
 
