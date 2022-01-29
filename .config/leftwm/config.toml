@@ -1,6 +1,7 @@
 modkey = "Mod4"
-mousekey = "Mod4"
-workspaces = []
+mousekey = "Mod1"
+# disable_tile_drag = false
+workspaces = [ ]
 # tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 tags = [ "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" ]
 # Layouts:

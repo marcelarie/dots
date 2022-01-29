@@ -81,6 +81,11 @@ alias glof='git log --oneline -M --stat --follow --'
 alias gstal='git stash list'
 alias grec='git log --graph --oneline --decorate ( git fsck --no-reflog | awk \'/dangling commit/ {print $3}\' )'
 alias gstapp='git stash apply'
+alias gw='git worktree'
+alias gw='git worktree add'
+alias gwl='git worktree list'
+alias gwp='git worktree prune'
+alias gwr='git worktree remove'
 
 #### Develop ####
 alias ys='yarn start'

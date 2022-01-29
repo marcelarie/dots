@@ -278,7 +278,7 @@ zyc() {
 }
 
 curl_brain() {
-    curl -H 'Content-Type: application/json' -X PUT -d "{\"allow_secondary\": 1, \"max_per_ip\": 1, \"min_workers\": 0, \"max_workers\": 4, \"queues\": [\"$1\",\"$1_low\"]}" http://config.ss/worker/supermarket/$1;
+    curl -H 'Content-Type: application/json' -X PUT -d "{\"allow_secondary\": 1, \"max_per_ip\": 1, \"min_workers\": 2, \"max_workers\": 6, \"queues\": [\"$1\",\"$1_low\"]}" http://config.ss/worker/supermarket/$1;
     echo "Updating config of $1";
     curl http://config.ss/worker/rebalance;
     echo "Rebalance done";
