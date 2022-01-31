@@ -235,7 +235,6 @@ alias t='vi -t "$(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### Supers ###
 alias dz='dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'
-alias re.pl="cd ~/clones/work/supers/dist/Supers-Crawler && \re.pl"
 alias sdw='sc deploy workers'
 alias sdw='sc deploy manager'
 

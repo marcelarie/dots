@@ -42,4 +42,4 @@
 [diff]
 	algorithm = histogram
 [commit]
-	template = .gitmessage
+	template = ~/.gitmessage
