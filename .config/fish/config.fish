@@ -28,11 +28,12 @@ set --universal -x GOPATH $HOME/.local/go # export PATH=/home/$USER/.cargo/bin:$
 #   FISH ALIAS   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
+# source $HOME/.config/fish/functions/br.fish
 source $HOME/.config/fish/git-alias.fish
 source $HOME/.config/fish/zoxide.fish
-source $HOME/.config/fish/functions/google.fish
-source $HOME/.config/fish/functions/nvim.fish
 source $HOME/.config/fish/functions/git.fish
+source $HOME/.config/fish/functions/nvim.fish
+source $HOME/.config/fish/functions/google.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  ALIAS   #
@@ -82,6 +83,11 @@ alias grec='git log --graph --oneline --decorate ( git fsck --no-reflog | awk \'
 alias gstapp='git stash apply'
 # old
 # alias gld='git fetch && git log --color -p --full-diff (git rev-parse --abbrev-ref HEAD)..origin/(git rev-parse --abbrev-ref HEAD) && git pull'
+alias gw='git worktree'
+alias gw='git worktree add'
+alias gwl='git worktree list'
+alias gwp='git worktree prune'
+alias gwr='git worktree remove'
 
 #### Develop ####
 alias ys='yarn start'
@@ -181,7 +187,7 @@ alias ctag='ctags --recurse=yes'
 # alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### SoySuper ###
-# alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
+alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz="zsh -c 'source ~/.zshrc; dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'"
 alias sdw="time sc deploy workers"
 alias sdm="time sc deploy manager"
