@@ -31,7 +31,7 @@ key = "Print"
 
 [[keybind]]
 command = "Execute"
-value = "dmenu_run -fn 'FiraCode:pixelsize=12'"
+value = "dmenu_run -fn 'FiraCode:pixelsize=25'"
 modifier = ["modkey"]
 key = "p"
 
@@ -88,7 +88,7 @@ key = "n"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -modi combi -show drun -theme /usr/share/rofi/themes/minimal.rasi -font 'Fira Code 10' -width 20"
+value = "rofi -modi combi -show drun -theme /usr/share/rofi/themes/minimal.rasi -font 'Fira Code 20' -width 60"
 modifier = ["modkey"]
 key = "d"
 
