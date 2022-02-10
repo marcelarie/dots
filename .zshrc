@@ -8,7 +8,8 @@ export ZSH="/home/marcel/.oh-my-zsh" ### SET MANPAGER
 ### "bat" as manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 ## go
-export PATH=/home/$USER/.cargo/bin:$PATH export GOPATH=$HOME/.local/go
+export PATH=/home/$USER/.cargo/bin:$PATH
+export GOPATH=$HOME/.local/go
 
 ### "vim" as manpager
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
@@ -277,10 +278,19 @@ zyc() {
 }
 
 curl_brain() {
-    curl -H 'Content-Type: application/json' -X PUT -d "{\"allow_secondary\": 1, \"max_per_ip\": 1, \"min_workers\": 2, \"max_workers\": 6, \"queues\": [\"$1\",\"$1_low\"]}" http://config.ss/worker/supermarket/$1;
-    echo "Updating config of $1";
+    curl -s -X PUT -d "{\"exclusive\":0,\"max_per_ip\":1,\"max\":6,\"min\":0,\"queues\": [\"$1\",\"$1_low\"]}" http://brain.ss/unit/$1
+    echo "\nUpdating config of $1";
     curl http://config.ss/worker/rebalance;
-    echo "Rebalance done";
+    echo "\nRebalance done";
+}
+
+add_workers() {
+    max=$2
+    min=$3
+    curl -s -X PUT -d "{\"exclusive\":0,\"max_per_ip\":1,\"max\":$max,\"min\":$min,\"queues\": [\"$1\",\"$1_low\"]}" http://brain.ss/unit/$1
+    echo "\nUpdating workers to $workers on $1";
+    curl http://config.ss/worker/rebalance;
+    echo "\nRebalance done";
 }
 
 mount_dd() {

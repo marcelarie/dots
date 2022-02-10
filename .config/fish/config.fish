@@ -16,8 +16,8 @@ base16-gruvbox-dark-medium # :)
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANPAGER='nvim +Man!'
 ## go
-set --universal -x PATH /home/$USER/.cargo/bin:$PATH # export GOPATH=$HOME/.local/go
-set --universal -x GOPATH $HOME/.local/go # export PATH=/home/$USER/.cargo/bin:$PATH
+# set --universal -x PATH /home/$USER/.cargo/bin:$PATH # export GOPATH=$HOME/.local/go
+# set --universal -x GOPATH $HOME/.local/go # export PATH=/home/$USER/.cargo/bin:$PATH
 
 ### "vim" as manpager
 # export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
@@ -189,6 +189,7 @@ alias sdm="time sc deploy manager"
 alias logcli="logcli --addr='http://monitor-0.ss:3100'"
 alias su="cd ~/clones/work/supers/"
 alias prove="provewatcher"
+alias gpdw="git push && sc deploy workers"
 
 ### Arco ###
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
