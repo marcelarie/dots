@@ -302,9 +302,9 @@ function goo () {
 eval "$(zoxide init bash)"
 
 # reporting tools - install when not installed
-# neofetch
+neofetch
 #screenfetch
-alsi
+# alsi
 #paleofetch
 #fetch
 #hfetch
@@ -332,7 +332,6 @@ export NODE_PATH=$(npm root -g)
 source ~/perl5/perlbrew/etc/bashrc
 
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
-
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi

@@ -88,7 +88,7 @@ key = "n"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -modi combi -show drun -theme /usr/share/rofi/themes/minimal.rasi -font 'Fira Code 12' -width 20 -dpi 192"
+value = "rofi -modi combi -show drun -theme /usr/share/rofi/themes/minimal.rasi -font 'Fira Code 8' -dpi 192"
 modifier = ["modkey"]
 key = "d"
 
