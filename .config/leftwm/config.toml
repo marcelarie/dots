@@ -15,13 +15,13 @@ focus_new_windows = true
 
 [[scratchpad]]
 name = "kitty" # This is the name which is referenced when calling (case-sensitive)
-value = "kitty fish" # The command to load the application if it isn't started
+value = "kitty" # The command to load the application if it isn't started
 # x, y, width, height are in pixels when an integer is inputted or a percentage when a float is inputted.
 # These values are relative to the size of the workspace, and will be restricted depending on the workspace size.
-x = 560
-y = 390
-height = 300
-width = 700
+x = 1000
+y = 490
+height = 1200
+width = 2000
 
 [[keybind]]
 command = "Execute"
@@ -70,7 +70,7 @@ key = "t"
 
 [[keybind]]
 command = "Execute"
-value = "kitty fish"
+value = "kitty /bin/fish"
 modifier = ["modkey"]
 key = "Return"
 
@@ -88,19 +88,19 @@ key = "n"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -modi combi -show drun -theme /usr/share/rofi/themes/minimal.rasi -font 'Fira Code 20' -width 60"
+value = "rofi -modi combi -show drun -theme /usr/share/rofi/themes/minimal.rasi -font 'Fira Code 12' -width 20 -dpi 192"
 modifier = ["modkey"]
 key = "d"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -show emoji -modi emoji"
+value = "rofimoji"
 modifier = ["modkey"]
 key = "e"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
+value = "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}' -font 'Fira Code 12' -dpi 192"
 modifier = ["modkey"]
 key = "v"
 

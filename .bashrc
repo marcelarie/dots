@@ -238,6 +238,8 @@ alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
 
+alias vi="nvim"
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
@@ -289,14 +291,20 @@ alias vi="nvim"
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
+# FUNCTIONS
+function goo () {
+    search="$@"
+    xdg-open "https://www.google.com/search?q=$search"
+}
+
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 eval "$(zoxide init bash)"
 
 # reporting tools - install when not installed
-neofetch
+# neofetch
 #screenfetch
-#alsi
+alsi
 #paleofetch
 #fetch
 #hfetch
@@ -320,6 +328,8 @@ source ~/perl5/perlbrew/etc/bashrc
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 export NODE_PATH=$(npm root -g)
+
+source ~/perl5/perlbrew/etc/bashrc
 
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
 

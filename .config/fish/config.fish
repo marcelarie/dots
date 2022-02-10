@@ -81,6 +81,8 @@ alias glof='git log --oneline -M --stat --follow --'
 alias gstal='git stash list'
 alias grec='git log --graph --oneline --decorate ( git fsck --no-reflog | awk \'/dangling commit/ {print $3}\' )'
 alias gstapp='git stash apply'
+# old
+# alias gld='git fetch && git log --color -p --full-diff (git rev-parse --abbrev-ref HEAD)..origin/(git rev-parse --abbrev-ref HEAD) && git pull'
 alias gw='git worktree'
 alias gw='git worktree add'
 alias gwl='git worktree list'
@@ -99,8 +101,10 @@ alias zrc='nvim ~/.zshrc'
 alias arc='nvim ~/.config/awesome'
 alias drc='cd ~/.config/arco-dwm & nvim config.h'
 alias frc='nvim ~/.config/fish/config.fish'
+alias sfrc='source ~/.config/fish/config.fish'
 alias krc='nvim ~/.config/kitty/kitty.conf'
-alias lrc='cd ~/.config/leftwm/ && nvim config.toml'
+alias brc='nvim ~/.bashrc'
+alias lrc='cd ~/.config/leftwm & nvim config.toml'
 alias clones='~/clones'
 alias dots='vi ~/.gitignore'
 
@@ -183,7 +187,8 @@ alias ctag='ctags --recurse=yes'
 # alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### SoySuper ###
-alias dz="dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean"
+alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
+alias dz="zsh -c 'source ~/.zshrc; dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'"
 alias sdw="time sc deploy workers"
 alias sdm="time sc deploy manager"
 alias logcli="logcli --addr='http://monitor-0.ss:3100'"
@@ -193,9 +198,12 @@ alias gpdw="git push && sc deploy workers"
 
 ### Arco ###
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias hibernate="sudo systemctl hibernate"
+alias hybridsleep="sudo systemctl hybrid-sleep"
 
 ### Own ###
-alias gtm="$HOME/clones/own/git-tellme/target/release/gtm"
+# alias gtm="$HOME/clones/own/git-tellme/target/release/gtm"
+# alias gtm="$HOME/clones/own/git-tellme/target/release/gtm"
 alias npmls="npm list -g | grep -o '\s.*' | tr -d '\n' | sed 's/\n+|\r|⏎//g'"
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
@@ -233,28 +241,28 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # vim
-set VICONFIG /home/marcel/.config/nvim/init.lua
-export VICONFIG
-
-# Ruby
-
-# Perl
-# set PERL5LIB "/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
-set -x PERL5LIB /home/marcel/perl5/lib/perl5
-export PERL5LIB
-
-# set PERL_LOCAL_LIB_ROOT "/home/marcel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
-set -x PERL_LOCAL_LIB_ROOT /home/marcel/perl5
-export PERL_LOCAL_LIB_ROOT
-
-set -x NODE_PATH (npm root -g)
-export NODE_PATH
-
-set PERL_MB_OPT --install_base \"/home/marcel/perl5\"
-export PERL_MB_OPT
-
-set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
-export PERL_MM_OPT
+# set VICONFIG /home/marcel/.config/nvim/init.lua
+# export VICONFIG
+#
+# # Ruby
+#
+# # Perl
+# # set PERL5LIB "/home/marcel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
+# set -x PERL5LIB /home/marcel/perl5/lib/perl5
+# export PERL5LIB
+#
+# # set PERL_LOCAL_LIB_ROOT "/home/marcel/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
+# set -x PERL_LOCAL_LIB_ROOT /home/marcel/perl5
+# export PERL_LOCAL_LIB_ROOT
+#
+# set -x NODE_PATH (npm root -g)
+# export NODE_PATH
+#
+# set PERL_MB_OPT --install_base \"/home/marcel/perl5\"
+# export PERL_MB_OPT
+#
+# set PERL_MM_OPT INSTALL_BASE=/home/marcel/perl5
+# export PERL_MM_OPT
 
 # SoySuper
 

@@ -307,6 +307,7 @@ current = false
 
 [[repos.themes]]
 name = "db"
+directory = "/home/marcel/.config/leftwm/themes/db"
 repository = "https://github.com/arcolinux/arcolinux-leftwm-theme-db/"
 commit = "*"
 version = "2.3.2"
@@ -343,6 +344,7 @@ current = false
 
 [[repos.themes]]
 name = "db-scifi"
+directory = "/home/marcel/.config/leftwm/themes/db-scifi"
 repository = "https://github.com/PeterDauwe/db-scifi"
 commit = "*"
 version = "2.3.2"
