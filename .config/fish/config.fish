@@ -187,7 +187,7 @@ alias ctag='ctags --recurse=yes'
 # alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### SoySuper ###
-alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
+# alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz="zsh -c 'source ~/.zshrc; dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'"
 alias sdw="time sc deploy workers"
 alias sdm="time sc deploy manager"
