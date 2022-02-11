@@ -84,7 +84,7 @@ alias gstapp='git stash apply'
 # old
 # alias gld='git fetch && git log --color -p --full-diff (git rev-parse --abbrev-ref HEAD)..origin/(git rev-parse --abbrev-ref HEAD) && git pull'
 alias gw='git worktree'
-alias gw='git worktree add'
+alias gwa='git worktree add'
 alias gwl='git worktree list'
 alias gwp='git worktree prune'
 alias gwr='git worktree remove'
@@ -187,7 +187,7 @@ alias ctag='ctags --recurse=yes'
 # alias t='vi -t "(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 ### SoySuper ###
-alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
+# alias re.pl="echo 'source ~/.zshrc && re.pl' | zsh"
 alias dz="zsh -c 'source ~/.zshrc; dzil build; cpanm --auto-cleanup 0.0001 -n *.tar.gz; dzil clean'"
 alias sdw="time sc deploy workers"
 alias sdm="time sc deploy manager"
@@ -234,7 +234,7 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # set -x PERLBREW_ROOT /usr/local/soft/perlbrew/
-# bass source ~/perl5/perlbrew/etc/bashrc
+bass source ~/perl5/perlbrew/etc/bashrc
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #

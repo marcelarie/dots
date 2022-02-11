@@ -1,0 +1,6 @@
+package bang-bang
+package bass
+package foreign-env
+package https://github.com/tomyun/base16-fish
+package nvm
+theme default

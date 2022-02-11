@@ -17,6 +17,7 @@
 !.config/cheat
 !.config/fish
 !.config/vifm
+!.config/omf
 !.config/starship.toml
 !.config/mimeapps.list
 !.config/rustfmt
