@@ -7,6 +7,7 @@
 !.gitconfig
 !.config
 .config/*
+!.config/alacritty
 !.config/awesome
 !.config/arco-dwm
 !.config/kitty
@@ -17,6 +18,7 @@
 !.config/cheat
 !.config/fish
 !.config/vifm
+!.config/rofi
 !.config/starship.toml
 !.config/mimeapps.list
 !.config/rustfmt
