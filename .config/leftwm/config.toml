@@ -128,7 +128,7 @@ key = "x"
 
 [[keybind]]
 command = "Execute"
-value = "arcolinux-logout"
+value = "rofi -show power-menu -modi power-menu:rofi-power-menu -show-icons"
 modifier = ["modkey"]
 key = "x"
 

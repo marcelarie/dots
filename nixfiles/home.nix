@@ -11,11 +11,11 @@
   home.homeDirectory = "/home/marcel";
 
   xsession = {
-      pointerCursor = {
-        package = pkgs.paper-icon-theme;
-        name = "Paper";
-        size = 38;
-      };
+    pointerCursor = {
+      package = pkgs.paper-icon-theme;
+      name = "Paper";
+      size = 38;
+    };
   };
 
   nixpkgs.overlays = [
@@ -32,10 +32,10 @@
     extraConfig = ''luafile /home/marcel/.config/nvim/nix.init.lua'';
 
     extraPackages = with pkgs; [
-       tree-sitter
-       pkgs.rnix-lsp
-       nodePackages.typescript
-       nodePackages.typescript-language-server
+      tree-sitter
+      pkgs.rnix-lsp
+      nodePackages.typescript
+      nodePackages.typescript-language-server
     ];
   };
 
