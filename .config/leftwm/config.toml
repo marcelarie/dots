@@ -70,7 +70,7 @@ key = "t"
 
 [[keybind]]
 command = "Execute"
-value = "alacritty -e 'fish'"
+value = "kitty fish"
 modifier = ["modkey"]
 key = "Return"
 
@@ -82,7 +82,7 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "alacritty /usr/local/bin/nvim"
+value = "kitty nvim"
 modifier = ["modkey"]
 key = "n"
 
