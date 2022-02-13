@@ -277,6 +277,7 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 
 # /home/marcel/clones/own/git-tellme/target/release/git-tellme
 # fm6000
+~/programs/fetch-master-6000/fm6000
 starship init fish | source
 
 # Generated for envman. Do not edit.

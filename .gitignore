@@ -43,6 +43,7 @@
 !.mozilla/
 !README.md
 !Notes.md
+!xorg.conf
 
 ### ARCH
 # !.config/pacman
