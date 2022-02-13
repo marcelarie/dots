@@ -323,7 +323,7 @@ goo ()
     xdg-open  https://www.google.com/search?q=$query
 }
 
-source ~/perl5/perlbrew/etc/bashrc
+# source ~/perl5/perlbrew/etc/bashrc
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

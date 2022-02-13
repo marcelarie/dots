@@ -6,7 +6,7 @@ end
 #   colorscheme   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
-base16-gruvbox-dark-medium # :)
+# base16-gruvbox-dark-medium # :)
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  CONFIG   #
@@ -177,6 +177,10 @@ alias cw="cargo watch -x run"
 alias cpub="cargo publish"
 alias ctd="cargo tree -d"
 
+### NixOS ###
+alias nrs='sudo nixos-rebuild switch -I nixos-config=/home/marcel/.config/nixos/configuration.nix'
+alias hms='home-manager switch'
+
 ### Cheat ###
 alias ch='cheat'
 alias che='cheat -e'
@@ -234,7 +238,7 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # set -x PERLBREW_ROOT /usr/local/soft/perlbrew/
-bass source ~/perl5/perlbrew/etc/bashrc
+# bass source ~/perl5/perlbrew/etc/bashrc
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #  ENV.VARIABLES #
@@ -267,8 +271,8 @@ bass source ~/perl5/perlbrew/etc/bashrc
 # SoySuper
 
 # /home/marcel/clones/own/git-tellme/target/release/git-tellme
-fm6000
+# fm6000
 starship init fish | source
 
 # Generated for envman. Do not edit.
-test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
+# test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"

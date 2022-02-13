@@ -46,15 +46,15 @@ command = "ToggleFullScreen"
 modifier = ["modkey"]
 key = "f"
 
-[[keybind]]
-command = "ToggleFloating"
-modifier = ["modkey", "Shift"]
-key = "f"
-
-[[keybind]]
-command = "ToggleFloating"
-modifier = ["modkey", "Shift"]
-key = "space"
+# [[keybind]]
+# command = "ToggleFloating"
+# modifier = ["modkey", "Shift"]
+# key = "f"
+# 
+# [[keybind]]
+# command = "ToggleFloating"
+# modifier = ["modkey", "Shift"]
+# key = "space"
 
 [[keybind]]
 command = "SetLayout"
@@ -70,7 +70,7 @@ key = "t"
 
 [[keybind]]
 command = "Execute"
-value = "kitty /bin/fish"
+value = "alacritty -e 'fish'"
 modifier = ["modkey"]
 key = "Return"
 
@@ -82,7 +82,7 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "kitty /usr/local/bin/nvim"
+value = "alacritty /usr/local/bin/nvim"
 modifier = ["modkey"]
 key = "n"
 
