@@ -43,3 +43,5 @@
 	algorithm = histogram
 ; [commit]
 ; 	template = ~/.gitmessage
+[core]
+	editor = nvim

@@ -17,7 +17,7 @@ export NVM_DIR="$HOME/.nvm"
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
 # vim
-export VICONFIG=/home/marcel/.config/nvim/init.lua
+export VICONFIG=/home/marcel/.config/nvim/nix.init.lua
 
 #  Ruby
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
