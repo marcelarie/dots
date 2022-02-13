@@ -13,4 +13,4 @@
     ignore = dirty
 [submodule ".config/nixos"]
 	path = .config/nixos
-	url = https://github.com/marcelarie/nix
+	url = git@github.com:marcelarie/nix.git
