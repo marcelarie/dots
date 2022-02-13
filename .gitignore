@@ -24,6 +24,7 @@
 !.config/mimeapps.list
 !.config/rustfmt
 !.config/greenclip.toml
+!.config/nixos
 !scripts/
 !.vimrc
 !*.zshrc

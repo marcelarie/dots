@@ -41,5 +41,5 @@
     conflictstyle = zdiff3
 [diff]
 	algorithm = histogram
-[commit]
-	template = ~/.gitmessage
+; [commit]
+; 	template = ~/.gitmessage
