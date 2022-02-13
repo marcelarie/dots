@@ -3,11 +3,20 @@
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  services.picom.enable = true;
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "marcel";
   home.homeDirectory = "/home/marcel";
+
+  xsession = {
+      pointerCursor = {
+        package = pkgs.paper-icon-theme;
+        name = "Paper";
+        size = 38;
+      };
+  };
 
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
@@ -28,6 +37,12 @@
        nodePackages.typescript
        nodePackages.typescript-language-server
     ];
+  };
+
+  programs.rofi = {
+    enable = true;
+    font = "FiraCode 20";
+    # theme = "~/.cache/wal/colors-rofi-dark.rasi";
   };
 
   # programs.fish = {

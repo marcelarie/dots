@@ -39,7 +39,7 @@ source $HOME/.config/fish/functions/google.fish
 #   ZSH  ALIAS   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
-#### Linux ####
+#### General ####
 alias ls="exa --git"
 alias l="ls"
 alias cp="cp -i" # Confirm before overwriting something
@@ -55,6 +55,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ...="cd ../../.."
 alias cat="bat"
+
+alias so="source .config/fish/config.fish"
 
 #### Manjaro ####
 alias pacmi="sudo pacman-mirrors --fasttrack && sudo pacman -Syyu"
@@ -98,7 +100,7 @@ alias yig='yarn install -g'
 
 #### Configs ####
 alias zrc='nvim ~/.zshrc'
-alias arc='nvim ~/.config/awesome'
+alias arc='nvim ~/.config/alacritty/alacritty.yml'
 alias drc='cd ~/.config/arco-dwm & nvim config.h'
 alias frc='nvim ~/.config/fish/config.fish'
 alias sfrc='source ~/.config/fish/config.fish'
@@ -180,6 +182,9 @@ alias ctd="cargo tree -d"
 ### NixOS ###
 alias nrs='sudo nixos-rebuild switch -I nixos-config=/home/marcel/.config/nixos/configuration.nix'
 alias hms='home-manager switch'
+alias nhs='sudo nixos-rebuild switch -I nixos-config=/home/marcel/.config/nixos/configuration.nix && home-manager switch'
+alias nrc='nvim ~/.config/nixos/configuration.nix'
+alias hmrc='nvim ~/nixfiles/home.nix'
 
 ### Cheat ###
 alias ch='cheat'
