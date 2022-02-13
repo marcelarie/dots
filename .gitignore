@@ -12,8 +12,6 @@
 !.config/arco-dwm
 !.config/kitty
 !.config/polybar*
-!.config/pacman
-!.config/paru
 !.config/himalaya
 !.config/cheat
 !.config/fish
@@ -24,9 +22,6 @@
 !.config/mimeapps.list
 !.config/rustfmt
 !.config/greenclip.toml
-!.config/nixos
-!nixfiles
-!.config/nixpkgs
 !scripts/
 !.vimrc
 !*.zshrc
@@ -48,3 +43,12 @@
 !.mozilla/
 !README.md
 !Notes.md
+
+### ARCH
+# !.config/pacman
+# !.config/paru
+
+### NIX
+!.config/nixos
+!nixfiles
+!.config/nixpkgs
