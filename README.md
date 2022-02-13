@@ -1,9 +1,7 @@
-# thinkpad p14s G2
-
 ```
                                       ╭─────────────────────────╮
                            დოოოოოდ    │                         │
-                           |     |    │  OS        ArchLinux    │
+                           |     |    │  OS        NixOS        │
                            |     |   ╭│  TERM      kitty        │
                            |-Ο Ο-|   ││  WM        leftwm       │
                           Ͼ   ∪   Ͽ  ││  SHELL     fish         │
@@ -32,6 +30,8 @@ nice post: https://blog.yossarian.net/2020/12/24/A-few-HiDPI-tricks-for-Linux
 
 **#TODO:**
 
+
+# thinkpad p14s G2
 
 Notes:
 For AMD computers xbacklight needs acpilight
