@@ -31,10 +31,10 @@
     hunk-header-file-style = red
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
-[credential]
-	helper = /usr/bin/git-credential-manager-core
-[credential "https://dev.azure.com"]
-	useHttpPath = true
+; [credential]
+; 	helper = /usr/bin/git-credential-manager-core
+; [credential "https://dev.azure.com"]
+; 	useHttpPath = true
 [init]
 	defaultBranch = main
 [merge]
