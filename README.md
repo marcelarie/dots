@@ -38,3 +38,5 @@ For AMD computers xbacklight needs acpilight
 On xfce-powermanager the option **Handle display brightness keys** can be disabled,
 enable it to control the brightness with the keyboard.
 
+Notes:
+xrandr --output DP-0 --auto --output HDMI-0 --auto --scale 2x2 --right-of DP-0
