@@ -50,11 +50,12 @@ key = "f"
 # command = "ToggleFloating"
 # modifier = ["modkey", "Shift"]
 # key = "f"
-#
-# [[keybind]]
+
+[[keybind]]
+command = "FloatingToTile"
 # command = "ToggleFloating"
-# modifier = ["modkey", "Shift"]
-# key = "space"
+modifier = ["modkey", "Shift"]
+key = "space"
 
 [[keybind]]
 command = "SetLayout"
@@ -116,7 +117,9 @@ modifier = ["modkey"]
 key = "q"
 
 [[keybind]]
-command = "SoftReload"
+# command = "SoftReload"
+command = "Execute"
+value = "kitty --hold leftwm-check && leftwm-command 'SoftReload"
 modifier = ["modkey", "Shift"]
 key = "r"
 

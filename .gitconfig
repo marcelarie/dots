@@ -37,8 +37,8 @@
 ; 	useHttpPath = true
 [init]
 	defaultBranch = main
-[merge]
-    conflictstyle = zdiff3
+; [merge]
+;     conflictstyle = zdiff3
 [diff]
 	algorithm = histogram
 ; [commit]
