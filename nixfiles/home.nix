@@ -42,7 +42,7 @@
   programs.rofi = {
     enable = true;
     font = "FiraCode 20";
-    # theme = "~/.cache/wal/colors-rofi-dark.rasi";
+    # theme = "~/.config/rofi/themes/gruvbox.rasi";
   };
 
   # programs.fish = {

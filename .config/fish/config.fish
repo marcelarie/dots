@@ -56,7 +56,7 @@ alias ...="cd ../.."
 alias ...="cd ../../.."
 alias cat="bat"
 
-alias so="source .config/fish/config.fish"
+alias so="source ~/.config/fish/config.fish"
 
 #### Manjaro ####
 alias pacmi="sudo pacman-mirrors --fasttrack && sudo pacman -Syyu"
@@ -201,7 +201,7 @@ alias dz="zsh -c 'source ~/.zshrc; dzil build; cpanm --auto-cleanup 0.0001 -n *.
 alias sdw="time sc deploy workers"
 alias sdm="time sc deploy manager"
 alias logcli="logcli --addr='http://monitor-0.ss:3100'"
-alias su="cd ~/clones/work/supers/"
+alias sup="cd ~/clones/work/supers/"
 alias prove="provewatcher"
 alias gpdw="git push && sc deploy workers"
 

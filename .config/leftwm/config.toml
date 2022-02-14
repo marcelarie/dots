@@ -88,13 +88,13 @@ key = "n"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -modi combi -show drun -font 'Fira Code 8' -dpi 192"
+value = "rofi -modi combi -show drun -font 'Fira Code 12' -dpi 192"
 modifier = ["modkey"]
 key = "d"
 
 [[keybind]]
 command = "Execute"
-value = "rofimoji"
+value = "rofimoji -a copy"
 modifier = ["modkey"]
 key = "e"
 

@@ -9,7 +9,7 @@
 .config/*
 !.config/alacritty
 !.config/awesome
-!.config/arco-dwm
+!.config/dwm
 !.config/kitty
 !.config/polybar*
 !.config/himalaya
