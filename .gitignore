@@ -11,6 +11,7 @@
 !.config/awesome
 !.config/dwm
 !.config/kitty
+!.config/autorandr
 !.config/polybar*
 !.config/himalaya
 !.config/cheat
