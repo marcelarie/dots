@@ -39,10 +39,22 @@
     ];
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Materia-dark";
+      package = pkgs.materia-theme;
+    };
+    iconTheme = {
+      name = "Paper";
+      package = pkgs.paper-icon-theme;
+    };
+  };
+
   programs.rofi = {
     enable = true;
     font = "FiraCode 20";
-    # theme = "~/.config/rofi/themes/gruvbox.rasi";
+    theme = ~/.config/rofi/themes/slate.rasi;
   };
 
   programs.fish = {
