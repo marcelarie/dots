@@ -3,7 +3,7 @@
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  services.picom.enable = true;
+  # services.picom.enable = true;
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -56,6 +56,10 @@
     font = "FiraCode 20";
     theme = ~/.config/rofi/themes/slate.rasi;
   };
+
+  home.packages = with pkgs;  [
+    nodePackages.speed-test
+  ];
 
   programs.fish = {
     enable = true;

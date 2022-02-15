@@ -2,3 +2,4 @@
 
 volumeicon &
 feh --bg-scale ~/images/background.jpg
+leftwm-command 'SoftReload'
