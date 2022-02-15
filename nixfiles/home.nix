@@ -14,7 +14,7 @@
     pointerCursor = {
       package = pkgs.paper-icon-theme;
       name = "Paper";
-      size = 38;
+      size = 28;
     };
   };
 
@@ -49,6 +49,10 @@
       name = "Paper";
       package = pkgs.paper-icon-theme;
     };
+    font = {
+      name = "Noto Sans 9.5";
+      package = pkgs.noto-fonts;
+    };
   };
 
   programs.rofi = {
@@ -59,6 +63,7 @@
 
   home.packages = with pkgs;  [
     nodePackages.speed-test
+    nodePackages.pnpm
   ];
 
   programs.fish = {
