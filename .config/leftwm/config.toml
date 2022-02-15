@@ -135,14 +135,14 @@ value = "rofi -show power-menu -modi power-menu:rofi-power-menu -show-icons"
 modifier = ["modkey"]
 key = "x"
 
-[[keybind]]
-command = "Execute"
-value = "slock"
-modifier = ["modkey", "Control"]
-key = "l"
+# [[keybind]]
+# command = "Execute"
+# value = "slock"
+# modifier = ["modkey", "Control"]
+# key = "l"
 
 [[keybind]]
-command = "MoveToLastWorkspace"
+command = "MoveWindowToNextWorkspace"
 modifier = ["modkey", "Shift"]
 key = "w"
 
@@ -186,15 +186,15 @@ command = "PreviousLayout"
 modifier = ["modkey", "Control"]
 key = "j"
 
-# [[keybind]]
-# command = "FocusWorkspaceNext"
-# modifier = ["modkey"]
-# key = "l"
-#
-# [[keybind]]
-# command = "FocusWorkspacePrevious"
-# modifier = ["modkey"]
-# key = "h"
+[[keybind]]
+command = "FocusWorkspaceNext"
+modifier = ["modkey"]
+key = "l"
+
+[[keybind]]
+command = "FocusWorkspacePrevious"
+modifier = ["modkey"]
+key = "h"
 
 [[keybind]]
 command = "MoveWindowUp"
@@ -353,11 +353,11 @@ key = "i"
 [[keybind]]
 command = "IncreaseMainWidth"
 value = "5"
-modifier = ["modkey"]
+modifier = ["modkey", "Shift"]
 key = "l"
 
 [[keybind]]
 command = "DecreaseMainWidth"
 value = "5"
-modifier = ["modkey"]
+modifier = ["modkey", "Shift"]
 key = "h"

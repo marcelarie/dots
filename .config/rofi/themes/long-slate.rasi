@@ -3,8 +3,7 @@
   border-color: #2e343f;
   text-color: #8ca0aa;
   spacing: 0;
-  height: 500px;
-  width: 3000px;
+  width: 1000px;
 }
 
 inputbar {
@@ -29,7 +28,7 @@ entry {
 }
 
 listview {
-  cycle: false;
+  cycle: true;
   margin: 0 0 -1px 0;
   scrollbar: false;
 }
@@ -40,5 +39,6 @@ element {
 }
 
 element selected {
-  background-color: #2e343f;
+  border-color: #8ca0aa;
+  border: 1px;
 }

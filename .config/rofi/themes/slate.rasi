@@ -28,7 +28,7 @@ entry {
 }
 
 listview {
-  cycle: false;
+  cycle: true;
   margin: 0 0 -1px 0;
   scrollbar: false;
 }
@@ -39,5 +39,6 @@ element {
 }
 
 element selected {
-  background-color: #2e343f;
+  border-color: #8ca0aa;
+  border: 1px;
 }
