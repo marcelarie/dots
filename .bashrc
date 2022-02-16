@@ -323,13 +323,11 @@ goo ()
     xdg-open  https://www.google.com/search?q=$query
 }
 
-# source ~/perl5/perlbrew/etc/bashrc
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 export NODE_PATH=$(npm root -g)
 
-source ~/perl5/perlbrew/etc/bashrc
+# source ~/perl5/perlbrew/etc/bashrc
 
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
 

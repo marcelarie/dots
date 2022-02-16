@@ -48,6 +48,8 @@
       texlab
       rust-analyzer
       deno
+      stylua
+      nodePackages.prettier
     ];
   };
 

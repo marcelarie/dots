@@ -6,7 +6,7 @@ end
 #   colorscheme   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 
-base16-gruvbox-dark-medium # :)
+# base16-gruvbox-dark-medium # :)
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #   ZSH  CONFIG   #
