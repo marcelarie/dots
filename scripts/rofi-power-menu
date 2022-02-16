@@ -6,7 +6,6 @@
 # For instance:
 #
 #   rofi -show powermenu -modi powermenu:./rofi-power-menu
-#
 # See README.md for more information.
 
 set -e

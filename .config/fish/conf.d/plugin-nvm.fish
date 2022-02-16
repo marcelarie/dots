@@ -1,1 +1,1 @@
-/nix/store/s2y0wkcyl3wl9ywcsdi7flpv4194b1a8-home-manager-files/.config/fish/conf.d/plugin-nvm.fish
+/nix/store/05ssd7kvvhyd087798myiqi5m2mzsc2f-home-manager-files/.config/fish/conf.d/plugin-nvm.fish

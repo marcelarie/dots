@@ -14,9 +14,10 @@
     pointerCursor = {
       package = pkgs.paper-icon-theme;
       name = "Paper";
-      size = 28;
+      size = 38;
     };
   };
+  nixpkgs.config.allowUnfree = true;
 
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
@@ -36,6 +37,17 @@
       pkgs.rnix-lsp
       nodePackages.typescript
       nodePackages.typescript-language-server
+      nodePackages.bash-language-server
+      nodePackages.vscode-langservers-extracted
+      nodePackages.vim-language-server
+      nodePackages.typescript
+      nodePackages.typescript-language-server
+      nodePackages.intelephense
+      nodePackages.dockerfile-language-server-nodejs
+      sumneko-lua-language-server
+      texlab
+      rust-analyzer
+      deno
     ];
   };
 
@@ -55,6 +67,18 @@
     };
   };
 
+  xdg.mimeApps = {
+    enable = true;
+    # associations.added = {
+    #   "application/pdf" = [ "org.gnome.Evince.desktop" ];
+    # };
+    defaultApplications = {
+      # "application/pdf" = [ "org.gnome.Evince.desktop" ];
+      "x-scheme-handler/http" = [ "firefox" ];
+      "x-scheme-handler/https" = [ "firefox" ];
+    };
+  };
+
   programs.rofi = {
     enable = true;
     font = "FiraCode 20";
@@ -64,6 +88,7 @@
   home.packages = with pkgs;  [
     nodePackages.speed-test
     nodePackages.pnpm
+    # sumneko-lua-language-server
   ];
 
   programs.fish = {
