@@ -19,9 +19,8 @@
 !.config/fish/fish_variables
 !.config/vifm
 !.config/omf
-!.config/rofi
+!.config/rofi/themes
 !.config/starship.toml
-!.config/mimeapps.list
 !.config/rustfmt
 !.config/greenclip.toml
 !scripts/
