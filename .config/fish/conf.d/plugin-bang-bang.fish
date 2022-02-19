@@ -1,1 +1,0 @@
-/nix/store/pi7mmb1fd9sggsn66jjvnrz7y3r7bhj8-home-manager-files/.config/fish/conf.d/plugin-bang-bang.fish
