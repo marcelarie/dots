@@ -10,7 +10,7 @@ SETUVAR Z_DATA:/home/marcel/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/marcel/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/marcel\x24
 SETUVAR __fish_initialized:3100
-SETUVAR fish_color_autosuggestion:222222
+SETUVAR fish_color_autosuggestion:444444
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:green
 SETUVAR fish_color_comment:222222

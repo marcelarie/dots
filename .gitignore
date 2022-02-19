@@ -16,6 +16,7 @@
 !.config/himalaya
 !.config/cheat
 !.config/fish/prenix-config.fish
+!.config/fish/fish_variables
 !.config/vifm
 !.config/omf
 !.config/rofi
