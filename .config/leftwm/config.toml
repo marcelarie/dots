@@ -10,7 +10,7 @@ layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHor
 layout_mode = "Tag"
 # scratchpad = []
 disable_current_tag_swap = false
-focus_behaviour = "ClickTo" # Can be Sloppy, ClickTo, or Driven
+focus_behaviour = "Sloppy" # Can be Sloppy, ClickTo, or Driven
 focus_new_windows = true
 
 [[scratchpad]]

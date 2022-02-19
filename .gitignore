@@ -10,12 +10,12 @@
 !.config/alacritty
 !.config/awesome
 !.config/dwm
-!.config/kitty
+!.config/kitty/prenix-kitty.conf
 !.config/autorandr
 !.config/polybar*
 !.config/himalaya
 !.config/cheat
-!.config/fish
+!.config/fish/prenix-config.fish
 !.config/vifm
 !.config/omf
 !.config/rofi
@@ -35,7 +35,6 @@
 !*local_supers.md
 !*old-sys-pacman-qe.md
 !.rustfmt.toml
-!.Xresources
 !.config/leftwm/config.toml
 !.config/leftwm/themes.toml
 !.config/neofetch/
@@ -52,5 +51,4 @@
 
 ### NIX
 !.config/nixos
-!nixfiles
 !.config/nixpkgs
