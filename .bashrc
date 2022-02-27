@@ -299,8 +299,6 @@ function goo () {
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
-eval "$(zoxide init bash)"
-
 # reporting tools - install when not installed
 neofetch
 #screenfetch
@@ -324,8 +322,8 @@ goo ()
 }
 
 # Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-export NODE_PATH=$(npm root -g)
+# [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+# export NODE_PATH=$(npm root -g)
 
 # source ~/perl5/perlbrew/etc/bashrc
 
@@ -335,4 +333,5 @@ alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 
+eval "$(zoxide init bash)"
 # export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
