@@ -301,9 +301,10 @@ function goo () {
 
 function trs () {
     if  [ $# -eq 0 ]; then
-        echo "Available languages";
-        curl -s -X GET "https://libretranslate.com/languages" \
-            -H  "accept: application/json"  | jq .
+         echo "Available languages:";
+         curl -s -X GET "https://libretranslate.com/languages" \
+              -H  "accept: application/json" \
+              | jq -j '.[]|"\n", .code, " (",.name, ") "' && echo;
         return 1;
     fi
 
