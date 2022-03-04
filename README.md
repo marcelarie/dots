@@ -1,4 +1,4 @@
-```
+````
                                       ╭─────────────────────────╮
                            დოოოოოდ    │                         │
                            |     |    │  OS        NixOS        │
@@ -8,21 +8,20 @@
                            |     |   ╯│  EDITOR    neovim       │
                           ˏ`-.ŏ.-´ˎ   │                         │
                               @       │             ...and more │
-                               @      ╰─────────────────────────╯
-```
+                               @      ╰─────────────────────────╯ ```
 
 ## 4k scaling
 
 nice post: https://blog.yossarian.net/2020/12/24/A-few-HiDPI-tricks-for-Linux
 
-- [x] Xresources dpi 
+- [x] Xresources dpi
 - [x] GTK dpi
-- [x] Q5 
+- [x] Q5
 - [x] kitty font size
 - [x] Icon size
 - [x] Polybar config
 - [x] Electron ( no need for now )
-- [x] Sddm scaling 
+- [x] Sddm scaling
 - [x] dmenu
 - [x] update all language servers
    - [ ] znote
@@ -40,3 +39,6 @@ enable it to control the brightness with the keyboard.
 
 Notes:
 xrandr --output DP-0 --auto --output HDMI-0 --auto --scale 2x2 --right-of DP-0
+
+
+````

@@ -323,6 +323,17 @@ function goo () {
     xdg-open "https://www.google.com/search?q=$search"
 }
 
+function trs () {
+    len=${#@};
+    lang=${@: -1};
+    query="${@:1:$len-1}";
+
+    curl -s 'https://libretranslate.de/translate' \
+       -H 'Content-Type: application/json' \
+       -d "{\"q\":\"$query\",\"source\":\"auto\",\"target\":\"$lang\"}" \
+       | jq .translatedText
+}
+
 ### init ###
 # eval "$(mcfly init zsh)"
 # export MCFLY_KEY_SCHEME=nvim

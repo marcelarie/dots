@@ -299,6 +299,25 @@ function goo () {
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
+function trs () {
+    if  [ $# -eq 0 ]; then
+        echo "Available languages";
+        curl -s -X GET "https://libretranslate.com/languages" \
+            -H  "accept: application/json"  | jq .
+        return 1;
+    fi
+
+    len=${#@};
+    target=${@: -1};
+    source=${@:$len -1: 1};
+    query="${@:1:$len-2}";
+
+    curl -s 'https://libretranslate.de/translate' \
+       -H 'Content-Type: application/json' \
+       -d "{\"q\":\"$query\",\"source\":\"$source\",\"target\":\"$target\"}" \
+       | jq .translatedText
+}
+
 # reporting tools - install when not installed
 neofetch
 #screenfetch
