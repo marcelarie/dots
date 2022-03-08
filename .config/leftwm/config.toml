@@ -37,6 +37,12 @@ key = "p"
 
 [[keybind]]
 command = "Execute"
+value = "~/scripts/rofi-translate.sh"
+modifier = ["modkey", "Shift"]
+key = "t"
+
+[[keybind]]
+command = "Execute"
 value = "~/scripts/rofi-pulse-sink.sh"
 modifier = ["modkey", "Shift"]
 key = "p"

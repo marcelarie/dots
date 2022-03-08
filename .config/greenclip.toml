@@ -5,7 +5,7 @@
   trim_space_from_selection = true
   use_primary_selection_as_input = true
   blacklisted_applications = []
-  enable_image_support = true
+  enable_image_support = false
   image_cache_directory = "/tmp/greenclip"
   static_history = [
       '(╯°□°）╯',
