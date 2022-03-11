@@ -316,7 +316,7 @@ function trs () {
     curl -s 'https://libretranslate.de/translate' \
        -H 'Content-Type: application/json' \
        -d "{\"q\":\"$query\",\"source\":\"$source\",\"target\":\"$target\"}" \
-       | jq .translatedText
+       | jq -r .translatedText
 }
 
 # reporting tools - install when not installed
