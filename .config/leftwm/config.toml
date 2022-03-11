@@ -124,8 +124,6 @@ key = "q"
 
 [[keybind]]
 command = "SoftReload"
-# command = "Execute"
-# value = "kitty --hold leftwm-check && leftwm-command 'SoftReload'"
 modifier = ["modkey", "Shift"]
 key = "r"
 

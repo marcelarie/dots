@@ -1,4 +1,4 @@
-````
+```
                                       ╭─────────────────────────╮
                            დოოოოოდ    │                         │
                            |     |    │  OS        NixOS        │
@@ -8,7 +8,8 @@
                            |     |   ╯│  EDITOR    neovim       │
                           ˏ`-.ŏ.-´ˎ   │                         │
                               @       │             ...and more │
-                               @      ╰─────────────────────────╯ ```
+                               @      ╰─────────────────────────╯ 
+```
 
 ## 4k scaling
 
@@ -27,9 +28,6 @@ nice post: https://blog.yossarian.net/2020/12/24/A-few-HiDPI-tricks-for-Linux
    - [ ] znote
 - [x] fork smooth leftwm theme and use that fork and add it as a submodule of this repo
 
-**#TODO:**
-
-
 # thinkpad p14s G2
 
 Notes:
@@ -40,5 +38,10 @@ enable it to control the brightness with the keyboard.
 Notes:
 xrandr --output DP-0 --auto --output HDMI-0 --auto --scale 2x2 --right-of DP-0
 
+Todos nix:
 
-````
+- HiDPI support for GTK
+- HiDPI support on internal tty
+- Install script/command to use flakes on nixos minimal install
+- Clean `dots` distro 
+- Use a remote flake (?)

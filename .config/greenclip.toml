@@ -10,12 +10,5 @@
   static_history = [
       '(╯°□°）╯',
       '¯\_(ツ)_/¯',
-      "my $d = driver('",
-      "my $gp = $d->get_product(",
-      "my $fp = $d->fetch_product(",
-      "my $cp = $d->category_products(",
-      'my $res = Mojo::Collection->new( @$cp )->map(sub { $d->fetch_product($_) })',
-      'my $cwp = Mojo::Collection->new($d->categories_with_products)->map(sub{ say "############# ".$_->{id}." #############"; $d->category_products($_->{id}) })->flatten;',
-      'my $cfp = $cp->map(sub { $d->fetch_product($_) })->compact->flatten;',
       "ñ",
 ]
