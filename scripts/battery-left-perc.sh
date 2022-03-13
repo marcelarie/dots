@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 m_acpi=$(acpi);
 bat="$( cut -d',' -f 2 <<< "$m_acpi" | tr -d ' ' )";
 full_time="$( acpi | cut -d',' -f 3 | sed 's/[aA-zZ]//g' )";
