@@ -70,7 +70,7 @@ font:
     #  family: Iosevka
     #  style: Light
     #  style: Medium
-    family: "FiraCode Nerd Font Mono"
+    family: "FiraCode Nerd Font"
     #  family: "Source Code Pro"
     # style: Retina
 
@@ -78,7 +78,7 @@ font:
   bold:
     #  family: Iosevka
     style: Medium
-    family: "FiraCode Nerd Font Mono"
+    family: "FiraCode Nerd Font"
     # family: "Source Code Pro"
 
   # The italic font face
@@ -86,7 +86,7 @@ font:
     #  family: Iosevka
     style: "Light Italic"
     # style: "Light Oblique"
-    family: "FiraCode Nerd Font Mono"
+    family: "FiraCode Nerd Font"
     # family: "Source Code Pro"
     # style: "Medium Italic"
 

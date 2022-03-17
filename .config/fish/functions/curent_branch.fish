@@ -1,1 +1,0 @@
-/nix/store/g5dirlykgbjr7dxyhh24wrng713w4f58-home-manager-files/.config/fish/functions/curent_branch.fish
