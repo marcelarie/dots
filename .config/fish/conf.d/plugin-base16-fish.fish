@@ -1,0 +1,1 @@
+/nix/store/g5dirlykgbjr7dxyhh24wrng713w4f58-home-manager-files/.config/fish/conf.d/plugin-base16-fish.fish
