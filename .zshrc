@@ -1,8 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+if test -e /etc/static/bashrc; then . /etc/static/bashrc; fi
+# source ~/programs/common
+
 # Path to your oh-my-zsh installation.
-export ZSH="/home/marcel/.oh-my-zsh" ### SET MANPAGER
+# export ZSH="/home/marcel/.oh-my-zsh" ### SET MANPAGER
 ### Uncomment only one of these!
 
 ### "bat" as manpager
@@ -81,9 +84,9 @@ DISABLE_UPDATE_PROMPT="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions mongodb)
+# plugins=(git zsh-syntax-highlighting zsh-autosuggestions mongodb)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -323,35 +326,47 @@ function goo () {
     xdg-open "https://www.google.com/search?q=$search"
 }
 
+#remove
+alias rmgitcache="rm -r ~/.cache/git"
+
+#moving your personal files and folders from /personal to ~
+alias personal='cp -Rf /personal/* ~'
+
+# personal
+alias vi="nvim"
+#list
+alias ls='exa --color=auto'
+alias la='ls -a'
+alias ll='ls -la'
+alias l='ls'
+alias l.="ls -A | egrep '^\.'"
+
+#fix obvious typo's
+alias cd..='cd ..'
+
+#search content with ripgrep
+alias rg="rg --sort path"
+
+#get the error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
 ### init ###
 # eval "$(mcfly init zsh)"
 # export MCFLY_KEY_SCHEME=nvim
 # export MCFLY_FUZZY=true
-# eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
 
 ### AUTOS STARTS ###
 
-#  pfetch
+ # pfetch
 # wbcn
 # DEFAULT => (?) 250 45
-xset r rate 150 45
+# xset r rate 150 45
 
-alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
-if [ -e /home/marcel/.nix-profile/etc/profile.d/nix.sh ]; then . /home/marcel/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-export NODE_PATH=$(npm root -g)
 
 # ≃≃≃≃≃≃≃≃≃ #
 #  SOURCES  #
 # ≃≃≃≃≃≃≃≃≃ ⩨
 
-source ~/perl5/perlbrew/etc/bashrc
 eval "$(zoxide init zsh)"
-#  source /home/marcel/.config/broot/launcher/bash/br
-
-# Generated for envman. Do not edit.
-# [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

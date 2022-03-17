@@ -4,21 +4,15 @@
 
 if test -e /etc/static/bashrc; then . /etc/static/bashrc; fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 export HISTCONTROL=ignoreboth:erasedups
 
-# Make nano the default editor
-
 export EDITOR='vim'
 export VISUAL='vim'
-
-PS1='[\u@\h \W]\$ '
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -91,16 +85,24 @@ function goo () {
     xdg-open "https://www.google.com/search?q=$search"
 }
 
+ps1 () {
+    current_pwd="$( pwd | sed "s#$HOME#~#" )";
+    branch="$( git symbolic-ref --short HEAD 2>/dev/null )";
+    [[ $( git status -s 2>/dev/null ) ]] && changes="❗" || changes="";
+    PS1=" $current_pwd \e[0;36m$branch$changes\e[m \n  > ";
+}
+
+ps1;
+
+cd () {
+    builtin cd "$@";
+    ps1;
+}
+
 #create a file called .bashrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 eval "$(zoxide init bash)"
 
-neofetch
-
-goo ()
-{
-    query="$@"
-    xdg-open  https://www.google.com/search?q=$query
-}
+# neofetch
