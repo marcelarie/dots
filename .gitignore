@@ -10,7 +10,7 @@
 !.config/alacritty
 !.config/awesome
 !.config/arco-dwm
-!.config/kitty
+/* !.config/kitty */
 !.config/polybar*
 !.config/pacman
 !.config/paru
