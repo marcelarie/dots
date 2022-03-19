@@ -26,7 +26,6 @@ nice post: https://blog.yossarian.net/2020/12/24/A-few-HiDPI-tricks-for-Linux
 - [x] dmenu
 - [x] update all language servers
    - [ ] znote
-- [x] fork smooth leftwm theme and use that fork and add it as a submodule of this repo
 
 # thinkpad p14s G2
 

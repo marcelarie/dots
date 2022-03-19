@@ -17,7 +17,7 @@
 [delta]
     features = decorations
     navigate = true
-    features =  calochortus-lyallii
+    ; features =  calochortus-lyallii
     ; side-by-side = true
 
 [delta "interactive"]

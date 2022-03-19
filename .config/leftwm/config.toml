@@ -95,7 +95,7 @@ key = "n"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -modi combi -show drun -font 'Fira Code 12' -dpi 150"
+value = "rofi -modi combi -show drun -font 'Fira Code 12' -dpi 200"
 modifier = ["modkey"]
 key = "d"
 
@@ -107,7 +107,7 @@ key = "e"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -modi 'clipboard:greenclip print' -theme /home/marcel/.config/rofi/themes/long-slate.rasi -show clipboard -run-command '{cmd}' -font 'Fira Code 12' -dpi 150"
+value = "rofi -modi 'clipboard:greenclip print' -theme /home/marcel/.config/rofi/themes/long-slate.rasi -show clipboard -run-command '{cmd}' -font 'Fira Code 12' -dpi 200"
 modifier = ["modkey"]
 key = "v"
 
@@ -135,7 +135,7 @@ key = "x"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -show power-menu -modi power-menu:rofi-power-menu -show-icons"
+value = "rofi -height 50 -show power-menu -modi power-menu:rofi-power-menu -show-icons -dpi 130  "
 modifier = ["modkey"]
 key = "x"
 
