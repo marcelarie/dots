@@ -39,8 +39,10 @@ xrandr --output DP-0 --auto --output HDMI-0 --auto --scale 2x2 --right-of DP-0
 
 Todos nix:
 
-- HiDPI support for GTK
 - HiDPI support on internal tty
 - Install script/command to use flakes on nixos minimal install
 - Clean `dots` distro 
 - Use a remote flake (?)
+
+Done nix:
+- HiDPI support for GTK 
