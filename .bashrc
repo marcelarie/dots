@@ -89,7 +89,7 @@ ps1 () {
     current_pwd="$( pwd | sed "s#$HOME#~#" )";
     branch="$( git symbolic-ref --short HEAD 2>/dev/null )";
     [[ $( git status -s 2>/dev/null ) ]] && changes="❗" || changes="";
-    PS1=" $current_pwd \e[0;36m$branch$changes\e[m \n  > ";
+    PS1=" $current_pwd \e[0;36m$branch$changes\e[m \n > ";
 }
 
 ps1;
@@ -104,5 +104,14 @@ cd () {
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 eval "$(zoxide init bash)"
+
+z () {
+    __zoxide_z "$@";
+    ps1;
+}
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # neofetch
