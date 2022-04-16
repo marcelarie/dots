@@ -9,7 +9,7 @@ SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/marcel/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/marcel/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/marcel\x24
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:444444
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:green
@@ -39,5 +39,6 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:yellow\x1e\x2d\x2ddim
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_paths:/home/marcel/\x2elocal/go\x1e/home/marcel/programs/bin\x1e/home/marcel/perl5/bin\x1e/home/marcel/\x2elocal/share/gem/ruby/3\x2e0\x2e0\x1e/home/marcel/perl5/bin/pls\x1e/home/marcel/\x2ecargo/bin\x1e/home/marcel/perl5
 SETUVAR yimmy_solarized:true
