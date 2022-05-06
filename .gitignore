@@ -7,16 +7,13 @@
 !.gitconfig
 !.config
 .config/*
-!.config/alacritty
 !.config/awesome
 !.config/arco-dwm
-/* !.config/kitty */
 !.config/polybar*
 !.config/pacman
 !.config/paru
 !.config/himalaya
 !.config/cheat
-# !.config/fish
 !.config/vifm
 !.config/omf
 !.config/rofi
@@ -44,3 +41,9 @@
 !.mozilla/
 !README.md
 !Notes.md
+
+# NOT ANYMORE
+
+# !.config/alacritty
+# !.config/kitty
+# !.config/fish

@@ -16,8 +16,8 @@
 
 [delta]
     features = decorations
+    features = kingfisher
     navigate = true
-    features =  calochortus-lyallii
     ; side-by-side = true
 
 [delta "interactive"]
