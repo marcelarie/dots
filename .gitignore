@@ -28,7 +28,6 @@
 !*.xprofile
 !*.tmux.conf
 !*.vimrc
-!.bashrc
 !*local_supers.md
 !*old-sys-pacman-qe.md
 !.rustfmt.toml
@@ -47,3 +46,4 @@
 # !.config/alacritty
 # !.config/kitty
 # !.config/fish
+# !.bashrc
