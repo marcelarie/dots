@@ -3,10 +3,18 @@
 alt - j : yabai -m window --focus prev || yabai -m window --focus last
 alt - k : yabai -m window --focus next || yabai -m window --focus first
 
-cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
+# open alacritty
 alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
+
+# cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
 # alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 # shift + alt - return : brew services restart yabai
+
+# close window
+alt - q : skhd --key "cmd - w"
+
+cmd - j : yabai -m display --focus west
+cmd - k : yabai -m display --focus east
 
 # swap window
 # alt - return : yabai -m window --swap west # swap with "main" tile (simply swap it west)
@@ -84,6 +92,10 @@ alt - t : yabai -m window --toggle float;\
 # toggle sticky, float and resize to picture-in-picture size
 # alt - p : yabai -m window --toggle sticky;\
 #           yabai -m window --grid 5:5:4:0:1:1
+
+alt + shift - r : \
+    launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"; \
+    skhd --reload
 
 # change layout of desktop
 # ctrl + alt - a : yabai -m space --layout bsp
