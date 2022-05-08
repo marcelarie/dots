@@ -3,8 +3,10 @@
 alt - j : yabai -m window --focus prev || yabai -m window --focus last
 alt - k : yabai -m window --focus next || yabai -m window --focus first
 
-cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
-alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
+alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
+# alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+# shift + alt - return : brew services restart yabai
 
 # swap window
 # alt - return : yabai -m window --swap west # swap with "main" tile (simply swap it west)
