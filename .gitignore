@@ -21,6 +21,8 @@
 !.config/mimeapps.list
 !.config/rustfmt
 !.config/greenclip.toml
+!.config/skhd
+!.config/yabai
 !scripts/
 !.vimrc
 !*.zshrc

@@ -3,6 +3,8 @@
 alt - j : yabai -m window --focus prev || yabai -m window --focus last
 alt - k : yabai -m window --focus next || yabai -m window --focus first
 
+cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+
 # swap window
 alt - return : yabai -m window --swap west # swap with "main" tile (simply swap it west)
 shift + alt - j : yabai -m window --swap prev
@@ -57,14 +59,14 @@ alt - y : yabai -m space --mirror y-axis
 alt - x : yabai -m space --mirror x-axis
 
 # toggle window fullscreen zoom
-alt - space : yabai -m window --toggle zoom-fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window native fullscreen
 # alt - space : yabai -m window --toggle native-fullscreen
 # shift + alt - f : yabai -m window --toggle native-fullscreen
 
 # toggle window border
-# shift + alt - b : yabai -m window --toggle border
+shift + alt - b : yabai -m window --toggle border
 
 # toggle window split type
 alt - e : yabai -m window --toggle split
