@@ -4,9 +4,10 @@ alt - j : yabai -m window --focus prev || yabai -m window --focus last
 alt - k : yabai -m window --focus next || yabai -m window --focus first
 
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 
 # swap window
-alt - return : yabai -m window --swap west # swap with "main" tile (simply swap it west)
+# alt - return : yabai -m window --swap west # swap with "main" tile (simply swap it west)
 shift + alt - j : yabai -m window --swap prev
 shift + alt - k : yabai -m window --swap next
 
