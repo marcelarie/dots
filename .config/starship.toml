@@ -1,6 +1,6 @@
 # Inserts a blank line between shell prompts
 add_newline = false
-command_timeout = 1000
+command_timeout = 10000
 
 # Replace the "❯" symbol in the prompt with "➜"
 # [character]                            # The name of the module we are configuring is "character"
@@ -10,5 +10,5 @@ command_timeout = 1000
 [package]
 disabled = true
 
-# [git_branch]
-# symbol = "🌱 "
+[git_branch]
+symbol = "🌱 "
