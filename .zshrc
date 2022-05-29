@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-if test -e /etc/static/bashrc; then . /etc/static/bashrc; fi
+# if test -e /etc/static/bashrc; then . /etc/static/bashrc; fi
 # source ~/programs/common
 
 # Path to your oh-my-zsh installation.
@@ -354,7 +354,8 @@ alias jctl="journalctl -p 3 -xb"
 # eval "$(mcfly init zsh)"
 # export MCFLY_KEY_SCHEME=nvim
 # export MCFLY_FUZZY=true
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
+# eval "$(starship init zsh)"
 
 ### AUTOS STARTS ###
 
@@ -365,8 +366,12 @@ eval "$(zoxide init zsh)"
 
 alias luamake=/home/marcel/.config/nvim/language-servers/lua-language-server/3rd/luamake/luamake
 
+# Nix
+ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+ fi
+ # End Nix
+
 # ≃≃≃≃≃≃≃≃≃ #
 #  SOURCES  #
 # ≃≃≃≃≃≃≃≃≃ ⩨
-
-eval "$(zoxide init zsh)"

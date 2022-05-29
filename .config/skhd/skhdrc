@@ -7,10 +7,11 @@ alt - j : yabai -m window --focus next || yabai -m window --focus first
 # yabai -m signal --add event=space_changed action="sh ~/scripts/yabai/clean-empty-spaces.sh"
 
 # open alacritty
-alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
+# alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
 
-# open alacritty
+# open kitty
 # alt - return : /etc/profiles/per-user/m.manzanares/bin/kitty --single-instance '/etc/profiles/per-user/m.manzanares/bin/fish'
+alt - return : ~/kitty.app --single-instance '/Users/m.manzanares/scripts/fish-home.sh'
 
 # close window
 shift + alt - q : skhd --key "cmd - w"
