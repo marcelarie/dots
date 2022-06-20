@@ -51,3 +51,4 @@
 ### NIX
 !.config/nixos
 !.config/nixpkgs
+scripts/rofi-translate.sh

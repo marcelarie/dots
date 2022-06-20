@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-[[ "${SYS_THEME}" = 'dark' ]] && name_img="dark-background.jpg" ||  name_img="background.jpg";
-
-volumeicon &
-feh --bg-scale ~/images/$name_img
-leftwm-command 'SoftReload'

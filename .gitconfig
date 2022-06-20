@@ -45,3 +45,8 @@
 ; 	template = ~/.gitmessage
 [core]
 	editor = nvim
+
+[safe]
+	directory = /Users/m.manzanares/.nixpkgs/
+	directory = /Users/m.manzanares/.nixpkgs
+	directory = /etc/nix
