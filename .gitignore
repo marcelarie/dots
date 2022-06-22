@@ -23,6 +23,8 @@
 !.config/starship.toml
 !.config/rustfmt
 !.config/greenclip.toml
+!.config/yabai
+!.config/skhd
 !scripts/
 !.vimrc
 !*.zshrc

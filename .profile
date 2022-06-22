@@ -1,1 +1,1 @@
-/nix/store/z6wd6x3i5a7ali40f9lfm3kyxxivif2x-home-manager-files/.profile
+/nix/store/p60wfg73l6k0mbpcfqc95mhrn65zikjx-home-manager-files/.profile
