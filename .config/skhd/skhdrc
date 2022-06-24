@@ -7,10 +7,14 @@ alt - j : yabai -m window --focus next || yabai -m window --focus first
 # yabai -m signal --add event=space_changed action="sh ~/scripts/yabai/clean-empty-spaces.sh"
 
 # open alacritty
-alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
+# alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
 
-# open alacritty
+# open kitty
 # alt - return : /etc/profiles/per-user/m.manzanares/bin/kitty --single-instance '/etc/profiles/per-user/m.manzanares/bin/fish'
+alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance '/Users/m.manzanares/scripts/fish-home.sh'
+
+# open wezterm
+# alt - return : wezterm start fish
 
 # close window
 shift + alt - q : skhd --key "cmd - w"
@@ -40,16 +44,16 @@ shift + cmd - l : yabai -m window --warp east || $(yabai -m window --display eas
 shift + alt - 0 : yabai -m space --balance
 
 # fast focus desktop
-alt - 1 : yabai -m space --focus 1
-alt - 2 : yabai -m space --focus 2
-alt - 3 : yabai -m space --focus 3
-alt - 4 : yabai -m space --focus 4
-alt - 5 : yabai -m space --focus 5
-alt - 6 : yabai -m space --focus 6
-alt - 7 : yabai -m space --focus 7
-alt - 8 : yabai -m space --focus 8
-alt - 9 : yabai -m space --focus 9
-alt - 0 : yabai -m space --focus 10
+alt - 1 : yabai -m space --focus 1  || yabai -m space --focus next
+alt - 2 : yabai -m space --focus 2  || yabai -m space --focus next
+alt - 3 : yabai -m space --focus 3  || yabai -m space --focus next
+alt - 4 : yabai -m space --focus 4  || yabai -m space --focus next
+alt - 5 : yabai -m space --focus 5  || yabai -m space --focus next
+alt - 6 : yabai -m space --focus 6  || yabai -m space --focus next
+alt - 7 : yabai -m space --focus 7  || yabai -m space --focus next
+alt - 8 : yabai -m space --focus 8  || yabai -m space --focus next
+alt - 9 : yabai -m space --focus 9  || yabai -m space --focus next
+alt - 0 : yabai -m space --focus 10 || yabai -m space --focus next
 
 # send window to desktop and follow focus
 shift + alt - 1 : yabai -m window --space  1; yabai -m space --focus 1
