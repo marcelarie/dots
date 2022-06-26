@@ -11,10 +11,11 @@ alt - j : yabai -m window --focus next || yabai -m window --focus first
 
 # open kitty
 # alt - return : /etc/profiles/per-user/m.manzanares/bin/kitty --single-instance '/etc/profiles/per-user/m.manzanares/bin/fish'
-alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance '/Users/m.manzanares/scripts/fish-home.sh'
+# alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance '/Users/m.manzanares/scripts/fish-home.sh'
 
 # open wezterm
 # alt - return : wezterm start fish
+alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm start fish
 
 # close window
 shift + alt - q : skhd --key "cmd - w"
@@ -100,7 +101,7 @@ shift + alt - b : yabai -m window --toggle border
 alt - e : yabai -m window --toggle split
 
 # float / unfloat window and center on screen
-alt - t : yabai -m window --toggle float;\
+alt - s : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 
 # toggle sticky

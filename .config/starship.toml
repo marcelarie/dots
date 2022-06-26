@@ -1,5 +1,5 @@
 # Inserts a blank line between shell prompts
-add_newline = false
+# add_newline = false
 command_timeout = 1000
 
 # Replace the "❯" symbol in the prompt with "➜"
@@ -12,3 +12,9 @@ command_timeout = 1000
 
 # [git_branch]
 # symbol = "🌱 "
+
+# Some Nerd font is required to see all the characters
+# and glyphs properly: https://starship.rs/guide/#prerequisites
+
+# https://en.wikipedia.org/wiki/Box-drawing_character
+# https://en.wikipedia.org/wiki/Arrow_(symbol)
