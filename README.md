@@ -21,7 +21,7 @@ nice post: https://blog.yossarian.net/2020/12/24/A-few-HiDPI-tricks-for-Linux
 - [x] kitty font size
 - [x] Icon size
 - [x] Polybar config
-- [x] Electron ( no need for now )
+- [x] Electron (no need for now)
 - [x] Sddm scaling
 - [x] dmenu
 - [x] update all language servers
