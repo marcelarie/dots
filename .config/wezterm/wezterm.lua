@@ -5,7 +5,7 @@ return {
 	show_update_window = false,
 	window_close_confirmation = "NeverPrompt",
 	skip_close_confirmation_for_processes_named = { "bash", "sh", "zsh", "fish", "tmux", "nvim" },
-	window_padding = { left = 20, right = 20, bottom = 20, top = 20 },
+	window_padding = { left = 40, right = 40, bottom = 40, top = 40 },
 	audible_bell = "Disabled",
 	hide_tab_bar_if_only_one_tab = true,
 	window_decorations = "RESIZE",
