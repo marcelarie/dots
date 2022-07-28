@@ -19,7 +19,7 @@ alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm start fish
 
 # close window
 shift + alt - q : skhd --key "cmd - w"
-alt - q : open -a Google\ Chrome -n
+alt - q : open -a Google\ Chrome\ Beta -n
 
 # todo check this
 # in leftwm Meta + h changes focus to the other screen
