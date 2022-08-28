@@ -19,7 +19,10 @@ alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm start fish
 
 # close window
 shift + alt - q : /opt/homebrew/bin/skhd --key "cmd - w"
+
+# browser
 alt - q : open -a Google\ Chrome\ Beta -n
+shift + alt - w : open -a Google\ Chrome\ Beta -n --args --profile-email=googlillo@gmail.com 'http://web.whatsapp.com/'
 
 # todo check this
 # in leftwm Meta + h changes focus to the other screen
