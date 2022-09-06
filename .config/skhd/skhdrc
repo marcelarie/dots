@@ -17,6 +17,9 @@ alt - j : /opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/ya
 # alt - return : wezterm start fish
 alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm start fish
 
+# open nvim
+alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start nvim
+
 # close window
 shift + alt - q : /opt/homebrew/bin/skhd --key "cmd - w"
 
@@ -81,6 +84,11 @@ shift + alt - l : expr $(/opt/homebrew/bin/yabai -m query --windows --window | j
 shift + alt - i : /opt/homebrew/bin/yabai -m window north --resize bottom:0:20 2> /dev/null || /opt/homebrew/bin/yabai -m window --resize bottom:0:20
 shift + alt - o : /opt/homebrew/bin/yabai -m window south --resize top:0:-20 2> /dev/null || /opt/homebrew/bin/yabai -m window --resize top:0:-20
 
+# hide window
+cmd - j : osascript -e "tell application \"System Events\" to set visible of first application process whose frontmost is true to false"
+# unhide window
+# cmd - k : osascript -e "tell application \"System Events\" to key code 48 using {command down}"
+
 # rotate tree
 alt - r : /opt/homebrew/bin/yabai -m space --rotate 90
 
@@ -107,6 +115,11 @@ alt - e : /opt/homebrew/bin/yabai -m window --toggle split
 alt - s : /opt/homebrew/bin/yabai -m window --toggle float;\
           /opt/homebrew/bin/yabai -m window --grid 4:4:1:1:2:2
 
+# scratchpad
+alt - v : /Applications/WezTerm.app/Contents/MacOS/wezterm start fish; \
+          sleep 0.1 && /opt/homebrew/bin/yabai -m window --toggle float;\
+          /opt/homebrew/bin/yabai -m window --grid 4:4:1:1:2:2
+
 # toggle sticky
 # alt - s : /opt/homebrew/bin/yabai -m window --toggle sticky
 
@@ -115,7 +128,7 @@ alt - s : /opt/homebrew/bin/yabai -m window --toggle float;\
 #           /opt/homebrew/bin/yabai -m window --grid 5:5:4:0:1:1
 
 alt + shift - r : \
-    launchctl kickstart -k "gui/${UID}/homebrew.mxcl./opt/homebrew/bin/yabai"; \ /opt/homebrew/bin/skhd --reload
+    launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # change layout of desktop
 # ctrl + alt - a : /opt/homebrew/bin/yabai -m space --layout bsp

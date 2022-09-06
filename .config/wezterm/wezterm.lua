@@ -1,15 +1,22 @@
-local wezterm = require("wezterm")
+local wezterm = require "wezterm"
 
 return {
 	check_for_updates = false,
-	show_update_window = false,
 	window_close_confirmation = "NeverPrompt",
-	skip_close_confirmation_for_processes_named = { "bash", "sh", "zsh", "fish", "tmux", "nvim" },
+	show_update_window = false,
+	skip_close_confirmation_for_processes_named = {
+		"bash",
+		"sh",
+		"zsh",
+		"fish",
+		"tmux",
+		"nvim",
+	},
 	window_padding = { left = 40, right = 40, bottom = 40, top = 40 },
 	audible_bell = "Disabled",
 	hide_tab_bar_if_only_one_tab = true,
 	window_decorations = "RESIZE",
-	font = wezterm.font("JetBrains Mono"),
+	font = wezterm.font "JetBrains Mono",
 	adjust_window_size_when_changing_font_size = false,
 	-- font_size = 16,
 	-- keys = {
@@ -25,6 +32,13 @@ return {
 	-- },
 	-- Spawn a fish shell in login mode
 	-- default_prog = { "/etc/profiles/per-user/m.manzanares/bin/fish" },
+	keys = {
+		{
+			key = "w",
+			mods = "CMD",
+			action = wezterm.action.CloseCurrentPane { confirm = false },
+		},
+	},
 
 	colors = {
 		-- The default text color
@@ -53,8 +67,26 @@ return {
 		-- The color of the split lines between panes
 		split = "#444444",
 
-		ansi = { "#373C45", "#FF5050", "#44B273", "#ED722E", "#1D918B", "#D16BB7", "#00BFA4", "#8E8D8D" },
-		brights = { "#CCCCCC", "#FF4D00", "#10B981", "#ED722E", "#1D918B", "#D68EB2", "#5AD1AA", "#FFFADE" },
+		ansi = {
+			"#373C45",
+			"#FF5050",
+			"#44B273",
+			"#ED722E",
+			"#1D918B",
+			"#D16BB7",
+			"#00BFA4",
+			"#8E8D8D",
+		},
+		brights = {
+			"#CCCCCC",
+			"#FF4D00",
+			"#10B981",
+			"#ED722E",
+			"#1D918B",
+			"#D68EB2",
+			"#5AD1AA",
+			"#FFFADE",
+		},
 
 		-- -- Arbitrary colors of the palette in the range from 16 to 255
 		-- indexed = { [136] = "#FFFF00" },

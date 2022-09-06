@@ -73,4 +73,7 @@ yabai -m signal --add event=window_resized action='echo "refresh windows" | nc -
 yabai -m signal --add event=window_minimized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
 yabai -m signal --add event=window_deminimized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
 
+for_window [class=Alacritty instance="__text_scratchpad"] floating enable move right 50px move down 600px resize set 705 260
+# bindsym $mod+m exec ~/text-scratchpad.sh 
+
 echo "yabai configuration loaded.."
