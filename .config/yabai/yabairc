@@ -36,6 +36,9 @@ yabai -m config mouse_modifier               fn
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
+yabai -m config window_border_radius         1
+yabai -m config window_border_radius         on
+yabai -m config window_animation_duration    0
 
 # yabai -m config external_bar all:30:0
 # add 20 padding to the top and 0 padding to the bottom of every space located on the main display
@@ -45,10 +48,10 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  0
-yabai -m config bottom_padding               0
-yabai -m config left_padding                 0
-yabai -m config right_padding                0
+yabai -m config top_padding                  5
+yabai -m config bottom_padding               5
+yabai -m config left_padding                 5
+yabai -m config right_padding                5
 yabai -m config window_gap                   10
 
 
@@ -73,7 +76,7 @@ yabai -m signal --add event=window_resized action='echo "refresh windows" | nc -
 yabai -m signal --add event=window_minimized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
 yabai -m signal --add event=window_deminimized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
 
-for_window [class=Alacritty instance="__text_scratchpad"] floating enable move right 50px move down 600px resize set 705 260
+# for_window [class=Alacritty instance="__text_scratchpad"] floating enable move right 50px move down 600px resize set 705 260
 # bindsym $mod+m exec ~/text-scratchpad.sh 
 
 echo "yabai configuration loaded.."

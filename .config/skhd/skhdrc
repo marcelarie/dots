@@ -72,7 +72,13 @@ shift + alt - 6 : /opt/homebrew/bin/yabai -m window --space  6; /opt/homebrew/bi
 shift + alt - 7 : /opt/homebrew/bin/yabai -m window --space  7; /opt/homebrew/bin/yabai -m space --focus 7
 shift + alt - 8 : /opt/homebrew/bin/yabai -m window --space  8; /opt/homebrew/bin/yabai -m space --focus 8
 shift + alt - 9 : /opt/homebrew/bin/yabai -m window --space  9; /opt/homebrew/bin/yabai -m space --focus 9
-shift + alt - 0 : /opt/homebrew/bin/yabai -m window --space  10; /opt/homebrew/bin/yabai -m space --focus 10
+shift + alt - 1 : /opt/homebrew/bin/yabai -m window --space  1; /opt/homebrew/bin/yabai -m space --focus 1
+
+# resize floating
+shift + alt - v : yabai -m window --resize left:-20:0
+shift + alt - right : yabai -m window --resize right:-20:0
+shift + alt - down : yabai -m window --resize bottom:-20:0
+shift + alt - up : yabai -m window --resize top:-20:0
 
 # create new space and focus
 shift + alt - n : /opt/homebrew/bin/yabai -m space --create && /opt/homebrew/bin/yabai -m space --focus next
@@ -85,7 +91,7 @@ shift + alt - i : /opt/homebrew/bin/yabai -m window north --resize bottom:0:20 2
 shift + alt - o : /opt/homebrew/bin/yabai -m window south --resize top:0:-20 2> /dev/null || /opt/homebrew/bin/yabai -m window --resize top:0:-20
 
 # hide window
-cmd - j : osascript -e "tell application \"System Events\" to set visible of first application process whose frontmost is true to false"
+# cmd - j : osascript -e "tell application \"System Events\" to set visible of first application process whose frontmost is true to false"
 # unhide window
 # cmd - k : osascript -e "tell application \"System Events\" to key code 48 using {command down}"
 
@@ -103,7 +109,7 @@ alt - f : /opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen
 
 # toggle window native fullscreen
 # alt - space : /opt/homebrew/bin/yabai -m window --toggle native-fullscreen
- shift + alt - f : /opt/homebrew/bin/yabai -m window --toggle native-fullscreen
+shift + alt - f : /opt/homebrew/bin/yabai -m window --toggle native-fullscreen
 
 # toggle window border
 shift + alt - b : /opt/homebrew/bin/yabai -m window --toggle border

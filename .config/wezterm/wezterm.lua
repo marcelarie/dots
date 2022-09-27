@@ -18,7 +18,7 @@ return {
 	window_decorations = "RESIZE",
 	font = wezterm.font "JetBrains Mono",
 	adjust_window_size_when_changing_font_size = false,
-	-- font_size = 16,
+	-- font_size = 15,
 	-- keys = {
 	-- { key = "r", mods = "CMD|SHIFT", action = "ReloadConfiguration" },
 	-- keys = {
