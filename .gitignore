@@ -9,6 +9,7 @@
 .config/*
 !.config/alacritty
 !.config/awesome
+!.config/topgrade.toml
 !.config/dwm
 !.config/kitty/prenix-kitty.conf
 !.config/autorandr
