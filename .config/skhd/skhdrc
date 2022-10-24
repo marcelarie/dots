@@ -18,7 +18,7 @@ alt - j : /opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/ya
 alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm start fish
 
 # open nvim
-alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start nvim
+# alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start nvim
 
 # close window
 shift + alt - q : /opt/homebrew/bin/skhd --key "cmd - w"
