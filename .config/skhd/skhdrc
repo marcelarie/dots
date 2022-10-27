@@ -27,6 +27,7 @@ shift + alt - q : /opt/homebrew/bin/skhd --key "cmd - w"
 alt - q : open -a Google\ Chrome\ Beta -n
 shift + alt - w : open -a Google\ Chrome\ Beta -n --args --profile-email=googlillo@gmail.com 'http://web.whatsapp.com/'
 shift + alt - c : open -a Google\ Chrome\ Beta -n --args --profile-email=marcelmanzanares2@stuart.com 'https://calendar.google.com/'
+shift + alt - s : open -a Google\ Chrome\ Beta -n --args --profile-email=marcelmanzanares2@stuart.com 'https://gostuart.slack.com/'
 
 # todo check this
 # in leftwm Meta + h changes focus to the other screen
