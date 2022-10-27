@@ -7,11 +7,11 @@ alt - j : /opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/ya
 # /opt/homebrew/bin/yabai -m signal --add event=space_changed action="sh ~/scripts//opt/homebrew/bin/yabai/clean-empty-spaces.sh"
 
 # open alacritty
-# alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
+# alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/marcelmanzanares2/bin/fish'
 
 # open kitty
-# alt - return : /etc/profiles/per-user/m.manzanares/bin/kitty --single-instance '/etc/profiles/per-user/m.manzanares/bin/fish'
-# alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance '/Users/m.manzanares/scripts/fish-home.sh'
+# alt - return : /etc/profiles/per-user/marcelmanzanares2/bin/kitty --single-instance '/etc/profiles/per-user/marcelmanzanares2/bin/fish'
+# alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance '/Users/marcelmanzanares2/scripts/fish-home.sh'
 
 # open wezterm
 # alt - return : wezterm start fish
@@ -26,7 +26,7 @@ shift + alt - q : /opt/homebrew/bin/skhd --key "cmd - w"
 # browser
 alt - q : open -a Google\ Chrome\ Beta -n
 shift + alt - w : open -a Google\ Chrome\ Beta -n --args --profile-email=googlillo@gmail.com 'http://web.whatsapp.com/'
-shift + alt - c : open -a Google\ Chrome\ Beta -n --args --profile-email=m.manzanares@stuart.com 'https://calendar.google.com/'
+shift + alt - c : open -a Google\ Chrome\ Beta -n --args --profile-email=marcelmanzanares2@stuart.com 'https://calendar.google.com/'
 
 # todo check this
 # in leftwm Meta + h changes focus to the other screen
