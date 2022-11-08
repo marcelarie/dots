@@ -78,6 +78,7 @@ scripts/rofi-translate.sh
 .config/fish/conf.d/plugin-bass.fish
 .config/fish/conf.d/plugin-z.fish
 .config/git/config
+.hammerspoon
 .cache/.keep
 .bashrc
 .profile

@@ -29,6 +29,11 @@ nice post: https://blog.yossarian.net/2020/12/24/A-few-HiDPI-tricks-for-Linux
 
 # thinkpad p14s G2
 
+<!--toc:start-->
+  - [4k scaling](#4k-scaling)
+- [thinkpad p14s G2](#thinkpad-p14s-g2)
+<!--toc:end-->
+
 Notes:
 For AMD computers xbacklight needs acpilight
 On xfce-powermanager the option **Handle display brightness keys** can be disabled,
