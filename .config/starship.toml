@@ -1,20 +1,25 @@
-# Inserts a blank line between shell prompts
-# add_newline = false
+add_newline = false
 command_timeout = 1000
+scan_timeout = 10
 
-# Replace the "❯" symbol in the prompt with "➜"
-# [character]                            # The name of the module we are configuring is "character"
-# success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+# [username]
+# style_user = "red bold"
+# style_root = "black bold"
+# format = "[$user]($style) "
+# disabled = false
+# show_always = true
+
+[character]
+error_symbol	      = "[>](bold red)"
+success_symbol        = "[i](bold green)"
+vimcmd_replace_symbol = "[r](bold red)"
+vimcmd_symbol         = "[n](bold blue)"
+vimcmd_visual_symbol  = "[v](bold yellow)"
 
 # # Disable the package module, hiding it from the prompt completely
 # [package]
 # disabled = true
 
-# [git_branch]
-# symbol = "🌱 "
-
-# Some Nerd font is required to see all the characters
-# and glyphs properly: https://starship.rs/guide/#prerequisites
-
-# https://en.wikipedia.org/wiki/Box-drawing_character
-# https://en.wikipedia.org/wiki/Arrow_(symbol)
+[git_branch]
+symbol = "🌱 "
+# symbol = "שׂ "
