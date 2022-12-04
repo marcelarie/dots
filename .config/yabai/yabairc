@@ -36,7 +36,7 @@ yabai -m config mouse_modifier               fn
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
-yabai -m config window_border_radius         1
+yabai -m config window_border_radius         10
 yabai -m config window_border_radius         on
 yabai -m config window_animation_duration    0
 
@@ -60,8 +60,8 @@ yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Finder$"             manage=off
 yabai -m rule --add app="^OpenVPN Connect$"    manage=off
 yabai -m rule --add app="^Photo Booth$"        manage=off
-yabai -m rule --add app="^Calculator$"        manage=off
-yabai -m rule --add app="^Illuminati$"        manage=off
+yabai -m rule --add app="^Calculator$"         manage=off
+yabai -m rule --add app="^Illuminati$"         manage=off
 
 # yabai -m window --toggle border
 # yabai -m rule --add app=Terminal border=off

@@ -2,10 +2,10 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["nix", "system"]
+disable = ["nix", "system", "vim" ]
 
 # Ignore failures for these steps
-#ignore_failures = ["powershell"]
+# ignore_failures = ["powershell"]
 
 # Run specific steps - same options as the command line flag
 #only = ["system", "emacs"]
@@ -61,9 +61,12 @@ disable = ["nix", "system"]
 # Custom commands
 [commands]
 "Nix flake update and rebuild" = "echo 'Nix update'; nix flake update ~/.nixpkgs && echo 'Nix rebuild'; sudo darwin-rebuild switch --flake ~/.nixpkgs#"
+"Wezterm nightly update" = "brew upgrade --cask wezterm-nightly --no-quarantine --greedy-latest"
+"Neovim nightly update" = "./Users/marcelmanzanares2/scripts/install-last-neovim.sh"
 
 [brew]
-#greedy_cask = true
+# greedy_cask = true
+# autoremove = true
 
 [linux]
 # Arch Package Manager to use. Allowed values: autodetect, trizen, paru, yay, pikaur, pacman.
