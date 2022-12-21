@@ -44,7 +44,7 @@ shift + alt - j : /opt/homebrew/bin/yabai -m window --swap prev
 shift + alt - k : /opt/homebrew/bin/yabai -m window --swap next
 # shift + alt - j : /Users/marcelmanzanares2/scripts/yabai/cycle.sh
 # shift + alt - k : /Users/marcelmanzanares2/scripts/yabai/cycle-counter-clock.sh
-shift + alt - e : /Users/marcelmanzanares2/scripts/yabai/swipe-displays.sh
+shift + alt - e : /Users/marcelmanzanares2/scripts/yabai/swap-displays.sh
 
 # move window
 shift + cmd - h : /opt/homebrew/bin/yabai -m window --warp west || $(/opt/homebrew/bin/yabai -m window --display west; /opt/homebrew/bin/yabai -m display --focus west)
