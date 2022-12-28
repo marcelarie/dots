@@ -56,6 +56,9 @@
 !.config/nixos
 !.config/nixpkgs
 
+### brew
+!Brewfile
+
 # SYMLINKS
 scripts/rofi-translate.sh
 .config/alacritty/alacritty.yml
