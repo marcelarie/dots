@@ -63,6 +63,7 @@ disable = ["nix", "system", "vim" ]
 "Nix flake update and rebuild" = "echo 'Nix update'; nix flake update ~/.nixpkgs && echo 'Nix rebuild'; sudo darwin-rebuild switch --flake ~/.nixpkgs#"
 "Wezterm nightly update" = "brew upgrade --cask wezterm-nightly --no-quarantine --greedy-latest"
 "Neovim nightly update" = "/Users/marcelmanzanares2/scripts/install-last-neovim.sh"
+"Generate Brewfile" = "brew bundle dump --force --file=/Users/marcelmanzanares2/Brewfile"
 
 [brew]
 # greedy_cask = true
