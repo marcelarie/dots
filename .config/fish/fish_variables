@@ -1,5 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export OPENAI_API_KEY:sk\x2dX5uzZn0jeUQF5iLJXf6ST3BlbkFJVR7Usbs5DN6mZKnqJlJy
+SETUVAR --export OPEN_API_KEY:sk\x2dX5uzZn0jeUQF5iLJXf6ST3BlbkFJVR7Usbs5DN6mZKnqJlJy
 SETUVAR --export PNPM_HOME:/Users/marcelmanzanares2/\x2epnpm
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z

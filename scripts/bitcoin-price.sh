@@ -7,10 +7,10 @@ price_response=$(curl -s "https://api.coindesk.com/v1/bpi/currentprice.json")
 year_price_response=$(curl -s "https://api.coindesk.com/v1/bpi/historical/close.json?start=2022-01-01&end=2022-12-31")
 
 # Parse the bitcoin prices from the API response
-prices=$(echo $year_price_response | jq -r '.bpi | to_entries[] | [.key, .value] | join(":")')
+prices=$(echo "$year_price_response" | jq -r '.bpi | to_entries[] | [.key, .value] | join(":")')
 
 # Parse the bitcoin price from the API response
-price=$(echo $price_response | jq -r '.bpi.USD.rate')
+price=$(echo "$price_response" | jq -r '.bpi.USD.rate')
 
 # Output the bitcoin price
 echo "The current bitcoin price is: $price"
