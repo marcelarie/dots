@@ -39,7 +39,7 @@ return {
 			action = wezterm.action.CloseCurrentPane { confirm = false },
 		},
 	},
-
+	default_cursor_style = "SteadyUnderline",
 	colors = {
 		-- The default text color
 		foreground = "#FFFADE",
