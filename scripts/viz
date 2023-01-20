@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+ZOXIDE_QUERY=$(zoxide query "$@")
+FIRST_LEVEL_FILES=$(ls -a "$ZOXIDE_QUERY")
+
+[[ -z "$FIRST_LEVEL_FILES" ]] &&
+	SELECTED_FILE="" ||
+	SELECTED_FILE=$(echo "$FIRST_LEVEL_FILES" | fzy)
+
+if [ -d "$ZOXIDE_QUERY" ]; then
+	cd "$ZOXIDE_QUERY" || exit 1
+else
+	echo "$ZOXIDE_QUERY is not a valid directory."
+	exit 1
+fi
+
+if [ -z "$SELECTED_FILE" ]; then
+	nvim .
+else
+	nvim "$ZOXIDE_QUERY/$SELECTED_FILE"
+fi

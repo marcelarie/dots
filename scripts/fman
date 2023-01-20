@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+[[ -z "$1" ]] && QUERY="." || QUERY="$1"
+
+MAN_PAGES_LIST=$(apropos "$QUERY")
+
+SELECTED_MAN_PAGE=$(echo "$MAN_PAGES_LIST" | fzy | cut -d " " -f1)
+
+if [ -z "$SELECTED_MAN_PAGE" ]; then
+	echo "No man page selected."
+	exit 1
+fi
+
+man "$SELECTED_MAN_PAGE"
