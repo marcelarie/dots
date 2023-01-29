@@ -2,7 +2,17 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["nix", "system", "vim" ]
+# Available steps: ############################################################
+# asdf, atom, bin, brew_cask, brew_formula, bun, cargo, chezmoi, chocolatey, choosenim,
+# composer, conda, config_update, containers, custom_commands, deb_get, deno, distrobox,
+# dotnet, emacs, firmware, flatpak, flutter, fossil, gcloud, gem, ghcup, git_repos,
+# github_cli_extensions, gnome_shell_extensions, go, guix, haxelib, helix, helm, home_manager,
+# jetpack, julia, juliaup, kakoune, krew, macports, mas, micro, myrepos, nix, node,
+# opam, pacdef, pacstall, pearl, pip3, pipx, pkg, pkgin, pnpm, powershell, protonup,
+# raco, rcm, remotes, restarts, rtcl, ruby_gems, rustup, scoop, sdkman, sheldon, shell,
+# snap, sparkle, spicetify, stack, system, tldr, tlmgr, tmux, toolbx, vagrant, vcpkg,
+# vim, winget, wsl, yadm, yarn
+disable = ["nix", "system", "vim", "mas" ]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]

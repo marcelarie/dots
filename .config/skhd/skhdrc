@@ -15,7 +15,7 @@ alt - j : /opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/ya
 
 # open wezterm
 # alt - return : wezterm start fish
-alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm start fish
+alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm -e fish
 
 # open nvim
 alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start ~/scripts/open-notes.sh
