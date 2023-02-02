@@ -14,3 +14,6 @@
 [submodule ".config/nixos"]
 	path = .config/nixos
 	url = git@github.com:marcelarie/nix.git
+[submodule ".config/cheat/cheatsheets/community"]
+	path = .config/cheat/cheatsheets/community
+	url = https://github.com/cheat/cheatsheets.git

@@ -12,7 +12,7 @@
 # raco, rcm, remotes, restarts, rtcl, ruby_gems, rustup, scoop, sdkman, sheldon, shell,
 # snap, sparkle, spicetify, stack, system, tldr, tlmgr, tmux, toolbx, vagrant, vcpkg,
 # vim, winget, wsl, yadm, yarn
-disable = ["nix", "system", "vim", "mas" ]
+disable = ["nix", "system", "vim", "mas", "ruby_gems", "gem"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
