@@ -1,5 +1,6 @@
 tap "1password/tap"
 tap "charmbracelet/tap"
+tap "dustinblackman/tap"
 tap "homebrew/aliases"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -33,6 +34,7 @@ brew "libgphoto2"
 brew "libxml2"
 brew "sqlite"
 brew "llvm"
+brew "luarocks"
 brew "markdownlint-cli"
 brew "mas"
 brew "mysql@5.7", link: true
@@ -52,6 +54,7 @@ brew "urlview"
 brew "yarn"
 brew "zoxide"
 brew "charmbracelet/tap/vhs"
+brew "dustinblackman/tap/languagetool-code-comments"
 brew "jakehilborn/jakehilborn/displayplacer"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
@@ -64,6 +67,7 @@ cask "qutebrowser"
 cask "stretchly"
 cask "wezterm-nightly"
 cask "whichspace"
+mas "Amphetamine", id: 937984704
 mas "Flow", id: 1423210932
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
