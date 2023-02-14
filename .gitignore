@@ -48,6 +48,7 @@
 !README.md
 !notes.md
 !xorg.conf
+!.cargo-programs
 
 ### ARCH
 # !.config/pacman
