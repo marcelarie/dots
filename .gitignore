@@ -49,6 +49,7 @@
 !notes.md
 !xorg.conf
 !.cargo-programs
+!.config/gh/config.yml
 
 ### ARCH
 # !.config/pacman
