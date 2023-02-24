@@ -47,6 +47,7 @@
 !.mozilla/
 !README.md
 !notes.md
+!.config/zk
 !xorg.conf
 !.cargo-programs
 !.config/gh/config.yml

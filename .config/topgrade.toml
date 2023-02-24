@@ -74,7 +74,7 @@ disable = ["nix", "system", "vim", "mas", "ruby_gems", "gem"]
 "Wezterm nightly update" = "brew upgrade --cask wezterm-nightly --no-quarantine --greedy-latest"
 "Neovim nightly update" = "/Users/marcelmanzanares2/scripts/install-last-neovim.sh"
 "Generate Brewfile" = "brew bundle dump --force --file=/Users/marcelmanzanares2/Brewfile"
-"Generate cargo-programs file" = "cat /Users/marcelmanzanares2/.crates2.json | jq -r '.installs | keys[] | split(" ")[0]' | sed '/^$/d' > .cargo-programs"
+# "Generate cargo-programs file" = "cat /Users/marcelmanzanares2/.crates2.json | jq -r '.installs | keys[] | split(" ")[0]' | sed '/^$/d' > .cargo-programs"
 
 [brew]
 # greedy_cask = true
