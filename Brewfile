@@ -41,6 +41,7 @@ brew "llvm"
 brew "luarocks"
 brew "markdownlint-cli"
 brew "mas"
+brew "micro"
 brew "mysql@5.7", link: true
 brew "nushell"
 brew "nvm"

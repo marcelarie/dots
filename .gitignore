@@ -28,6 +28,7 @@
 !.config/skhd
 .config/fish/fish_variables
 !scripts/
+scripts/work/hibob-attendence.js
 !.vimrc
 !*.zshrc
 !*.prettierrc
