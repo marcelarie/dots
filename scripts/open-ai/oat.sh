@@ -72,7 +72,7 @@ fi
 
 content=$(echo "$response" | jq -r '.choices[0].message.content')
 
-echo -e "${red_color}Question:${no_color}"
+echo -e "${red_color}Request:${no_color}"
 printf '\n'
 # shellcheck disable=2059
 printf "$text"
