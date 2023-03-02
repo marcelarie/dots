@@ -12,7 +12,7 @@ usage() {
 	echo ""
 	echo "Optional arguments:"
 	echo "  -t   The text to send to OpenAI's GPT-3 model"
-	echo "  -m   Select specific model"
+	echo "  -m   Select specific model (not working)"
 	echo "  -h   Display this help menu"
 }
 
@@ -45,7 +45,19 @@ turbo_model="gpt-3.5-turbo"
 
 model=$(if [[ -z "$specific_model" ]]; then echo "$turbo_model"; else echo "$specific_model"; fi)
 
-response=$(curl -s https://api.openai.com/v1/chat/completions \
+base_url="https://api.openai.com/v1"
+endpoint="chat/completions"
+
+# this does not work yet
+# endpoint=$(if [[ "$model" == "$text_davinci_003" ]]; then echo "completions"; else echo "chat/completions"; fi)
+
+if [ "$model" != "$turbo_model" ]; then
+	echo -e "${red_color}Error:${no_color} Right now only the turbo model is supported"
+
+	exit 1;
+fi
+
+response=$(curl -s "$base_url/$endpoint" \
 	-H "Authorization: Bearer $OPENAI_API_KEY" \
 	-H "Content-Type: application/json" \
 	-d "{\"model\":\"${model}\",\"messages\":[{\"role\":\"user\",\"content\":\"$clean_text\"}]}")
