@@ -38,7 +38,7 @@ if [ -z "$text" ]; then
 	exit 1
 fi
 
-clean_text=$(echo "$text" | tr '\n' ' ')
+clean_text=$(echo "$text" | tr '\n' ' ' | sed 's/"/\\"/g')
 
 turbo_model="gpt-3.5-turbo"
 # text_davinci_003="text-davinci-003"
@@ -53,8 +53,7 @@ endpoint="chat/completions"
 
 if [ "$model" != "$turbo_model" ]; then
 	echo -e "${red_color}Error:${no_color} Right now only the turbo model is supported"
-
-	exit 1;
+	exit 1
 fi
 
 response=$(curl -s "$base_url/$endpoint" \
@@ -93,6 +92,10 @@ echo "Do you want to copy the response?"
 should_copy_response=$(printf 'Yes\nNo' | fzy)
 
 if [ "$should_copy_response" = "Yes" ]; then
-	echo "$content" | pbcopy
+	if [[ $OSTYPE == "darwin"* ]]; then
+		echo "$content" | pbcopy
+	else
+		echo "$content" | xsel -ib
+	fi
 	echo "Copied to clipboard"
 fi

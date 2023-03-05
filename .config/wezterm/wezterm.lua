@@ -17,6 +17,8 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	window_decorations = "RESIZE",
 	font = wezterm.font "JetBrains Mono",
+	-- font = wezterm.font "Hack Nerd Font",
+	-- font = wezterm.font "Inconsolata Nerd Font Regular",
 	-- font = wezterm.font "Iosevka Nerd Font Mono",
 	adjust_window_size_when_changing_font_size = false,
 	font_size = 14.5,

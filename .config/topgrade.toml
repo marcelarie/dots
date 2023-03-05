@@ -13,6 +13,7 @@
 # snap, sparkle, spicetify, stack, system, tldr, tlmgr, tmux, toolbx, vagrant, vcpkg,
 # vim, winget, wsl, yadm, yarn
 disable = ["nix", "system", "vim", "mas", "ruby_gems", "gem"]
+skip_notify = true
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
