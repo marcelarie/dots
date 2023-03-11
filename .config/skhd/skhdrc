@@ -24,7 +24,8 @@ alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start ~/scripts/open-
 shift + alt - q : /opt/homebrew/bin/skhd --key "cmd - w"
 
 # browser
-alt - q : open -a Google\ Chrome\ Beta -n
+# alt - q : open -a Google\ Chrome\ Beta -n
+alt - q : open -a Arc
 shift + alt - w : open -a Google\ Chrome\ Beta -n --args --profile-email=googlillo@gmail.com 'http://web.whatsapp.com/'
 shift + alt - c : open -a Google\ Chrome\ Beta -n --args --profile-email=m.manzanares@stuart.com 'https://calendar.google.com/'
 shift + alt - s : open -a Google\ Chrome\ Beta -n --args --profile-email=m.manzanares@stuart.com 'https://gostuart.slack.com/'

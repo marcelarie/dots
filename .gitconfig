@@ -50,3 +50,5 @@
 	directory = /Users/m.manzanares/.nixpkgs/
 	directory = /Users/m.manzanares/.nixpkgs
 	directory = /etc/nix
+[commit]
+	template = /Users/marcelmanzanares2/.gitmessage
