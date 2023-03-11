@@ -1,0 +1,30 @@
+
+#
+# feat:
+# A new feature or enhancement to an existing feature.
+# Example: feat: Add payment gateway integration.
+#
+# fix:
+# A bug fix or correction to an existing feature.
+# Example: fix: Fix UI component rendering issue.
+#
+# docs:
+# Changes to documentation, such as adding new guides, updating README files, or adding comments to code.
+# Example: docs: Update README file with instructions for using the API.
+#
+# style:
+# Changes to the appearance of the user interface or code formatting.
+# Example: style: Update CSS for better mobile responsiveness.
+#
+# refactor:
+# Changes to existing code that improve performance, maintainability, or readability but don't introduce new features or fixes.
+# Example: refactor: Optimize database queries for faster search functionality.
+#
+# test:
+# Adding, changing, or updating tests to improve overall code quality.
+# Example: test: Add unit tests for new API endpoints.
+#
+# chore:
+# Changes to build processes, dependencies, or code infrastructure that don't affect the final product.
+# Example: chore: Update dependencies to latest version.
+
