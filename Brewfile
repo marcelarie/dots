@@ -64,6 +64,7 @@ brew "stylua"
 brew "topgrade"
 brew "urlview"
 brew "yarn"
+brew "zellij"
 brew "zoxide"
 brew "charmbracelet/tap/vhs"
 brew "dustinblackman/tap/languagetool-code-comments"
@@ -89,6 +90,7 @@ mas "Flow", id: 1423210932
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "Little Snitch Mini", id: 1629008763
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "WhatsApp", id: 1147396723

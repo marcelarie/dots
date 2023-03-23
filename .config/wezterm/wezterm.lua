@@ -23,6 +23,7 @@ return {
 	-- font = wezterm.font "Iosevka Nerd Font Mono",
 	adjust_window_size_when_changing_font_size = false,
 	font_size = 14.5,
+	-- font_size = 18,
 	-- keys = {
 	-- { key = "r", mods = "CMD|SHIFT", action = "ReloadConfiguration" },
 	-- keys = {

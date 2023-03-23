@@ -1,4 +1,3 @@
-# focus window
 # here the || was added so the selection cycles and doesn't stop at the end or beginning
 alt - k : /opt/homebrew/bin/yabai -m window --focus prev || /opt/homebrew/bin/yabai -m window --focus last
 alt - j : /opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/yabai -m window --focus first
@@ -18,7 +17,7 @@ alt - j : /opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/ya
 alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm -e fish
 
 # open nvim
-alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start ~/scripts/open-notes.sh
+# alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start ~/scripts/open-notes.sh
 
 # close window
 shift + alt - q : /opt/homebrew/bin/skhd --key "cmd - w"
