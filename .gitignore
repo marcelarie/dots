@@ -28,6 +28,7 @@
 !.config/yabai
 !.config/skhd
 .config/fish/fish_variables
+!.config/tmuxinator
 !scripts/
 scripts/work/hibob-attendence.js
 !.vimrc

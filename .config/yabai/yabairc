@@ -62,7 +62,7 @@ yabai -m rule --add app="^OpenVPN Connect$"    manage=off
 yabai -m rule --add app="^Photo Booth$"        manage=off
 yabai -m rule --add app="^Calculator$"         manage=off
 yabai -m rule --add app="^Illuminati$"         manage=off
-yabai -m rule --add app='^1Password$'          manage=off
+# yabai -m rule --add app='^1Password$'          manage=off
 yabai -m rule --add title='^VLC$'              border=off
 
 # yabai -m window --toggle border
