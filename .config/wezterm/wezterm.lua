@@ -1,51 +1,6 @@
 local wezterm = require "wezterm"
 
-return {
-	check_for_updates = false,
-	window_close_confirmation = "NeverPrompt",
-	show_update_window = false,
-	skip_close_confirmation_for_processes_named = {
-		"bash",
-		"sh",
-		"zsh",
-		"fish",
-		"tmux",
-		"nvim",
-	},
-	window_padding = { left = 40, right = 40, bottom = 40, top = 40 },
-	audible_bell = "Disabled",
-	hide_tab_bar_if_only_one_tab = true,
-	window_decorations = "RESIZE",
-	font = wezterm.font "JetBrains Mono",
-	-- font = wezterm.font "VT323",
-	-- font = wezterm.font "Hack Nerd Font",
-	-- font = wezterm.font "Inconsolata Nerd Font Regular",
-	-- font = wezterm.font "Iosevka Nerd Font Mono",
-	adjust_window_size_when_changing_font_size = false,
-	font_size = 14.5,
-	-- font_size = 18,
-	-- keys = {
-	-- { key = "r", mods = "CMD|SHIFT", action = "ReloadConfiguration" },
-	-- keys = {
-	--     -- This will create a new split and run your default program inside it
-	--     {
-	--         key = "Enter",
-	--         mods = "CMD",
-	--         action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }),
-	--     },
-	-- },
-	-- },
-	-- Spawn a fish shell in login mode
-	-- default_prog = { "/etc/profiles/per-user/m.manzanares/bin/fish" },
-	keys = {
-		{
-			key = "w",
-			mods = "CMD",
-			action = wezterm.action.CloseCurrentPane { confirm = false },
-		},
-	},
-	default_cursor_style = "SteadyUnderline",
-	colors = {
+local lighthaus_dark_colors = {
 		-- The default text color
 		foreground = "#FFFADE",
 		-- The default background color
@@ -101,5 +56,74 @@ return {
 		-- holding input pending the result of input composition, change the cursor
 		-- to this color to give a visual cue about the compose state.
 		compose_cursor = "#1D918B",
+	}
+
+local kanagawa_dragon_colors = {
+		foreground = "#c5c9c5",
+		-- background = "#181616",
+		background = "#000000",
+
+		cursor_bg = "#C8C093",
+		cursor_fg = "#C8C093",
+		cursor_border = "#C8C093",
+
+		selection_fg = "#C8C093",
+		selection_bg = "#2D4F67",
+
+		scrollbar_thumb = "#16161D",
+		split = "#16161D",
+
+		ansi = { "#0D0C0C", "#C4746E", "#8A9A7B", "#C4B28A", "#8BA4B0", "#A292A3", "#8EA4A2", "#C8C093" },
+		brights = { "#A6A69C", "#E46876", "#87A987", "#E6C384", "#7FB4CA", "#938AA9", "#7AA89F", "#C5C9C5" },
+		indexed = { [16] = "#B6927B", [17] = "#B98D7B" },
+}
+
+
+return {
+	check_for_updates = false,
+	window_close_confirmation = "NeverPrompt",
+	show_update_window = false,
+	skip_close_confirmation_for_processes_named = {
+		"bash",
+		"sh",
+		"zsh",
+		"fish",
+		"tmux",
+		"nvim",
 	},
+	window_padding = { left = 40, right = 40, bottom = 40, top = 40 },
+	audible_bell = "Disabled",
+	hide_tab_bar_if_only_one_tab = true,
+	window_decorations = "RESIZE",
+	font = wezterm.font "JetBrains Mono",
+	-- font = wezterm.font "VT323",
+	-- font = wezterm.font "Hack Nerd Font",
+	-- font = wezterm.font "Inconsolata Nerd Font Regular",
+	-- font = wezterm.font "Iosevka Nerd Font Mono",
+	adjust_window_size_when_changing_font_size = false,
+	font_size = 14.5,
+	-- font_size = 18,
+	-- keys = {
+	-- { key = "r", mods = "CMD|SHIFT", action = "ReloadConfiguration" },
+	-- keys = {
+	--     -- This will create a new split and run your default program inside it
+	--     {
+	--         key = "Enter",
+	--         mods = "CMD",
+	--         action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }),
+	--     },
+	-- },
+	-- },
+	-- Spawn a fish shell in login mode
+	-- default_prog = { "/etc/profiles/per-user/m.manzanares/bin/fish" },
+	keys = {
+		{
+			key = "w",
+			mods = "CMD",
+			action = wezterm.action.CloseCurrentPane { confirm = false },
+		},
+	},
+	force_reverse_video_cursor = true,
+	default_cursor_style = "SteadyUnderline",
+	colors = kanagawa_dragon_colors,
 }
