@@ -54,6 +54,7 @@ scripts/work/hibob-attendence.js
 !xorg.conf
 !.cargo-programs
 !.config/gh/config.yml
+!.config/atuin
 
 ### ARCH
 # !.config/pacman
