@@ -67,6 +67,7 @@ scripts/work/hibob-attendence.js
 
 ### brew
 !Brewfile
+!Cargofile
 
 # SYMLINKS
 scripts/rofi-translate.sh
