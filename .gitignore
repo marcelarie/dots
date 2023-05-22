@@ -65,6 +65,10 @@ scripts/work/hibob-attendence.js
 !.config/nixos
 !.config/nixpkgs
 
+### file structure
+!clones-file-structure.md
+!programs-file-structure.md
+
 ### brew
 !Brewfile
 !Cargofile

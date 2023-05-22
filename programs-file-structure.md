@@ -1,0 +1,12 @@
+AgentGPT
+brightness
+chatgpt-clone
+linuxwave
+lobster
+luarocks-3.8.0
+neovim
+nushell
+Odin
+Open-Assistant
+typst
+v
