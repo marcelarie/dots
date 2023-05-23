@@ -1,0 +1,30 @@
+theme = "dark_catppuccin"
+[editor]
+line-number = "relative"
+mouse = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+space = { w = ":w" } # Maps the Control-s to the typable command :w which is an alias for :write (save file)
+# C-o = ":open ~/.config/helix/config.toml" # Maps the Control-o to opening of the helix config file
+## g = { a = "code_action" } # Maps `ga` to show possible code actions
+"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+space = { f = ":format" }
+
+[keys.insert]
+"A-x" = "normal_mode" # Maps Alt-X to enter normal mode
+# j = { k = "normal_mode" } # Maps `jk` to exit insert mode

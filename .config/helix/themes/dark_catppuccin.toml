@@ -1,0 +1,10 @@
+inherits = "catppuccin_macchiato"
+
+# Override the theming for "keyword"s:
+# "keyword" = { fg = "gold" }
+
+"ui.background" = { bg = "midnight" }
+
+# Override colors in the palette:
+[palette]
+berry = "#2A2A4D"

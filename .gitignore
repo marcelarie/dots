@@ -17,7 +17,6 @@
 !.config/autorandr
 !.config/polybar*
 !.config/himalaya
-!.config/cheat
 !.config/fish/prenix-config.fish
 !.config/fish/fish_variables
 !.config/vifm
@@ -28,7 +27,14 @@
 !.config/greenclip.toml
 !.config/yabai
 !.config/skhd
-.config/fish/fish_variables
+!.config/bat
+!.config/btop
+!.config/cheat
+!.config/helix
+!.config/htop
+!.config/lf
+!.config/vimfm
+!.config/fish/fish_variables
 !.config/tmuxinator
 !scripts/
 scripts/work/hibob-attendence.js
