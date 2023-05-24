@@ -1,1 +1,1 @@
-/home/marcel/clones/own/rofi-translate-to-clip/rofi-translate.sh
+/Users/m.manzanares/clones/own/rofi-translate-to-clip/rofi-translate.sh

@@ -17,8 +17,8 @@
 !.config/autorandr
 !.config/polybar*
 !.config/himalaya
-!.config/fish/prenix-config.fish
-!.config/fish/fish_variables
+!.config/fish/config.fish
+!.config/fish/alias.fish
 !.config/vifm
 !.config/omf
 !.config/rofi/themes
