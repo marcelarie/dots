@@ -10,7 +10,8 @@ vim-language-server bash-language-server \
 yaml-language-server \
 vscode-langservers-extracted \
 vscode-json-languageserver \
-dockerfile-language-server-nodejs pyright
+dockerfile-language-server-nodejs pyright \
+eslint_d
 ```
 
 `npm` packages:
