@@ -71,9 +71,9 @@ skip_notify = true
 
 # Custom commands
 [commands]
-"Nix flake update and rebuild" = "echo 'Nix update'; nix flake update ~/.nixpkgs && echo 'Nix rebuild'; sudo darwin-rebuild switch --flake ~/.nixpkgs#"
+# "Nix flake update and rebuild" = "echo 'Nix update'; nix flake update ~/.nixpkgs && echo 'Nix rebuild'; sudo darwin-rebuild switch --flake ~/.nixpkgs#"
 "Wezterm nightly update" = "brew upgrade --cask wezterm-nightly --no-quarantine --greedy-latest"
-"Neovim nightly update" = "/Users/m.manzanares/scripts/install-last-neovim.sh"
+# "Neovim nightly update" = "/Users/m.manzanares/scripts/install-last-neovim.sh"
 "Generate Brewfile" = "brew bundle dump --force --file=/Users/m.manzanares/Brewfile"
 "Generate Cargofile" = "ls ~/.cargo/bin > ~/Cargofile"
 "Generate Cargofile" = "tree -L 2 clones > clones-file-structure.md"
