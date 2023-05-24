@@ -34,7 +34,6 @@
 !.config/htop
 !.config/lf
 !.config/vimfm
-!.config/fish/fish_variables
 !.config/tmuxinator
 !scripts/
 scripts/work/hibob-attendence.js
@@ -80,6 +79,9 @@ scripts/work/hibob-attendence.js
 ### brew
 !Brewfile
 !Cargofile
+
+## IGNORE
+.config/fish/fish_variables
 
 # SYMLINKS
 scripts/rofi-translate.sh
