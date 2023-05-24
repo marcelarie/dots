@@ -84,30 +84,3 @@ scripts/work/hibob-attendence.js
 .config/fish/fish_variables
 
 # SYMLINKS
-scripts/rofi-translate.sh
-.config/alacritty/alacritty.yml
-.config/nvim/init.vim
-.config/tmux/tmux.conf
-.config/kitty/kitty.conf
-.config/fish/config.fish
-.config/fish/functions/trs.fish
-.config/fish/functions/nvm.fish
-.config/fish/functions/gitignore.fish
-.config/fish/functions/gld.fish
-.config/fish/functions/goo.fish
-.config/fish/functions/nsp.fish
-.config/fish/functions/nfs.fish
-.config/fish/functions/current_branch.fish
-.config/fish/conf.d/plugin-base16-fish.fish
-.config/fish/conf.d/plugin-bang-bang.fish
-.config/fish/conf.d/plugin-nvm.fish
-.config/fish/conf.d/plugin-foreign-env.fish
-.config/fish/conf.d/plugin-bass.fish
-.config/fish/conf.d/plugin-z.fish
-.config/git/config
-.hammerspoon
-.cache/.keep
-.bashrc
-.profile
-.zshrc
-result

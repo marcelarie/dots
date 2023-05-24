@@ -73,11 +73,11 @@ skip_notify = true
 [commands]
 "Nix flake update and rebuild" = "echo 'Nix update'; nix flake update ~/.nixpkgs && echo 'Nix rebuild'; sudo darwin-rebuild switch --flake ~/.nixpkgs#"
 "Wezterm nightly update" = "brew upgrade --cask wezterm-nightly --no-quarantine --greedy-latest"
-"Neovim nightly update" = "/Users/marcelmanzanares2/scripts/install-last-neovim.sh"
-"Generate Brewfile" = "brew bundle dump --force --file=/Users/marcelmanzanares2/Brewfile"
+"Neovim nightly update" = "/Users/m.manzanares/scripts/install-last-neovim.sh"
+"Generate Brewfile" = "brew bundle dump --force --file=/Users/m.manzanares/Brewfile"
 "Generate Cargofile" = "ls ~/.cargo/bin > ~/Cargofile"
 "Generate Cargofile" = "tree -L 2 clones > clones-file-structure.md"
-# "Generate cargo-programs file" = "cat /Users/marcelmanzanares2/.crates2.json | jq -r '.installs | keys[] | split(" ")[0]' | sed '/^$/d' > .cargo-programs"
+# "Generate cargo-programs file" = "cat /Users/m.manzanares/.crates2.json | jq -r '.installs | keys[] | split(" ")[0]' | sed '/^$/d' > .cargo-programs"
 
 [brew]
 # greedy_cask = true
