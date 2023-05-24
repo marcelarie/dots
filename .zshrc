@@ -1,3 +1,5 @@
+echo 'source "$HOME/.rye/env"' >> ~/.zshrc
+
 # pnpm
 export PNPM_HOME="/Users/m.manzanares/Library/pnpm"
 case ":$PATH:" in
@@ -7,3 +9,4 @@ esac
 # pnpm end
 
 eval "$(starship init zsh)"
+source "$HOME/.rye/env"
