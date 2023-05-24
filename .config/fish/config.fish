@@ -152,11 +152,22 @@ status --is-interactive; and rbenv init - fish | source
 starship init fish | source
 
 # Atuin config
-set -gx ATUIN_NOBIND "true"
-status --is-interactive; atuin init fish | source
+set -gx ATUIN_NOBIND true
+status --is-interactive
+atuin init fish | source
 bind --erase \cr
 bind -M insert \cr _atuin_search
 # end
+
+## pnpm
+set -xg PNPM_HOME "/Users/m.manzanares/Library/pnpm"
+switch "$PATH"
+    case ":$PNPM_HOME:"
+        # Do nothing
+    case '*'
+        set -xg PATH "$PNPM_HOME:$PATH"
+end
+## pnpm-end
 
 fnm env --use-on-cd | source
 
