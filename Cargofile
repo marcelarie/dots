@@ -1,6 +1,8 @@
 cargo
 cargo-clippy
 cargo-fmt
+cargo-install-update
+cargo-install-update-config
 cargo-miri
 cargo-watch
 clippy-driver

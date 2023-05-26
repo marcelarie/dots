@@ -19,6 +19,7 @@
 !.config/himalaya
 !.config/fish/
 !.config/fish/config.fish
+!.config/tmux
 !.config/fish/alias.fish
 !.config/fish/functions/
 !.config/vifm
