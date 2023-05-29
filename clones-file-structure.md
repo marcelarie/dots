@@ -4,7 +4,9 @@ clones
 │   ├── dots
 │   ├── nix
 │   └── rofi-translate-to-clip
+├── pers
+│   └── notes
 └── work
     └── stuart-frontend
 
-8 directories, 0 files
+10 directories, 0 files
