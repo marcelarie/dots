@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Path to the submodule
+SUBMODULE_PATH="~/.password-store/"
+
+# Get the current branch name
+BRANCH=$(git symbolic-ref --short HEAD)
+
+# Check if the current branch is the one you want to trigger the submodule push
+if [[ "$BRANCH" == "m1" || "$BRANCH" == "main" ]]; then
+	# Change directory to the submodule
+	cd "$SUBMODULE_PATH"
+
+	# Push changes to the submodule
+	git push origin "$BRANCH"
+fi

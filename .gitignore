@@ -42,6 +42,7 @@
 scripts/work/hibob-attendence.js
 !.vimrc
 !.password-store
+!.githooks
 !*.zshrc
 !*.prettierrc
 !*.profile
