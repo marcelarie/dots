@@ -43,6 +43,7 @@ scripts/work/hibob-attendence.js
 !.vimrc
 !.password-store
 !.githooks
+!.gnupg/gpg-agent.conf
 !*.zshrc
 !*.prettierrc
 !*.profile
