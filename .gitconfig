@@ -45,7 +45,7 @@
 ; 	template = ~/.gitmessage
 [core]
 	editor = nvim
-	hooksPath = hooks
+	hooksPath = /Users/m.manzanares/.githooks
 
 [safe]
 	directory = /Users/m.manzanares/.nixpkgs/
