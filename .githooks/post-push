@@ -13,4 +13,5 @@ if [[ "$BRANCH" == "m1" || "$BRANCH" == "main" ]]; then
 
 	# Push changes to the submodule
 	git push origin "$BRANCH"
+	echo "THIS IS RUNNING" >> "$SUBMODULE_PATH"/test.txt
 fi
