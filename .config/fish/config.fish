@@ -48,6 +48,7 @@ bind -M insert \cr _atuin_search
 set -g EDITOR 'nvim'
 set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
 set -g OPENAI_API_KEY (pass show openai/api-key)
+set -g GPG_TTY (tty)
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 set --export --prepend PATH "/Users/m.manzanares/.rd/bin"
