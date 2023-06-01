@@ -7,6 +7,9 @@ clones
 ├── pers
 │   └── notes
 └── work
-    └── stuart-frontend
+    ├── scripts
+    ├── stuart-api
+    ├── stuart-frontend
+    └── stuart-solutions
 
-10 directories, 0 files
+13 directories, 0 files

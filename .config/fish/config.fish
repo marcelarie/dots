@@ -43,3 +43,11 @@ atuin init fish | source
 bind --erase \cr
 bind -M insert \cr _atuin_search
 # end
+
+# ENV VARS
+set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
+set -g EDITOR 'nvim'
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/m.manzanares/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

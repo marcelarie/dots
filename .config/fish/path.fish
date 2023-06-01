@@ -13,3 +13,11 @@ switch "$PATH"
     case "*"
         fish_add_path $RYE_SHIMS
 end
+
+set -xg CALIBRE_APPS "/Applications/calibre.app/Contents/MacOS/"
+switch "$PATH"
+    case ":$CALIBRE_APPS:"
+        # Do nothing
+    case "*"
+        fish_add_path $CALIBRE_APPS
+end
