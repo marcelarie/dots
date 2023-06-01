@@ -50,3 +50,4 @@ export PATH="/Users/m.manzanares/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 source "$HOME/.rye/env"
 source "$HOME/.rye/env"
+source "$HOME/.rye/env"
