@@ -140,7 +140,8 @@ alt - s : /opt/homebrew/bin/yabai -m window --toggle float;\
 #           /opt/homebrew/bin/yabai -m window --grid 5:5:4:0:1:1
 
 alt + shift - r : \
-    launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+    yabai --restart-service
+    # launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # change layout of desktop
 # ctrl + alt - a : /opt/homebrew/bin/yabai -m space --layout bsp
