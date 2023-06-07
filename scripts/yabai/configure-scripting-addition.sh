@@ -21,4 +21,4 @@ hash=$(shasum -a 256 $(which yabai) | awk '{print $1}')
 result="$user ALL=(root) NOPASSWD: sha256:$hash $yabai --load-sa"
 
 echo $result | pbcopy
-echo $result | sudo EDITOR='tee -a' visudo
+# echo $result | sudo EDITOR='tee -a' visudo -f /private/etc/sudoers.d/yabai

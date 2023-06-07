@@ -18,8 +18,6 @@ set fish_greeting
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ### "nvim" as manpager
-export MANPAGER='nvim +Man!'
-export PAGER='less -FRX'
 
 for p in /run/current-system/sw/bin
     if not contains $p $fish_user_paths
@@ -50,3 +48,10 @@ set -g EDITOR nvim
 # set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
 set -g OPENAI_API_KEY (pass show openai/api-key)
 set -g GPG_TTY (tty)
+set -g MANPAGER 'nvim +Man!'
+set -g PAGER 'less -FRX'
+# set -g M1 1
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/m.manzanares/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
