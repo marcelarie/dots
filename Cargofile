@@ -15,6 +15,7 @@ just
 mdbook
 mdbook-svgbob
 nu_plugin_gstat
+pista
 rls
 rust-analyzer
 rust-gdb
