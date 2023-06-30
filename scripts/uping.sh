@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/usr/bin/env bash
 trap "run=0" SIGHUP SIGINT SIGTERM
 
 _audible=0

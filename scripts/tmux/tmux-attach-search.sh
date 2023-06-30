@@ -5,10 +5,10 @@ NO_SERVER_REGEX='^no server running on /tmp/tmux-\d/default'
 
 if [ -z "$SESSIONS_LIST" ] || [[ "$SESSIONS_LIST" =~ $NO_SERVER_REGEX ]]; then
 	printf "No sessions found\n"
-	read -pr "Do you wish to start a session? Answer Y or N " yn
+	read -p "Do you wish to start a session? Answer Y or N " yn
 	case $yn in
 	[Yy]*)
-		read -pr "For Work or Personal? Answer W or P " wp
+		read -p "For Work or Personal? Answer W or P " wp
 		case $wp in
 		[Ww]*) "$HOME/scripts/tmux/work1.sh" ;;
 		[Pp]*) exit 1 ;;
