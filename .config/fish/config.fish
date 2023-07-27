@@ -17,8 +17,6 @@ set fish_greeting
 ### "bat" as manpager
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-### "nvim" as manpager
-
 for p in /run/current-system/sw/bin
     if not contains $p $fish_user_paths
         set -g fish_user_paths $p $fish_user_paths

@@ -1,7 +1,10 @@
 clones
 ├── lang_servers
 ├── own
+│   ├── aoc22
 │   ├── dots
+│   ├── knowledge-material
+│   ├── marcelarie.com
 │   ├── nix
 │   └── rofi-translate-to-clip
 ├── pers
@@ -13,4 +16,4 @@ clones
     ├── stuart-frontend
     └── stuart-solutions
 
-14 directories, 0 files
+17 directories, 0 files
