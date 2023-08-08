@@ -10,10 +10,13 @@ clones
 ├── pers
 │   └── notes
 └── work
+    ├── lop-searcher
     ├── mc-clients-account-management
+    ├── mc-live-ops-packages
+    ├── postman
     ├── scripts
     ├── stuart-api
     ├── stuart-frontend
     └── stuart-solutions
 
-17 directories, 0 files
+20 directories, 0 files

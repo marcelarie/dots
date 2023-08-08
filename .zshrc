@@ -7,6 +7,7 @@ esac
 # pnpm end
 
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
 source "$HOME/.rye/env"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)

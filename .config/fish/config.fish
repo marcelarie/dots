@@ -31,6 +31,7 @@ status --is-interactive; and rbenv init - fish | source
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃##
 starship init fish | source
 fnm env --use-on-cd | source
+direnv hook fish | source
 # status --is-interactive; and rbenv init - fish | source
 
 # Atuin config
