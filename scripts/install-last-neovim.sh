@@ -9,4 +9,4 @@ BUILD_NVIM="sudo make CMAKE_BUILD_TYPE=Release install && nvim -v"
 cd "$PROGRAMS/neovim/" || exit
 git pull --all --stat
 
-time (eval "$BUILD_NVIM") || (make diskclean && eval "$BUILD_NVIM")
+time (eval "$BUILD_NVIM") || (sudo make diskclean && eval "$BUILD_NVIM")
