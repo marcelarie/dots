@@ -1,25 +1,25 @@
 ```
-              ___       ___        ___   Marcel Arie ~ git version 2.41.0
-             ####      ####       ####   --------------------------------
-            ####      ####       ####    Project: dots (5 branches)
-      _____####______####___    ####     HEAD: 1ee2a34 (m1, origin/m1)
-     #######################   ####      Pending: 2+-
-    #######################   ####       Version: 1.0.0
-        ####      ####       ####        Created: 2 years ago
-       ####      ####       ####         Languages:                            
-  ____####______####____   ####                     ● Shell (38.3 %) ● Fish (29.5 %)
- #######################  ####                      ● BASH (14.4 %) ● Python (6.0 %)
-#######################  ___                        ● Ruby (5.7 %) ● Lua (4.7 %)
-   ####      ####       ####                        ● Other (1.5 %) 
-  ####      ####       ####              Authors: 96% Marcel Arie 285
- ####      ####       ####                        4% marcelarie 12
-                                         Last change: 37 seconds ago
-                                         URL: git@github.com:marcelarie/dots.git
-                                         Commits: 297
-                                         Churn (4): README.md 3
-                                                    clones-file-structure.md 3
-                                                    …/fish/alias.fish 2
-                                         Lines of code: 1840
-                                         Size: 508.00 KiB (179 files)
-                                         License: ISC
+                 ___                Marcel Arie ~ git version 2.41.0
+  ___======____=---=)               --------------------------------
+/T            \_--===)              Project: dots (5 branches)
+[ \ (0)   \~    \_-==)              HEAD: ca4376d (m1, origin/m1)
+ \      / )J~~    \-=)              Pending: 3+-
+  \\___/  )JJ~~~   \)               Version: 1.0.0
+   \_____/JJJ~~~~    \              Created: 2 years ago
+   / \  , \J~~~~~     \             Languages:                           
+  (-\)\=|\\\~~~~       L__                     ● Fish (36.9 %) ● Shell (34.2 %)
+  (\\)  (\\\)_           \==__                 ● BASH (12.9 %) ● Python (5.4 %)
+   \V    \\\) ===_____   \\\\\\                ● Ruby (5.1 %) ● Lua (4.2 %)
+          \V)     \_) \\\\JJ\J\)               ● Other (1.3 %) 
+                      /J\JT\JJJJ)   Authors: 96% Marcel Arie 289
+                      (JJJ| \UUU)            4% marcelarie 12
+                       (UU)         Last change: 5 days ago
+                                    URL: git@github.com:marcelarie/dots.git
+                                    Commits: 301
+                                    Churn (6): README.md 3
+                                               …/fish/config.fish 2
+                                               Brewfile 2
+                                    Lines of code: 2058
+                                    Size: 518.99 KiB (180 files)
+                                    License: ISC
 ```

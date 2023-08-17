@@ -49,6 +49,7 @@ set -g OPENAI_API_KEY (pass show openai/api-key)
 set -g GPG_TTY (tty)
 set -g MANPAGER 'nvim +Man!'
 set -g PAGER 'less -FRX'
+set -g HOMEBREW_NO_AUTO_UPDATE 1
 # set -g M1 1
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
