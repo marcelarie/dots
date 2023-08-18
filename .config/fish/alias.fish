@@ -1,4 +1,5 @@
 set current_branch (git symbolic-ref --short HEAD)
+# set select_modified (git status | rg 'modified' | sed 's/modified://g' | fzf | awk '{$1=$1};1')
 
 alias ls="exa"
 alias l="ls"
@@ -35,6 +36,7 @@ alias gstal="git stash list"
 alias grec='git log --graph --oneline --decorate ( git fsck --no-reflog | awk "/dangling commit/ {print $3}" )'
 alias gstapp="git stash apply"
 alias gdfc=" git diff --name-only origin/HEAD"
+alias gdsm='git diff (gst | rg "modified" | sed "s/modified://g" | fzf | awk \'{$1=$1};1\' )'
 alias gw="git worktree"
 alias gwa="git worktree add"
 alias gwl="git worktree list"
