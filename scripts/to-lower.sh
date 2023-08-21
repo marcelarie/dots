@@ -16,10 +16,12 @@ for f in *; do
 		no_uppercase=$(tr '[:upper:]' '[:lower:]' <<<"$no_dashes")
 
 		if [[ $f != "$no_uppercase" ]]; then
-			echo "mv ${f} ${no_uppercase}"
-			read -p "Apply changes? (y/n) " -n 1 -r
+			if [[ $apply_changes != true ]]; then
+				echo "mv ${f} ${no_uppercase}"
+				read -p "Apply changes? (y/n) " -n 1 -r
+			fi
 
-			if [[ $REPLY =~ ^[Yy]$ || $apply_changes == true ]]; then
+			if [[ $apply_changes == true || $REPLY =~ ^[Yy]$ ]]; then
 				mv "$f" "$no_uppercase"
 				echo "Renamed ${f} to ${no_uppercase}"
 			else
