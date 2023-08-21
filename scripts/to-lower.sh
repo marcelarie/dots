@@ -1,3 +1,30 @@
+#!/usr/bin/env bash
+
+shopt -s nullglob
+
+apply_changes=false
+
+if [[ $1 == "--apply" ]]; then
+	apply_changes=true
+fi
+
 for f in *; do
-    test -f "$f" && echo mv "$f" "$( tr '[:upper:]' '[:lower:]' <<<"$f" )"
+	if [[ -f $f ]]; then
+		no_underscores=${f//_/-}
+		no_spaces=${no_underscores// /-}
+		no_dashes=${no_spaces//--/-}
+		no_uppercase=$(tr '[:upper:]' '[:lower:]' <<<"$no_dashes")
+
+		if [[ $f != "$no_uppercase" ]]; then
+			echo "mv ${f} ${no_uppercase}"
+			read -p "Apply changes? (y/n) " -n 1 -r
+
+			if [[ $REPLY =~ ^[Yy]$ || $apply_changes == true ]]; then
+				mv "$f" "$no_uppercase"
+				echo "Renamed ${f} to ${no_uppercase}"
+			else
+				echo "Skipping ${f}"
+			fi
+		fi
+	fi
 done

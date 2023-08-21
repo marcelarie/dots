@@ -10,7 +10,7 @@ if [ -z "$SESSIONS_LIST" ] || [[ "$SESSIONS_LIST" =~ $NO_SERVER_REGEX ]]; then
 	[Yy]*)
 		read -p "For Work or Personal? Answer W or P " wp
 		case $wp in
-		[Ww]*) "$HOME/scripts/tmux/work1.sh" ;;
+		[Ww]*) "$HOME/scripts/tmux/create-session.sh work" ;;
 		[Pp]*) exit 1 ;;
 		*) echo "Exit" ;;
 		esac
