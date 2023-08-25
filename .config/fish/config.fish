@@ -50,6 +50,9 @@ set -g GPG_TTY (tty)
 set -g MANPAGER 'nvim +Man!'
 set -g PAGER 'less -FRX'
 set -g HOMEBREW_NO_AUTO_UPDATE 1
+set -g ANDROID_HOME ~/Library/Android/sdk
+set -g ANDROID_SDK_ROOT ~/Library/Android/sdk
+# set -g ANDROID_AVD_HOME ~/Library/Android/avd
 # set -g M1 1
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
