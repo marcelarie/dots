@@ -4,7 +4,11 @@ red_color='\033[0;31m'
 yellow_color='\033[0;33m'
 no_color='\033[0m'
 
-OPENAI_API_KEY=$(pass show openai/api-key)
+if [[ -z $OPENAI_API_KEY ]]; then
+	if command -v pass &>/dev/null; then
+		OPENAI_API_KEY=$(pass show openai/api-key)
+	fi
+fi
 
 usage() {
 	echo -e "${yellow_color}Usage:${no_color} oat [-t text]"
