@@ -4,6 +4,8 @@ red_color='\033[0;31m'
 yellow_color='\033[0;33m'
 no_color='\033[0m'
 
+OPENAI_API_KEY=$(pass show openai/api-key)
+
 usage() {
 	echo -e "${yellow_color}Usage:${no_color} oat [-t text]"
 	echo "Send text input to OpenAI's GPT-3 language model and display the model's response"
