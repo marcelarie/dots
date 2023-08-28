@@ -32,6 +32,7 @@ status --is-interactive; and rbenv init - fish | source
 starship init fish | source
 fnm env --use-on-cd | source
 direnv hook fish | source
+source /Users/m.manzanares/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 # status --is-interactive; and rbenv init - fish | source
 
 # Atuin config
