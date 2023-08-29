@@ -1,3 +1,5 @@
+# shellcheck disable=2148
+
 # pnpm
 export PNPM_HOME="/Users/m.manzanares/Library/pnpm"
 case ":$PATH:" in
@@ -6,7 +8,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 source "$HOME/.rye/env"
 

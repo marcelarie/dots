@@ -7,6 +7,7 @@ source ~/.config/fish/keybinds.sh
 source ~/.config/fish/external/zoxide.fish
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
+
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #     CONFIG     #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
@@ -17,6 +18,7 @@ set fish_greeting
 ### "bat" as manpager
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+
 for p in /run/current-system/sw/bin
     if not contains $p $fish_user_paths
         set -g fish_user_paths $p $fish_user_paths
@@ -24,7 +26,9 @@ for p in /run/current-system/sw/bin
 end
 
 set -g fish_user_paths /Users/marcelmanzanares2/scripts $fish_user_paths
-status --is-interactive; and rbenv init - fish | source
+if not set -q LIGHTWEIGHT_MODE
+    status --is-interactive; and rbenv init - fish | source
+end
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃##
 #   EXTERNAL SOURCES   #
@@ -45,14 +49,16 @@ bind -M insert \cr _atuin_search
 
 # ENV VARS
 set -g EDITOR nvim
-# set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
-set -g OPENAI_API_KEY (pass show openai/api-key)
-set -g GPG_TTY (tty)
+if not set -q LIGHTWEIGHT_MODE
+    # set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
+    set -g OPENAI_API_KEY (pass show openai/api-key)
+    set -g GPG_TTY (tty)
+end
+set -g ANDROID_HOME ~/Library/Android/sdk
+set -g ANDROID_SDK_ROOT ~/Library/Android/sdk
 set -g MANPAGER 'nvim +Man!'
 set -g PAGER 'less -FRX'
 set -g HOMEBREW_NO_AUTO_UPDATE 1
-set -g ANDROID_HOME ~/Library/Android/sdk
-set -g ANDROID_SDK_ROOT ~/Library/Android/sdk
 # set -g ANDROID_AVD_HOME ~/Library/Android/avd
 # set -g M1 1
 

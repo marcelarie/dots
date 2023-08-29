@@ -186,6 +186,7 @@ alias gpristine="git reset --hard & git clean -dfx"
 alias gcm="git checkout master"
 alias gcmsg="git commit -m"
 alias gco="git checkout"
+alias gcohi='git reflog --date=iso  | rg \'checkout\' | sed \'s/^.*moving/moving/\' | sed "s/main/$(set_color red)main$(set_color normal)/" | sed "s/from\\(.*\\)to/from$(set_color green)\1$(set_color normal)to/"'
 alias gcount="git shortlog -sn"
 alias gcp="git cherry-pick"
 alias gcs="git commit -S"
