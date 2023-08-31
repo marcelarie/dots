@@ -24,6 +24,7 @@
 !.config/fish/functions/
 !.config/vifm
 !.config/omf
+!.config/nushell
 !.config/rofi/themes
 !.config/starship.toml
 !.config/rustfmt

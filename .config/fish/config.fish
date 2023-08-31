@@ -7,7 +7,6 @@ source ~/.config/fish/keybinds.sh
 source ~/.config/fish/external/zoxide.fish
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
-
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #     CONFIG     #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
