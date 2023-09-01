@@ -1,9 +1,17 @@
+alias nurc = nvim ~/.config/nushell/config.nu
+alias nuenv = nvim ~/.config/nushell/env.nu
+alias nual = nvim ~/.config/nushell/alias.nu
+# def so [] {
+#    (source ~/.config/nushell/config.nu)
+# }
+
 # alias ls = ^exa
-alias l = ^ls
-alias ll = ^exa -l
-alias lla = ^exa -la
-alias cp = ^cp -i
-alias mv = ^mv -i
+
+alias l = ls
+alias ll = ls -l
+alias lla = ls -la
+alias cp = cp -i
+alias mv = mv -i
 alias kmv = ^~/scripts/mv-kebab.sh
 alias rm = ^rm -i
 alias df = ^df -h
