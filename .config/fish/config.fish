@@ -51,6 +51,7 @@ set -g EDITOR nvim
 if not set -q LIGHTWEIGHT_MODE
     # set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
     set -g OPENAI_API_KEY (pass show openai/api-key)
+    set -g GITHUB_TOKEN (pass show github/token)
     set -g GPG_TTY (tty)
 end
 set -g ANDROID_HOME ~/Library/Android/sdk

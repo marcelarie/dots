@@ -14,14 +14,14 @@ alt - j : yabai -m window --focus next || yabai -m window --focus first
 
 # open wezterm
 # alt - return : wezterm start fish
-alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm -e fish
-alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm -e 'nu'
+alt - return : wezterm -e fish
+alt - n : alacritty -e 'nu'
 
 # open nvim
 # alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start ~/scripts/open-notes.sh
 
 # close window
-shift + alt - q : /opt/homebrew/bin/skhd --key "cmd - w"
+shift + alt - q : skhd --key "cmd - w"
 
 # browser
 # alt - q : open -a Google\ Chrome\ Beta -n

@@ -1,4 +1,9 @@
-set current_branch (git symbolic-ref --short HEAD)
+function current_branch
+    git symbolic-ref --short HEAD
+end
+function git_dirs
+    git ls-files | xargs -n 1 dirname | uniq | grep -v '^.$' | fzy
+end
 # set select_modified (git status | rg 'modified' | sed 's/modified://g' | fzf | awk '{$1=$1};1')
 
 alias ls="exa"
@@ -62,6 +67,7 @@ alias alrc="nvim ~/.config/fish/alias.fish"
 alias zkn="cd ~/clones/pers/notes; ~/scripts/zk-new.sh"
 alias zko="cd ~/clones/pers/notes; nvim -c 'ZkNotes'; cd -"
 alias zkwo="nvim ~/clones/pers/notes/ix07-work-to-do-s.md"
+alias zkpe="nvim ~/clones/pers/notes/hz98-personal-to-do-s.md"
 alias emulator="~/Library/Android/sdk/emulator/emulator"
 alias vi="nvim"
 alias iv="nvim"
@@ -203,7 +209,7 @@ alias gfo="git fetch origin"
 alias gg="git gui citool"
 alias gga="git gui citool --amend"
 alias ggpull="git pull origin (git symbolic-ref --short HEAD)"
-alias ggpush="git push origin (git symbolic-ref --short HEAD)"
+alias ggpush="git push origin current_branch"
 alias gpsup="git push --set-upstream origin (git symbolic-ref --short HEAD)"
 alias ggsup="git branch --set-upstream-to origin (git symbolic-ref --short HEAD)"
 alias gignore="git update-index --assume-unchanged"
