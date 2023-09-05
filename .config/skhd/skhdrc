@@ -9,13 +9,13 @@ alt - j : yabai -m window --focus next || yabai -m window --focus first
 # alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/marcelmanzanares2/bin/fish'
 
 # open kitty
-# alt - return : /etc/profiles/per-user/marcelmanzanares2/bin/kitty --single-instance '/etc/profiles/per-user/marcelmanzanares2/bin/fish'
+# alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance 'nu'
 # alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance '/Users/marcelmanzanares2/scripts/fish-home.sh'
 
 # open wezterm
 # alt - return : wezterm start fish
-alt - return : wezterm -e fish
-alt - n : alacritty -e 'nu'
+alt - return : wezterm start nu
+alt - n : /Applications/Alacritty.app/Contents/MacOS/alacritty -e 'nu'
 
 # open nvim
 # alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start ~/scripts/open-notes.sh

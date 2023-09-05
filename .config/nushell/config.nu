@@ -10,4 +10,5 @@ $env.config = {
 # --------------------------------END OF FILE--------------------------------- #
 # External sources
 
+use ~/.cache/starship/init.nu
 source ~/.zoxide.nu

@@ -1,9 +1,11 @@
 function current_branch
     git symbolic-ref --short HEAD
 end
+
 function git_dirs
-    git ls-files | xargs -n 1 dirname | uniq | grep -v '^.$' | fzy
+    git ls-files | xargs -n 1 dirname | sort | uniq | grep -v '^.$' | fzy
 end
+
 # set select_modified (git status | rg 'modified' | sed 's/modified://g' | fzf | awk '{$1=$1};1')
 
 alias ls="exa"
@@ -54,6 +56,7 @@ alias yi="yarn install"
 alias ya="yarn add"
 alias yb="yarn build"
 alias yig="yarn install -g"
+alias yjd="yarn jest --silent=false --watch (git_dirs)"
 alias zrc="nvim ~/.zshrc"
 # alias arc="nvim ${nixConfig}/home-manager/programs/alacritty/default.nix"
 alias frc="nvim ~/.config/fish/config.fish"
@@ -208,10 +211,10 @@ alias gfa="git fetch --all --prune"
 alias gfo="git fetch origin"
 alias gg="git gui citool"
 alias gga="git gui citool --amend"
-alias ggpull="git pull origin (git symbolic-ref --short HEAD)"
-alias ggpush="git push origin current_branch"
-alias gpsup="git push --set-upstream origin (git symbolic-ref --short HEAD)"
-alias ggsup="git branch --set-upstream-to origin (git symbolic-ref --short HEAD)"
+alias ggpull="git pull origin (current_branch)"
+alias ggpush="git push origin (current_branch)"
+alias gpsup="git push --set-upstream origin (current_branch)"
+alias ggsup="git branch --set-upstream-to origin (current_branch)"
 alias gignore="git update-index --assume-unchanged"
 alias git-svn-dcommit-push="git svn dcommit & git push github master:svntrunk"
 alias gk="gitk --all --branches"
