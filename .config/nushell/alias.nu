@@ -1,11 +1,6 @@
 alias nurc = nvim ~/.config/nushell/config.nu
 alias nuenv = nvim ~/.config/nushell/env.nu
 alias nual = nvim ~/.config/nushell/alias.nu
-# def so [] {
-#    (source ~/.config/nushell/config.nu)
-# }
-
-# alias ls = ^exa
 
 alias l = ls
 alias ll = ls -l
@@ -29,7 +24,7 @@ alias src = ^nvim ~/.config/skhd/skhdrc
 alias yrc = ^nvim ~/.config/yabai/yabairc
 alias govh = ^ssh marcel@135.125.234.60
 alias gb = ^git checkout (git branch | fzy | xargs)
-# alias gbde = ^git branch -D (git branch | fzy | xargs)
+alias gbde = ^git branch -D (git branch | fzy | xargs)
 # alias gstp = ^git status --porcelain | awk 'match($1, 'M'){ print $2 }' | paste -sd ' '
 alias gst = ^git status
 alias grs = ^git restore
@@ -65,9 +60,6 @@ alias lrc = ^cd ~/.config/leftwm & nvim config.toml
 alias clones = ^~/clones
 alias dots = ^vi ~/.gitignore
 alias alrc = ^nvim ~/.config/fish/alias.fish
-# alias zkn = ^cd $"($env.HOME)/clones/pers/notes"; run-external $"($env.HOME)/scripts/zk-new.sh"
-# alias zko = ^cd $"($env.HOME)/clones/pers/notes"; nvim -c 'ZkNotes'; cd -
-# alias zkwo = ^nvim $"($env.HOME)/clones/pers/notes/ix07-work-to-do-s.md"
 alias emulator = ^~/Library/Android/sdk/emulator/emulator
 alias vi = ^nvim
 alias iv = ^nvim
@@ -105,7 +97,6 @@ alias nm = ^mw -Y and neomutt
 alias mc = ^mcfly search
 alias ta = ^tmux attach -t
 alias tas = run-external $"($env.HOME)/scripts/tmux/tmux-attach-search.sh"
-# def tas [] {
 alias trc = ^nvim $"($env.HOME)/.config/tmux/tmux.conf"
 alias skrc = ^nvim $"(env.HOME)/.config/skhd/skhdrc"
 alias tn = ^tmux new-session
@@ -131,8 +122,6 @@ alias ctd = ^cargo tree -d
 alias ns = ^nix-shell
 alias nixin = ^~/scripts/nix-search.sh
 alias tg = ^topgrade
-# alias stu-health = ^curl -s https://api.stuart.com/health | jq -r .status
-# alias stu-health-beta = ^curl -s https://api.beta.stuart.com/health | jq -r .status
 alias ch = ^cheat
 alias che = ^cheat -e
 alias chl = ^cheat (cheat -l | cut -f1 -d " " | fzy)

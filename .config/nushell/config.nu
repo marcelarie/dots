@@ -1,4 +1,5 @@
 source ./alias.nu
+source ./func.nu
 
 $env.config = {
   show_banner: false,
