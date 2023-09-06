@@ -10,10 +10,13 @@ $env.config = {
 }
 
 def create_left_prompt [] {
+    let home = ($env.HOME)
     let path_segment = ($env.PWD)
-    let current_branch = " 🌱 " + (current_branch)
+    let current_branch = " 🌱 " + ($"(ansi purple_bold)(current_branch)")
 
-    $path_segment + $current_branch
+    let clean_path = $path_segment | str replace $home "~"
+
+    ($clean_path + $current_branch)
 }
 
 def create_right_prompt [] {
