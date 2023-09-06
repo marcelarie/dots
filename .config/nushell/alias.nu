@@ -162,3 +162,5 @@ alias gcmsg = ^git commit -m
 alias gco = ^git checkout
 alias gp = ^git push
 alias gl = ^git pull
+alias current_branch = ^git symbolic-ref --short HEAD
+alias gpsup = ^git push --set-upstream origin (git symbolic-ref --short HEAD)
