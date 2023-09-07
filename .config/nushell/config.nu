@@ -1,5 +1,5 @@
-source ./alias.nu
-source ./func.nu
+source alias.nu
+source func.nu
 
 $env.config = {
   edit_mode: vi,
@@ -8,13 +8,13 @@ $env.config = {
     mode: thin
   },
    hooks: {
-    env_change: {
-      PWD: [{ |before, after|
-        if ('FNM_DIR' in $env) and ([.nvmrc .node-version] | path exists | any { |it| $it }) {
-          fnm use
-        }
-      }]
-    }
+    # env_change: {
+    #   PWD: [{ |before, after|
+    #     if ('FNM_DIR' in $env) and ([.nvmrc .node-version] | path exists | any { |it| $it }) {
+    #       fnm use
+    #     }
+    #   }]
+    # }
   }
 }
 
@@ -30,17 +30,7 @@ def create_left_prompt [] {
 }
 
 def create_right_prompt [] {
-
-#     let time_segment = ([
-#         (current_branch)
-#     ] | str join)
-#
-#     if $time_segment ~= $env.HOME {
-#        $time_segment = $time_segment | str replace $env.HOME "~"
-#     }
-#
       (git status --porcelain | awk '{print $1;}' | tr '\n' ' ')
-#     $time_segment
 }
 
 $env.PROMPT_COMMAND = { create_left_prompt }
