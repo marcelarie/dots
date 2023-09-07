@@ -8,10 +8,10 @@ end
 
 # set select_modified (git status | rg 'modified' | sed 's/modified://g' | fzf | awk '{$1=$1};1')
 
-alias ls="exa"
+alias ls="eza"
 alias l="ls"
-alias ll="exa -l"
-alias lla="exa -la"
+alias ll="eza -l"
+alias lla="eza -la"
 alias cp="cp -i"
 alias mv="mv -i"
 alias kmv="~/scripts/mv-kebab.sh"
