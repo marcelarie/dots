@@ -8,13 +8,30 @@ $env.config = {
     mode: thin
   },
    hooks: {
-    # env_change: {
-    #   PWD: [{ |before, after|
-    #     if ('FNM_DIR' in $env) and ([.nvmrc .node-version] | path exists | any { |it| $it }) {
-    #       fnm use
-    #     }
-    #   }]
-    # }
+    env_change: {
+      PWD: [{ |before, after|
+        if ('FNM_DIR' in $env) and ([.nvmrc .node-version] | path exists | any { |it| $it }) {
+          fnm use
+        }
+      }]
+    }
+  }
+}
+
+def override_clones_dir_path [path] {
+  let work_path = "/clones/work/"
+  let work_path = "/clones/work/"
+  let pers_path = "/clones/pers/"
+  let own_path  = "/clones/own/"
+
+  if ($work_path in $path) {
+    ($path | str replace $work_path "/w/")
+  } else if ($pers_path in $path) {
+    ($path | str replace $pers_path "/p/")
+  } else if ($own_path in $path) {
+    ($path | str replace $own_path  "/o/")
+  } else {
+    $path
   }
 }
 
@@ -24,7 +41,9 @@ def create_left_prompt [] {
     let branch = (current_branch)
     let current_branch = " 🌱 " + ($"(ansi purple_bold)(current_branch)")
 
-    let clean_path = $path_segment | str replace $home "~"
+
+    let no_clones_path = override_clones_dir_path $path_segment
+    let clean_path = $no_clones_path | str replace $home "~"
 
     ($clean_path + $current_branch)
 }
@@ -45,4 +64,5 @@ $env.PROMPT_MULTILINE_INDICATOR = "::> "
 # External sources
 
 # use ~/.cache/starship/init.nu
+# use external/fnm.nu
 source ~/.zoxide.nu
