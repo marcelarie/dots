@@ -1,6 +1,8 @@
 source alias.nu
 source func.nu
 
+use ~/clones/fork/nu_scripts/custom-completions/mod.nu *
+
 $env.config = {
   edit_mode: vi,
   show_banner: false,
@@ -24,7 +26,6 @@ $env.config = {
 }
 
 def override_clones_dir_path [path] {
-  let work_path = "/clones/work/"
   let work_path = "/clones/work/"
   let pers_path = "/clones/pers/"
   let own_path  = "/clones/own/"
