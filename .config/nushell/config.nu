@@ -82,19 +82,38 @@ def create_left_prompt [] {
 }
 
 def create_right_prompt [] {
-   if (git-changes) {
-    "*"
-  } else if (git-staged-changes) {
-    "+"
+  let duration = $env.CMD_DURATION_MS | into int
+
+  let parsed_duration = $"($duration / 1000 | math round --precision 2)s"
+
+  if ($duration > 60000) {
+    let parsed_duration = $"($duration / 60000 | math round --precision 2)m"
+  }
+  # if is a minute or more calculate on minutes
+  let time = date now | format date "%H:%M"
+
+  ($parsed_duration + " - " + $time)
+  #  if (git-changes) {
+  #   "*"
+  # } else if (git-staged-changes) {
+  #   "+"
+  # }
+}
+
+def colored_error_prompt [prompt: string] {
+  if ($env.LAST_EXIT_CODE == 0) {
+    $"(ansi green_bold)($prompt) (ansi reset)"
+  } else {
+    $"(ansi red_bold)($prompt) (ansi reset)"
   }
 }
 
 $env.PROMPT_COMMAND = { create_left_prompt }
-# $env.PROMPT_COMMAND_RIGHT = { create_right_prompt }
-$env.PROMPT_INDICATOR = "> "
-$env.PROMPT_INDICATOR_VI_INSERT = " [i]: "
-$env.PROMPT_INDICATOR_VI_NORMAL = " [n]: "
-$env.PROMPT_MULTILINE_INDICATOR = ":>  "
+$env.PROMPT_COMMAND_RIGHT = { create_right_prompt }
+$env.PROMPT_INDICATOR = {colored_error_prompt '>'}
+$env.PROMPT_INDICATOR_VI_INSERT = {colored_error_prompt '[i]:'}
+$env.PROMPT_INDICATOR_VI_NORMAL = {colored_error_prompt '[n]:'}
+$env.PROMPT_MULTILINE_INDICATOR = {colored_error_prompt ':> '}
 
 
 # --------------------------------END OF FILE--------------------------------- #
