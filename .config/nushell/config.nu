@@ -1,6 +1,8 @@
 source alias.nu
 source func.nu
 
+# source external/get-weather.nu
+
 use ~/clones/fork/nu_scripts/custom-completions/mod.nu *
 
 $env.config = {
@@ -25,6 +27,10 @@ $env.config = {
   }
 }
 
+def colored_string [value, color: string] {
+    $"(ansi ($color))($value)(ansi reset)"
+}
+
 def override_clones_dir_path [path] {
   let work_path = "/clones/work/"
   let pers_path = "/clones/pers/"
@@ -42,12 +48,12 @@ def override_clones_dir_path [path] {
 }
 
 def node_version [] {
-  let node_version = (fnm current)
+  let node_version = (node -v)
 
   if ($node_version == "system" or ($node_version | is-empty)) {
-     ""
+    ""
   } else {
-    $"(ansi yellow_bold) 󰎙 ($node_version)(ansi reset)"
+    colored_string $" 󰎙 ($node_version)" 'yellow_bold'
   }
 }
 
@@ -70,55 +76,65 @@ def git-staged-changes [] {
 }
 
 def create_left_prompt [] {
-    let home = ($env.HOME)
-    let path_segment = ($env.PWD)
-    let branch = (current_branch)
-    let current_branch = " 🌱 " + ($"(ansi purple_bold)(current_branch)(ansi reset)")
-
+    let home = $env.HOME
+    let path_segment = $env.PWD
+    let node_version = (node_version)
     let no_clones_path = override_clones_dir_path $path_segment
     let clean_path = $no_clones_path | str replace $home "~"
 
-    ( $clean_path + (node_version) + $current_branch  )
+    if (ls -a | rg '.git' | is-empty) {
+      $clean_path + $node_version
+    } else {
+      let branch = (^git symbolic-ref --short HEAD | str trim)
+      let current_branch = " 🌱 " + (colored_string $branch 'purple_bold')
+      $clean_path + $node_version + $current_branch
+    }
 }
 
-def create_right_prompt [] {
+def last_command_duration [] {
   let duration = $env.CMD_DURATION_MS | into int
 
   let parsed_duration = $"($duration / 1000 | math round --precision 2)s"
+  let minute_duration = $"($duration / 60000 | math round --precision 2)m"
 
   if ($duration > 60000) {
-    let parsed_duration = $"($duration / 60000 | math round --precision 2)m"
+    $minute_duration
+  } else {
+    $parsed_duration
   }
-  # if is a minute or more calculate on minutes
-  let time = date now | format date "%H:%M"
-
-  ($parsed_duration + " - " + $time)
-  #  if (git-changes) {
-  #   "*"
-  # } else if (git-staged-changes) {
-  #   "+"
+  # } else if ($duration > 3600000) {
+  #   let parsed_duration = $"($duration / 3600000 | math round --precision 2)h"
   # }
+
+}
+
+def create_right_prompt [] {
+  let lc_duration = last_command_duration
+  let time = date now | format date "%H:%M"
+  let $duration_and_time = $"($lc_duration) - ($time)"
+
+  colored_string $duration_and_time 'xterm_grey50'
 }
 
 def colored_error_prompt [prompt: string] {
   if ($env.LAST_EXIT_CODE == 0) {
-    $"(ansi green_bold)($prompt) (ansi reset)"
+    colored_string $prompt 'green_bold'
   } else {
-    $"(ansi red_bold)($prompt) (ansi reset)"
+    colored_string $prompt 'red_bold'
   }
 }
 
 $env.PROMPT_COMMAND = { create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = { create_right_prompt }
-$env.PROMPT_INDICATOR = {colored_error_prompt '>'}
-$env.PROMPT_INDICATOR_VI_INSERT = {colored_error_prompt '[i]:'}
-$env.PROMPT_INDICATOR_VI_NORMAL = {colored_error_prompt '[n]:'}
+$env.PROMPT_INDICATOR = {colored_error_prompt "\n> "}
+$env.PROMPT_INDICATOR_VI_INSERT = {colored_error_prompt "\n[i]: "}
+$env.PROMPT_INDICATOR_VI_NORMAL = {colored_error_prompt "\n[n]: "}
 $env.PROMPT_MULTILINE_INDICATOR = {colored_error_prompt ':> '}
-
 
 # --------------------------------END OF FILE--------------------------------- #
 # External sources
 
 # use ~/.cache/starship/init.nu
 # use external/fnm.nu
+# source ~/.local/share/atuin/init.nu
 source ~/.zoxide.nu

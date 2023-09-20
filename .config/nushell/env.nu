@@ -7,7 +7,8 @@ $env.PATH = (
 
 $env.EDITOR = 'nvim'
 $env.OPENAI_API_KEY = (pass show openai/api-key)
-$env.GITHUB_TOKEN = (pass show github/token)
+$env.HOMEBREW_NO_AUTO_UPDATE = 1
+# $env.GITHUB_TOKEN = (pass show github/token)
 
 
 # fnm support on cd
