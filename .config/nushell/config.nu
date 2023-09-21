@@ -4,6 +4,8 @@ source func.nu
 # source external/get-weather.nu
 
 use ~/clones/fork/nu_scripts/custom-completions/mod.nu *
+use ~/clones/fork/nu_scripts/modules/rbenv/rbenv.nu *
+
 
 $env.config = {
   edit_mode: vi,
@@ -14,7 +16,7 @@ $env.config = {
    hooks: {
     pre_prompt: [{ ||
       let direnv = (direnv export json | from json)
-      let direnv = if ($direnv | length) == 1 { $direnv } else { {} }
+      let direnv = if not ($direnv | is-empty) { $direnv } else { {} }
       $direnv | load-env
     }],
     env_change: {
@@ -26,6 +28,12 @@ $env.config = {
     }
   }
 }
+
+def rgfind [file] { rg --files | rg $file }
+
+# This is not possible yet :(
+# ls ~/.config/nushell/*.nu | each { |f| source $f.name }
+def so [] { exec nu }
 
 def colored_string [value, color: string] {
     $"(ansi ($color))($value)(ansi reset)"
@@ -57,6 +65,27 @@ def node_version [] {
   }
 }
 
+def node_path [path: string] {
+  if not (ls -a | rg 'package.json' | is-empty) {
+    $path + (node_version)
+  } else {
+    $path
+  }
+}
+
+def ruby_version [] {
+  let ruby_version = (ruby -v | str trim | str replace "ruby " "" | split row ' ' | get 0)
+  $"(ansi red)  ($ruby_version)(ansi reset)"
+}
+
+def ruby_path [path: string] {
+  if not (ls -a | rg 'Gemfile' | is-empty) {
+    $path + (ruby_version)
+  } else {
+    $path
+  }
+}
+
 def git-changes [] {
     git diff --exit-code
     if $env.LAST_EXIT_CODE == 1 {
@@ -75,20 +104,39 @@ def git-staged-changes [] {
     }
 }
 
-def create_left_prompt [] {
+def get_clean_path [] {
     let home = $env.HOME
     let path_segment = $env.PWD
     let node_version = (node_version)
     let no_clones_path = override_clones_dir_path $path_segment
     let clean_path = $no_clones_path | str replace $home "~"
+    $clean_path
+}
 
-    if (ls -a | rg '.git' | is-empty) {
-      $clean_path + $node_version
-    } else {
-      let branch = (^git symbolic-ref --short HEAD | str trim)
-      let current_branch = " 🌱 " + (colored_string $branch 'purple_bold')
-      $clean_path + $node_version + $current_branch
-    }
+def pos_git_path [path: string] {
+  let branch = (do { git rev-parse --abbrev-ref HEAD } | complete | get stdout | str trim)
+
+  if ($branch | is-empty) {
+    $path
+  } else {
+    let current_branch = " 🌱 " + (colored_string $branch 'purple_bold')
+    $path + $current_branch
+  }
+}
+
+def get_dev_env_path [path:string] {
+    let pos_ruby_path = ruby_path $path
+    let pos_node_path = node_path $pos_ruby_path
+    let post_git_path = pos_git_path $pos_node_path
+
+    $post_git_path
+}
+
+def create_left_prompt [] {
+    let clean_path = get_clean_path
+    let dev_env_path = get_dev_env_path $clean_path
+
+    $dev_env_path
 }
 
 def last_command_duration [] {

@@ -1,7 +1,6 @@
 alias nurc = nvim ~/.config/nushell/config.nu
 alias nuenv = nvim ~/.config/nushell/env.nu
 alias nual = nvim ~/.config/nushell/alias.nu
-
 alias l = ls
 alias ll = ls -l
 alias lla = ls -la
@@ -9,8 +8,8 @@ alias el = ^eza
 alias ela = ^eza -a
 alias ell = ^eza -l
 alias ella = ^eza -la
-alias cp = cp -i
-alias mv = mv -i
+alias cp = ^cp -i
+alias mv = ^mv -i
 alias kmv = ^~/scripts/mv-kebab.sh
 alias rm = ^rm -i
 alias df = ^df -h
@@ -34,6 +33,7 @@ alias grss = ^git restore --staged
 alias grssa = ^git restore --staged *
 alias bbd = ^brew bundle dump --force --file=/Users/m.manzanares/Brewfile
 alias cbd = ^ls ~/.cargo/bin > ~/Cargofile
+alias glo = ^git log
 alias glof = ^git log --oneline -M --stat --follow --
 alias glast = ^git log --pretty=format:"%h" HEAD^..HEAD
 alias gstal = ^git stash list
@@ -108,7 +108,7 @@ alias tmsc = ^tmux switch-client -t
 alias two = ^~/scripts/tmux/create-session.sh work
 alias tpe = ^~/scripts/tmux/create-session.sh own
 alias muxi = ^tmuxinator
-alias xis = ^"tmuxinator start"
+alias xis = ^tmuxinator start
 alias cn = ^cargo new
 alias ca = ^cargo add
 alias cr = ^cargo run
@@ -131,6 +131,7 @@ alias sdw = ^time sc deploy workers
 alias sdm = ^time sc deploy manager
 alias logcli = ^logcli --addr="http://monitor-0.ss:3100"
 alias sup = ^cd ~/clones/work/supers/
+alias gm = ^git merge
 alias prove = ^provewatcher
 alias gpdw = ^git push and sc deploy workers
 alias update-grub = ^sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -165,3 +166,6 @@ alias gp = ^git push
 alias gl = ^git pull
 alias current_branch = ^git symbolic-ref --short HEAD
 alias gpsup = ^git push --set-upstream origin (git symbolic-ref --short HEAD)
+alias ghpv = ^gh pr view -w
+alias ghpc = ^gh pr create
+alias ghrv = ^gh repo view -w

@@ -19,6 +19,7 @@ clones
     ├── lop-searcher
     ├── mc-clients-account-management
     ├── mc-live-ops-packages
+    ├── mc-scripts
     ├── mission-control
     ├── postman
     ├── scripts
@@ -27,4 +28,4 @@ clones
     ├── stuart-frontend
     └── stuart-solutions
 
-28 directories, 0 files
+29 directories, 0 files
