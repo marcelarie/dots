@@ -6,13 +6,63 @@ source func.nu
 use ~/clones/fork/nu_scripts/custom-completions/mod.nu *
 use ~/clones/fork/nu_scripts/modules/rbenv/rbenv.nu
 
+let zoxide_completer = {|spans|
+    $spans | skip 1 | zoxide query -l $in | lines | where {|x| $x != $env.PWD}
+}
+
+let fish_completer = {|spans|
+    fish --command $'complete "--do-complete=($spans | str join " ")"'
+    | $"value(char tab)description(char newline)" + $in
+    | from tsv --flexible --no-infer
+}
+
+let carapace_completer = {|spans: list<string>|
+    carapace $spans.0 nushell $spans
+    | from json
+    | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }
+}
+
+# This completer will use carapace by default
+let external_completer = {|spans|
+    let expanded_alias = (scope aliases | where name == $spans.0 | get -i 0 | get -i expansion)
+    let spans = (if $expanded_alias != null  {
+        $spans | skip 1 | prepend ($expanded_alias | split words)
+    } else { $spans })
+
+    {
+        # carapace completions are incorrect for nu
+        nu: $fish_completer
+        # fish completes commits and branch names in a nicer way
+        git: $fish_completer
+        # carapace doesn't have completions for asdf
+        asdf: $fish_completer
+        z: $zoxide_completer
+        zi: $zoxide_completer
+    } | get -i $spans.0 | default $carapace_completer | do $in $spans
+
+}
 
 $env.config = {
-  edit_mode: vi,
-  show_banner: false,
+  edit_mode: vi
+  show_banner: false
   table: {
+    padding: { left: 0 right: 0 }
     mode: thin
-  },
+  }
+  filesize: {
+    metric: true
+  }
+  cursor_shape: {
+    vi_insert: underscore
+    vi_normal: block
+  }
+  completions: {
+      external: {
+          max_results: 100
+          # enabled: true
+          # completer: $external_completer
+      }
+  }
   keybindings: [
    {
     name: trigger-completion-menu
@@ -34,20 +84,30 @@ $env.config = {
     mode: emacs
     event: { send: menuprevious }
   }
- ],
+  {
+    name: reload
+    modifier: control
+    keycode: char_r
+    mode: [emacs, vi_insert, vi_normal]
+    event: {
+        send: executehostcommand,
+        cmd: "exec nu"
+    }
+  }
+ ]
    hooks: {
     pre_prompt: [{ ||
       let direnv = (direnv export json | from json)
       let direnv = if not ($direnv | is-empty) { $direnv } else { {} }
       $direnv | load-env
-    }],
+    }]
     env_change: {
       PWD: [{ |before, after|
         if ('FNM_DIR' in $env) and ([.nvmrc .node-version] | path exists | any { |it| $it }) {
           fnm --log-level=quiet use
         }
       }]
-    },
+    }
   }
 }
 

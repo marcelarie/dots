@@ -157,3 +157,25 @@ def colored_error_prompt [prompt: string] {
     colored_string $prompt 'red_bold'
   }
 }
+
+def git_log [number=5:int] {
+    let log = git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n $number
+       | lines
+       | split column "»¦«" commit subject name email date
+       | upsert date {|d| $d.date | into datetime}
+
+    $log
+}
+
+def git_log_by_date [number=25:int] {
+  let log = git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n $number
+      | lines
+      | split column "»¦«" commit subject name email date
+      | upsert date {|d| $d.date
+      | into datetime
+      | format date '%Y-%m-%d'}
+      | group-by date
+      | transpose date count
+
+  $log
+}

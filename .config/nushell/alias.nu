@@ -36,6 +36,7 @@ alias grssa = ^git restore --staged *
 alias bbd = ^brew bundle dump --force --file=/Users/m.manzanares/Brewfile
 alias cbd = ^ls ~/.cargo/bin > ~/Cargofile
 alias glo = ^git log
+# alias glot = do {^git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n 5 | lines | split column "»¦«" commit subject name email date | upsert date {|d| $d.date | into datetime} }
 alias glof = ^git log --oneline -M --stat --follow --
 alias glast = ^git log --pretty=format:"%h" HEAD^..HEAD
 alias gstal = ^git stash list
