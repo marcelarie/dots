@@ -67,7 +67,7 @@ def node_path [path: string] {
 }
 
 def ruby_version [] {
-  let ruby_version = (ruby -v | str trim | str replace "ruby " "" | split row ' ' | get 0)
+  let ruby_version = (^rbenv version | str trim | str replace "ruby " "" | split row ' ' | get 0)
   $"(ansi red)  ($ruby_version)(ansi reset)"
 }
 
@@ -97,6 +97,15 @@ def git-staged-changes [] {
     }
 }
 
+def git_main_branch [] {
+    git remote show origin
+    | lines
+    | str trim
+    | find --regex 'HEAD .*?[：: ].+'
+    | first
+    | str replace --regex 'HEAD .*?[：: ](.+)' '$1'
+}
+
 def get_clean_path [] {
     let home = $env.HOME
     let path_segment = $env.PWD
@@ -112,7 +121,7 @@ def pos_git_path [path: string] {
   if ($branch | is-empty) {
     $path
   } else {
-    let current_branch = " 🌱 " + (colored_string $branch 'purple_bold')
+    let current_branch = colored_string  (" 🌱 " + $branch) 'purple_bold'
     $path + $current_branch
   }
 }

@@ -8,6 +8,10 @@ $env.PATH = (
 $env.EDITOR = 'nvim'
 $env.OPENAI_API_KEY = (pass show openai/api-key)
 $env.HOMEBREW_NO_AUTO_UPDATE = 1
+$env.RANDOM = (random integer ..32767)
+$env.MANPAGER = 'nvim +Man!'
+$env.PAGER = 'less -FRX'
+
 # $env.GITHUB_TOKEN = (pass show github/token)
 
 

@@ -79,7 +79,7 @@ skip_notify = true
 "Generate Brewfile" = "brew bundle dump --force --file=/Users/m.manzanares/Brewfile"
 "Generate Cargofile" = "ls ~/.cargo/bin > ~/Cargofile"
 "Generate Clones File Structure" = "tree -L 2 clones > clones-file-structure.md"
-"Generate dot files fetch" = "echo '```' > README.md; ./scripts/onefetch-clean-outuput.sh >> README.md; echo '```' >> README.md"
+"Generate dot files fetch" = "echo '```' > README.md; ./scripts/onefetch-clean-outuput >> README.md; echo '```' >> README.md"
 # "Generate cargo-programs file" = "cat /Users/m.manzanares/.crates2.json | jq -r '.installs | keys[] | split(" ")[0]' | sed '/^$/d' > .cargo-programs"
 
 [brew]

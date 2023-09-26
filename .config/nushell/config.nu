@@ -4,7 +4,7 @@ source func.nu
 # source external/get-weather.nu
 
 use ~/clones/fork/nu_scripts/custom-completions/mod.nu *
-use ~/clones/fork/nu_scripts/modules/rbenv/rbenv.nu *
+use ~/clones/fork/nu_scripts/modules/rbenv/rbenv.nu
 
 
 $env.config = {
@@ -13,6 +13,28 @@ $env.config = {
   table: {
     mode: thin
   },
+  keybindings: [
+   {
+    name: trigger-completion-menu
+    modifier: none
+    keycode: tab
+    mode: [emacs vi_normal vi_insert]
+    event: {
+      until: [
+        { send: menu name: completion_menu }
+        { send: menunext }
+        { edit: complete }
+      ]
+    }
+  }
+  {
+    name: completion_previous
+    modifier: shift
+    keycode: backtab
+    mode: emacs
+    event: { send: menuprevious }
+  }
+ ],
    hooks: {
     pre_prompt: [{ ||
       let direnv = (direnv export json | from json)
@@ -25,7 +47,7 @@ $env.config = {
           fnm --log-level=quiet use
         }
       }]
-    }
+    },
   }
 }
 
@@ -36,12 +58,18 @@ def create_left_prompt [] {
     $dev_env_path
 }
 
+def get_weather [location="Barcelona"] {
+   curl -s $"wttr.in/$location?format=%t"
+}
+
 def create_right_prompt [] {
   let lc_duration = last_command_duration
   let time = date now | format date "%H:%M"
   let $duration_and_time = $"($lc_duration) - ($time)"
+  let weather = get_weather
 
-  colored_string $duration_and_time 'xterm_grey50'
+  (colored_string $duration_and_time 'xterm_grey50')
+  # + ' '  + (colored_string $weather 'xterm_blue')
 }
 
 $env.PROMPT_COMMAND = { create_left_prompt }
