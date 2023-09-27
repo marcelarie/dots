@@ -1,8 +1,8 @@
 let nu_config = "~/.config/nushell/"
 
-alias nurc = do { cd $nu_config; nvim config.nu }
-alias nuenv = do { cd $nu_config; nvim env.nu }
-alias nual = do { cd $nu_config; nvim alias.nu }
+alias nurc = do { cd $nu_config; nvim config.nu } # Edit nu config
+alias nuenv = do { cd $nu_config; nvim env.nu } # Edit nu env
+alias nual = do { cd $nu_config; nvim alias.nu } # Edit nu alias
 alias l = ls
 alias ll = ls -l
 alias lla = ls -la

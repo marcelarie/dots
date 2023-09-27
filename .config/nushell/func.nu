@@ -116,13 +116,20 @@ def get_clean_path [] {
 }
 
 def pos_git_path [path: string] {
+  # TODO: use this
+  # git status --porcelain | lines | each {|l| if ($l | str contains 'A  ') { $l } else { 'error' } }
   let branch = (do { git rev-parse --abbrev-ref HEAD } | complete | get stdout | str trim)
 
   if ($branch | is-empty) {
     $path
   } else {
     let current_branch = colored_string  (" 🌱 " + $branch) 'purple_bold'
-    $path + $current_branch
+
+    # if (git-changes) {
+    #   $path + $current_branch + (colored_string " [!?] " 'red_bold')
+    # } else {
+      $path + $current_branch
+    # }
   }
 }
 

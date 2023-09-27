@@ -1,10 +1,11 @@
 source alias.nu
 source func.nu
+source colors.nu
 
 # source external/get-weather.nu
 
-use ~/clones/fork/nu_scripts/custom-completions/mod.nu *
-use ~/clones/fork/nu_scripts/modules/rbenv/rbenv.nu
+# use ~/clones/forks/nu_scripts/custom-completions/mod.nu *
+use ~/clones/forks/nu_scripts/modules/rbenv/rbenv.nu
 
 let zoxide_completer = {|spans|
     $spans | skip 1 | zoxide query -l $in | lines | where {|x| $x != $env.PWD}
@@ -43,6 +44,8 @@ let external_completer = {|spans|
 }
 
 $env.config = {
+  color_config: $base16_theme
+
   edit_mode: vi
   show_banner: false
   table: {
@@ -57,10 +60,14 @@ $env.config = {
     vi_normal: block
   }
   completions: {
+      case_sensitive: false # set to true to enable case-sensitive completions
+      quick: false  # set this to false to prevent auto-selecting completions when only one remains
+      partial: false  # set this to false to prevent partial filling of the prompt
+      algorithm: "prefix"  # prefix or fuzzy
       external: {
           max_results: 100
-          # enabled: true
-          # completer: $external_completer
+          enable: true
+          completer: $external_completer
       }
   }
   keybindings: [
@@ -84,16 +91,16 @@ $env.config = {
     mode: emacs
     event: { send: menuprevious }
   }
-  {
-    name: reload
-    modifier: control
-    keycode: char_r
-    mode: [emacs, vi_insert, vi_normal]
-    event: {
-        send: executehostcommand,
-        cmd: "exec nu"
-    }
-  }
+  # {
+  #   name: reload
+  #   modifier: control
+  #   keycode: char_r
+  #   mode: [emacs, vi_insert, vi_normal]
+  #   event: {
+  #       send: executehostcommand,
+  #       cmd: "exec nu"
+  #   }
+  # }
  ]
    hooks: {
     pre_prompt: [{ ||
