@@ -157,9 +157,12 @@ def last_command_duration [] {
   # }
 }
 
-def colored_error_prompt [prompt: string] {
+def colored_error_prompt [
+  prompt: string,
+  color=green_bold:string
+] {
   if ($env.LAST_EXIT_CODE == 0) {
-    colored_string $prompt 'green_bold'
+    colored_string $prompt $color
   } else {
     colored_string $prompt 'red_bold'
   }

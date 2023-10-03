@@ -133,7 +133,7 @@ def create_right_prompt [] {
   let lc_duration = last_command_duration
   let time = date now | format date "%H:%M"
   let $duration_and_time = $"($lc_duration) - ($time)"
-  let weather = get_weather
+  # let weather = get_weather
 
   (colored_string $duration_and_time 'xterm_grey50')
   # + ' '  + (colored_string $weather 'xterm_blue')
@@ -143,7 +143,7 @@ $env.PROMPT_COMMAND = { create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = { create_right_prompt }
 $env.PROMPT_INDICATOR = {colored_error_prompt "\n> "}
 $env.PROMPT_INDICATOR_VI_INSERT = {colored_error_prompt "\n[i]: "}
-$env.PROMPT_INDICATOR_VI_NORMAL = {colored_error_prompt "\n[n]: "}
+$env.PROMPT_INDICATOR_VI_NORMAL = {colored_error_prompt "\n[n]: " "blue_bold"}
 $env.PROMPT_MULTILINE_INDICATOR = {colored_error_prompt ':> '}
 
 # --------------------------------END OF FILE--------------------------------- #
