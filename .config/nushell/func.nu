@@ -97,7 +97,7 @@ def git-staged-changes [] {
     }
 }
 
-def git_main_branch [] {
+def git_main_remote_branch [] {
     git remote show origin
     | lines
     | str trim
@@ -117,7 +117,7 @@ def get_clean_path [] {
 
 def pos_git_path [path: string] {
   # TODO: use this
-  # git status --porcelain | lines | each {|l| if ($l | str contains 'A  ') { $l } else { 'error' } }
+  # let git_status = get_git_status_table
   let branch = (do { git rev-parse --abbrev-ref HEAD } | complete | get stdout | str trim)
 
   if ($branch | is-empty) {
@@ -165,6 +165,35 @@ def colored_error_prompt [
     colored_string $prompt $color
   } else {
     colored_string $prompt 'red_bold'
+  }
+}
+
+def get_git_status_table [] {
+  let git_status = (git status --porcelain | lines)
+  mut staged = []
+  mut non_staged = []
+  mut new_files = []
+  mut deleted_files = []
+
+  for status in $git_status {
+    let $file = $status | split row ' ' | last
+
+    if ($status | str starts-with 'M ') {
+      $staged ++= $file
+    } else if ($status | str starts-with ' M') {
+      $non_staged ++= $file
+    } else if ($status | str starts-with ' D') {
+      $deleted_files ++= $file
+    } else if ($status | str starts-with '??') {
+      $new_files ++= $file
+    }
+  }
+
+  {
+    deleted_files: $deleted_files,
+    new_files:     $new_files,
+    non_staged:    $non_staged,
+    staged:        $staged,
   }
 }
 

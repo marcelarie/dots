@@ -54,3 +54,5 @@
 	directory = /etc/nix
 [commit]
 	template = /Users/m.manzanares/.gitmessage
+[pull]
+	rebase = true
