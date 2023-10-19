@@ -199,7 +199,13 @@ def get_git_status_table [] {
 
 # git add all and commit
 def gac [message?: string] {
-  git add --all
+  let error = do { git add --all } | complete | get stderr | str trim
+
+  if ($error | str contains "fatal: not a git repository") {
+    print "Not a git repository"
+    return
+  }
+
   if ($message | is-empty) {
     git commit
   } else {
