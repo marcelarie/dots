@@ -197,7 +197,8 @@ def get_git_status_table [] {
   }
 }
 
-def git_add_commit [message?: string] {
+# git add all and commit
+def gac [message?: string] {
   git add --all
   if ($message | is-empty) {
     git commit
