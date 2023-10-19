@@ -197,6 +197,15 @@ def get_git_status_table [] {
   }
 }
 
+def git_add_commit [message?: string] {
+  git add --all
+  if ($message | is-empty) {
+    git commit
+  } else {
+    git commit -m $message
+  }
+}
+
 def git_log [number=5:int] {
     let log = git log --pretty=%h»¦«%s»¦«%aN»¦«%aE»¦«%aD -n $number
        | lines
