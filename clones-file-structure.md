@@ -1,7 +1,8 @@
 clones
 ├── external
 │   └── nu_scripts
-├── fork
+├── forks
+│   ├── kanagawa.nvim
 │   └── nu_scripts
 ├── lang_servers
 ├── own
@@ -19,6 +20,7 @@ clones
     ├── lop-searcher
     ├── mc-clients-account-management
     ├── mc-live-ops-packages
+    ├── mc-live-ops-rules-manager
     ├── mc-scripts
     ├── mission-control
     ├── postman
@@ -28,4 +30,4 @@ clones
     ├── stuart-frontend
     └── stuart-solutions
 
-29 directories, 0 files
+31 directories, 0 files
