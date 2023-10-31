@@ -43,6 +43,9 @@ alias gstal = ^git stash list
 alias grec = ^git log --graph --oneline --decorate ( git fsck --no-reflog | awk "/dangling commit/ {print $3}" )
 alias gstapp = ^git stash apply
 alias gd = ^git diff
+# alias gdt=GIT_EXTERNAL_DIFF=difft git diff
+alias gds = ^git diff --staged
+alias gdc = ^git diff --cached
 alias gdfc = ^git diff --name-only origin/HEAD
 alias gdsm = ^git diff (gst | rg "modified" | sed "s/modified://g" | fzf | awk '{$1=$1};1' )
 alias gw = ^git worktree

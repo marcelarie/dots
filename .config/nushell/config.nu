@@ -110,7 +110,8 @@ $env.config = {
     }]
     env_change: {
       PWD: [{ |before, after|
-        if ('FNM_DIR' in $env) and ([.nvmrc .node-version] | path exists | any { |it| $it }) {
+        let is_node_dir = [.nvmrc .node-version] | path exists | any { |it| $it }
+        if ('FNM_DIR' in $env) and $is_node_dir {
           fnm --log-level=quiet use
         }
       }]

@@ -5,6 +5,8 @@ clones
 │   ├── kanagawa.nvim
 │   └── nu_scripts
 ├── lang_servers
+├── learn
+│   └── codecrafters-grep-rust
 ├── own
 │   ├── aoc22
 │   ├── dots
@@ -17,8 +19,11 @@ clones
 ├── pers
 │   └── notes
 └── work
+    ├── lop-rules-manager
     ├── lop-searcher
+    ├── mc-app-template
     ├── mc-clients-account-management
+    ├── mc-gh-actions
     ├── mc-live-ops-packages
     ├── mc-live-ops-rules-manager
     ├── mc-scripts
@@ -30,4 +35,4 @@ clones
     ├── stuart-frontend
     └── stuart-solutions
 
-31 directories, 0 files
+36 directories, 0 files
