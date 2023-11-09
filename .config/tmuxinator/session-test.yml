@@ -1,7 +1,4 @@
-# /Users/marcelmanzanares2/.config/tmuxinator/stuart-frontend.yml
-
-name: stuart-frontend
-root: ~/clones/work/stuart-frontend/
+# /Users/m.manzanares/.config/tmuxinator/session-test.yml
 
 # Optional tmux socket
 # socket_name: foo
@@ -12,7 +9,7 @@ root: ~/clones/work/stuart-frontend/
 # Project hooks
 
 # Runs on project start, always
-# on_project_start: fish
+# on_project_start: command
 
 # Run on project start, the first time
 # on_project_first_start: command
@@ -43,19 +40,16 @@ root: ~/clones/work/stuart-frontend/
 
 # Controls whether the tmux session should be attached to automatically. Defaults to true.
 # attach: false
+name: <%= @args[0] %>-<%= @args[1] %>
+root: ~/clones/work/<%= @args[1] %>
+pre_window: nu
 
 windows:
   - editor:
-      layout: main-vertical
-      panes:
-      - run_several_commands:
-        - fish
-        - nvm use
-        - nvim
-  - shell:
       layout: main-horizontal
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
       panes:
-        - fish
-        - run_several_commands:
-          - fish
-          - nvm use
+        - nvim
+        - ls

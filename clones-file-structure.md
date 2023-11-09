@@ -1,11 +1,15 @@
 clones
 ├── external
-│   └── nu_scripts
+│   ├── nu_scripts
+│   ├── nupm
+│   ├── scripts
+│   └── tmux-sessionizer
 ├── forks
 │   ├── kanagawa.nvim
 │   └── nu_scripts
 ├── lang_servers
 ├── learn
+│   ├── OpenSign
 │   └── codecrafters-grep-rust
 ├── own
 │   ├── aoc22
@@ -26,13 +30,15 @@ clones
     ├── mc-gh-actions
     ├── mc-live-ops-packages
     ├── mc-live-ops-rules-manager
+    ├── mc-packages
     ├── mc-scripts
     ├── mission-control
     ├── postman
+    ├── rules-manager-for-review
     ├── scripts
     ├── stuart-api
     ├── stuart-api-old
     ├── stuart-frontend
     └── stuart-solutions
 
-36 directories, 0 files
+42 directories, 0 files

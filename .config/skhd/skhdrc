@@ -29,7 +29,8 @@ alt - q : open -a Arc
 # shift + alt - w : open -a Google\ Chrome\ Beta -n --args --profile-email=googlillo@gmail.com 'http://web.whatsapp.com/'
 shift + alt - w : open -a WhatsApp
 shift + alt - c : open -a Google\ Chrome\ Beta -n --args --profile-email=m.manzanares@stuart.com 'https://calendar.google.com/'
-shift + alt - s : open -a Google\ Chrome\ Beta -n --args --profile-email=m.manzanares@stuart.com 'https://gostuart.slack.com/'
+# shift + alt - s : open -a Google\ Chrome\ Beta -n --args --profile-email=m.manzanares@stuart.com 'https://gostuart.slack.com/'
+shift + alt - s : open -a Slack
 
 # todo check this
 # in leftwm Meta + h changes focus to the other screen

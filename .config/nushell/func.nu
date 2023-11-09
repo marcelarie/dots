@@ -21,6 +21,10 @@ def zkwo [] {
 
 def rgfind [file] { rg --files | rg $file }
 
+# tmux
+def two [] { nu $"($env.HOME)/scripts/tmux/create-session.nu" work }
+def tpe [] { nu $"($env.HOME)/scripts/tmux/create-session.nu" pers }
+
 # nu
 
 # This is not possible yet :(

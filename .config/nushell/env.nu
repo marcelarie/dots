@@ -32,4 +32,4 @@ if not (which fnm | is-empty) {
 
 # External sources
 
-zoxide init nushell | save -f ~/.zoxide.nu
+# zoxide init nushell | save -f ~/.zoxide.nu

@@ -2,6 +2,8 @@ source alias.nu
 source func.nu
 source colors.nu
 
+use ~/clones/external/nupm/nupm/
+
 # source external/get-weather.nu
 
 # use ~/clones/forks/nu_scripts/custom-completions/mod.nu *
@@ -61,11 +63,11 @@ $env.config = {
   }
   completions: {
       case_sensitive: false # set to true to enable case-sensitive completions
-      quick: false  # set this to false to prevent auto-selecting completions when only one remains
-      partial: false  # set this to false to prevent partial filling of the prompt
-      algorithm: "prefix"  # prefix or fuzzy
+      quick: false          # set this to false to prevent auto-selecting completions when only one remains
+      partial: true         # set this to false to prevent partial filling of the prompt
+      algorithm: "prefix"   # prefix or fuzzy
       external: {
-          max_results: 100
+          max_results: 25
           enable: true
           completer: $external_completer
       }
@@ -75,7 +77,7 @@ $env.config = {
     name: trigger-completion-menu
     modifier: none
     keycode: tab
-    mode: [emacs vi_normal vi_insert]
+    mode: [vi_normal vi_insert emacs]
     event: {
       until: [
         { send: menu name: completion_menu }

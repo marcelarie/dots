@@ -8,6 +8,7 @@ cargo-miri
 cargo-watch
 clippy-driver
 fzyr
+glicol-cli
 hq
 htmlq
 hurl
