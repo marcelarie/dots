@@ -83,8 +83,30 @@ def ruby_path [path: string] {
   }
 }
 
+def gb [] {
+  let branch = (^git branch | fzy | xargs)
+
+  if ($branch | is-empty) {
+    print "No branch selected"
+    return
+  }
+
+  ^git checkout $branch
+}
+
+def gbde [] {
+  let branch = (^git branch | fzy | xargs)
+
+  if ($branch | is-empty) {
+    print "No branch selected"
+    return
+  }
+
+  ^git branch -D $branch
+}
+
 def git-changes [] {
-    git diff --exit-code
+    ^git diff --exit-code
     if $env.LAST_EXIT_CODE == 1 {
         true
     } else {
@@ -93,7 +115,7 @@ def git-changes [] {
 }
 
 def git-staged-changes [] {
-    git diff --staged --exit-code
+    ^git diff --staged --exit-code
     if $env.LAST_EXIT_CODE == 1 {
         true
     } else {
@@ -102,7 +124,7 @@ def git-staged-changes [] {
 }
 
 def git_main_remote_branch [] {
-    git remote show origin
+    ^git remote show origin
     | lines
     | str trim
     | find --regex 'HEAD .*?[：: ].+'
@@ -122,7 +144,7 @@ def get_clean_path [] {
 def pos_git_path [path: string] {
   # TODO: use this
   # let git_status = get_git_status_table
-  let branch = (do { git rev-parse --abbrev-ref HEAD } | complete | get stdout | str trim)
+  let branch = (do { ^git rev-parse --abbrev-ref HEAD } | complete | get stdout | str trim)
 
   if ($branch | is-empty) {
     $path
@@ -173,7 +195,7 @@ def colored_error_prompt [
 }
 
 def get_git_status_table [] {
-  let git_status = (git status --porcelain | lines)
+  let git_status = (^git status --porcelain | lines)
   mut staged = []
   mut non_staged = []
   mut new_files = []
@@ -211,9 +233,9 @@ def gac [message?: string] {
   }
 
   if ($message | is-empty) {
-    git commit
+    ^git commit
   } else {
-    git commit -m $message
+    ^git commit -m $message
   }
 }
 

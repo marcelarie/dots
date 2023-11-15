@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if ! type -P ollama >/dev/null; then
+	echo "ollama not found"
+	exit 1
+fi
+
+if [ $# -eq 0 ]; then
+	echo "Usage: howdoi <question>"
+	exit 1
+fi
+
+QUESTION="$*"
+
+ollama run smart-code-assistant $QUESTION | glow
