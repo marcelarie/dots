@@ -32,7 +32,7 @@ def main [$type: string] {
         tmux select-pane -t 1
         # # tmux send-keys $shell C-m
         tmux send-keys $"cd ($repo_name)" C-m
-        tmux resize-pane -D 80
+        tmux resize-pane -D 280
         tmux send-keys $shell C-m
         tmux send-keys C-l
 
