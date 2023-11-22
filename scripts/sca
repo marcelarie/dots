@@ -6,10 +6,11 @@ if ! type -P ollama >/dev/null; then
 fi
 
 if [ $# -eq 0 ]; then
-	echo "Usage: howdoi <question>"
+	echo "Usage: sca <question>"
 	exit 1
 fi
 
 QUESTION="$*"
 
 ollama run smart-code-assistant $QUESTION | glow
+echo ""

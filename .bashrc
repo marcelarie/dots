@@ -10,5 +10,4 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/m.manzanares/.rd/bin:$PATH"
-export PATH="/Users/m.manzanares/programs/nushell/target/release/:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

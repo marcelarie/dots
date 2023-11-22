@@ -6,7 +6,8 @@ clones
 │   └── tmux-sessionizer
 ├── forks
 │   ├── kanagawa.nvim
-│   └── nu_scripts
+│   ├── nu_scripts
+│   └── tldr
 ├── lang_servers
 ├── learn
 │   ├── OpenSign
@@ -36,9 +37,10 @@ clones
     ├── postman
     ├── rules-manager-for-review
     ├── scripts
+    ├── shadowing-with-ferdi
     ├── stuart-api
     ├── stuart-api-old
     ├── stuart-frontend
     └── stuart-solutions
 
-42 directories, 0 files
+44 directories, 0 files
