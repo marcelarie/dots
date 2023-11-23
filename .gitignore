@@ -30,6 +30,7 @@
 !.config/rustfmt
 !.config/greenclip.toml
 !.config/yabai
+!.config/sketchybar
 !.config/skhd
 !.config/bat
 !.config/btop
@@ -76,6 +77,7 @@ scripts/work/hibob-attendence.js
 ### NIX
 !.config/nixos
 !.config/nixpkgs
+
 
 ### file structure
 !clones-file-structure.md

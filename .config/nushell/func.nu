@@ -260,3 +260,14 @@ def git_log_by_date [number=25:int] {
 
   $log
 }
+
+def minivim [] {
+  let config = (^ls ~/.config/nvim/minimal-configs/ | fzy)
+
+  if $config == "" {
+      echo "No minimal config selected"
+      exit
+  }
+
+  ^nvim -u $config
+}
