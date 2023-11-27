@@ -12,7 +12,7 @@
 #  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 
 borders active_color=0xff1D918B inactive_color=0xff494d64 width=7.0 style=round 2>/dev/null 1>&2 &
-yabai -m config external_bar all:25:0 # 25 height, 0px offset from top for sketchybar
+# yabai -m config external_bar all:20:0 # 25 height, 0px offset from top for sketchybar
 
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"

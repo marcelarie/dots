@@ -1,5 +1,6 @@
 clones
 ├── external
+│   ├── SketchyBar
 │   ├── nu_scripts
 │   ├── nupm
 │   ├── scripts
@@ -20,7 +21,8 @@ clones
 │   ├── knowledge-material
 │   ├── marcelarie.com
 │   ├── nix
-│   └── rofi-translate-to-clip
+│   ├── rofi-translate-to-clip
+│   └── tree-rs
 ├── pers
 │   └── notes
 └── work
@@ -43,4 +45,4 @@ clones
     ├── stuart-frontend
     └── stuart-solutions
 
-44 directories, 0 files
+46 directories, 0 files

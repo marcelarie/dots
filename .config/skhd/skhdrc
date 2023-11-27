@@ -143,6 +143,7 @@ alt - s : yabai -m window --toggle float;\
 
 alt + shift - r : \
     yabai --restart-service
+    # yabai --restart-service && sketchybar --reload
     # launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # change layout of desktop

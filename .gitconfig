@@ -56,3 +56,5 @@
 	template = /Users/m.manzanares/.gitmessage
 [pull]
 	rebase = true
+[branch]
+	autoSetupMerge = always

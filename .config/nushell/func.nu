@@ -23,7 +23,7 @@ def rgfind [file] { rg --files | rg $file }
 
 # tmux
 def two [] { nu $"($env.HOME)/scripts/tmux/create-session.nu" work }
-def tpe [] { nu $"($env.HOME)/scripts/tmux/create-session.nu" pers }
+def tpe [] { nu $"($env.HOME)/scripts/tmux/create-session.nu" own }
 
 # nu
 
