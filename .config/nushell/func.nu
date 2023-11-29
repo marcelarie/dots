@@ -271,3 +271,19 @@ def minivim [] {
 
   ^nvim -u $config
 }
+
+def git_status_count [] {
+  let statuses = (git status -s | lines)
+  let counts = [
+      { name: "M", count: ($statuses | str starts-with " M" | where $it == true | length) },
+      { name: "A", count: ($statuses | str starts-with " A" | where $it == true | length) },
+      { name: "D", count: ($statuses | str starts-with " D" | where $it == true | length) },
+      { name: "R", count: ($statuses | str starts-with " R" | where $it == true | length) },
+      { name: "C", count: ($statuses | str starts-with " C" | where $it == true | length) },
+      { name: "U", count: ($statuses | str starts-with " U" | where $it == true | length) },
+      { name: "??", count: ($statuses | str starts-with "??" | where $it == true | length) },
+      { name: "!!", count: ($statuses | str starts-with "!!" | where $it == true | length) },
+  ]
+  let result = ($counts | each { |x| if $x.count == 0 { "" } else { $"($x.count) ($x.name)" }}) | where $it != "" |  str join " - "
+  echo $result
+}

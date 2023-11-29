@@ -21,11 +21,19 @@ eslint_d
 pip packages:
 `mdformat-gfm`
 
+#### Fix install nvim from source 
+
+```shell
+sudo rm -rf ~/programs/neovim/build
+sudo make diskclean
+```
+
 #### Fix Firefox resize on TWM:
 
 - Go to `about:config` and change `privacy.resistFingerprinting` to `true`
 
 #### Fix `gpg: public key decryption failed: No pinentry`
 
-
-`pkill gpg-agent`
+```shell
+pkill gpg-agent
+```
