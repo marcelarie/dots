@@ -65,3 +65,17 @@ set -g HOMEBREW_NO_AUTO_UPDATE 1
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 set --export --prepend PATH "/Users/m.manzanares/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /Users/m.manzanares/miniconda3/bin/conda
+    eval /Users/m.manzanares/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/Users/m.manzanares/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/Users/m.manzanares/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/Users/m.manzanares/miniconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+

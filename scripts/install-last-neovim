@@ -10,7 +10,10 @@ BUILD_NVIM="sudo make CMAKE_BUILD_TYPE=Release install && nvim -v"
 
 cd "$PROGRAMS/neovim/" || exit
 if [ "$1" == "--head" ]; then
-    git reset --hard HEAD~"$1"
+    git reset --hard HEAD~"$2"
+fi
+if [ "$1" == "--commit" ]; then
+    git reset --hard "$2"
 fi
 git pull --all --stat
 

@@ -14,7 +14,7 @@ clones
 │   ├── OpenSign
 │   └── codecrafters-grep-rust
 ├── own
-│   ├── aoc22
+│   ├── aoc23
 │   ├── dots
 │   ├── fixtures-generator
 │   ├── git-tellme

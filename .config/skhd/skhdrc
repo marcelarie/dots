@@ -15,7 +15,7 @@ alt - j : yabai -m window --focus next || yabai -m window --focus first
 # open wezterm
 # alt - return : wezterm start fish
 alt - return : wezterm start nu
-alt - n : /Applications/Alacritty.app/Contents/MacOS/alacritty -e 'nu'
+# alt - n : /Applications/Alacritty.app/Contents/MacOS/alacritty -e 'nu'
 
 # open nvim
 # alt - n : /Applications/WezTerm.app/Contents/MacOS/wezterm start ~/scripts/open-notes.sh
