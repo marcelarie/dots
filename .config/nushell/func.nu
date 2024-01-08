@@ -163,8 +163,9 @@ def get_dev_env_path [path:string] {
     let pos_ruby_path = ruby_path $path
     let pos_node_path = node_path $pos_ruby_path
     let post_git_path = pos_git_path $pos_node_path
+    let git_status = ^starship module git_status
 
-    $post_git_path
+    $post_git_path + " " + $git_status
 }
 
 def last_command_duration [] {

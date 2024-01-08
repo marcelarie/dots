@@ -2,89 +2,158 @@ add_newline = false
 command_timeout = 1000
 scan_timeout = 10
 
-# [disable]
+# -- Disabled modules
+[shlvl]
+disabled = true
+[singularity]
+disabled = true
+[kubernetes]
+disabled = true
+[vcsh]
+disabled = true
+[git_commit]
+disabled = true
+[git_state]
+disabled = true
+[git_metrics]
+disabled = true
+[hg_branch]
+disabled = true
+[package]
+disabled = true
+[c]
+disabled = true
+[cobol]
+disabled = true
+[daml]
+disabled = true
+[dart]
+disabled = true
+[dotnet]
+disabled = true
+[elixir]
+disabled = true
+[elm]
+disabled = true
+[erlang]
+disabled = true
+[golang]
+disabled = true
+[guix_shell]
+disabled = true
+[haskell]
+disabled = true
+[haxe]
+disabled = true
+[helm]
+disabled = true
+[java]
+disabled = true
+[julia]
+disabled = true
+[kotlin]
+disabled = true
+[nim]
+disabled = true
+[ocaml]
+disabled = true
+[opa]
+disabled = true
+[perl]
+disabled = true
+[php]
+disabled = true
+[pulumi]
+disabled = true
+[purescript]
+disabled = true
+[python]
+disabled = true
+[raku]
+disabled = true
+[rlang]
+disabled = true
+[red]
+disabled = true
+[ruby]
+disabled = true
+[scala]
+disabled = true
+[swift]
+disabled = true
+[terraform]
+disabled = true
+[vlang]
+disabled = true
+[vagrant]
+disabled = true
+[zig]
+disabled = true
+[buf]
+disabled = true
+[nix_shell]
+disabled = true
+[conda]
+disabled = true
+[meson]
+disabled = true
+[spack]
+disabled = true
+[memory_usage]
+disabled = true
+[aws]
+disabled = true
+[gcloud]
+disabled = true
+[openstack]
+disabled = true
+[azure]
+disabled = true
+[env_var]
+disabled = false
+[crystal]
+disabled = true
+[battery]
+disabled = true
+[time]
+disabled = true
+[status]
+disabled = true
+[os]
+disabled = true
+[container]
+disabled = true
+[shell]
+disabled = true
+[docker_context]
+disabled = true
 
-# format = """
-# $username\
-# $hostname\
-# $localip\
-# $shlvl\
-# $singularity\
-# $kubernetes\
-# $directory\
-# $vcsh\
-# $git_branch\
-# ${custom.test}\
-# $git_commit\
-# $git_state\
-# $git_metrics\
-# $git_status\
-# $hg_branch\
-# $docker_context\
-# $package\
-# $c\
-# $cmake\
-# $cobol\
-# $daml\
-# $dart\
-# $deno\
-# $dotnet\
-# $elixir\
-# $elm\
-# $erlang\
-# $golang\
-# $guix_shell\
-# $haskell\
-# $haxe\
-# $helm\
-# $java\
-# $julia\
-# $kotlin\
-# $lua\
-# $nim\
-# $nodejs\
-# $ocaml\
-# $opa\
-# $perl\
-# $php\
-# $pulumi\
-# $purescript\
-# $python\
-# $raku\
-# $rlang\
-# $red\
-# $ruby\
-# $rust\
-# $scala\
-# $swift\
-# $terraform\
-# $vlang\
-# $vagrant\
-# $zig\
-# $buf\
-# $nix_shell\
-# $conda\
-# $meson\
-# $spack\
-# $memory_usage\
-# $aws\
-# $gcloud\
-# $openstack\
-# $azure\
-# $env_var\
-# $crystal\
-# $custom\
-# $sudo\
-# $cmd_duration\
-# $line_break\
-# $jobs\
-# $battery\
-# $time\
-# $status\
-# $os\
-# $container\
-# $shell\
-# $character"""
+# -- Enabled modules
+[username]
+disabled = false
+[hostname]
+disabled = false
+[localip]
+disabled = false
+[directory]
+disabled = false
+[line_break]
+disabled = false
+[cmd_duration]
+disabled = false
+[jobs]
+disabled = false
+[nodejs]
+disabled = false
+[lua]
+disabled = false
+[cmake]
+disabled = false
+[deno]
+disabled = false
+
+# [character]
+# disabled = true
 
 # [username]
 # style_user = "red bold"
@@ -99,24 +168,22 @@ success_symbol        = "[i](bold green)"
 vimcmd_replace_symbol = "[r](bold red)"
 vimcmd_symbol         = "[n](bold blue)"
 vimcmd_visual_symbol  = "[v](bold yellow)"
-
 # # Disable the package module, hiding it from the prompt completely
 # [package]
 # disabled = true
-
 [custom.test]
 command = "echo $(tmux display-message -p \"#S\")"
 format = "[$output]($style) "
-
 [rust]
 symbol = " "
-
-[git_metrics]
+[sudo]
 disabled = false
-
+symbol = "👑 "
 # [nodejs]
 # symbol = " "
 # format = "[$symbol($version)]($style)"
 
 [git_branch]
 symbol = "🌱 " # "שׂ "
+[git_status]
+ignore_submodules = true

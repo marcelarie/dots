@@ -13,8 +13,8 @@ alt - j : yabai -m window --focus next || yabai -m window --focus first
 # alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance '/Users/marcelmanzanares2/scripts/fish-home.sh'
 
 # open wezterm
-# alt - return : wezterm start fish
-alt - return : wezterm start nu
+alt - return : wezterm start fish
+# alt - return : wezterm start nu
 # alt - n : /Applications/Alacritty.app/Contents/MacOS/alacritty -e 'nu'
 
 # open nvim
