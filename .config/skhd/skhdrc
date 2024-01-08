@@ -6,11 +6,11 @@ alt - j : yabai -m window --focus next || yabai -m window --focus first
 # yabai -m signal --add event=space_changed action="sh ~/scripts/yabai/clean-empty-spaces.sh"
 
 # open alacritty
-# alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/marcelmanzanares2/bin/fish'
+# alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e '/etc/profiles/per-user/m.manzanares/bin/fish'
 
 # open kitty
 # alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance 'nu'
-# alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance '/Users/marcelmanzanares2/scripts/fish-home.sh'
+# alt - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance '/Users/m.manzanares/scripts/fish-home.sh'
 
 # open wezterm
 alt - return : wezterm start fish
@@ -45,9 +45,10 @@ alt - w : yabai -m space --display next || yabai -m space --display prev
 # alt - return : yabai -m window --swap west # swap with "main" tile (simply swap it west)
 shift + alt - j : yabai -m window --swap prev
 shift + alt - k : yabai -m window --swap next
-# shift + alt - j : /Users/marcelmanzanares2/scripts/yabai/cycle.sh
-# shift + alt - k : /Users/marcelmanzanares2/scripts/yabai/cycle-counter-clock.sh
-shift + alt - e : /Users/marcelmanzanares2/scripts/yabai/swap-displays.sh
+# shift + alt - j : /Users/m.manzanares/scripts/yabai/cycle.sh
+# shift + alt - k : /Users/m.manzanares/scripts/yabai/cycle-counter-clock.sh
+shift + alt - e : $(echo $HOME)/scripts/yabai/swap-displays.sh
+shift + alt - e : open -a $(echo $HOME)
 
 # move window
 shift + cmd - h : yabai -m window --warp west || $(yabai -m window --display west; yabai -m display --focus west)

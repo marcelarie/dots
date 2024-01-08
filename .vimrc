@@ -1,130 +1,120 @@
-" sensible.vim - Defaults everyone can agree on
-" Maintainer:   Tim Pope <http://tpo.pe/>
-" Version:      1.1
+" Don't try to be vi compatible
+set nocompatible
 
-if &compatible
-  finish
-else
-  let g:loaded_sensible = 1
-endif
+" Helps force plugins to load correctly when it is turned back on below
+filetype off
 
-if has('autocmd')
-  filetype plugin indent on
-endif
-if has('syntax') && !exists('g:syntax_on')
-  syntax enable
-endif
+" TODO: Load plugins here (pathogen or vundle)
 
-" Use :help 'option' to see the documentation for the given option.
+" Turn on syntax highlighting
+syntax on
 
-set autoindent
-set backspace=indent,eol,start
-set complete-=i
-set smarttab
+" For plugins to load correctly
+filetype plugin indent on
 
-set nrformats-=octal
+" TODO: Pick a leader key
+let mapleader = " "
 
-set ttimeout
-set ttimeoutlen=100
+" Security
+set modelines=0
 
-set incsearch
-" Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
+" Show line numbers
+set number
 
-set laststatus=2
+" Show file stats
 set ruler
+
+" No bell
+set belloff=all
+
+" Encoding
+set encoding=utf-8
+
+" Whitespace
+set wrap
+set textwidth=79
+set formatoptions=tcqrn1
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set noshiftround
+
+" Cursor motion
+set scrolloff=3
+set backspace=indent,eol,start
+set matchpairs+=<:> " use % to jump between pairs
+runtime! macros/matchit.vim
+
+" Move up/down editor lines
+nnoremap j gj
+nnoremap k gk
+
+" Allow hidden buffers
+set hidden
+
+" Rendering
+set ttyfast
+
+" Status bar
+set laststatus=2
+
+" Last line
+set showmode
 set showcmd
-set wildmenu
 
-if !&scrolloff
-  set scrolloff=1
-endif
-if !&sidescrolloff
-  set sidescrolloff=5
-endif
-set display+=lastline
+" Searching
+nnoremap / /\v
+vnoremap / /\v
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+map <leader><space> :let @/=''<cr> " clear search
 
-if &encoding ==# 'latin1' && has('gui_running')
-  set encoding=utf-8
-endif
+nnoremap ; :
+nnoremap : ;
 
-if &listchars ==# 'eol:$'
-  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-endif
+" Formatting
+nnoremap <leader>q :q<cr>
 
-if v:version > 703 || v:version == 703 && has("patch541")
-  set formatoptions+=j " Delete comment character when joining commented lines
-endif
+" Visualize tabs and newlines
+set listchars=tab:▸\ ,eol:¬
+"
+" Toggle tabs and EOL
+map <leader>l :set list!<CR>
 
-if has('path_extra')
-  setglobal tags-=./tags tags^=./tags;
-endif
 
-if &shell =~# 'fish$'
-  set shell=/bin/bash
-endif
+call plug#begin()
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
 
-set autoread
-set fileformats+=mac
+" On-demand loading
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 
-if &history < 1000
-  set history=1000
-endif
-if &tabpagemax < 50
-  set tabpagemax=50
-endif
-if !empty(&viminfo)
-  set viminfo^=!
-endif
-set sessionoptions-=options
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
-" Allow color schemes to do bright colors without forcing bold.
-if &t_Co == 8 && $TERM !~# '^linux'
-  set t_Co=16
-endif
+" Color scheme
+Plug 'lighthaus-theme/vim-lighthaus'
 
-" Load matchit.vim, but only if the user hasn't installed a newer version.
-if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim
-endif
+" Unmanaged plugin (manually installed and updated)
+" Plug '~/my-prototype-plugin'
 
-inoremap <C-U> <C-G>u<C-U>
-" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
-let s:opam_share_dir = system("opam config var share")
-let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
+call plug#end()
 
-let s:opam_configuration = {}
+" NerdTree
+map <leader><tab> :NERDTreeToggle<cr>
 
-function! OpamConfOcpIndent()
-  execute "set rtp^=" . s:opam_share_dir . "/ocp-indent/vim"
-endfunction
-let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
+" FZF
+map <leader>f :Files<cr>
+map <leader>b :Buffers<cr>
+nnoremap <leader>rg :Rg<cr>
 
-function! OpamConfOcpIndex()
-  execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
-endfunction
-let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
 
-function! OpamConfMerlin()
-  let l:dir = s:opam_share_dir . "/merlin/vim"
-  execute "set rtp+=" . l:dir
-endfunction
-let s:opam_configuration['merlin'] = function('OpamConfMerlin')
+" Source .vimrc
+map <leader>so :source ~/.vimrc<cr>
 
-let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
-let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
-let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
-for tool in s:opam_packages
-  " Respect package order (merlin should be after ocp-index)
-  if count(s:opam_available_tools, tool) > 0
-    call s:opam_configuration[tool]()
-  endif
-endfor
-" ## end of OPAM user-setup addition for vim / base ## keep this line
-" ## added by OPAM user-setup for vim / ocp-indent ## a92b00e4d29fc5b7892208e6f1579522 ## you can edit, but keep this line
-if count(s:opam_available_tools,"ocp-indent") == 0
-  source "/Users/m.manzanares/.opam/default/share/ocp-indent/vim/indent/ocaml.vim"
-endif
-" ## end of OPAM user-setup addition for vim / ocp-indent ## keep this line
+" Color scheme (terminal)

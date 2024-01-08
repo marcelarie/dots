@@ -5,7 +5,7 @@ source ~/.config/fish/path.fish
 source ~/.config/fish/alias.fish
 source ~/.config/fish/keybinds.sh
 source ~/.config/fish/external/zoxide.fish
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+# source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
 #     CONFIG     #
@@ -17,14 +17,6 @@ set fish_greeting
 ### "bat" as manpager
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-
-for p in /run/current-system/sw/bin
-    if not contains $p $fish_user_paths
-        set -g fish_user_paths $p $fish_user_paths
-    end
-end
-
-set -g fish_user_paths /Users/marcelmanzanares2/scripts $fish_user_paths
 if not set -q LIGHTWEIGHT_MODE
     status --is-interactive; and rbenv init - fish | source
 end

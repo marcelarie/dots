@@ -21,3 +21,10 @@ switch "$PATH"
     case "*"
         fish_add_path $CALIBRE_APPS
 end
+
+
+for p in /run/current-system/sw/bin
+    fish_add_path $p
+end
+
+fish_add_path /Users/m.manzanares/scripts/
