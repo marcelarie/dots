@@ -14,9 +14,9 @@ REPO=$(echo $SELECTED_REPO | sed 's/\//-/g' | sed 's/\./-dot-/g')
 SESSION="$SESSION_TYPE-$REPO"
 REPO_NAME="$WORK_PATH/$SELECTED_REPO/"
 # Generating the session name using the repository
-SHELL=nu
+SHELL=fish
 EDITOR=nvim
-# CUSTOM_COMMAND=""
+CUSTOM_COMMAND="fnm use"
 
 if ! tmux has-session -t "$SESSION" 2>/dev/null; then
 	echo "Creating new session..."
@@ -24,14 +24,14 @@ if ! tmux has-session -t "$SESSION" 2>/dev/null; then
 	tmux new-window -n $EDITOR
 	tmux send-keys "$SHELL" C-m
 	tmux send-keys "cd $REPO_NAME" C-m
-	# tmux send-keys "$CUSTOM_COMMAND" C-m
+	tmux send-keys "$CUSTOM_COMMAND" C-m
 	tmux send-keys "$EDITOR" C-m
 	tmux send-keys C-l
 	tmux split-window -v
 	tmux select-pane -t 1
 	tmux send-keys "$SHELL" C-m
 	tmux send-keys "cd $REPO_NAME" C-m
-	# tmux send-keys "$CUSTOM_COMMAND" C-m
+	tmux send-keys "$CUSTOM_COMMAND" C-m
 	tmux send-keys C-l
 	tmux resize-pane -D 80
 else
