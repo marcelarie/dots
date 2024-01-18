@@ -19,6 +19,7 @@ clones
 │   ├── fixtures-generator
 │   ├── git-tellme
 │   ├── knowledge-material
+│   ├── marcelarie
 │   ├── marcelarie.com
 │   ├── nix
 │   ├── rofi-translate-to-clip
@@ -45,4 +46,4 @@ clones
     ├── stuart-frontend
     └── stuart-solutions
 
-46 directories, 0 files
+47 directories, 0 files
