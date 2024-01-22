@@ -44,10 +44,10 @@ if not set -q LIGHTWEIGHT_MODE
     # set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
     set -g OPENAI_API_KEY (pass show openai/api-key)
     set -g GITHUB_TOKEN (pass show github/token)
-    set -g GPG_TTY (tty)
+    # set -g GPG_TTY (tty)
 end
-set -g ANDROID_HOME ~/Library/Android/sdk
-set -g ANDROID_SDK_ROOT ~/Library/Android/sdk
+# set -g ANDROID_HOME ~/Library/Android/sdk
+# set -g ANDROID_SDK_ROOT ~/Library/Android/sdk
 set -g MANPAGER 'nvim +Man!'
 set -g PAGER 'less -FRX'
 set -g HOMEBREW_NO_AUTO_UPDATE 1
@@ -60,13 +60,13 @@ set --export --prepend PATH "/Users/m.manzanares/.rd/bin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /Users/m.manzanares/miniconda3/bin/conda
-    eval /Users/m.manzanares/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/Users/m.manzanares/miniconda3/etc/fish/conf.d/conda.fish"
-        . "/Users/m.manzanares/miniconda3/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/Users/m.manzanares/miniconda3/bin" $PATH
-    end
-end
+# if test -f /Users/m.manzanares/miniconda3/bin/conda
+#     eval /Users/m.manzanares/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# else
+#     if test -f "/Users/m.manzanares/miniconda3/etc/fish/conf.d/conda.fish"
+#         . "/Users/m.manzanares/miniconda3/etc/fish/conf.d/conda.fish"
+#     else
+#         set -x PATH "/Users/m.manzanares/miniconda3/bin" $PATH
+#     end
+# end
 # <<< conda initialize <<<
