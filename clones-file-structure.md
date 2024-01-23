@@ -38,12 +38,14 @@ clones
     ├── mc-scripts
     ├── mission-control
     ├── postman
+    ├── pulse-v3
     ├── rules-manager-for-review
     ├── scripts
     ├── shadowing-with-ferdi
     ├── stuart-api
     ├── stuart-api-old
     ├── stuart-frontend
-    └── stuart-solutions
+    ├── stuart-solutions
+    └── web-ui
 
-47 directories, 0 files
+49 directories, 0 files
