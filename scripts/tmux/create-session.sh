@@ -21,14 +21,14 @@ CUSTOM_COMMAND="fnm use"
 if ! tmux has-session -t "$SESSION" 2>/dev/null; then
 	echo "Creating new session..."
 	tmux new-session -d -s "$SESSION"
-	tmux new-window -n $EDITOR
+	tmux rename-window -t "$SESSION:0" $EDITOR
 	# tmux send-keys "$SHELL" C-m
 	tmux send-keys "cd $REPO_NAME" C-m
 	tmux send-keys "$CUSTOM_COMMAND" C-m
 	tmux send-keys "$EDITOR" C-m
 	tmux send-keys C-l
 	tmux split-window -v
-	tmux select-pane -t 1
+	tmux select-pane -t 0
 	# tmux send-keys "$SHELL" C-m
 	tmux send-keys "cd $REPO_NAME" C-m
 	tmux send-keys "$CUSTOM_COMMAND" C-m
