@@ -300,3 +300,8 @@ alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias nurc="nvim ~/.config/nushell/config.nu"
 alias nual="nvim ~/.config/nushell/alias.nu"
 alias nuenv="nvim ~/.config/nushell/env.nu"
+
+alias jr="just run"
+alias jw="just watch"
+alias jb="just build"
+alias jt="just test"
