@@ -8,6 +8,7 @@ clones
 ├── forks
 │   ├── kanagawa.nvim
 │   ├── nu_scripts
+│   ├── sttusline
 │   └── tldr
 ├── lang_servers
 ├── learn
@@ -17,6 +18,7 @@ clones
 │   ├── aoc23
 │   ├── dots
 │   ├── fixtures-generator
+│   ├── gh-fuzzy-search
 │   ├── git-tellme
 │   ├── knowledge-material
 │   ├── marcelarie
@@ -48,4 +50,4 @@ clones
     ├── stuart-solutions
     └── web-ui
 
-49 directories, 0 files
+51 directories, 0 files

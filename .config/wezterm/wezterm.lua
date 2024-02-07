@@ -99,7 +99,6 @@ local kanagawa_dragon_colors = {
 return {
 	check_for_updates = false,
 	window_close_confirmation = "NeverPrompt",
-	show_update_window = false,
 	skip_close_confirmation_for_processes_named = {
 		"bash",
 		"sh",
@@ -113,6 +112,7 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	window_decorations = "RESIZE",
 	font = wezterm.font "IBM Plex Mono",
+	-- font = wezterm.font "PragmataPro",
 	-- font = wezterm.font "JetBrainsMono Nerd Font",
 	-- font = wezterm.font "VT323",
 	-- font = wezterm.font "Hack Nerd Font",
