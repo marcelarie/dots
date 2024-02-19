@@ -5,6 +5,7 @@ source "$HOME/.rye/env"
 
 # ENV. VARIABLES
 export OPENAI_API_KEY=$(pass show openai/api-key)
+export GITHUB_TOKEN=$(pass show github/token)
 export HOMEBREW_NO_AUTO_UPDATE=1
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 

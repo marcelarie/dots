@@ -7,6 +7,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+#
+export GITHUB_TOKEN=$(pass show github/token)
 
 # eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
@@ -38,4 +40,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
