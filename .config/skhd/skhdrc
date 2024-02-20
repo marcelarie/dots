@@ -47,8 +47,8 @@ shift + alt - j : yabai -m window --swap prev
 shift + alt - k : yabai -m window --swap next
 # shift + alt - j : /Users/m.manzanares/scripts/yabai/cycle.sh
 # shift + alt - k : /Users/m.manzanares/scripts/yabai/cycle-counter-clock.sh
-shift + alt - e : $(echo $HOME)/scripts/yabai/swap-displays.sh
-shift + alt - e : open -a $(echo $HOME)
+shift + alt - e : $(echo $HOME)/scripts/yabai/swap-displays-new.sh
+# shift + alt - h : open $(echo $HOME)
 
 # move window
 shift + cmd - h : yabai -m window --warp west || $(yabai -m window --display west; yabai -m display --focus west)
