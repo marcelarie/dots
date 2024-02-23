@@ -40,3 +40,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# bun completions
+[ -s "/Users/m.manzanares/.bun/_bun" ] && source "/Users/m.manzanares/.bun/_bun"
