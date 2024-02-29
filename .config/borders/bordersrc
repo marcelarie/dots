@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# TABLE OF COLORS
+# red: 0xffff0000
+# green: 0xff00ff00
+# blue: 0xff0000ff
+# yellow: 0xffffff00
+# cyan: 0xff00ffff
+# magenta: 0xffff00ff
+# white: 0xffffffff
+# black: 0xff000000
+# gray: 0xff808080
+# dark_gray: 0xff404040
+#
+
+options=(
+	style=round
+	width=7.0
+	hidpi=off
+	active_color=0xff1D918B
+	inactive_color=0xff494d64
+)
+
+borders "${options[@]}"
