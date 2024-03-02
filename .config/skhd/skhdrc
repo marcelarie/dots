@@ -27,7 +27,8 @@ shift + alt - q : skhd --key "cmd - w"
 # alt - q : open -a Google\ Chrome\ Beta -n
 #
 # shift + alt - w : open -a Google\ Chrome\ Beta -n --args --profile-email=googlillo@gmail.com 'http://web.whatsapp.com/'
-shift + alt - w : open -a WhatsApp
+# shift + alt - w : open -a WhatsApp
+shift + alt - w : open /Users/m.manzanares/Applications/WhatsApp-Web.app
 shift + alt - c : open -a Google\ Chrome\ Beta -n --args --profile-email=m.manzanares@stuart.com 'https://calendar.google.com/'
 # shift + alt - s : open -a Google\ Chrome\ Beta -n --args --profile-email=m.manzanares@stuart.com 'https://gostuart.slack.com/'
 shift + alt - s : open -a Slack
