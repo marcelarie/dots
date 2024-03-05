@@ -137,7 +137,7 @@ brew "parallel"
 brew "tree"
 brew "pass"
 brew "peco"
-brew "percona-toolkit", link: false
+brew "percona-toolkit"
 brew "pfetch"
 brew "pinentry-mac"
 brew "pipes-sh"
