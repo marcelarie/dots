@@ -4,7 +4,6 @@
 source ~/.config/fish/path.fish
 source ~/.config/fish/alias.fish
 source ~/.config/fish/keybinds.sh
-source ~/.config/fish/external/zoxide.fish
 # source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
@@ -25,6 +24,7 @@ end
 #   EXTERNAL SOURCES   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃##
 starship init fish | source
+zoxide init fish | source
 # fnm env --use-on-cd --log-level quiet | source # fnm has a fish plugin
 direnv hook fish | source
 # source /Users/m.manzanares/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
