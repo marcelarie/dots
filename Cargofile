@@ -8,6 +8,7 @@ cargo-leptos
 cargo-miri
 cargo-watch
 clippy-driver
+fx
 fzyr
 glicol-cli
 hq

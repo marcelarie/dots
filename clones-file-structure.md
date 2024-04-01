@@ -29,6 +29,7 @@ clones
 ├── pers
 │   └── notes
 └── work
+    ├── client-dashboard
     ├── lop-rules-manager
     ├── lop-searcher
     ├── mc-app-template
@@ -50,4 +51,4 @@ clones
     ├── stuart-solutions
     └── web-ui
 
-51 directories, 0 files
+52 directories, 0 files
