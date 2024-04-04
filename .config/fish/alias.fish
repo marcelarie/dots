@@ -26,6 +26,7 @@ alias cat="bat"
 alias so="source ~/.config/fish/config.fish"
 alias src="nvim ~/.config/skhd/skhdrc"
 alias yrc="nvim ~/.config/yabai/yabairc"
+alias fenv='nvim (find . -type f -name ".env" | sort -V | head -n 1)'
 alias govh="ssh marcel@135.125.234.60"
 alias gb="git checkout (git branch | fzy | xargs)"
 alias gbde="git branch -D (git branch | fzy | xargs)"
