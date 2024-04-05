@@ -1,6 +1,7 @@
 # shellcheck disable=2148
 
 source "$HOME/.rye/env"
+source rund bash
 # eval "$(starship init bash)"
 
 # ENV. VARIABLES

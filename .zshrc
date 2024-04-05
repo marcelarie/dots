@@ -1,5 +1,7 @@
 # shellcheck disable=2148
 
+source rund zsh
+
 # pnpm
 export PNPM_HOME="/Users/m.manzanares/Library/pnpm"
 case ":$PATH:" in
