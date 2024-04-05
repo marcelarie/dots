@@ -3,6 +3,7 @@
 source "$HOME/.rye/env"
 source rund bash
 # eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 
 # ENV. VARIABLES
 export OPENAI_API_KEY=$(pass show openai/api-key)

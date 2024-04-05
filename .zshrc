@@ -1,6 +1,7 @@
 # shellcheck disable=2148
 
-source rund zsh
+source $(rund zsh)
+eval "$(zoxide init zsh)"
 
 # pnpm
 export PNPM_HOME="/Users/m.manzanares/Library/pnpm"
