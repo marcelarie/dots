@@ -20,3 +20,6 @@
 [submodule ".password-store"]
 	path = .password-store
 	url = git@github.com:marcelarie/.password-store.git
+[submodule ".config/tmux/plugins/minimal-tmux-status"]
+	path = .config/tmux/plugins/minimal-tmux-status
+	url = https://github.com/niksingh710/minimal-tmux-status.git

@@ -98,3 +98,10 @@ scripts/work/hibob-attendence.js
 .config/fish/fish_variables
 
 # SYMLINKS
+
+# v Added with script
+!.tmex
+
+# v Added with script v
+!.tmux
+
