@@ -202,6 +202,7 @@ alias gcount="git shortlog -sn"
 alias gcp="git cherry-pick"
 alias gcs="git commit -S"
 alias gd="git diff"
+alias gdts="GIT_CONFIG_PARAMETERS=\"'diff.tool=diffsitter' 'difftool.prompt=false' 'difftool.diffsitter.cmd=diffsitter \"\$LOCAL\" \"\$REMOTE\"'\" git difftool"
 alias gdt="GIT_EXTERNAL_DIFF=difft git diff"
 alias gds="git diff --staged"
 alias gdca="git diff --cached"
@@ -306,6 +307,8 @@ alias nuenv="nvim ~/.config/nushell/env.nu"
 
 alias nn="nnn -e"
 alias nnn="nnn -e"
+
+# alias stayawake="caffeinate -dims"
 
 alias jr="just run"
 alias jw="just watch"
