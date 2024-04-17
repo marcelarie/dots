@@ -308,6 +308,8 @@ alias nuenv="nvim ~/.config/nushell/env.nu"
 alias nn="nnn -e"
 alias nnn="nnn -e"
 
+alias fman="./scripts/fman.sh"
+
 # alias stayawake="caffeinate -dims"
 
 alias jr="just run"

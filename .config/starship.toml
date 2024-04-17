@@ -110,7 +110,7 @@ disabled = true
 [azure]
 disabled = true
 [env_var]
-disabled = false
+disabled = true
 [crystal]
 disabled = true
 [battery]
@@ -130,27 +130,27 @@ disabled = true
 
 # -- Enabled modules
 [username]
-disabled = false
+disabled = true
 [hostname]
-disabled = false
+disabled = true
 [localip]
-disabled = false
+disabled = true
 [directory]
 disabled = false
 [line_break]
 disabled = false
 [cmd_duration]
-disabled = false
+disabled = true
 [jobs]
-disabled = false
+disabled = true
 [nodejs]
-disabled = false
+disabled = true
 [lua]
-disabled = false
+disabled = true
 [cmake]
-disabled = false
+disabled = true
 [deno]
-disabled = false
+disabled = true
 
 # [character]
 # disabled = true
@@ -159,7 +159,7 @@ disabled = false
 # style_user = "red bold"
 # style_root = "black bold"
 # format = "[$user]($style) "
-# disabled = false
+# disabled = true
 # show_always = true
 
 [character]
@@ -177,7 +177,7 @@ format = "[$output]($style) "
 [rust]
 symbol = " "
 [sudo]
-disabled = false
+disabled = true
 symbol = "👑 "
 # [nodejs]
 # symbol = " "
