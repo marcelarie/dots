@@ -13,7 +13,8 @@ clones
 ├── lang_servers
 ├── learn
 │   ├── OpenSign
-│   └── codecrafters-grep-rust
+│   ├── codecrafters-grep-rust
+│   └── use-signals
 ├── own
 │   ├── aoc23
 │   ├── dots
@@ -25,11 +26,13 @@ clones
 │   ├── marcelarie.com
 │   ├── nix
 │   ├── rofi-translate-to-clip
+│   ├── rund
 │   └── tree-rs
 ├── pers
 │   └── notes
 └── work
     ├── client-dashboard
+    ├── dev-portal
     ├── lop-rules-manager
     ├── lop-searcher
     ├── mc-app-template
@@ -51,4 +54,4 @@ clones
     ├── stuart-solutions
     └── web-ui
 
-52 directories, 0 files
+55 directories, 0 files
