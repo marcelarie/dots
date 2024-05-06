@@ -8,6 +8,7 @@ clones
 ├── forks
 │   ├── kanagawa.nvim
 │   ├── nu_scripts
+│   ├── open-webui
 │   ├── sttusline
 │   └── tldr
 ├── lang_servers
@@ -27,7 +28,8 @@ clones
 │   ├── nix
 │   ├── rofi-translate-to-clip
 │   ├── rund
-│   └── tree-rs
+│   ├── tree-rs
+│   └── zettelin
 ├── pers
 │   └── notes
 └── work
@@ -45,7 +47,6 @@ clones
     ├── mission-control
     ├── postman
     ├── pulse-v3
-    ├── rules-manager-for-review
     ├── scripts
     ├── shadowing-with-ferdi
     ├── stuart-api
@@ -54,4 +55,4 @@ clones
     ├── stuart-solutions
     └── web-ui
 
-55 directories, 0 files
+56 directories, 0 files

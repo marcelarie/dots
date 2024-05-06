@@ -18,6 +18,10 @@ REPO_NAME="$WORK_PATH/$SELECTED_REPO/"
 EDITOR=nvim
 # CUSTOM_COMMAND="fnm use"
 
-tmex "$SESSION" \
-	--reattach  \
-	--layout="2{41}" "cd $REPO_NAME; clear; $EDITOR" "cd $REPO_NAME; clear"
+# if ! tmux has-session -t "$SESSION" 2>/dev/null; then
+tmex "$SESSION" --reattach --layout="2{41}" "cd $REPO_NAME; clear; $EDITOR" "cd $REPO_NAME; clear"
+# else
+# 	echo "Session already exists"
+# fi
+#
+# tmux -2 attach-session -t "$SESSION"

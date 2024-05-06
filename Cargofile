@@ -32,6 +32,7 @@ rustfmt
 rustlings
 rustup
 selene
+starship
 thebook
 tree-rs
 typstfmt

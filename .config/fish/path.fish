@@ -28,3 +28,4 @@ for p in /run/current-system/sw/bin
 end
 
 fish_add_path /Users/m.manzanares/scripts/
+fish_add_path /Users/m.manzanares/.local/bin
