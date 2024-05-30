@@ -19,7 +19,7 @@ EDITOR=nvim
 # CUSTOM_COMMAND="fnm use"
 
 # if ! tmux has-session -t "$SESSION" 2>/dev/null; then
-tmex "$SESSION" --reattach --layout="2{41}" "cd $REPO_NAME; clear; $EDITOR" "cd $REPO_NAME; clear"
+tmex "$SESSION" --reattach --focus=0 --layout="2{41}"  "cd $REPO_NAME; clear; $EDITOR" "cd $REPO_NAME; clear; fish" 
 # else
 # 	echo "Session already exists"
 # fi

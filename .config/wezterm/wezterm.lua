@@ -121,17 +121,6 @@ return {
 	adjust_window_size_when_changing_font_size = false,
 	font_size = 12,
 	-- font_size = 18,
-	-- keys = {
-	-- { key = "r", mods = "CMD|SHIFT", action = "ReloadConfiguration" },
-	-- keys = {
-	--     -- This will create a new split and run your default program inside it
-	--     {
-	--         key = "Enter",
-	--         mods = "CMD",
-	--         action = wezterm.action({ SplitHorizontal = { domain = "CurrentPaneDomain" } }),
-	--     },
-	-- },
-	-- },
 	-- Spawn a fish shell in login mode
 	-- default_prog = { "/etc/profiles/per-user/m.manzanares/bin/fish" },
 	keys = {
@@ -140,6 +129,15 @@ return {
 			mods = "CMD",
 			action = wezterm.action.CloseCurrentPane { confirm = false },
 		},
+		-- This will create a new split and run your default program inside it
+		{
+			key = "Enter",
+			mods = "CMD",
+			action = wezterm.action {
+				SplitVertical = { domain = "CurrentPaneDomain" },
+			},
+		},
+		-- { key = "r", mods = "CMD|SHIFT", action = "ReloadConfiguration" },
 	},
 	force_reverse_video_cursor = true,
 	default_cursor_style = "SteadyUnderline",
