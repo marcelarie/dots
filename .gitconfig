@@ -55,7 +55,7 @@
 [commit]
 	template = /Users/m.manzanares/.gitmessage
 [pull]
-	rebase = true
+	rebase = false
 [branch]
 	autoSetupMerge = always
 [filter "lfs"]
