@@ -57,21 +57,21 @@ print_events = false
 render_timer = false
 
 [font]
-size = 14.0
+size = 12.0
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "BlexMono Nerd Font"
 
 [font.glyph_offset]
 x = 0
 y = 0
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "BlexMono Nerd Font"
 style = "Light Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "BlexMono Nerd Font"
 
 [font.offset]
 x = 0
