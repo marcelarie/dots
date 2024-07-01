@@ -25,6 +25,7 @@
 !.config/vifm
 !.config/omf
 !.config/nushell
+.config/nushell/history.txt
 !.config/rofi/themes
 !.config/starship.toml
 !.config/rustfmt
@@ -105,4 +106,5 @@ scripts/work/hibob-attendence.js
 
 # v Added with script v
 !.tmux
+!.config/hypr
 

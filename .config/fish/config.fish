@@ -43,10 +43,10 @@ bind -M insert \cr _atuin_search
 set -g -x EDITOR nvim
 if not set -q LIGHTWEIGHT_MODE
     # set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
-    set -g OPENAI_API_KEY (pass show openai/api-key)
-    set -g -x GITHUB_TOKEN (pass show github/token)
-    set -g -x SRC_ACCESS_TOKEN (pass show sg/token)
-    set -g -x SRC_ENDPOINT (pass show sg/endpoint)
+    # set -g OPENAI_API_KEY (pass show openai/api-key)
+    # set -g -x GITHUB_TOKEN (pass show github/token)
+    # set -g -x SRC_ACCESS_TOKEN (pass show sg/token)
+    # set -g -x SRC_ENDPOINT (pass show sg/endpoint)
     # set -g GPG_TTY (tty)
 end
 # set -g ANDROID_HOME ~/Library/Android/sdk
