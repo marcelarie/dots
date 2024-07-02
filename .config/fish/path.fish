@@ -27,5 +27,5 @@ for p in /run/current-system/sw/bin
     fish_add_path $p
 end
 
-fish_add_path /Users/m.manzanares/scripts/
-fish_add_path /Users/m.manzanares/.local/bin
+fish_add_path /home/$USER/scripts/
+fish_add_path /home/$USER/.local/bin

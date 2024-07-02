@@ -107,5 +107,7 @@ scripts/work/hibob-attendence.js
 
 # v Added with script v
 !.tmux
+
 !.config/hypr
+!.config/waybar
 
