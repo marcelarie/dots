@@ -100,11 +100,7 @@
         "format-alt": "{time} ",
         // "format-good": "OK", // An empty format will hide the module
         "format-full": "",
-         "format-icons": {
-            "discharging": ["󰁻", "󰁽", "󰁹"],
-            "charging": ["󰁻", "󰁽", "󰁹"],
-            "plugged": ""
-        },
+        "format-icons": [ "󰁻", "󰁽", "󰁿", "󰂁", "󰁹" ],
     },
     "battery#bat2": {
         "bat": "BAT2"
