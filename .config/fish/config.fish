@@ -20,6 +20,13 @@ if not set -q LIGHTWEIGHT_MODE
     status --is-interactive; and rbenv init - fish | source
 end
 
+# Transient prompt
+# function starship_transient_prompt_func
+#   starship module character
+# end
+# starship init fish | source
+# enable_transience
+
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃##
 #   EXTERNAL SOURCES   #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃≃##
