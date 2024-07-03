@@ -111,4 +111,5 @@ scripts/work/hibob-attendence.js
 !.config/hypr
 !.config/waybar
 !.config/wofi
+!.config/kanshi
 
