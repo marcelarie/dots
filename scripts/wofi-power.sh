@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# pkill wofi or 
+if pgrep -x "wofi" > /dev/null
+then
+  pkill wofi
+fi
+
 entries="logout\nsuspend\nreboot\nshutdown"
 
 selected=$(echo -e "$entries" | wofi --width 250 --height 210 --dmenu --cache-file /dev/null | awk '{print $1}')
