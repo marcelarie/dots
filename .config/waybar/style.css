@@ -65,7 +65,7 @@ window#waybar.chromium {
 }
 
 #workspaces button.visible {
-    color: #24738e;
+    font-weight: bold;
 }
 
 /* #workspaces button.current_output.focused { */
