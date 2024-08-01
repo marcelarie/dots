@@ -107,7 +107,7 @@ return {
 		"tmux",
 		"nvim",
 	},
-	window_padding = { left = 40, right = 40, bottom = 40, top = 40 },
+	window_padding = { left = 20, right = 20, bottom = 20, top = 20 },
 	audible_bell = "Disabled",
 	hide_tab_bar_if_only_one_tab = true,
 	window_decorations = "RESIZE",
@@ -119,7 +119,7 @@ return {
 	-- font = wezterm.font "Inconsolata Nerd Font Regular",
 	-- font = wezterm.font "Iosevka Nerd Font Mono",
 	adjust_window_size_when_changing_font_size = false,
-	font_size = 12,
+	font_size = 10,
 	-- font_size = 18,
 	-- Spawn a fish shell in login mode
 	-- default_prog = { "/etc/profiles/per-user/m.manzanares/bin/fish" },
@@ -142,4 +142,5 @@ return {
 	force_reverse_video_cursor = true,
 	default_cursor_style = "SteadyUnderline",
 	colors = kanagawa_dragon_colors,
+	enable_wayland = false,
 }
