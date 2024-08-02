@@ -45,6 +45,7 @@ bind -M insert \cr _atuin_search
 
 # ENV VARS
 set -g -x EDITOR nvim
+set -g -x HYPRSHOT_DIR $HOME/screenshots
 # if not set -q LIGHTWEIGHT_MODE
     # set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
     # set -g OPENAI_API_KEY (pass show openai/api-key)

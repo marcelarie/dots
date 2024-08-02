@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # URL of the Chrome DevTools Protocol JSON file
 DEVTOOLS_URL="http://localhost:9222/json"
