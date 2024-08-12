@@ -1,5 +1,8 @@
 #### Packages
 
+08-08-2024
+Removed kdeconnect and pulseaudio-qt
+
 2023-05-24
 
 ```bash
