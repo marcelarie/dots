@@ -3,6 +3,11 @@
 08-08-2024
 Removed kdeconnect and pulseaudio-qt
 
+23-08-2024
+TODO:
+- Reinstall powerdevil
+- Find alternatives to okular
+
 2023-05-24
 
 ```bash
