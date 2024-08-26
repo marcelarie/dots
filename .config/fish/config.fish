@@ -48,10 +48,11 @@ set -g -x EDITOR nvim
 set -g -x HYPRSHOT_DIR $HOME/screenshots
 # set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
 # set -g OPENAI_API_KEY (pass show openai/api-key)
+set -g -x ANTHROPIC_API_KEY (pass show anthropic/api-key)
 # set -g -x GITHUB_TOKEN (pass show github/token)
 # set -g -x SRC_ACCESS_TOKEN (pass show sg/token)
 # set -g -x SRC_ENDPOINT (pass show sg/endpoint)
-# set -g GPG_TTY (tty)
+set -g GPG_TTY (tty)
 set -g MANPAGER 'nvim +Man!'
 set -g PAGER 'less -FRX'
 

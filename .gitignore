@@ -43,6 +43,7 @@
 !.config/lf
 !.config/vimfm
 !.config/tmuxinator
+!.config/gnupg
 !scripts/
 scripts/work/hibob-attendence.js
 !.vimrc

@@ -12,8 +12,10 @@ fi
 # Collect fullscreen status
 fullscreen_status=$(hyprctl clients | grep -E "fullscreen: 1|fakefullscreen: 1" | wc -l)
 
+echo "Fullscreen status: $fullscreen_status"
+
 # Check if fullscreen is enabled
-if [ "$fullscreen_status" -gt 0 ]; then
+if [ "$fullscreen_status" -gt 1 ]; then
 	hyprctl dispatch fullscreen 1
 fi
 
