@@ -24,4 +24,4 @@ export PATH="/Users/m.manzanares/.rd/bin:$PATH"
 alias vi=nvim
 alias ls=eza
 alias ll='eza -alF'
-
+alias hx='helix'

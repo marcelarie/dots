@@ -72,6 +72,8 @@ scripts/work/hibob-attendence.js
 !.cargo-programs
 !.config/gh/config.yml
 !.config/atuin
+!.config/mako
+!.config/tridactyl
 
 ### ARCH
 # !.config/pacman

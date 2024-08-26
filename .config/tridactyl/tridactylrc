@@ -1,0 +1,34 @@
+" General Settings
+set allowautofocus false
+set editorcmd floating-terminal $EDITOR
+set externalclipboardcmd wl-copy
+set yankto both
+set configversion 2.0
+set searchurls.dl https://duckduckgo.com/lite/?q=%s
+set searchurls.d https://next.duckduckgo.com/?kmjx.menu=renderer%3ANativeMML%26%3Bsemantics%3Atrue%26%3Bcontext%3ABrowser%26%3Bzoom%3ANone&kp=-2&kc=-1&k1=-1&kam=osm&kak=-1&kax=-1&kaq=-1&kao=-1&kap=-1&kau=-1&t=ffab&ia=web&q=%s
+set searchengine d
+set update.lastchecktime 1723034997286
+set smoothscroll false
+
+" Binds
+bind ;c hint -c summary,[class*="expand"],[class="togg"]
+bind j scrollline 4
+bind k scrollline -4
+bind ,r hint -W exclaim_quiet terminal tuir --enable-media
+bind ,h hint -W exclaim_quiet terminal hn-url
+bind ,m hint -W mpvsafe
+bind ,s source
+bind gd tabdetach
+bind gD composite tabduplicate | tabdetach
+
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+
+# This breaks tridactyl command line
+" keymap ; :
+" keymap : ;
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl

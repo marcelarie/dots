@@ -23,7 +23,7 @@ space = { w = ":w" } # Maps the Control-s to the typable command :w which is an 
 # C-o = ":open ~/.config/helix/config.toml" # Maps the Control-o to opening of the helix config file
 ## g = { a = "code_action" } # Maps `ga` to show possible code actions
 "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
-space = { f = ":format" }
+# space = { f = ":format" }
 
 [keys.insert]
 "A-x" = "normal_mode" # Maps Alt-X to enter normal mode

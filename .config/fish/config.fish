@@ -46,20 +46,14 @@ bind -M insert \cr _atuin_search
 # ENV VARS
 set -g -x EDITOR nvim
 set -g -x HYPRSHOT_DIR $HOME/screenshots
-# if not set -q LIGHTWEIGHT_MODE
-    # set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
-    # set -g OPENAI_API_KEY (pass show openai/api-key)
-    # set -g -x GITHUB_TOKEN (pass show github/token)
-    # set -g -x SRC_ACCESS_TOKEN (pass show sg/token)
-    # set -g -x SRC_ENDPOINT (pass show sg/endpoint)
-    # set -g GPG_TTY (tty)
-# end
-# set -g ANDROID_HOME ~/Library/Android/sdk
-# set -g ANDROID_SDK_ROOT ~/Library/Android/sdk
+# set -g DOCKER_HOST (podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
+# set -g OPENAI_API_KEY (pass show openai/api-key)
+# set -g -x GITHUB_TOKEN (pass show github/token)
+# set -g -x SRC_ACCESS_TOKEN (pass show sg/token)
+# set -g -x SRC_ENDPOINT (pass show sg/endpoint)
+# set -g GPG_TTY (tty)
 set -g MANPAGER 'nvim +Man!'
 set -g PAGER 'less -FRX'
-# set -g ANDROID_AVD_HOME ~/Library/Android/avd
-# set -g M1 1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
