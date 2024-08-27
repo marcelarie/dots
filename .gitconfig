@@ -65,3 +65,5 @@
 	required = true
 [maintenance]
 	repo = /Users/m.manzanares
+[gpg]
+	program = /home/marcel/scripts/gpg-pinetry-loopback.sh
