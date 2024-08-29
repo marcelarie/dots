@@ -320,3 +320,5 @@ alias jr="just run"
 alias jw="just watch"
 alias jb="just build"
 alias jt="just test"
+
+alias nmtui="$HOME/scripts/nice-color-nmtui.sh"

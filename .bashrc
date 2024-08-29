@@ -8,6 +8,9 @@ source ~/.local/share/xelabash/xela.bash
 GPG_AGENT_INFO=$(gpgconf --list-dirs agent-socket)
 export GPG_AGENT_INFO
 
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # If SSH_AUTH_SOCK is not set, set it to gpg-agent's SSH socket
 if [ -z "$SSH_AUTH_SOCK" ] && [ -S "$GPG_AGENT_INFO.ssh" ]; then
     export SSH_AUTH_SOCK="$GPG_AGENT_INFO.ssh"

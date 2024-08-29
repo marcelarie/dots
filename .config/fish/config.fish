@@ -52,7 +52,7 @@ set -g -x ANTHROPIC_API_KEY (pass show anthropic/api-key)
 # set -g -x GITHUB_TOKEN (pass show github/token)
 # set -g -x SRC_ACCESS_TOKEN (pass show sg/token)
 # set -g -x SRC_ENDPOINT (pass show sg/endpoint)
-set -g GPG_TTY (tty)
+set -g -x GPG_TTY (tty)
 set -g MANPAGER 'nvim +Man!'
 set -g PAGER 'less -FRX'
 
