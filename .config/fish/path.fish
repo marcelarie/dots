@@ -8,3 +8,4 @@
 
 
 fish_add_path /home/$USER/scripts/
+fish_add_path /home/$USER/go/bin

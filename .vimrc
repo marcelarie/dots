@@ -1,6 +1,8 @@
 " Don't try to be vi compatible
 set nocompatible
 
+let mapleader =" "
+
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
@@ -76,14 +78,17 @@ map <leader><space> :let @/=''<cr> " clear search
 nnoremap ; :
 nnoremap : ;
 
-" Formatting
+" Quit file
 nnoremap <leader>q :q<cr>
+
+" Save
+nnoremap <leader>w :w<cr>
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
 "
 " Toggle tabs and EOL
-map <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<CR>
 
 
 call plug#begin()
@@ -97,6 +102,8 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'fenetikm/falcon'
+
 " Color scheme
 Plug 'lighthaus-theme/vim-lighthaus'
 
@@ -106,11 +113,11 @@ Plug 'lighthaus-theme/vim-lighthaus'
 call plug#end()
 
 " NerdTree
-map <leader><tab> :NERDTreeToggle<cr>
+nnoremap <leader><tab> :NERDTreeToggle<cr>
 
 " FZF
-map <leader>f :Files<cr>
-map <leader>b :Buffers<cr>
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>rg :Rg<cr>
 
 
@@ -118,3 +125,5 @@ nnoremap <leader>rg :Rg<cr>
 map <leader>so :source ~/.vimrc<cr>
 
 " Color scheme (terminal)
+colorscheme falcon
+
