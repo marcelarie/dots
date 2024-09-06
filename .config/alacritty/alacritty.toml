@@ -97,6 +97,7 @@ render_timer = false
 size = 10.0
 
 [font.bold]
+# family = "PixelCode Bold"
 family = "BlexMono Nerd Font"
 
 [font.glyph_offset]
@@ -106,8 +107,11 @@ y = 0
 [font.italic]
 family = "BlexMono Nerd Font"
 style = "Light Italic"
+# family = "PixelCode"
+# style = "Thin Italic"
 
 [font.normal]
+# family = "PixelCode Light"
 family = "BlexMono Nerd Font"
 
 [font.offset]
