@@ -55,6 +55,7 @@ set -g -x ANTHROPIC_API_KEY (pass show anthropic/api-key)
 set -g -x GPG_TTY (tty)
 set -g MANPAGER 'nvim +Man!'
 set -g PAGER 'less -FRX'
+set -g -x MOZ_ENABLE_WAYLAND 1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

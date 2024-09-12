@@ -13,7 +13,7 @@ export GPG_TTY
 
 # If SSH_AUTH_SOCK is not set, set it to gpg-agent's SSH socket
 if [ -z "$SSH_AUTH_SOCK" ] && [ -S "$GPG_AGENT_INFO.ssh" ]; then
-    export SSH_AUTH_SOCK="$GPG_AGENT_INFO.ssh"
+	export SSH_AUTH_SOCK="$GPG_AGENT_INFO.ssh"
 fi
 
 # source "$HOME/.rye/env"
@@ -29,6 +29,10 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export HYPRSHOT_DIR=$HOME/screenshots
 export EDITOR=nvim
 export ANTHROPIC_API_KEY=$(pass show anthropic/api-key)
+
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+	export MOZ_ENABLE_WAYLAND=1
+fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/m.manzanares/.rd/bin:$PATH"

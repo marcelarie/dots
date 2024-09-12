@@ -9,15 +9,21 @@ if ! command_exists hyprctl; then
 	exit 1
 fi
 
-# Collect fullscreen status
-fullscreen_status=$(hyprctl clients | grep -E "fullscreen: 1|fakefullscreen: 1" | wc -l)
+current_workspace=$(hyprctl activeworkspace -j | jq -r '.id')
+hyprland_clients=$(hyprctl clients -j)
 
-echo "Fullscreen status: $fullscreen_status"
+echo "$hyprland_clients" | jq -c '.[]' | while read -r obj; do
+	fullscreen=$(echo "$obj" | jq -r '.fullscreen')
+	workspace_id=$(echo "$obj" | jq -r '.workspace.id')
 
-# Check if fullscreen is enabled
-if [ "$fullscreen_status" -gt 1 ]; then
-	hyprctl dispatch fullscreen 1
-fi
+	if [ "$workspace_id" = "$current_workspace" ] && [ "$fullscreen" -gt 0 ]; then
+		if [ "$fullscreen" -eq 2 ]; then
+			hyprctl dispatch fullscreen 2
+		else
+			hyprctl dispatch fullscreen 1
+		fi
+	fi
+done
 
 # Execute the command if provided
 if [ $# -gt 0 ]; then
