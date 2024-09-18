@@ -329,3 +329,5 @@ alias nmtui="$HOME/scripts/nice-color-nmtui.sh"
 alias my_public_ip="ip -json route get 8.8.8.8 | jq -r '.[].prefsrc'"
 alias vps_connect="sshpass -p (pass show do-vps-marcel-ubuntu/marcel) ssh marcel@164.90.160.49"
 alias vps_connect_root="sshpass -p (pass show do-vps-marcel-ubuntu/root) ssh root@164.90.160.49"
+alias show_webcams="v4l2-ctl --list-devices"
+

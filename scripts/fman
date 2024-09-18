@@ -2,7 +2,7 @@
 
 [[ -z "$1" ]] && QUERY="." || QUERY="$1"
 
-MAN_PAGES_LIST=$(apropos "$QUERY")
+MAN_PAGES_LIST=$(apropos "$QUERY" | sort | uniq)
 
 SELECTED_MAN_PAGE=$(echo "$MAN_PAGES_LIST" | fzy | cut -d " " -f1)
 

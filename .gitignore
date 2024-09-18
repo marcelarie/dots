@@ -75,6 +75,7 @@ scripts/work/hibob-attendence.js
 !.config/atuin
 !.config/mako
 !.config/tridactyl
+!.local/share/applications
 
 ### ARCH
 # !.config/pacman

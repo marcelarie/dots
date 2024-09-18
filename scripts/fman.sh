@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-binary_list=$(compgen -c | grep '[[:alpha:]]' | sort)
+binary_list=$(compgen -c | grep '[[:alpha:]]' | sort | uniq)
 
 selected_binary=$(echo "$binary_list" | fzf --preview='man {} 2> /dev/null | col -b')
 
