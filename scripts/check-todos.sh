@@ -12,13 +12,15 @@ if [ -f $TODO_FILE ]; then
 	# If you want to check every 10 minutes
 	# if [ $TIME_DIFFERENCE_MINUTES -ge 10 ]; then
 	# 	echo "🤨 Reminder: You haven't checked your TODOs in the last 10 minutes!"
+	# 	notify-send "🤨 Reminder: You haven't checked your TODOs in the last 10 minutes!"
 	# fi
 
 	# If you want to check every 2 hours
 	if [ $TIME_DIFFERENCE -ge 2 ]; then
 		echo "🤨 Reminder: You haven't checked your TODOs in the last 2 hours!"
+		notify-send "🤨 Reminder: You haven't checked your TODOs in the last 2 hours!"
 	fi
 else
 	echo "🤨 Reminder: You didn't create a TODO file for today!"
-	echo "Run todo to create one."
+	notify-send "🤨 Reminder: You didn't create a TODO file for today!"
 fi
