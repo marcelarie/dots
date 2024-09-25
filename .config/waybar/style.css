@@ -235,9 +235,9 @@ label:focus {
 }
 
 #language {
-    background: #bbccdd;
-    color: #333333;
-    padding: 0 5px;
-    margin: 6px 3px;
-    min-width: 16px;
+    background: #000000;
+    color: #808080;
+    padding: 0px;
+    margin: 0px;
+    min-width: 0px
 }

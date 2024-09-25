@@ -16,17 +16,17 @@ $env.PAGER = 'less -FRX'
 
 
 # fnm support on cd
-if not (which fnm | is-empty) {
-  ^fnm env --json | from json | load-env
-  # Checking `Path` for Windows
-  let path = if 'Path' in $env { $env.Path } else { $env.PATH }
-  let node_path = if (sys).host.name == 'Windows' {
-    $"($env.FNM_MULTISHELL_PATH)"
-  } else {
-    $"($env.FNM_MULTISHELL_PATH)/bin"
-  }
-  $env.PATH = ($path | prepend [ $node_path ])
-}
+# if not (which fnm | is-empty) {
+#   ^fnm env --json | from json | load-env
+#   # Checking `Path` for Windows
+#   let path = if 'Path' in $env { $env.Path } else { $env.PATH }
+#   let node_path = if (sys).host.name == 'Windows' {
+#     $"($env.FNM_MULTISHELL_PATH)"
+#   } else {
+#     $"($env.FNM_MULTISHELL_PATH)/bin"
+#   }
+#   $env.PATH = ($path | prepend [ $node_path ])
+# }
 
 # --------------------------------END OF FILE--------------------------------- #
 

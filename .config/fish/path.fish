@@ -9,3 +9,4 @@
 
 fish_add_path /home/$USER/scripts/
 fish_add_path /home/$USER/go/bin
+fish_add_path /home/$USER/.local/share/bob/nvim-bin

@@ -20,9 +20,11 @@
         "memory",
         "custom/sensors-temp",
         "battery",
+        // "upower",
         "battery#bat2",
         "clock",
         // "custom/clock",
+        "hyprland/language",
         "tray"
     ],
     // Modules configuration
@@ -119,28 +121,59 @@
             ""
         ]
     },
+    // "battery": {
+    //     "states": {
+    //         "good": 95,
+    //         "warning": 30,
+    //         "critical": 15
+    //     },
+    //     "format": "{icon} {capacity}% ",
+    //     "format-charging": "{capacity}%",
+    //     "format-plugged": "󱘖 {capacity}%",
+    //     "format-alt": "{time} ",
+    //     // "format-good": "OK", // An empty format will hide the module
+    //     // "format-full": "",
+    //     "format-icons": [
+    //         "󰁻",
+    //         "󰁽",
+    //         "󰁿",
+    //         "󰂁",
+    //         "󰁹"
+    //     ]
+    // },
     "battery": {
         "states": {
-            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}% ",
-        "format-charging": "{capacity}%",
-        "format-plugged": "{capacity}%",
-        "format-alt": "{time} ",
-        // "format-good": "OK", // An empty format will hide the module
-        // "format-full": "",
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-plugged": "󱘖 {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-full": "{capacity}%",
         "format-icons": [
             "󰁻",
             "󰁽",
             "󰁿",
             "󰂁",
             "󰁹"
-        ]
+        ],
+        "interval": 3
     },
     "battery#bat2": {
         "bat": "BAT2"
+    },
+    "upower": {
+        "icon-size": 20,
+        "hide-if-empty": true,
+        "tooltip": true,
+        "tooltip-spacing": 20
+    },
+    "hyprland/language": {
+        "format": " {}",
+        "format-en": "en",
+        "format-es": "es",
+        "keyboard-name": "keyd-virtual-keyboard"
     },
     "custom/sensors-temp": {
         "exec": "/home/marcel/scripts/sensors-temp.sh",

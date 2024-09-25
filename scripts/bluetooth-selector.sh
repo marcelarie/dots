@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# Function to send notifications
 notify_user() {
 	local status=$1
 	local message=$2
 	local icon=$3
+
 	notify-send "$icon $message"
 }
 
@@ -15,9 +15,9 @@ mapfile -t all_device_names < <(printf '%s\n' "${devices[@]}" | cut --fields 3- 
 connected_sign="✔️"
 disconnected_sign="❌"
 
-# Prepend a sign to each device name based on its connection status
 devices_result=""
 for device in "${all_device_names[@]}"; do
+	# Prepend a sign to each device name based on its connection status
 	if [[ " ${connected_device_names[*]} " == *" $device "* ]]; then
 		devices_result+="${connected_sign} $device"$'\n'
 	else
@@ -47,7 +47,7 @@ manage_connection() {
 	fi
 }
 
-# Check if the device is connected and toggle its status
+# Toggle bluetooth connection
 if printf "%s\n" "${connected_device_names[@]}" | grep -Fxq "$selected"; then
 	notify_user "disconnect" "Disconnecting from $selected..." ">"
 	manage_connection "disconnect" "$selected" "$device_id" "$disconnected_sign"

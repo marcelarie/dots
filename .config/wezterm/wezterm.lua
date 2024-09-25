@@ -111,6 +111,7 @@ return {
 	audible_bell = "Disabled",
 	hide_tab_bar_if_only_one_tab = true,
 	window_decorations = "RESIZE",
+	font = wezterm.font "PixelCode Bold",
 	-- font = wezterm.font "IBM Plex Mono",
 	-- font = wezterm.font "PragmataPro",
 	-- font = wezterm.font "JetBrainsMono Nerd Font",
@@ -119,7 +120,7 @@ return {
 	-- font = wezterm.font "Inconsolata Nerd Font Regular",
 	-- font = wezterm.font "Iosevka Nerd Font Mono",
 	adjust_window_size_when_changing_font_size = false,
-	font_size = 10,
+	font_size = 9,
 	-- font_size = 18,
 	-- Spawn a fish shell in login mode
 	-- default_prog = { "/etc/profiles/per-user/m.manzanares/bin/fish" },
