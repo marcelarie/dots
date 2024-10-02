@@ -84,11 +84,12 @@
         "spacing": 10
     },
     "clock": {
-        "format": "<tt>{:%H:%M }</tt>",
-        "format-alt": "<tt>{:%d-%m-%Y}</tt>",
+        "format": "<tt>{:%d/%m - %H:%M} </tt>",
+        "format-alt": "<tt>{:%a %d/%m/%Y - %H:%M }</tt>",
         // "on-click": "gsimplecal",
         "on-click-right": "gsimplecal",
-        "tooltip": false
+        "tooltip": false,
+        "interval": 60
     },
     // "custom/clock": {
     //     "exec": "date +'%H:%M'",
