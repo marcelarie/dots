@@ -1,0 +1,32 @@
+# A complete reference of available options can be found in `man 5 tofi`.
+
+# anchor = top
+width = 30%
+height = 450
+# horizontal = true
+font-size = 11
+prompt-text = " > "
+font = IBM Plex Mono
+outline-width = 0
+border-width = 0
+background-color = #000000
+min-input-width = 120
+result-spacing = 15
+
+selection-color = #000000
+selection-background = #f0c674
+selection-background-padding = 5
+
+# selection-match-color = #ff0000
+
+text-cursor-style = underscore
+text-cursor-thickness = 2
+text-cursor-color = #FFFFFF
+
+border-width = 1
+border-color = #ffffff
+
+# padding-top = 5
+# padding-bottom = 5
+# padding-left = 5
+# padding-right = 5
