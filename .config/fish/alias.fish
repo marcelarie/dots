@@ -315,7 +315,7 @@ alias nuenv="nvim ~/.config/nushell/env.nu"
 alias nn="nnn -e"
 alias nnn="nnn -e"
 
-alias rofimoji="wofi-emoji"
+alias rofimoji="~/scripts/tofi/emoji-selector.sh"
 
 alias fman="./scripts/fman.sh"
 

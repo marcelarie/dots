@@ -24,7 +24,8 @@ text-cursor-thickness = 2
 text-cursor-color = #FFFFFF
 
 border-width = 1
-border-color = #ffffff
+# border-color = #33ccff
+border-color = #f0c674
 
 # padding-top = 5
 # padding-bottom = 5

@@ -8,7 +8,7 @@ if [ ! -f "$tmp_path" ]; then
 fi
 
 # Input operation
-operation=$(cat $tmp_path | tofi --prompt-text="Math Operation: " --require-match=false)
+operation=$(cat $tmp_path | tofi --prompt-text=" " --require-match=false)
 
 # Exit if no operation provided
 if [ -z "$operation" ]; then
