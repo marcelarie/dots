@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 
-tmp_path="/tmp/tofi-calc-history"
+XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+tmp_dir="$XDG_CACHE_HOME/tofi-calc"
+tmp_path="$tmp_dir/history"
 is_history_value=false
+max_age_days=10
 
+mkdir -p "$tmp_dir"
 if [ ! -f "$tmp_path" ]; then
-	touch "$tmp_path"
+    touch "$tmp_path"
 fi
+
+# Clean up old entries
+find "$tmp_dir" -type f -mtime +$max_age_days -delete
 
 # Input operation
 operation=$(cat $tmp_path | tofi --prompt-text=" " --require-match=false)
@@ -22,7 +29,7 @@ if [[ "$operation" == *"="* ]]; then
 	is_history_value=true
 fi
 
-# Calculate the result
+# Calculate the result and delete new line or backslash characters
 result=$(echo "$operation" | bc -l)
 
 # Exit if invalid operation
@@ -34,11 +41,14 @@ fi
 # Save the operation and result to history 
 if [ "$is_history_value" = false ]; then
 	if ! grep -q "$operation = $result" "$tmp_path"; then
-		echo "$operation = $result" >>"$tmp_path"
+	    temp_file=$(mktemp)
+	    echo "$operation = $result" > "$temp_file"
+	    cat "$tmp_path" >> "$temp_file"
+	    mv "$temp_file" "$tmp_path"
 	fi
 fi
 
 # Copy the result to the clipboard
-echo "$result" | wl-copy
+echo "$result" | wl-copy --trim-newline
 
 notify-send "Result: $result" "The result has been copied to the clipboard."

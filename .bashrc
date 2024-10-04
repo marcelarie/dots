@@ -1,8 +1,9 @@
 # shellcheck disable=2148
 
-GIT_PROMPT=true
-KUBE_PROMPT=true
+export GIT_PROMPT=true
+export KUBE_PROMPT=true
 source ~/.local/share/xelabash/xela.bash
+source ~/.bash_aliases
 
 # Start gpg-agent if not already running
 GPG_AGENT_INFO=$(gpgconf --list-dirs agent-socket)
@@ -28,17 +29,13 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export HYPRSHOT_DIR=$HOME/screenshots
 export EDITOR=nvim
-export ANTHROPIC_API_KEY=$(pass show anthropic/api-key)
+export TERMINAL=alacritty
+
+ANTHROPIC_API_KEY=$(pass show anthropic/api-key)
+export ANTHROPIC_API_KEY
 
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
 	export MOZ_ENABLE_WAYLAND=1
 fi
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/m.manzanares/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-alias vi=nvim
-alias ls=eza
-alias ll='eza -alF'
-alias hx='helix'
+export PATH="/home/$USER/.local/share/bob/nvim-bin:$PATH"

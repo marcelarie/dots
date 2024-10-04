@@ -2,9 +2,10 @@
 #    SOURCES     #
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ ⩨
 source ~/.config/fish/path.fish
-source ~/.config/fish/alias.fish
+source ~/.config/fish/functions.fish
 source ~/.config/fish/abbr.fish
 source ~/.config/fish/keybinds.sh
+source ~/.bash_aliases
 # source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # ≃≃≃≃≃≃≃≃≃≃≃≃≃≃ #
@@ -56,6 +57,7 @@ set -g -x GPG_TTY (tty)
 set -g MANPAGER 'nvim +Man!'
 set -g PAGER 'less -FRX'
 set -g -x MOZ_ENABLE_WAYLAND 1
+set -g -x TERMINAL alacritty -e
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
