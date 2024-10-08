@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Run onefetch and store the output in a variable
-output=$(onefetch)
+# run command passed as arg
+output=$(eval "$@")
 
 # Remove color-related characters using sed
 clean_output=$(

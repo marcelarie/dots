@@ -5,6 +5,15 @@ export KUBE_PROMPT=true
 source ~/.local/share/xelabash/xela.bash
 source ~/.bash_aliases
 
+# ~/.bashrc
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+source <(carapace _carapace)
+
+# Use bash-completion, if available
+# [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+#     . /usr/share/bash-completion/bash_completion
+
+
 # Start gpg-agent if not already running
 GPG_AGENT_INFO=$(gpgconf --list-dirs agent-socket)
 export GPG_AGENT_INFO
@@ -20,7 +29,6 @@ fi
 # source "$HOME/.rye/env"
 # source rund bash
 # eval "$(starship init bash)"
-eval "$(zoxide init bash)"
 
 # ENV. VARIABLES
 # export OPENAI_API_KEY=$(pass show openai/api-key)
@@ -37,5 +45,7 @@ export ANTHROPIC_API_KEY
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
 	export MOZ_ENABLE_WAYLAND=1
 fi
+
+eval "$(zoxide init bash)"
 
 export PATH="/home/$USER/.local/share/bob/nvim-bin:$PATH"

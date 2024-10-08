@@ -10,40 +10,31 @@ use ~/clones/external/nupm/nupm/
 # use ~/clones/forks/nu_scripts/modules/rbenv/rbenv.nu
 
 let zoxide_completer = {|spans|
-    $spans | skip 1 | zoxide query -l $in | lines | where {|x| $x != $env.PWD}
+    $spans | skip 1 | zoxide query -l ...$in | lines | where {|x| $x != $env.PWD}
 }
 
-let fish_completer = {|spans|
-    fish --command $'complete "--do-complete=($spans | str join " ")"'
-    | $"value(char tab)description(char newline)" + $in
-    | from tsv --flexible --no-infer
+let carapace_completer = {|spans|
+    carapace $spans.0 nushell ...$spans | from json
 }
-
-# let carapace_completer = {|spans: list<string>|
-#     carapace $spans.0 nushell $spans
-#     | from json
-#     | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }
-# }
 
 # This completer will use carapace by default
-# let external_completer = {|spans|
-#     let expanded_alias = (scope aliases | where name == $spans.0 | get -i 0 | get -i expansion)
-#     let spans = (if $expanded_alias != null  {
-#         $spans | skip 1 | prepend ($expanded_alias | split words)
-#     } else { $spans })
-#
-#     {
-#         # carapace completions are incorrect for nu
-#         nu: $fish_completer
-#         # fish completes commits and branch names in a nicer way
-#         git: $fish_completer
-#         # carapace doesn't have completions for asdf
-#         asdf: $fish_completer
-#         z: $zoxide_completer
-#         zi: $zoxide_completer
-#     } | get -i $spans.0 | default $carapace_completer | do $in $spans
-#
-# }
+let external_completer = {|spans|
+    let expanded_alias = (scope aliases | where name == $spans.0 | get -i 0 | get -i expansion)
+    let spans = (if $expanded_alias != null  {
+        $spans | skip 1 | prepend ($expanded_alias | split words)
+    } else { $spans })
+
+        match $spans.0 {
+        # nu => $fish_completer # carapace completions are incorrect for nu
+        # git => $fish_completer # fish completes commits and branch names in a nicer way
+        # asdf => $fish_completer # carapace doesn't have completions for asdf
+
+        # use zoxide completions for zoxide commands
+        z | zi => $zoxide_completer
+        __zoxide_z | __zoxide_zi => $zoxide_completer
+        _ => $carapace_completer
+    } | do $in $spans
+}
 
 $env.config = {
   color_config: $base16_theme
@@ -52,7 +43,9 @@ $env.config = {
   show_banner: false
   table: {
     padding: { left: 0 right: 0 }
-    mode: thin
+    # rounded basic compact compact_double light thin with_love reinforced heavy none other
+    mode: none
+   
   }
   filesize: {
     metric: true
@@ -61,17 +54,17 @@ $env.config = {
     vi_insert: underscore
     vi_normal: block
   }
-  # completions: {
-  #     case_sensitive: false # set to true to enable case-sensitive completions
-  #     quick: false          # set this to false to prevent auto-selecting completions when only one remains
-  #     partial: true         # set this to false to prevent partial filling of the prompt
-  #     algorithm: "prefix"   # prefix or fuzzy
-  #     external: {
-  #         max_results: 25
-  #         enable: true
-  #         completer: $external_completer
-  #     }
-  # }
+  completions: {
+      case_sensitive: false # set to true to enable case-sensitive completions
+      quick: false          # set this to false to prevent auto-selecting completions when only one remains
+      partial: true         # set this to false to prevent partial filling of the prompt
+      algorithm: "prefix"   # prefix or fuzzy
+      external: {
+          max_results: 25
+          enable: true
+          completer: $external_completer
+      }
+  }
   keybindings: [
    {
     name: trigger-completion-menu
@@ -155,4 +148,4 @@ $env.PROMPT_MULTILINE_INDICATOR = {colored_error_prompt ':> '}
 # use ~/.cache/starship/init.nu
 # use external/fnm.nu
 # source ~/.local/share/atuin/init.nu
-# source ~/.zoxide.nu
+source ./external/zoxide.nu
