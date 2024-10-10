@@ -148,8 +148,8 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "󱐋 {capacity}%",
-        "format-plugged": "󱘖 {capacity}%",
+        "format-charging": "󱐋  {capacity}%",
+        "format-plugged": "󱘖  {capacity}%",
         "format-alt": "{time} {icon}",
         "format-full": "{capacity}%",
         "format-icons": [
@@ -171,10 +171,11 @@
         "tooltip-spacing": 20
     },
     "hyprland/language": {
-        "format": " {}",
+        "format": " {}   ",
         "format-en": "en",
         "format-es": "es",
-        "keyboard-name": "keyd-virtual-keyboard"
+        "keyboard-name": "keyd-virtual-keyboard",
+        "spacing": 10
     },
     "custom/sensors-temp": {
         "exec": "/home/marcel/scripts/sensors-temp.sh",

@@ -12,6 +12,7 @@
 !.config/alacritty
 !.config/awesome
 !.config/topgrade.toml
+!.config/mimeapps.list
 !.config/dwm
 !.config/kitty/prenix-kitty.conf
 !.config/autorandr

@@ -1,0 +1,26 @@
+[Default Applications]
+image/png=imv.desktop
+image/jpeg=imv.desktop
+image/svg+xml=imv.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+x-scheme-handler/tonsite=org.telegram.desktop.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-NBZSU2.desktop
+message/rfc822=userapp-Thunderbird-NBZSU2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-NBZSU2.desktop
+x-scheme-handler/webcal=userapp-Thunderbird-75BSU2.desktop
+text/calendar=userapp-Thunderbird-75BSU2.desktop
+application/x-extension-ics=userapp-Thunderbird-75BSU2.desktop
+x-scheme-handler/webcals=userapp-Thunderbird-75BSU2.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+
+[Added Associations]
+image/png=feh.desktop;imv.desktop;
+image/jpeg=imv.desktop;
+image/svg+xml=imv.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-NBZSU2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-NBZSU2.desktop;
+x-scheme-handler/webcal=userapp-Thunderbird-75BSU2.desktop;
+x-scheme-handler/webcals=userapp-Thunderbird-75BSU2.desktop;

@@ -2,6 +2,7 @@ source alias.nu
 source func.nu
 source colors.nu
 
+
 use ~/clones/external/nupm/nupm/
 
 # source external/get-weather.nu
@@ -148,4 +149,5 @@ $env.PROMPT_MULTILINE_INDICATOR = {colored_error_prompt ':> '}
 # use ~/.cache/starship/init.nu
 # use external/fnm.nu
 # source ~/.local/share/atuin/init.nu
+
 source ./external/zoxide.nu

@@ -32,5 +32,5 @@ $env.PAGER = 'less -FRX'
 
 # External sources
 
-zoxide init nushell | str replace "def-env" "def --env" --all | save -f ~/.zoxide.nu
-# zoxide init nushell | save -f ~/.zoxide.nu
+# zoxide init nushell | str replace "def-env" "def --env" --all | save -f ~/.zoxide.nu
+zoxide init nushell | save -f ~/.zoxide.nu
