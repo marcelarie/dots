@@ -42,11 +42,11 @@ def override_clones_dir_path [path] {
   let own_path  = "/clones/own/"
 
   if ($work_path in $path) {
-    ($path | str replace $work_path "/w/")
+    ($path | str replace $work_path "/work/")
   } else if ($pers_path in $path) {
-    ($path | str replace $pers_path "/p/")
+    ($path | str replace $pers_path "/pers/")
   } else if ($own_path in $path) {
-    ($path | str replace $own_path  "/o/")
+    ($path | str replace $own_path  "/own/")
   } else {
     $path
   }
