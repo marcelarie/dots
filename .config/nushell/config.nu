@@ -1,4 +1,5 @@
 source alias.nu
+source bash-aliases.nu
 source func.nu
 source colors.nu
 
@@ -135,6 +136,8 @@ def create_right_prompt [] {
   (colored_string $duration_and_time 'xterm_grey50')
   # + ' '  + (colored_string $weather 'xterm_blue')
 }
+
+neofetch
 
 $env.PROMPT_COMMAND = { create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = { create_right_prompt }

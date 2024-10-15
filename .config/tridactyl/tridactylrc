@@ -1,6 +1,11 @@
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
+
+sanitise tridactyllocal tridactylsync
+
 " General Settings
 set allowautofocus false
-set editorcmd floating-terminal $EDITOR
+set editorcmd foot -e "/home/marcel/.local/share/bob/nvim-bin/nvim"
 set externalclipboardcmd wl-copy
 set yankto both
 set configversion 2.0
@@ -26,9 +31,9 @@ bind ? fillcmdline find -?
 bind n findnext 1
 bind N findnext -1
 
+autocmd DocStart https://chatgpt.com/ mode ignore
+autocmd DocStart https://notebooklm.google.com mode ignore
+
 # This breaks tridactyl command line
 " keymap ; :
 " keymap : ;
-
-" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
-" vim: set filetype=tridactyl

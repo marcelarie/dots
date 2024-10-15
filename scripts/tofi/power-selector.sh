@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # pkill tofi or 
 if pgrep -x "tofi" > /dev/null

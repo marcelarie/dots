@@ -5,6 +5,8 @@ export KUBE_PROMPT=true
 source ~/.local/share/xelabash/xela.bash
 source ~/.bash_aliases
 
+set -o vi
+
 # ~/.bashrc
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 source <(carapace _carapace)
@@ -46,7 +48,8 @@ export SRC_ENDPOINT
 export HOMEBREW_NO_AUTO_UPDATE=1
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export HYPRSHOT_DIR=$HOME/screenshots
-export EDITOR=nvim
+export EDITOR=/home/marcel/.local/share/bob/nvim-bin/nvim
+export SUDO_EDITOR=/home/marcel/.local/share/bob/nvim-bin/nvim
 export TERMINAL=alacritty
 
 ANTHROPIC_API_KEY=$(pass show anthropic/api-key)

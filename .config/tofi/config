@@ -1,5 +1,8 @@
 # A complete reference of available options can be found in `man 5 tofi`.
 
+drun-launch = false
+terminal = /usr/bin/foot
+
 # anchor = top
 width = 30%
 height = 450
