@@ -14,8 +14,8 @@ source <(carapace _carapace)
 eval "$(atuin init bash --disable-up-arrow)"
 
 # Use bash-completion, if available
-# [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
-#     . /usr/share/bash-completion/bash_completion
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 
 # Start gpg-agent if not already running
 GPG_AGENT_INFO=$(gpgconf --list-dirs agent-socket)

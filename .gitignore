@@ -29,6 +29,8 @@
 .config/nushell/history.txt
 !.config/rofi/themes
 !.config/paru/
+!.inputrc
+!.bashrc
 !.config/starship.toml
 !.config/rustfmt
 !.config/greenclip.toml
