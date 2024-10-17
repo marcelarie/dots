@@ -1,8 +1,7 @@
 source alias.nu
-source bash-aliases.nu
+source bash-alises.nu
 source func.nu
 source colors.nu
-
 
 use ~/clones/external/nupm/nupm/
 
@@ -137,8 +136,6 @@ def create_right_prompt [] {
   # + ' '  + (colored_string $weather 'xterm_blue')
 }
 
-neofetch
-
 $env.PROMPT_COMMAND = { create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = { create_right_prompt }
 $env.PROMPT_INDICATOR = {colored_error_prompt "\n> "}
@@ -153,4 +150,4 @@ $env.PROMPT_MULTILINE_INDICATOR = {colored_error_prompt ':> '}
 # use external/fnm.nu
 # source ~/.local/share/atuin/init.nu
 
-source ./external/zoxide.nu
+source ~/.zoxide.nu
