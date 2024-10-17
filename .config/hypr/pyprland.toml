@@ -1,0 +1,21 @@
+[pyprland]
+plugins = [
+    "expose",
+    "fetch_client_menu",
+    "lost_windows",
+    "magnify",
+    "scratchpads",
+    "shift_monitors",
+    "toggle_special",
+    "workspaces_follow_focus",
+]
+
+
+
+[scratchpads.term]
+animation = "fromTop"
+command = "foot -e bash --class=foot-dropterm"
+class = "foot-dropterm"
+size = "75% 60%"
+max_size = "1920px 100%"
+margin = 50

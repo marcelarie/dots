@@ -10,26 +10,25 @@ use ~/clones/external/nupm/nupm/
 # use ~/clones/forks/nu_scripts/custom-completions/mod.nu *
 # use ~/clones/forks/nu_scripts/modules/rbenv/rbenv.nu
 
-let zoxide_completer = {|spans|
-    $spans | skip 1 | zoxide query -l ...$in | lines | where {|x| $x != $env.PWD}
-}
 
 let carapace_completer = {|spans|
     carapace $spans.0 nushell ...$spans | from json
 }
 
+let zoxide_completer = {|spans|
+    $spans | skip 1 | zoxide query -l ...$in | lines | where {|x| $x != $env.PWD}
+}
+
 # This completer will use carapace by default
 let external_completer = {|spans|
     let expanded_alias = (scope aliases | where name == $spans.0 | get -i 0 | get -i expansion)
+
+
     let spans = (if $expanded_alias != null  {
         $spans | skip 1 | prepend ($expanded_alias | split words)
     } else { $spans })
 
-        match $spans.0 {
-        # nu => $fish_completer # carapace completions are incorrect for nu
-        # git => $fish_completer # fish completes commits and branch names in a nicer way
-        # asdf => $fish_completer # carapace doesn't have completions for asdf
-
+    match $spans.0 {
         # use zoxide completions for zoxide commands
         z | zi => $zoxide_completer
         __zoxide_z | __zoxide_zi => $zoxide_completer
@@ -61,30 +60,76 @@ $env.config = {
       partial: true         # set this to false to prevent partial filling of the prompt
       algorithm: "prefix"   # prefix or fuzzy
       external: {
-          max_results: 25
+          max_results: 20
           enable: true
           completer: $external_completer
       }
   }
+  menus: [
+  {
+    name: zoxide_menu
+    only_buffer_difference: true
+    marker: "| "
+    type: {
+        layout: columnar
+        page_size: 20
+    }
+    style: {
+        text: green
+        selected_text: green_reverse
+        description_text: yellow
+    }
+    source: { |buffer, position|
+        zoxide query -ls $buffer
+        | parse -r '(?p<description>[0-9]+) (?p<value>.+)'
+    }
+  }
+   {
+    name: completion_menu
+    only_buffer_difference: false
+    marker: ">> "
+    type: {
+      layout: columnar
+      columns: 4
+      col_width: 20   # Optional value. If missing all the screen width is used to calculate column width
+      col_padding: 2
+    }
+    style: {
+      text: { fg: "#ffffff" }
+      selected_text: { fg: "#0c0c0c" bg: "#ffe500" attr: b}
+      description_text: yellow
+    }
+  }
+  ]
   keybindings: [
    {
-    name: trigger-completion-menu
+    name: completion_menu
     modifier: none
     keycode: tab
     mode: [vi_normal vi_insert emacs]
     event: {
       until: [
         { send: menu name: completion_menu }
+        { send: menudown }
         { send: menunext }
         { edit: complete }
       ]
     }
   }
   {
+    name: zoxide_menu
+    modifier: control
+    keycode: char_o
+    mode: [emacs, vi_normal, vi_insert]
+    event: [
+      { send: menu name: zoxide_menu }
+    ]
+  }
+  {
     name: completion_previous
     modifier: shift
     keycode: backtab
-    mode: emacs
+    mode: [vi_normal vi_insert emacs]
     event: { send: menuprevious }
   }
   # {
@@ -98,7 +143,7 @@ $env.config = {
   #   }
   # }
  ]
-   hooks: {
+ hooks: {
     pre_prompt: [{ ||
       let direnv = (direnv export json | from json)
       let direnv = if not ($direnv | is-empty) { $direnv } else { {} }
